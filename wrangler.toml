@@ -1,15 +1,7 @@
 name = "ai-dayahimour"
 compatibility_date = "2025-03-31"
-pages_build_output_dir = ".next"
+pages_build_output_dir = "out"
 compatibility_flags = [ "nodejs_compat" ]
 
 [build]
 command = "npm run build"
-output_directory = ".next"
-
-[[routes]]
-page = "/"
-match = "/"
-[[routes]]
-page = "/*"
-match = "/*"
