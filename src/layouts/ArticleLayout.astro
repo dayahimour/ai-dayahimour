@@ -1,0 +1,131 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  category: string;
+  tags: string[];
+  image?: string;
+  author?: string;
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { title, description, date, category, tags, image, author = 'فريق AI DayaHimour', headings } = Astro.props;
+
+const formattedDate = new Date(date).toLocaleDateString('ar-EG', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+// Estimate reading time (Arabic ~200 words/min)
+const content = await Astro.slots.render('default');
+const wordCount = content.replace(/<[^>]*>/g, '').split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+---
+
+<BaseLayout title={title} description={description} image={image} type="article">
+  <article class="max-w-5xl mx-auto px-4 py-12">
+    <!-- Article Header -->
+    <header class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="tag">{category}</span>
+        <span class="text-gray-500 text-sm">{formattedDate}</span>
+        <span class="text-gray-500 text-sm flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {readingTime} دقائق قراءة
+        </span>
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
+        {title}
+      </h1>
+
+      <p class="text-lg text-gray-400 mb-6">{description}</p>
+
+      <div class="flex items-center gap-3 text-gray-400">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-neon-blue to-neon-green flex items-center justify-center text-dark-900 font-bold text-sm">
+          {author.charAt(0)}
+        </div>
+        <div>
+          <p class="text-white font-medium text-sm">{author}</p>
+          <p class="text-xs text-gray-500">{formattedDate}</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cover Image -->
+    {image && (
+      <div class="mb-10 rounded-2xl overflow-hidden border border-dark-500/30">
+        <img src={image} alt={title} class="w-full h-64 md:h-96 object-cover" loading="lazy" />
+      </div>
+    )}
+
+    <!-- Content Grid: TOC + Article -->
+    <div class="flex flex-col lg:flex-row gap-10">
+      <!-- Table of Contents (Desktop) -->
+      {headings.length > 0 && (
+        <aside class="hidden lg:block lg:w-64 shrink-0">
+          <div class="sticky top-24">
+            <TableOfContents headings={headings} />
+          </div>
+        </aside>
+      )}
+
+      <!-- Article Content -->
+      <div class="flex-1 prose-dark">
+        <slot />
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="mt-12 pt-8 border-t border-dark-500/30">
+      <div class="flex flex-wrap gap-2">
+        {tags.map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Share Buttons -->
+    <div class="mt-8 flex items-center gap-4">
+      <span class="text-gray-400 text-sm">شارك المقال:</span>
+      <a
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(Astro.url.href)}`}
+        target="_blank"
+        rel="noopener"
+        class="w-10 h-10 rounded-full bg-dark-600 hover:bg-neon-blue/20 flex items-center justify-center transition-colors"
+        aria-label="Share on Twitter"
+      >
+        <svg class="w-5 h-5 text-gray-400 hover:text-neon-blue" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      </a>
+      <a
+        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url.href)}`}
+        target="_blank"
+        rel="noopener"
+        class="w-10 h-10 rounded-full bg-dark-600 hover:bg-neon-blue/20 flex items-center justify-center transition-colors"
+        aria-label="Share on Facebook"
+      >
+        <svg class="w-5 h-5 text-gray-400 hover:text-neon-blue" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+      </a>
+      <button
+        onclick="navigator.clipboard.writeText(window.location.href)"
+        class="w-10 h-10 rounded-full bg-dark-600 hover:bg-neon-blue/20 flex items-center justify-center transition-colors"
+        aria-label="Copy Link"
+      >
+        <svg class="w-5 h-5 text-gray-400 hover:text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+      </button>
+    </div>
+  </article>
+</BaseLayout>

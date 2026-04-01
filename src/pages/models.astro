@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ModelCard from '../components/ModelCard.astro';
+
+const models = [
+  {
+    name: 'GPT-4o',
+    company: 'OpenAI',
+    description: 'أحدث نموذج من OpenAI يدمج النص والصور والصوت بسلاسة مع سرعة عالية.',
+    strengths: ['متعدد الوسائط', 'سريع جداً', 'إبداعي', 'محادثة طبيعية'],
+    type: 'متعدد',
+    releaseDate: '2024',
+  },
+  {
+    name: 'Claude 3.5 Sonnet',
+    company: 'Anthropic',
+    description: 'نموذج يتفوق في البرمجة والتحليل المنطقي مع التزام عالٍ بالأمان.',
+    strengths: ['برمجة ممتازة', 'تحليل منطقي', 'آمن', 'سياق 200K'],
+    type: 'لغوي',
+    releaseDate: '2024',
+  },
+  {
+    name: 'Gemini Ultra',
+    company: 'Google DeepMind',
+    description: 'نموذج Google الأقوى مع نافذة سياق هائلة وتكامل مع خدمات Google.',
+    strengths: ['سياق 1M+', 'بحث مدمج', 'متعدد اللغات', 'تكامل Google'],
+    type: 'متعدد',
+    releaseDate: '2024',
+  },
+  {
+    name: 'Llama 3',
+    company: 'Meta',
+    description: 'نموذج مفتوح المصدر من Meta يمكن تشغيله محلياً على جهازك.',
+    strengths: ['مفتوح المصدر', 'يعمل محلياً', 'قابل للتخصيص', 'مجاني'],
+    type: 'لغوي',
+    releaseDate: '2024',
+  },
+  {
+    name: 'Midjourney v6',
+    company: 'Midjourney',
+    description: 'الأفضل في إنشاء صور فنية واقعية من أوصاف نصية.',
+    strengths: ['جودة فنية عالية', 'واقعية', 'أساليب متنوعة', 'تفاصيل دقيقة'],
+    type: 'صور',
+    releaseDate: '2024',
+  },
+  {
+    name: 'Sora',
+    company: 'OpenAI',
+    description: 'نموذج رائد في إنشاء فيديوهات واقعية من أوصاف نصية.',
+    strengths: ['فيديو واقعي', 'فهم فيزيائي', 'مدة طويلة', 'جودة سينمائية'],
+    type: 'فيديو',
+    releaseDate: '2024',
+  },
+  {
+    name: 'Whisper v3',
+    company: 'OpenAI',
+    description: 'أدق نموذج لتحويل الكلام إلى نص يدعم أكثر من 100 لغة.',
+    strengths: ['دقة عالية', '100+ لغة', 'مفتوح المصدر', 'يعمل محلياً'],
+    type: 'صوت',
+    releaseDate: '2024',
+  },
+  {
+    name: 'DALL-E 3',
+    company: 'OpenAI',
+    description: 'نموذج إنشاء صور يفهم التعليمات النصية المعقدة بدقة.',
+    strengths: ['فهم نصي دقيق', 'نصوص في الصور', 'متكامل مع ChatGPT', 'آمن'],
+    type: 'صور',
+    releaseDate: '2024',
+  },
+];
+---
+
+<BaseLayout title="النماذج" description="دليل شامل لأهم نماذج الذكاء الاصطناعي مع مواصفاتها ونقاط قوتها">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <!-- Header -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        نماذج <span class="gradient-text">الذكاء الاصطناعي</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl">
+        استعرض أهم وأقوى نماذج AI في السوق مع تحليل مفصل لنقاط القوة والاستخدامات
+      </p>
+    </div>
+
+    <!-- Models Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {models.map(model => (
+        <ModelCard {...model} />
+      ))}
+    </div>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2 class="section-title flex items-center gap-3 mb-8">
+        <span class="w-8 h-8 rounded-lg bg-neon-blue/10 flex items-center justify-center">
+          <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </span>
+        جدول المقارنة
+      </h2>
+      <div class="glass-card overflow-hidden overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-dark-500/30">
+              <th class="text-right p-4 text-white font-semibold">النموذج</th>
+              <th class="text-right p-4 text-white font-semibold">الشركة</th>
+              <th class="text-right p-4 text-white font-semibold">النوع</th>
+              <th class="text-right p-4 text-white font-semibold">المميزات الرئيسية</th>
+            </tr>
+          </thead>
+          <tbody>
+            {models.map((model, i) => (
+              <tr class:list={['border-b border-dark-500/20', i % 2 === 0 ? 'bg-dark-700/20' : '']}>
+                <td class="p-4 text-neon-blue font-medium">{model.name}</td>
+                <td class="p-4 text-gray-400">{model.company}</td>
+                <td class="p-4"><span class="tag text-xs">{model.type}</span></td>
+                <td class="p-4 text-gray-400">{model.strengths.slice(0, 2).join('، ')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
