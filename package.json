@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npx wrangler pages deploy out --project-name=ai-dayahimour --branch=main"
   },
   "dependencies": {
     "next": "15.5.10",
