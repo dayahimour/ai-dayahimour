@@ -2,137 +2,228 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ModelCard from '../components/ModelCard.astro';
 
-const languageModels = [
-  { name: 'GPT-5.4', company: 'OpenAI', description: 'أحدث نموذج يدمج التفكير المنطقي الطويل والوكلاء الذاتيين.', strengths: ['تفكير منطقي', 'وكيل ذاتي', 'متعدد الوسائط'], type: 'متعدد', slug: 'gpt-5-4', rating: '1350 Elo' },
-  { name: 'Claude Opus 4.6', company: 'Anthropic', description: 'ملك البرمجة المعقدة والتحليل العميق للبيانات والأرقام.', strengths: ['برمجة متقدمة', 'أمان عالي', 'طول السياق'], type: 'لغوي', slug: 'claude-opus-4-6', rating: '1340 Elo' },
-  { name: 'Gemini 3.1 Pro', company: 'Google', description: 'سياق ضخم يفوق 2 مليون رمز وتكامل گوگل العميق.', strengths: ['سياق 2M', 'بحث حي', 'תكامل بيئي'], type: 'متعدد', slug: 'gemini-3-1-pro', rating: '1335 Elo' },
-  { name: 'Grok 4.20', company: 'xAI', description: 'سريع جداً في معالجة البيانات الحية بفضل ربطه المباشر بتويتر.', strengths: ['بيانات حية', 'بدون قيود', 'حس الفكاهة'], type: 'لغوي', slug: 'grok-4-20-multi-agent-xai', rating: '1290 Elo' },
-  { name: 'Qwen 3.6 Plus', company: 'Alibaba Cloud', description: 'النموذج الصيني المذهل الذي يُنافس أقوى النماذج الغربية بامتياز.', strengths: ['رياضيات', 'مفتوح المصدر', 'متعدد اللغات'], type: 'لغوي', slug: 'qwen-3-6-plus', rating: '1330 Elo' },
-  { name: 'MiniMax M2.7', company: 'MiniMax', description: 'يتصدر التقييمات كنموذج ذو شخصية تفاعلية لتطبيقات الترفيه.', strengths: ['شخصيات مخصصة', 'صوتيات', 'تفاعل عالي'], type: 'لغوي', slug: 'minimax-m2-7', rating: '1250 Elo' },
-  { name: 'MiMo-V2-Pro', company: 'Xiaomi', description: 'أقوى نموذج مدمج للأجهزة المحمولة والهواتف الذكية.', strengths: ['خفيف وسريع', 'تطبيقات الهاتف', 'آمن'], type: 'متعدد', slug: 'mimo-v2-pro-xiaomi' },
-  { name: 'DeepSeek V3.2', company: 'DeepSeek', description: 'الأفضل في الفاعلية وتكلفة التشغيل، خيار المطورين الاقتصادي الأقوى.', strengths: ['تكلفة منخفضة', 'أداء برمجيات', 'سرعة'], type: 'لغوي', slug: 'deepseek-v3-2', rating: '1320 Elo' },
-  { name: 'Llama 4 Maverick', company: 'Meta', description: 'ثورة ميتا المنتظرة في عالم المصادر المفتوحة بحجم ضخم.', strengths: ['مجاني', 'آمن للشركات', 'استضافة ذاتية'], type: 'لغوي', slug: 'llama-4-maverick' },
-  { name: 'Claude Sonnet 4.6', company: 'Anthropic', description: 'المزيج المثالي بين السرعة الفائقة والذكاء التنافسي اليومي.', strengths: ['سرعة فائقة', 'سعر ممتاز', 'كود قوي'], type: 'لغوي', slug: 'claude-sonnet-4-6' },
-  { name: 'GLM 5 / Turbo', company: 'Zhipu AI', description: 'نموذج صيني متقدم جداً يبرز في الأسواق الآسيوية للغة والموثوقية.', strengths: ['السوق الآسيوي', 'رؤية الكمبيوتر'], type: 'لغوي', slug: 'glm-5' },
-  { name: 'Step 3.5 Flash', company: 'StepFun', description: 'نموذج ذو سرعة مهولة للمهام المتعددة والاستجابات اللحظية.', strengths: ['سريع جداً', 'اقتصادي', 'لوحات تحكم'], type: 'لغوي', slug: 'step-3-5-flash' },
-  { name: 'Kimi K2.5', company: 'Moonshot', description: 'السيد المُطلق في قراءة الملايين من الرموز (Long Context).', strengths: ['مستندات عملاقة', 'ذاكرة كبيرة', 'تحليل كتب'], type: 'لغوي', slug: 'kimi-k2-5' }
-];
+const models = [
+  // --- النماذج اللغوية والمتعددة الوسائط ---
+  {
+    name: 'GPT-5.4',
+    company: 'OpenAI',
+    description: 'أحدث طراز متقدم من أوبن أيه آي، يدمج التفكير المنطقي الطويل والوكلاء الذاتيين لنجاح غير مسبوق.',
+    strengths: ['تفكير منطقي 10x', 'وكيل ذاتي (Agentic)', 'متعدد الوسائط'],
+    type: 'متعدد',
+    releaseDate: 'مارس 2026',
+    slug: 'gpt5-analysis',
+    rating: '1350 Elo',
+  },
+  {
+    name: 'Claude Opus 4.6',
+    company: 'Anthropic',
+    description: 'النموذج الأذكى تحليلياً عالمياً في كتابة الكود والتحليل المتقدم، يتربع على عرش البرمجة المعقدة.',
+    strengths: ['برمجة متقدمة', 'أمان عالي جداً', 'تحليل عبقري'],
+    type: 'لغوي',
+    releaseDate: 'فبراير 2026',
+    slug: 'claude-opus-4-6',
+    rating: '1340 Elo',
+  },
+  {
+    name: 'Qwen 3.6 Plus',
+    company: 'Alibaba Cloud',
+    description: 'النموذج الصيني المذهل الذي يُنافس أقوى النماذج الغربية، يتميز بقوة الاستنتاج المنطقي.',
+    strengths: ['الاستنتاج والرياضيات', 'مفتوح المصدر', 'تعدد لغات'],
+    type: 'لغوي',
+    releaseDate: 'أبريل 2026',
+    slug: 'qwen3-6-plus-review',
+    rating: '1330 Elo',
+  },
+  {
+    name: 'DeepSeek-V3.2',
+    company: 'DeepSeek',
+    description: 'الأفضل في الفاعلية وتكلفة التشغيل، يُعتبر معياراً جديداً في أداء النماذج السريعة البرمجية.',
+    strengths: ['الكود والبرمجة', 'تكلفة منخفضة', 'سرعة هائلة'],
+    type: 'لغوي',
+    releaseDate: 'أواخر 2025',
+    slug: 'deepseek-v3-2-guide',
+    rating: '1320 Elo',
+  },
+  {
+    name: 'Grok 4.20',
+    company: 'xAI',
+    description: 'الأسرع في معالجة البيانات الحية بفضل الوصول المباشر لخوادم تويتر (X)، مع قدرات خالية من الرقابة.',
+    strengths: ['بيانات حية (Real-time)', 'بدون قيود صارمة', 'حس الفكاهة'],
+    type: 'لغوي',
+    releaseDate: 'مارس 2026',
+    slug: 'grok-4.20-multi-agent-xai',
+    rating: '1290 Elo',
+  },
+  
+  // --- نماذج إنتاج الصور ---
+  {
+    name: 'GPT Image 1.5',
+    company: 'OpenAI',
+    description: 'أفضل نموذج حالياً في الالتزام بالوصف النصي الدقيق وإدراج النصوص بكفاءة داخل الصورة.',
+    strengths: ['التزام بالوصف', 'نصوص دقيقة', 'متاح بـ ChatGPT Plus'],
+    type: 'صور',
+    releaseDate: 'أبريل 2026',
+    slug: 'gpt-image-1-5',
+    rating: 'الأول استجابةً',
+  },
+  {
+    name: 'Gemini 3 Pro Image',
+    company: 'Google',
+    description: 'يتفوق في الواقعية (Photorealism) والتكامل متعدد الوسائط في بيئة جوجل.',
+    strengths: ['واقعية فائقة', 'تكامل جوجل', 'تعديل ذكي'],
+    type: 'صور',
+    releaseDate: 'مارس 2026',
+    slug: 'gemini-3-pro-image',
+    rating: '1355 Elo (صور)',
+  },
+  {
+    name: 'FLUX.2 Pro',
+    company: 'Black Forest Labs',
+    description: 'أعلى جودة فنية وتفاصيل دقيقة مع سرعة توليد هائلة عبر منصات مفتوحة ومغلقة.',
+    strengths: ['تفاصيل مذهلة', 'تشريح سليم', 'سرعة الإنتاج'],
+    type: 'صور',
+    releaseDate: '2026',
+    slug: 'flux-2-pro',
+    rating: 'مفتوح المصدر #1',
+  },
+  {
+    name: 'Midjourney v8',
+    company: 'Midjourney',
+    description: 'الأفضل على الإطلاق في الأسلوب الفني الإبداعي والتفريغ السينمائي (Artistic Visuals).',
+    strengths: ['أسلوب فني مذهل', 'إضاءة إبداعية', 'تناسق الألوان'],
+    type: 'صور',
+    releaseDate: 'أبريل 2026',
+    slug: 'midjourney-v8',
+    rating: 'الأول إبداعياً',
+  },
+  {
+    name: 'Seedream 2.0',
+    company: 'ByteDance',
+    description: 'النموذج الصيني القوي جداً من ByteDance للتنوع البصري والاستخدام التجاري السريع.',
+    strengths: ['استخدام تجاري', 'تنوع الثقافات', 'مجاني نسبياً'],
+    type: 'صور',
+    releaseDate: 'مارس 2026',
+    slug: 'seedream-5-0',
+    rating: 'متفوق تجارياً',
+  },
 
-const imageModels = [
-  { name: 'GPT Image 1.5', company: 'OpenAI', description: 'أفضل نموذج حالياً في الالتزام بالوصف وإدراج النصوص بكفاءة.', strengths: ['نصوص متقنة', 'امتثال قوي', 'متوفر בـ GPT+', 'متعدد'], type: 'صور', slug: 'gpt-image-1-5' },
-  { name: 'Gemini 3 Pro Image', company: 'Google', description: 'سيد الواقعية الفائقة (Photorealism) المعروف سابقاً בـ Nano Banana Pro.', strengths: ['وجوه واقعية', 'طبيعة', 'تكامل جوجل'], type: 'صور', slug: 'gemini-3-pro-image' },
-  { name: 'FLUX.2 Pro', company: 'Black Forest Labs', description: 'أعلى جودة فنية وتفاصيل دقيقة مع سرعة توليد هائلة.', strengths: ['تشريح دقيق', 'سرعة البناء', 'أطراف سليمة'], type: 'صور', slug: 'flux-2-pro' },
-  { name: 'Midjourney v8', company: 'Midjourney', description: 'الأفضل بلا منازع في الإبداع الفني (Artistic Visuals).', strengths: ['أسلوب فني مذهل', 'إضاءة إبداعية', 'تناسق الألوان'], type: 'صور', slug: 'midjourney-v8', rating: 'الأول إبداعياً' },
-  { name: 'Seedream 5.0 (2.0)', company: 'ByteDance', description: 'النموذج الصيني القوي للتنوع البصري والاستخدام التجاري والإعلاني.', strengths: ['إعلانات وتجارة', 'تنوع الثقافات', 'جسم كامل'], type: 'صور', slug: 'seedream-5-0' }
-];
-
-const videoModels = [
-  { name: 'Veo 3.1', company: 'Google', description: 'النموذج الأول للواقعية ومزامنة الصوت الأصلية والتحكم الإخراجي.', strengths: ['صوت أصيل', 'فيزياء تصويرية', 'تحكم متقدم'], type: 'فيديو', slug: 'veo-3-1' },
-  { name: 'Sora 2 Pro', company: 'OpenAI', description: 'الأقوى في الفيزياء وحركة العناصر والمشاهد السينمائية المتصلة.', strengths: ['جودة 4K', 'فيزياء سائلة', 'مدة طويلة'], type: 'فيديو', slug: 'sora-2-pro' },
-  { name: 'Kling 3.0', company: 'Kuaishou', description: 'حركة بشرية دقيقة جداً مع ميزة تعدد اللقطات وسعر مناسب.', strengths: ['حركة بشرية سلسة', 'تعدد زوايا', 'اقتصادي'], type: 'فيديو', slug: 'kling-3-0' },
-  { name: 'Runway Gen-4.5', company: 'RunwayML', description: 'الخيار الاحترافي لصناع الأفلام للتحكم بأدوات المونتاج والفرشاة.', strengths: ['أدوات إخراجية', 'حركة سائلة', 'تحكم بالكاميرا'], type: 'فيديو', slug: 'runway-gen-4-5' },
-  { name: 'Seedance 2.0', company: 'ByteDance', description: 'متفوق في ثبات الشخصيات وتأثيرات منصة تيك توك الديناميكية.', strengths: ['ثبات شخصيات', 'مؤثرات قوية', 'إنتاج سريع'], type: 'فيديو', slug: 'seedance-2-0' }
-];
-
-const agentTools = [
-  { name: 'OpenClaw', company: 'AI Devs', description: 'أداة الوكلاء الذاتيين المفتوحة والممتازة في مهام متعددة.', strengths: ['وكيل ذاتي', 'مرونة عالية', 'مفتوح'], type: 'متعدد', slug: 'openclaw' },
-  { name: 'Kilo Code', company: 'Kilo', description: 'المساعد البرمجي الذي يبسط تعقيدات الأكواد بشكل سحري.', strengths: ['شرح الكود', 'بناء سريع', 'مفيد للمبتدئين'], type: 'متعدد', slug: 'kilo-code' },
-  { name: 'Claude Code', company: 'Anthropic', description: 'واجهة سطر الأوامر (CLI) الخاصة بكلود لهندسة المشاريع فوريا.', strengths: ['CLI قوي', 'تكامل محلي', 'فهم الملفات'], type: 'لغوي', slug: 'claude-code' },
-  { name: 'Cline', company: 'Cline HQ', description: 'مهندس الـ Astro الأول والمطور الذاتي الأقوى في محرر VSCode.', strengths: ['بناء تطبيقات', 'مراقبة أوامر', 'تحكم تلقائي'], type: 'متعدد', slug: 'cline' },
-  { name: 'Descript', company: 'Descript', description: 'أداة تغيير قواعد تحرير الفيديو والصوت باستخدام النص فقط.', strengths: ['تعديل كنص', 'دبلجة صوتية', 'بودكاست'], type: 'متعدد', slug: 'descript' },
-  { name: 'Hermes Agent', company: 'Nous Research', description: 'بناء وتخصيص تدفقات العمل الموثوقة مع أفضل نماذج הـ Agentic.', strengths: ['قرارات مستقلة', 'مهام الويب', 'تحليل'], type: 'متعدد', slug: 'hermes-agent' },
-  { name: 'Janitor AI', company: 'Janitor', description: 'أكبر منصة لمحاكاة الشخصيات والتفاعل الترفيهي الغامر.', strengths: ['شخصيات مخصصة', 'حرية تامة', 'لعب الأدوار'], type: 'متعدد', slug: 'janitor-ai' },
-  { name: 'ISEKAI ZERO', company: 'Games HQ', description: 'التجربة المستقبلية المعززة للذكاء الاصطناعي في بيئة الألعاب.', strengths: ['عوالم افتراضية', 'شخصيات ذكية', 'تفاعل آلي'], type: 'متعدد', slug: 'isekai-zero' },
-  { name: 'Roo Code', company: 'Roo', description: 'بديل سريع لإنتاج الأكواد وبناء النماذج الأولية على المتصفح.', strengths: ['النماذج الأولية', 'بساطة', 'تصدير سريع'], type: 'لغوي', slug: 'roo-code' },
-  { name: 'Lemonade', company: 'Marketing AI', description: 'منصة صناعة المحتوى الإعلاني والتسويقي الأولى لمحتوى السوشيال.', strengths: ['إدارة حملات', 'نسخ إعلانية', 'بوستات'], type: 'متعدد', slug: 'lemonade' },
-  { name: 'Cursor', company: 'Cursor', description: 'محرر الأكواد المعزز بالذكاء الاصطناعي والذي يهدد عرش VS Code.', strengths: ['تعديلات ثنائية', 'سياق المشروع', 'سريع جداً'], type: 'متعدد', slug: 'cursor' },
-  { name: 'Perplexity AI', company: 'Perplexity', description: 'محرك بحث متطور يجيب على تساؤلاتك مدعماً بالمصادر والمراجع.', strengths: ['بحث عميق', 'اقتباسات دقيقة', 'برو بحث'], type: 'متعدد', slug: 'perplexity-ai' },
-  { name: 'ElevenLabs', company: 'ElevenLabs', description: 'التوليد الصوتي الأكثر واقعية وإنسانية في العالم بجميع اللهجات.', strengths: ['صوت طبيعي', 'دبلجة بضغطة', 'استنساخ أصوات'], type: 'صوت', slug: 'elevenlabs' },
-  { name: 'Zapier AI', company: 'Zapier', description: 'تدير جميع عملياتك وتربط تطبيقاتك المختلفة بذكاء أوتوماتيكي.', strengths: ['أتمتة الشركات', 'ربط التطبيقات', 'تدفق سلس'], type: 'متعدد', slug: 'zapier-ai' },
-  { name: 'Lovable', company: 'Lovable Dev', description: 'صنع واجهات المستخدم والتطبيقات بمجرد الوصف دون أكواد.', strengths: ['بناء الـ UI', 'مكونات جاهزة', 'تصميم عصري'], type: 'متعدد', slug: 'lovable' }
+  // --- نماذج إنتاج الفيديو ---
+  {
+    name: 'Veo 3.1',
+    company: 'Google',
+    description: 'النموذج الأمثل والأول حالياً للواقعية، ومزامنة الصوت الأصلية (Native audio)، والتحكم السينمائي.',
+    strengths: ['صوت أصيل', 'فيزياء دقيقة', 'تحكم سينمائي'],
+    type: 'فيديو',
+    releaseDate: 'أبريل 2026',
+    slug: 'veo-3-1',
+    rating: 'الأول (فيديو)',
+  },
+  {
+    name: 'Sora 2 Pro',
+    company: 'OpenAI',
+    description: 'الأقوى في الفيزياء الواقعية وقصص الحركة المحاكية للواقع بدقة عالية وتزامن صوتي.',
+    strengths: ['حركة معقدة', 'جودة 4K+', 'استمرارية المشهد'],
+    type: 'فيديو',
+    releaseDate: 'مارس 2026',
+    slug: 'sora-2-pro',
+    rating: 'منافس شرس #1',
+  },
+  {
+    name: 'Kling 3.0',
+    company: 'Kuaishou',
+    description: 'أفضل قيمة للمبدعين بفضل الحركة البشرية السلسة جداً ودعم المقاطع المتعددة (Multi-shot).',
+    strengths: ['حركة بشرية دقيقة', 'أفضل قيمة', 'عبر المنصات'],
+    type: 'فيديو',
+    releaseDate: 'فبراير 2026',
+    slug: 'kling-3-0',
+    rating: 'أفضل استهلاك',
+  },
+  {
+    name: 'Runway Gen-4.5',
+    company: 'RunwayML',
+    description: 'الأفضل للتحكم الإبداعي الاحترافي وصناع الأفلام بفضل أدوات التحرير המتقدمة.',
+    strengths: ['تحكم بالمخرج', 'تحريك دقيق للصورة', 'أدوات المونتاج'],
+    type: 'فيديو',
+    releaseDate: 'أبريل 2026',
+    slug: 'runway-gen-4-5',
+    rating: 'المخرجين #1',
+  },
+  {
+    name: 'Seedance 2.0',
+    company: 'ByteDance',
+    description: 'متفوق في ثبات الشخصيات والبنية الجديدة من نوع (Dual-branch diffusion) الصينية.',
+    strengths: ['ثبات الشخصية', 'سرعة المعالجة', 'مؤثرات التيكتوك'],
+    type: 'فيديو',
+    releaseDate: '2026',
+    slug: 'seedance-2-0',
+    rating: 'الأفضل للـ Shorts',
+  },
 ];
 ---
 
-<BaseLayout title="دليل النماذج والأدوات" description="المرجع العربي الشامل لأقوى النماذج اللغوية، البصرية، الفيديو، وأدوات الوكلاء الذاتيين.">
+<BaseLayout title="النماذج العالمية" description="دليل شامل لأهم وأحدث 10 نماذج ذكاء اصطناعي رائدة عالمياً مع مواصفاتها ونقاط قوتها">
   <div class="max-w-7xl mx-auto px-4 py-12">
     <!-- Header -->
-    <div class="mb-16 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-        الدليل الشامل للـ <span class="gradient-text">الرياضة العقلية الجديدة (AI)</span>
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        أقوى نماذج <span class="gradient-text">الذكاء الاصطناعي (أبريل 2026)</span>
       </h1>
-      <p class="text-gray-400 text-lg max-w-3xl mx-auto">
-        استكشف المئات من النماذج والأدوات الأقوى عالمياً. تم تصنيفها بدقة لتشمل معالجة اللغات الطبيعية، توليد الصور والفيديو الخيالية، ووكلاء الأتمتة البرمجية. 
+      <p class="text-gray-400 text-lg max-w-2xl">
+        استعرض قائمة أقوى 10 نماذج صينية وعالمية تتصدر المؤشرات حالياً، اضغط على النموذج لقراءة التحليل التقييمي المفصل لها.
       </p>
     </div>
 
-    <!-- Section 1: Language Models -->
-    <section class="mb-20">
-      <div class="flex items-center gap-4 mb-8 pb-4 border-b border-dark-600/50">
-        <span class="w-10 h-10 rounded-xl bg-neon-blue/15 flex items-center justify-center">
-          <svg class="w-5 h-5 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    <!-- Models Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {models.map((model) => (
+        <ModelCard {...model} />
+      ))}
+    </div>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2 class="section-title flex items-center gap-3 mb-8">
+        <span class="w-8 h-8 rounded-lg bg-neon-blue/10 flex items-center justify-center">
+          <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>
         </span>
-        <h2 class="text-3xl font-bold text-white">النماذج اللغوية (LLMs)</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {languageModels.map((model) => (
-          <ModelCard {...model} />
-        ))}
-      </div>
-    </section>
-
-    <!-- Section 2: Image Models -->
-    <section class="mb-20">
-      <div class="flex items-center gap-4 mb-8 pb-4 border-b border-dark-600/50">
-        <span class="w-10 h-10 rounded-xl bg-pink-500/15 flex items-center justify-center">
-          <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </span>
-        <h2 class="text-3xl font-bold text-white">نماذج إنتاج الصور</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {imageModels.map((model) => (
-          <ModelCard {...model} />
-        ))}
-      </div>
-    </section>
-
-    <!-- Section 3: Video Models -->
-    <section class="mb-20">
-      <div class="flex items-center gap-4 mb-8 pb-4 border-b border-dark-600/50">
-        <span class="w-10 h-10 rounded-xl bg-emerald-500/15 flex items-center justify-center">
-          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-        </span>
-        <h2 class="text-3xl font-bold text-white">نماذج إنتاج الفيديو</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {videoModels.map((model) => (
-          <ModelCard {...model} />
-        ))}
+        جدول التقييم العالمي العام
+      </h2>
+      <div class="glass-card overflow-hidden overflow-x-auto">
+        <table class="w-full text-sm text-right align-middle">
+          <thead>
+            <tr class="border-b border-dark-500/30 bg-dark-800/80">
+              <th class="p-4 text-white font-semibold whitespace-nowrap">النموذج</th>
+              <th class="p-4 text-white font-semibold">الشركة</th>
+              <th class="p-4 text-white font-semibold">النوع</th>
+              <th class="p-4 text-white font-semibold whitespace-nowrap">نظام القياس (Elo Rating)</th>
+              <th class="p-4 text-white font-semibold">المميزات الرئيسية</th>
+            </tr>
+          </thead>
+          <tbody>
+            {models.map((model, i) => (
+              <tr class:list={['border-b border-dark-500/20 hover:bg-white/5 transition-colors', i % 2 === 0 ? 'bg-dark-700/20' : '']}>
+                <td class="p-4">
+                  <a href={model.slug ? `/blog/${model.slug}` : '#'} class="text-neon-blue font-medium hover:underline hover:text-neon-green transition-colors">
+                    {model.name}
+                  </a>
+                </td>
+                <td class="p-4 text-gray-300">{model.company}</td>
+                <td class="p-4">
+                  <span class="px-2 py-1 bg-dark-600 rounded text-xs text-gray-300 font-medium">{model.type}</span>
+                </td>
+                <td class="p-4">
+                  <span class="text-yellow-500 font-bold bg-yellow-500/10 px-2.5 py-1 rounded-full text-xs items-center gap-1 inline-flex">
+                    🏆 {model.rating}
+                  </span>
+                </td>
+                <td class="p-4 text-gray-400 text-xs">{model.strengths.slice(0, 3).join('، ')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
-
-    <!-- Section 4: AI Agents & Tools -->
-    <section class="mb-20">
-      <div class="flex items-center gap-4 mb-8 pb-4 border-b border-dark-600/50">
-        <span class="w-10 h-10 rounded-xl bg-purple-500/15 flex items-center justify-center">
-          <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        </span>
-        <h2 class="text-3xl font-bold text-white">وكلاء الـ AI وأقوى الأدوات</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {agentTools.map((model) => (
-          <ModelCard {...model} />
-        ))}
-      </div>
-    </section>
-
   </div>
 </BaseLayout>
