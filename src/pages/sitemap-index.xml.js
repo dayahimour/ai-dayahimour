@@ -1,11 +1,11 @@
 export const prerender = true;
 
 export async function GET() {
-  const siteUrl = 'https://ai-dayahimour.workers.dev';
-  
+  const siteUrl = 'https://dayahimour.org';
+
   // Get all blog posts
   const posts = await fetch(`${siteUrl}/api/posts`).catch(() => ({ posts: [] }));
-  
+
   const pages = [
     '/',
     '/about',
