@@ -1,0 +1,84 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: string;
+}
+
+const {
+  title,
+  description = 'موقعك الأول لأخبار وتحليلات الذكاء الاصطناعي بالعربية — نماذج، أدوات، تنبؤات المستقبل',
+  image = '/images/og-default.svg',
+  type = 'website'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === 'الرئيسية' ? 'AI DayaHimour — أخبار الذكاء الاصطناعي' : `${title} | AI DayaHimour`;
+---
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:site_name" content="AI DayaHimour" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AI DayaHimour",
+      "url": Astro.site,
+      "description": description,
+      "inLanguage": "ar",
+    })} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Google AdSense Placeholder (قم بإزالة التعليقات ووضع معرف الناشر الخاص بك هنا) -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+    
+    <!-- SEO: Robots -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    
+    <!-- RSS & Sitemap Discovery -->
+    <link rel="alternate" type="application/rss+xml" title="AI DayaHimour — RSS" href="/rss.xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    
+    <!-- Slot للـ Head إضافات من الصفحات -->
+    <slot name="head" />
+  </head>
+  <body class="bg-dark-900 min-h-screen flex flex-col bg-grid">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

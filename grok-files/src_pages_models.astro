@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ModelCard from '../components/ModelCard.astro';
+
+const models = [
+  // --- النماذج اللغوية والمتعددة الوسائط ---
+  {
+    name: 'GPT-5.4',
+    company: 'OpenAI',
+    description: 'أحدث طراز متقدم من أوبن أيه آي، يدمج التفكير المنطقي الطويل والوكلاء الذاتيين لنجاح غير مسبوق.',
+    strengths: ['تفكير منطقي 10x', 'وكيل ذاتي (Agentic)', 'متعدد الوسائط'],
+    type: 'متعدد',
+    releaseDate: 'مارس 2026',
+    slug: 'gpt5-analysis',
+    rating: '1350 Elo',
+  },
+  {
+    name: 'Claude Opus 4.6',
+    company: 'Anthropic',
+    description: 'النموذج الأذكى تحليلياً عالمياً في كتابة الكود والتحليل المتقدم، يتربع على عرش البرمجة المعقدة.',
+    strengths: ['برمجة متقدمة', 'أمان عالي جداً', 'تحليل عبقري'],
+    type: 'لغوي',
+    releaseDate: 'فبراير 2026',
+    slug: 'claude-opus-4-6',
+    rating: '1340 Elo',
+  },
+  {
+    name: 'Qwen 3.6 Plus',
+    company: 'Alibaba Cloud',
+    description: 'النموذج الصيني المذهل الذي يُنافس أقوى النماذج الغربية، يتميز بقوة الاستنتاج المنطقي.',
+    strengths: ['الاستنتاج والرياضيات', 'مفتوح المصدر', 'تعدد لغات'],
+    type: 'لغوي',
+    releaseDate: 'أبريل 2026',
+    slug: 'qwen3-6-plus-review',
+    rating: '1330 Elo',
+  },
+  {
+    name: 'DeepSeek-V3.2',
+    company: 'DeepSeek',
+    description: 'الأفضل في الفاعلية وتكلفة التشغيل، يُعتبر معياراً جديداً في أداء النماذج السريعة البرمجية.',
+    strengths: ['الكود والبرمجة', 'تكلفة منخفضة', 'سرعة هائلة'],
+    type: 'لغوي',
+    releaseDate: 'أواخر 2025',
+    slug: 'deepseek-v3-2-guide',
+    rating: '1320 Elo',
+  },
+  {
+    name: 'Grok 4.20',
+    company: 'xAI',
+    description: 'الأسرع في معالجة البيانات الحية بفضل الوصول المباشر لخوادم تويتر (X)، مع قدرات خالية من الرقابة.',
+    strengths: ['بيانات حية (Real-time)', 'بدون قيود صارمة', 'حس الفكاهة'],
+    type: 'لغوي',
+    releaseDate: 'مارس 2026',
+    slug: 'grok-4.20-multi-agent-xai',
+    rating: '1290 Elo',
+  },
+  
+  // --- نماذج إنتاج الصور ---
+  {
+    name: 'GPT Image 1.5',
+    company: 'OpenAI',
+    description: 'أفضل نموذج حالياً في الالتزام بالوصف النصي الدقيق وإدراج النصوص بكفاءة داخل الصورة.',
+    strengths: ['التزام بالوصف', 'نصوص دقيقة', 'متاح بـ ChatGPT Plus'],
+    type: 'صور',
+    releaseDate: 'أبريل 2026',
+    slug: 'gpt-image-1-5',
+    rating: 'الأول استجابةً',
+  },
+  {
+    name: 'Gemini 3 Pro Image',
+    company: 'Google',
+    description: 'يتفوق في الواقعية (Photorealism) والتكامل متعدد الوسائط في بيئة جوجل.',
+    strengths: ['واقعية فائقة', 'تكامل جوجل', 'تعديل ذكي'],
+    type: 'صور',
+    releaseDate: 'مارس 2026',
+    slug: 'gemini-3-pro-image',
+    rating: '1355 Elo (صور)',
+  },
+  {
+    name: 'FLUX.2 Pro',
+    company: 'Black Forest Labs',
+    description: 'أعلى جودة فنية وتفاصيل دقيقة مع سرعة توليد هائلة عبر منصات مفتوحة ومغلقة.',
+    strengths: ['تفاصيل مذهلة', 'تشريح سليم', 'سرعة الإنتاج'],
+    type: 'صور',
+    releaseDate: '2026',
+    slug: 'flux-2-pro',
+    rating: 'مفتوح المصدر #1',
+  },
+  {
+    name: 'Midjourney v8',
+    company: 'Midjourney',
+    description: 'الأفضل على الإطلاق في الأسلوب الفني الإبداعي والتفريغ السينمائي (Artistic Visuals).',
+    strengths: ['أسلوب فني مذهل', 'إضاءة إبداعية', 'تناسق الألوان'],
+    type: 'صور',
+    releaseDate: 'أبريل 2026',
+    slug: 'midjourney-v8',
+    rating: 'الأول إبداعياً',
+  },
+  {
+    name: 'Seedream 2.0',
+    company: 'ByteDance',
+    description: 'النموذج الصيني القوي جداً من ByteDance للتنوع البصري والاستخدام التجاري السريع.',
+    strengths: ['استخدام تجاري', 'تنوع الثقافات', 'مجاني نسبياً'],
+    type: 'صور',
+    releaseDate: 'مارس 2026',
+    slug: 'seedream-5-0',
+    rating: 'متفوق تجارياً',
+  },
+
+  // --- نماذج إنتاج الفيديو ---
+  {
+    name: 'Veo 3.1',
+    company: 'Google',
+    description: 'النموذج الأمثل والأول حالياً للواقعية، ومزامنة الصوت الأصلية (Native audio)، والتحكم السينمائي.',
+    strengths: ['صوت أصيل', 'فيزياء دقيقة', 'تحكم سينمائي'],
+    type: 'فيديو',
+    releaseDate: 'أبريل 2026',
+    slug: 'veo-3-1',
+    rating: 'الأول (فيديو)',
+  },
+  {
+    name: 'Sora 2 Pro',
+    company: 'OpenAI',
+    description: 'الأقوى في الفيزياء الواقعية وقصص الحركة المحاكية للواقع بدقة عالية وتزامن صوتي.',
+    strengths: ['حركة معقدة', 'جودة 4K+', 'استمرارية المشهد'],
+    type: 'فيديو',
+    releaseDate: 'مارس 2026',
+    slug: 'sora-2-pro',
+    rating: 'منافس شرس #1',
+  },
+  {
+    name: 'Kling 3.0',
+    company: 'Kuaishou',
+    description: 'أفضل قيمة للمبدعين بفضل الحركة البشرية السلسة جداً ودعم المقاطع المتعددة (Multi-shot).',
+    strengths: ['حركة بشرية دقيقة', 'أفضل قيمة', 'عبر المنصات'],
+    type: 'فيديو',
+    releaseDate: 'فبراير 2026',
+    slug: 'kling-3-0',
+    rating: 'أفضل استهلاك',
+  },
+  {
+    name: 'Runway Gen-4.5',
+    company: 'RunwayML',
+    description: 'الأفضل للتحكم الإبداعي الاحترافي وصناع الأفلام بفضل أدوات التحرير המتقدمة.',
+    strengths: ['تحكم بالمخرج', 'تحريك دقيق للصورة', 'أدوات المونتاج'],
+    type: 'فيديو',
+    releaseDate: 'أبريل 2026',
+    slug: 'runway-gen-4-5',
+    rating: 'المخرجين #1',
+  },
+  {
+    name: 'Seedance 2.0',
+    company: 'ByteDance',
+    description: 'متفوق في ثبات الشخصيات والبنية الجديدة من نوع (Dual-branch diffusion) الصينية.',
+    strengths: ['ثبات الشخصية', 'سرعة المعالجة', 'مؤثرات التيكتوك'],
+    type: 'فيديو',
+    releaseDate: '2026',
+    slug: 'seedance-2-0',
+    rating: 'الأفضل للـ Shorts',
+  },
+];
+---
+
+<BaseLayout title="النماذج العالمية" description="دليل شامل لأهم وأحدث 10 نماذج ذكاء اصطناعي رائدة عالمياً مع مواصفاتها ونقاط قوتها">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <!-- Header -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        أقوى نماذج <span class="gradient-text">الذكاء الاصطناعي (أبريل 2026)</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl">
+        استعرض قائمة أقوى 10 نماذج صينية وعالمية تتصدر المؤشرات حالياً، اضغط على النموذج لقراءة التحليل التقييمي المفصل لها.
+      </p>
+    </div>
+
+    <!-- Models Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {models.map((model) => (
+        <ModelCard {...model} />
+      ))}
+    </div>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2 class="section-title flex items-center gap-3 mb-8">
+        <span class="w-8 h-8 rounded-lg bg-neon-blue/10 flex items-center justify-center">
+          <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </span>
+        جدول التقييم العالمي العام
+      </h2>
+      <div class="glass-card overflow-hidden overflow-x-auto">
+        <table class="w-full text-sm text-right align-middle">
+          <thead>
+            <tr class="border-b border-dark-500/30 bg-dark-800/80">
+              <th class="p-4 text-white font-semibold whitespace-nowrap">النموذج</th>
+              <th class="p-4 text-white font-semibold">الشركة</th>
+              <th class="p-4 text-white font-semibold">النوع</th>
+              <th class="p-4 text-white font-semibold whitespace-nowrap">نظام القياس (Elo Rating)</th>
+              <th class="p-4 text-white font-semibold">المميزات الرئيسية</th>
+            </tr>
+          </thead>
+          <tbody>
+            {models.map((model, i) => (
+              <tr class:list={['border-b border-dark-500/20 hover:bg-white/5 transition-colors', i % 2 === 0 ? 'bg-dark-700/20' : '']}>
+                <td class="p-4">
+                  <a href={model.slug ? `/blog/${model.slug}` : '#'} class="text-neon-blue font-medium hover:underline hover:text-neon-green transition-colors">
+                    {model.name}
+                  </a>
+                </td>
+                <td class="p-4 text-gray-300">{model.company}</td>
+                <td class="p-4">
+                  <span class="px-2 py-1 bg-dark-600 rounded text-xs text-gray-300 font-medium">{model.type}</span>
+                </td>
+                <td class="p-4">
+                  <span class="text-yellow-500 font-bold bg-yellow-500/10 px-2.5 py-1 rounded-full text-xs items-center gap-1 inline-flex">
+                    🏆 {model.rating}
+                  </span>
+                </td>
+                <td class="p-4 text-gray-400 text-xs">{model.strengths.slice(0, 3).join('، ')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolCard from '../components/ToolCard.astro';
+
+const tools = [
+  {
+    name: 'ChatGPT',
+    description: 'أشهر chatbot في العالم. محادثات ذكية، كتابة، ترجمة، وبرمجة.',
+    category: 'محادثة',
+    url: 'https://chat.openai.com',
+    free: true,
+  },
+  {
+    name: 'Claude',
+    description: 'مساعد AI قوي من Anthropic. ممتاز في التحليل والبرمجة.',
+    category: 'محادثة',
+    url: 'https://claude.ai',
+    free: true,
+  },
+  {
+    name: 'Midjourney',
+    description: 'أفضل أداة لإنشاء صور فنية واقعية بالذكاء الاصطناعي.',
+    category: 'تصميم',
+    url: 'https://midjourney.com',
+    free: false,
+  },
+  {
+    name: 'GitHub Copilot',
+    description: 'مساعد برمجة ذكي يكتب الكود معك مباشرة في المحرر.',
+    category: 'برمجة',
+    url: 'https://github.com/features/copilot',
+    free: false,
+  },
+  {
+    name: 'Perplexity AI',
+    description: 'محرك بحث ذكي يعطيك إجابات مباشرة مع المصادر.',
+    category: 'بحث',
+    url: 'https://perplexity.ai',
+    free: true,
+  },
+  {
+    name: 'ElevenLabs',
+    description: 'تحويل النص إلى صوت بشري طبيعي بأكثر من 30 لغة.',
+    category: 'صوت',
+    url: 'https://elevenlabs.io',
+    free: true,
+  },
+  {
+    name: 'Runway ML',
+    description: 'إنشاء وتعديل الفيديوهات بالذكاء الاصطناعي.',
+    category: 'فيديو',
+    url: 'https://runwayml.com',
+    free: true,
+  },
+  {
+    name: 'Notion AI',
+    description: 'ميزات AI مدمجة في أداة إدارة الملاحظات.',
+    category: 'إنتاجية',
+    url: 'https://notion.so',
+    free: false,
+  },
+  {
+    name: 'Gamma',
+    description: 'إنشاء عروض تقديمية احترافية في ثوانٍ بـ AI.',
+    category: 'عروض',
+    url: 'https://gamma.app',
+    free: true,
+  },
+  {
+    name: 'Suno AI',
+    description: 'إنشاء موسيقى كاملة من وصف نصي بالذكاء الاصطناعي.',
+    category: 'موسيقى',
+    url: 'https://suno.ai',
+    free: true,
+  },
+  {
+    name: 'Hugging Face',
+    description: 'منصة مفتوحة المصدر لاستكشاف وتجربة آلاف نماذج AI.',
+    category: 'تطوير',
+    url: 'https://huggingface.co',
+    free: true,
+  },
+  {
+    name: 'Canva AI',
+    description: 'أدوات تصميم ذكية مدمجة في منصة Canva الشهيرة.',
+    category: 'تصميم',
+    url: 'https://canva.com',
+    free: true,
+  },
+];
+---
+
+<BaseLayout title="الأدوات" description="دليل شامل لأفضل أدوات الذكاء الاصطناعي المجانية والمدفوعة">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <!-- Header -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        أدوات <span class="gradient-text">الذكاء الاصطناعي</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl">
+        اكتشف أفضل أدوات AI التي ستحسن إنتاجيتك وعملك اليومي
+      </p>
+    </div>
+
+    <!-- Tools Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {tools.map(tool => (
+        <ToolCard {...tool} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
