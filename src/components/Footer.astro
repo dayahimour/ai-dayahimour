@@ -21,7 +21,8 @@ const currentYear = new Date().getFullYear();
 
         <!-- Newsletter -->
         <div class="glass-card p-4">
-          <p class="text-sm text-white font-medium mb-2">📬 اشترك في النشرة البريدية</p>
+          <p class="text-sm text-white font-medium mb-1">📬 النشرة البريدية</p>
+          <p class="text-xs text-gray-400 mb-3">اشترك لتصلك أحدث المقالات، تحليلات النماذج الجديدة، وأهم الأخبار التقنية أولاً بأول.</p>
           <form class="flex gap-2" onsubmit="event.preventDefault(); this.querySelector('button').textContent = '✓ تم!'; setTimeout(() => this.querySelector('button').textContent = 'اشتراك', 2000);">
             <input
               type="email"
