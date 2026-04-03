@@ -1,10 +1,18 @@
 ---
-title: Qwen3.6 Plus: نموذج الجيل الجديد من Qwen يُطلق تجريبياً مجاناً على OpenRouter مع سياق مليون رمز
-description: إطلاق Qwen3.6 Plus Preview كإصدار تجريبي مجاني على OpenRouter (ينتهي 3 أبريل 2026) مع تحليل دقيق لعمارته الهجينة، قدراته في البرمجة الوكيلة (agentic coding)، الرؤية متعددة الوسائط، نتائج الاختبارات الرسمية، والتطبيقات العملية للمطورين.
+title: "Qwen3.6 Plus: نموذج الجيل الجديد من Qwen يُطلق تجريبياً مجاناً على OpenRouter مع سياق مليون رمز"
+description: "إطلاق Qwen3.6 Plus Preview كإصدار تجريبي مجاني على OpenRouter (ينتهي 3 أبريل 2026) مع تحليل دقيق لعمارته الهجينة، قدراته في البرمجة الوكيلة (agentic coding)، الرؤية متعددة الوسائط، نتائج الاختبارات الرسمية، والتطبيقات العملية للمطورين."
 date: "2026-04-02"
-category: نماذج
-tags: ["Qwen3.6-Plus", "OpenRouter", "نماذج Qwen", "ذكاء اصطناعي", "agentic AI", "برمجة وكيلة", "Alibaba Cloud", "multimodal"]
-image: ""
+category: "نماذج"
+tags:
+  - Qwen3.6-Plus
+  - OpenRouter
+  - نماذج Qwen
+  - ذكاء اصطناعي
+  - agentic AI
+  - برمجة وكيلة
+  - Alibaba Cloud
+  - multimodal
+image: "https://images.openai.com/static-rsc-4/BxbHR5CfXxFj2moXCbMj7AtTxGd4DGgRFh8G4xI-6jppMBviJCNiXeeNMa1LDN68rIYh9cZF98INOqBoR8dQ9_E8XTrDFNg6lycnmTjeEtcGbRqjwIa_KzLVpz1Cm9e4hvSceukxbrTE5b-94x5r9_WZo07RMaKODw-rd33YdIyLkE0_GQ2Lt-qxtiKhiK1_?purpose=fullsize"
 ---
 
 # Qwen3.6 Plus: نموذج الجيل الجديد من Qwen يُطلق تجريبياً مجاناً على OpenRouter مع سياق مليون رمز

@@ -1,10 +1,19 @@
 ---
-title: Grok 4.20 Multi-Agent: نموذج الوكلاء المتعددين من xAI يُطلق على OpenRouter للبحث التعاوني والمهام الوكيلة
-description: إطلاق Grok 4.20 Multi-Agent (x-ai/grok-4.20-multi-agent) في 31 مارس 2026 كمتغير متخصص في الوكلاء المتعددين مع سياق 2 مليون رمز و4-16 وكيلاً متوازياً. تحليل دقيق لعمارته المتعددة الوكلاء، قدراته في البحث الزمني الحقيقي، تقليل الهلوسات، الأسعار، والتطبيقات العملية للمطورين.
+title: "Grok 4.20 Multi-Agent: نموذج الوكلاء المتعددين من xAI يُطلق على OpenRouter للبحث التعاوني والمهام الوكيلة"
+description: "إطلاق Grok 4.20 Multi-Agent (x-ai/grok-4.20-multi-agent) في 31 مارس 2026 كمتغير متخصص في الوكلاء المتعددين مع سياق 2 مليون رمز و4-16 وكيلاً متوازياً. تحليل دقيق لعمارته المتعددة الوكلاء، قدراته في البحث الزمني الحقيقي، تقليل الهلوسات، الأسعار، والتطبيقات العملية للمطورين."
 date: "2026-04-03"
-category: نماذج
-tags: ["Grok-4.20-Multi-Agent", "xAI", "multi-agent", "Grok-4.20", "OpenRouter", "ذكاء اصطناعي", "agentic AI", "Realtime Multi-Agent Research", "x-ai"]
-image: ""
+category: "نماذج"
+tags:
+  - Grok-4.20-Multi-Agent
+  - xAI
+  - multi-agent
+  - Grok-4.20
+  - OpenRouter
+  - ذكاء اصطناعي
+  - agentic AI
+  - Realtime Multi-Agent Research
+  - x-ai
+image: "https://images.openai.com/static-rsc-4/IJBDZ1yCHRRiwZXqaa4Mt5j23RbbfjOUm1mNcZW-iueSFuyaM7eWajFvFlj7LBFsRRtZ18lH9vi8kEMtxYv_R-xyuf9-u44AZaxZC5E2DYvxj89NQ9aErxVlbd_fOgfpMwJG3vWw2sQV2sI6KhLnSfXxcviRD7hnyI-Y04OTU_2yJhze9ACaHF1CwS9s1R-Q?purpose=fullsize"
 ---
 
 # Grok 4.20 Multi-Agent: نموذج الوكلاء المتعددين من xAI يُطلق على OpenRouter للبحث التعاوني والمهام الوكيلة
