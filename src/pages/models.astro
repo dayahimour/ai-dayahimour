@@ -6,101 +6,121 @@ const models = [
   {
     name: 'GPT-5.4',
     company: 'OpenAI',
-    description: 'أحدث نموذج رائد، يدمج التفكير البرمجي المعقد والوكلاء الذاتيين (Agentic Workflows).',
-    strengths: ['تفكير منطقي', 'وكيل ذاتي', 'متعدد الوسائط', 'سريع جداً'],
+    description: 'أحدث طراز متقدم من أوبن أيه آي، يدمج التفكير المنطقي الطويل والوكلاء الذاتيين لنجاح غير مسبوق.',
+    strengths: ['تفكير منطقي 10x', 'وكيل ذاتي (Agentic)', 'متعدد الوسائط', 'سريع جداً'],
     type: 'متعدد',
     releaseDate: 'مارس 2026',
+    slug: 'gpt5-analysis',
+    rating: '1350 Elo',
   },
   {
     name: 'Claude Opus 4.6',
     company: 'Anthropic',
-    description: 'النموذج الأذكى عالمياً في كتابة الكود والتحليل المتقدم، يتفوق في المهام المعقدة.',
-    strengths: ['برمجة متقدمة', 'أمان عالي', 'تحليل عبقري', 'سياق كبير'],
+    description: 'النموذج الأذكى تحليلياً عالمياً في كتابة الكود والتحليل المتقدم، يتربع على عرش البرمجة المعقدة.',
+    strengths: ['برمجة متقدمة', 'أمان عالي جداً', 'تحليل عبقري', 'سياق كبير'],
     type: 'لغوي',
     releaseDate: 'فبراير 2026',
+    slug: 'claude-opus-4-6',
+    rating: '1340 Elo',
   },
   {
     name: 'Gemini 3.1 Pro',
     company: 'Google DeepMind',
-    description: 'أداء هائل مع نافذة سياق تفوق 2 مليون رمز، وتكامل عميق مع نظام جوجل.',
-    strengths: ['سياق ضخم', 'تكامل جوجل', 'بحث حي', 'فيديو وصوت'],
+    description: 'أداء هائل مع نافذة سياق تفوق 2 مليون رمز، وتكامل عميق وسحري مع إيكوسيستم جوجل.',
+    strengths: ['سياق ضخم (2M)', 'تكامل تطبيقات جوجل', 'بحث حي', 'فيديو وصوت أصيل'],
     type: 'متعدد',
     releaseDate: '2026',
+    slug: 'gemini-3-1-pro',
+    rating: '1335 Elo',
   },
   {
-    name: 'Grok 4',
-    company: 'xAI',
-    description: 'الأسرع في معالجة البيانات الحية بفضل الوصول لتويتر (X)، مع قدرات خالية من الرقابة.',
-    strengths: ['بيانات حية', 'بدون قيود', 'تفكير سريع', 'مفتوح نسبياً'],
+    name: 'Qwen 3.6 Plus',
+    company: 'Alibaba Cloud',
+    description: 'النموذج الصيني المذهل الذي يُنافس أقوى النماذج الغربية، يتميز بقوة الاستنتاج المنطقي وتفوقه في الرياضيات.',
+    strengths: ['منطق ورياضيات', 'مفتوح المصدر (Weights)', 'منافس عالمي', 'سرعة أداء'],
     type: 'لغوي',
-    releaseDate: '2026',
+    releaseDate: 'أبريل 2026',
+    slug: 'qwen3.6-plus',
+    rating: '1330 Elo',
   },
   {
     name: 'DeepSeek-V3.2',
     company: 'DeepSeek',
-    description: 'أفضل بديل مفتوح المصدر حالياً، في انتظار إطلاق الإصدار V4 المرتقب.',
-    strengths: ['مفتوح المصدر', 'تكلفة منخفضة', 'برمجة مميزة', 'كفاءة عالية'],
+    description: 'الأفضل في الفاعلية (Efficiency) وتكلفة التشغيل، يُعتبر معياراً جديداً في أداء النماذج السريعة البرمجية.',
+    strengths: ['الكود والبرمجة', 'تكلفة منخفضة', 'أداء استثنائي', 'كفاءة تشغيل'],
     type: 'لغوي',
-    releaseDate: 'ديسمبر 2025',
+    releaseDate: 'أواخر 2025',
+    slug: 'deepseek-v3-2',
+    rating: '1320 Elo',
   },
   {
-    name: 'Claude Sonnet 4.6',
-    company: 'Anthropic',
-    description: 'الموازنة المثالية بين السرعة والأداء العالي في المهام اليومية والبرمجة السريعة.',
-    strengths: ['سريع وذكي', 'تسعير ممتاز', 'موثوق', 'تحليل قوي'],
-    type: 'لغوي',
-    releaseDate: 'فبراير 2026',
-  },
-  {
-    name: 'Llama 4',
-    company: 'Meta',
-    description: 'الجيل الرابع الأقوى من نماذج لاما، يمكنه العمل محلياً على سيرفرات الشركات.',
-    strengths: ['مجاني للشركات', 'بيئة محلية', 'دعم عالمي', 'قابل للتعديل'],
+    name: 'KimiClaw (K2.5)',
+    company: 'Moonshot AI',
+    description: 'النموذج الصيني الرائد في معالجة المستندات الضخمة (الـ Long Context)، قادر على قراءة ملايين الكلمات باحتراف.',
+    strengths: ['قراءة كتب كاملة', 'ذاكرة فائقة', 'وكيل باحث', 'دعم صيني قوي'],
     type: 'لغوي',
     releaseDate: '2026',
+    slug: 'openclaw-kimiclaw-2026',
+    rating: '1310 Elo',
   },
   {
-    name: 'Midjourney v7',
-    company: 'Midjourney',
-    description: 'رائد توليد الصور بالذكاء الاصطناعي، يتميز بتناسق المشاهد والنصوص في الصور.',
-    strengths: ['صور واقعية', 'أسلوب فني', 'نصوص دقيقة', 'إضاءة إبداعية'],
-    type: 'صور',
-    releaseDate: '2026',
+    name: 'Grok 4.20',
+    company: 'xAI',
+    description: 'الأسرع في معالجة البيانات الحية بفضل الوصول المباشر لخوادم تويتر (X)، مع قدرات خالية من الرقابة.',
+    strengths: ['بيانات حية (Real-time)', 'بدون قيود صارمة', 'وكلاء متعددين', 'حس الفكاهة'],
+    type: 'لغوي',
+    releaseDate: 'مارس 2026',
+    slug: 'grok-4.20-multi-agent-xai',
+    rating: '1290 Elo',
+  },
+  {
+    name: 'Mimo V2 Pro',
+    company: 'Xiaomi',
+    description: 'أقوى نموذج مدمج للأجهزة المحمولة والهواتف الذكية، مصمم لسهولة الاستخدام اليومي والتكامل العتادي.',
+    strengths: ['سريع على الهواتف', 'بيئة HyperOS', 'تفاعل يومي', 'معالجة على الجهاز'],
+    type: 'متعدد',
+    releaseDate: 'أبريل 2026',
+    slug: 'mimo-v2-pro-xiaomi',
+    rating: '1280 Elo',
+  },
+  {
+    name: 'MiniMax m2.7',
+    company: 'MiniMax',
+    description: 'يتصدر التقييمات كواحد من النماذج ذات الشخصية التفاعلية القوية وتطبيقات الترفيه والردود المخصصة.',
+    strengths: ['شخصيات AI', 'صوت احترافي', 'تفاعل عالي', 'إنتاجية ترفيهية'],
+    type: 'متعدد',
+    releaseDate: 'פبراير 2026',
+    slug: 'minimax-m2-7',
+    rating: '1250 Elo',
   },
   {
     name: 'Sora 2',
     company: 'OpenAI',
-    description: 'أقوى نموذج لتوليد مشاهد فيديو حية وطويلة بجودة سينمائية وفيزياء واقعية.',
-    strengths: ['جودة سينمائية', 'دقة فيزيائية', 'عالي الوضوح', 'مؤثرات متقدمة'],
+    description: 'النموذج الأقوى عالمياً لتوليد مقاطع الفيديو بدقة 4K مع فيزياء واقعية رائعة وتحريك تفاعلي زمني.',
+    strengths: ['جودة سينمائية', 'دقة فيزيائية', 'مدة طويلة', 'مؤثرات بصرية'],
     type: 'فيديو',
     releaseDate: '2026',
-  },
-  {
-    name: 'GPT-5.4 mini',
-    company: 'OpenAI',
-    description: 'نسخة اقتصادية موفرة وسريعة جداً للمهام البسيطة والتي تتطلب سرعة استجابة هائلة.',
-    strengths: ['استجابة لحظية', 'رخيص جداً', 'للمهام السريعة', 'تكامل API'],
-    type: 'لغوي',
-    releaseDate: 'مارس 2026',
+    slug: 'sora-2',
+    rating: 'المركز الأول فيديو',
   },
 ];
 ---
 
-<BaseLayout title="النماذج" description="دليل شامل لأهم نماذج الذكاء الاصطناعي مع مواصفاتها ونقاط قوتها">
+<BaseLayout title="النماذج العالمية" description="دليل شامل لأهم وأحدث 10 نماذج ذكاء اصطناعي رائدة عالمياً مع مواصفاتها ونقاط قوتها">
   <div class="max-w-7xl mx-auto px-4 py-12">
     <!-- Header -->
     <div class="mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-        نماذج <span class="gradient-text">الذكاء الاصطناعي</span>
+        أقوى نماذج <span class="gradient-text">الذكاء الاصطناعي (أبريل 2026)</span>
       </h1>
       <p class="text-gray-400 text-lg max-w-2xl">
-        استعرض أهم وأقوى نماذج AI في السوق مع تحليل مفصل لنقاط القوة والاستخدامات
+        استعرض قائمة أقوى 10 نماذج صينية وعالمية تتصدر المؤشرات حالياً، اضغط على النموذج لقراءة التحليل التقييمي المفصل لها.
       </p>
     </div>
 
     <!-- Models Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-      {models.map(model => (
+      {models.map((model) => (
         <ModelCard {...model} />
       ))}
     </div>
@@ -113,25 +133,37 @@ const models = [
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>
         </span>
-        جدول المقارنة
+        جدول التقييم العالمي العام
       </h2>
       <div class="glass-card overflow-hidden overflow-x-auto">
-        <table class="w-full text-sm">
+        <table class="w-full text-sm text-right align-middle">
           <thead>
-            <tr class="border-b border-dark-500/30">
-              <th class="text-right p-4 text-white font-semibold">النموذج</th>
-              <th class="text-right p-4 text-white font-semibold">الشركة</th>
-              <th class="text-right p-4 text-white font-semibold">النوع</th>
-              <th class="text-right p-4 text-white font-semibold">المميزات الرئيسية</th>
+            <tr class="border-b border-dark-500/30 bg-dark-800/80">
+              <th class="p-4 text-white font-semibold whitespace-nowrap">النموذج</th>
+              <th class="p-4 text-white font-semibold">الشركة</th>
+              <th class="p-4 text-white font-semibold">النوع</th>
+              <th class="p-4 text-white font-semibold whitespace-nowrap">نظام القياس (Elo Rating)</th>
+              <th class="p-4 text-white font-semibold">المميزات الرئيسية</th>
             </tr>
           </thead>
           <tbody>
             {models.map((model, i) => (
-              <tr class:list={['border-b border-dark-500/20', i % 2 === 0 ? 'bg-dark-700/20' : '']}>
-                <td class="p-4 text-neon-blue font-medium">{model.name}</td>
-                <td class="p-4 text-gray-400">{model.company}</td>
-                <td class="p-4"><span class="tag text-xs">{model.type}</span></td>
-                <td class="p-4 text-gray-400">{model.strengths.slice(0, 2).join('، ')}</td>
+              <tr class:list={['border-b border-dark-500/20 hover:bg-white/5 transition-colors', i % 2 === 0 ? 'bg-dark-700/20' : '']}>
+                <td class="p-4">
+                  <a href={model.slug ? `/blog/${model.slug}` : '#'} class="text-neon-blue font-medium hover:underline hover:text-neon-green transition-colors">
+                    {model.name}
+                  </a>
+                </td>
+                <td class="p-4 text-gray-300">{model.company}</td>
+                <td class="p-4">
+                  <span class="px-2 py-1 bg-dark-600 rounded text-xs text-gray-300 font-medium">{model.type}</span>
+                </td>
+                <td class="p-4">
+                  <span class="text-yellow-500 font-bold bg-yellow-500/10 px-2.5 py-1 rounded-full text-xs items-center gap-1 inline-flex">
+                    🏆 {model.rating}
+                  </span>
+                </td>
+                <td class="p-4 text-gray-400 text-xs">{model.strengths.slice(0, 3).join('، ')}</td>
               </tr>
             ))}
           </tbody>
