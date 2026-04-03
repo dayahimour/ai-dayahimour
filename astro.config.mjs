@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-    site: 'https://ai-dayahimour.dayahimour.workers.dev',
+    site: 'https://ai-dayahimour.workers.dev',
     output: 'static',
     integrations: [
         tailwind(),
