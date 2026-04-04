@@ -1,0 +1,69 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  category: string;
+  icon?: string;
+  slug?: string;
+  tokens?: string;
+  isNew?: boolean;
+}
+
+const { name, description, category, icon, slug, tokens, isNew } = Astro.props;
+
+const categoryColors: Record<string, string> = {
+  'برمجة': 'from-neon-blue to-blue-600',
+  'محادثة': 'from-purple-500 to-pink-500',
+  'فيديو': 'from-neon-green to-emerald-600',
+  'صوت': 'from-yellow-500 to-orange-500',
+  'ألعاب': 'from-red-500 to-pink-600',
+  'وكيل': 'from-cyan-500 to-blue-600',
+};
+
+const gradientClass = categoryColors[category] || categoryColors['برمجة'];
+const finalHref = slug ? `/blog/${slug}` : '#';
+---
+
+<a href={finalHref} class={`block glass-card p-6 group hover:border-neon-blue/40 transition-all duration-300 hover:shadow-lg hover:shadow-neon-blue/10 relative overflow-hidden ${!slug && 'cursor-default'}`}>
+  <!-- Glowing Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-neon-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+  
+  <!-- Header -->
+  <div class="flex items-start justify-between mb-4 relative z-10">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-xl bg-gradient-to-br {gradientClass}/20 border border-dark-500/50 flex items-center justify-center group-hover:scale-110 transition-transform">
+        {icon ? (
+          <span class="text-2xl">{icon}</span>
+        ) : (
+          <svg class="w-6 h-6 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        )}
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-white group-hover:text-neon-blue transition-colors flex items-center gap-2">
+          {name}
+          {isNew && (
+            <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-neon-green/20 text-neon-green border border-neon-green/30">جديد</span>
+          )}
+        </h3>
+        <p class="text-xs text-gray-400">{category}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p class="text-sm text-gray-300 mb-4 leading-relaxed relative z-10">{description}</p>
+
+  <!-- Tokens -->
+  {tokens && (
+    <div class="flex items-center justify-between relative z-10">
+      <span class="text-xs text-gray-500">📊 {tokens} tokens</span>
+      {slug ? (
+        <span class="text-neon-blue text-xs font-medium group-hover:text-neon-green transition-colors">اقرأ المزيد ←</span>
+      ) : (
+        <span class="text-yellow-500/80 text-xs">قريباً...</span>
+      )}
+    </div>
+  )}
+</a>
