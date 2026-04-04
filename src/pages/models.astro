@@ -11,8 +11,7 @@ const models = [
     strengths: ['تفكير منطقي 10x', 'وكيل ذاتي (Agentic)', 'متعدد الوسائط'],
     type: 'متعدد',
     releaseDate: 'مارس 2026',
-    slug: 'gpt5-analysis',
-    rating: '1350 Elo',
+    slug: 'gpt-5-4',
   },
   {
     name: 'Claude Opus 4.6',
@@ -22,7 +21,24 @@ const models = [
     type: 'لغوي',
     releaseDate: 'فبراير 2026',
     slug: 'claude-opus-4-6',
-    rating: '1340 Elo',
+  },
+  {
+    name: 'Claude Sonnet 4.6',
+    company: 'Anthropic',
+    description: 'النموذج السريع والاقتصادي من Anthropic، مثالي للمهام اليومية والبرمجة السريعة.',
+    strengths: ['سرعة فائقة', 'تكلفة منخفضة', 'أداء ممتاز'],
+    type: 'لغوي',
+    releaseDate: 'مارس 2026',
+    slug: 'claude-sonnet-4-6',
+  },
+  {
+    name: 'Gemini 3.1 Pro',
+    company: 'Google',
+    description: 'نموذج Google الرائد الذي يتفوق في الاستنتاج العلمي والسياق الطويل.',
+    strengths: ['استنتاج علمي', 'سياق مليون رمز', 'تكلفة منخفضة'],
+    type: 'متعدد',
+    releaseDate: 'فبراير 2026',
+    slug: 'gemini-3-1-pro',
   },
   {
     name: 'Qwen 3.6 Plus',
@@ -31,8 +47,7 @@ const models = [
     strengths: ['الاستنتاج والرياضيات', 'مفتوح المصدر', 'تعدد لغات'],
     type: 'لغوي',
     releaseDate: 'أبريل 2026',
-    slug: 'qwen3-6-plus-review',
-    rating: '1330 Elo',
+    slug: 'qwen-3-6-plus',
   },
   {
     name: 'DeepSeek-V3.2',
@@ -41,8 +56,7 @@ const models = [
     strengths: ['الكود والبرمجة', 'تكلفة منخفضة', 'سرعة هائلة'],
     type: 'لغوي',
     releaseDate: 'أواخر 2025',
-    slug: 'deepseek-v3-2-guide',
-    rating: '1320 Elo',
+    slug: 'deepseek-v3-2',
   },
   {
     name: 'Grok 4.20',
@@ -51,8 +65,61 @@ const models = [
     strengths: ['بيانات حية (Real-time)', 'بدون قيود صارمة', 'حس الفكاهة'],
     type: 'لغوي',
     releaseDate: 'مارس 2026',
-    slug: 'grok-4.20-multi-agent-xai',
-    rating: '1290 Elo',
+    slug: 'grok-4-20-multi-agent-xai',
+  },
+  {
+    name: 'Llama 4 Maverick',
+    company: 'Meta',
+    description: 'النموذج مفتوح المصدر الذي يتفوق على GPT-4o في البرمجة والرياضيات بتكلفة أقل 90%.',
+    strengths: ['مفتوح المصدر', 'برمجة متقدمة', 'تكلفة منخفضة جداً'],
+    type: 'لغوي',
+    releaseDate: 'أبريل 2026',
+    slug: 'llama-4-maverick',
+  },
+  {
+    name: 'MiMo-V2-Pro',
+    company: 'Xiaomi',
+    description: 'نموذج شاومي الرائد المصمم للمهام الوكيلية المعقدة بتريليون معامل.',
+    strengths: ['وكلاء ذكيين', 'سياق مليون رمز', 'أداء وكيلي'],
+    type: 'لغوي',
+    releaseDate: 'مارس 2026',
+    slug: 'mimo-v2-pro-xiaomi',
+  },
+  {
+    name: 'MiniMax M2.7',
+    company: 'MiniMax',
+    description: 'النموذج الصيني MoE الذي ينافس Claude Opus بتكلفة أقل 20 مرة.',
+    strengths: ['MoE فعال', 'وكلاء ذكيين', 'تكلفة منخفضة'],
+    type: 'لغوي',
+    releaseDate: 'مارس 2026',
+    slug: 'minimax-m2-7',
+  },
+  {
+    name: 'Kimi K2.5',
+    company: 'Moonshot AI',
+    description: 'النموذج الصيني الذي يتفوق في الرياضيات والبرمجة بتكلفة أقل 80%.',
+    strengths: ['رياضيات متقدمة', 'برمجة قوية', 'قيمة استثنائية'],
+    type: 'لغوي',
+    releaseDate: 'مارس 2026',
+    slug: 'kimi-k2-5',
+  },
+  {
+    name: 'GLM 5 Turbo',
+    company: 'Zhipu AI',
+    description: 'النموذج الصيني متعدد الاستخدامات من Zhipu AI للاستخدام العام.',
+    strengths: ['متعدد الاستخدامات', 'دعم صيني ممتاز', 'تكلفة معقولة'],
+    type: 'لغوي',
+    releaseDate: 'أبريل 2026',
+    slug: 'glm-5',
+  },
+  {
+    name: 'Step 3.5 Flash',
+    company: 'StepFun',
+    description: 'النموذج السريع والمجاني من StepFun للمهام البسيطة.',
+    strengths: ['مجاني', 'سرعة فائقة', 'سهل الاستخدام'],
+    type: 'لغوي',
+    releaseDate: 'أبريل 2026',
+    slug: 'step-3-5-flash',
   },
   
   // --- نماذج إنتاج الصور ---
@@ -64,7 +131,6 @@ const models = [
     type: 'صور',
     releaseDate: 'أبريل 2026',
     slug: 'gpt-image-1-5',
-    rating: 'الأول استجابةً',
   },
   {
     name: 'Gemini 3 Pro Image',
@@ -74,7 +140,6 @@ const models = [
     type: 'صور',
     releaseDate: 'مارس 2026',
     slug: 'gemini-3-pro-image',
-    rating: '1355 Elo (صور)',
   },
   {
     name: 'FLUX.2 Pro',
@@ -84,7 +149,6 @@ const models = [
     type: 'صور',
     releaseDate: '2026',
     slug: 'flux-2-pro',
-    rating: 'مفتوح المصدر #1',
   },
   {
     name: 'Midjourney v8',
@@ -94,17 +158,15 @@ const models = [
     type: 'صور',
     releaseDate: 'أبريل 2026',
     slug: 'midjourney-v8',
-    rating: 'الأول إبداعياً',
   },
   {
-    name: 'Seedream 2.0',
+    name: 'Seedream 5.0',
     company: 'ByteDance',
     description: 'النموذج الصيني القوي جداً من ByteDance للتنوع البصري والاستخدام التجاري السريع.',
     strengths: ['استخدام تجاري', 'تنوع الثقافات', 'مجاني نسبياً'],
     type: 'صور',
     releaseDate: 'مارس 2026',
     slug: 'seedream-5-0',
-    rating: 'متفوق تجارياً',
   },
 
   // --- نماذج إنتاج الفيديو ---
@@ -116,7 +178,6 @@ const models = [
     type: 'فيديو',
     releaseDate: 'أبريل 2026',
     slug: 'veo-3-1',
-    rating: 'الأول (فيديو)',
   },
   {
     name: 'Sora 2 Pro',
@@ -126,7 +187,6 @@ const models = [
     type: 'فيديو',
     releaseDate: 'مارس 2026',
     slug: 'sora-2-pro',
-    rating: 'منافس شرس #1',
   },
   {
     name: 'Kling 3.0',
@@ -136,17 +196,15 @@ const models = [
     type: 'فيديو',
     releaseDate: 'فبراير 2026',
     slug: 'kling-3-0',
-    rating: 'أفضل استهلاك',
   },
   {
     name: 'Runway Gen-4.5',
     company: 'RunwayML',
-    description: 'الأفضل للتحكم الإبداعي الاحترافي وصناع الأفلام بفضل أدوات التحرير המتقدمة.',
+    description: 'الأفضل للتحكم الإبداعي الاحترافي وصناع الأفلام بفضل أدوات التحرير المتقدمة.',
     strengths: ['تحكم بالمخرج', 'تحريك دقيق للصورة', 'أدوات المونتاج'],
     type: 'فيديو',
     releaseDate: 'أبريل 2026',
     slug: 'runway-gen-4-5',
-    rating: 'المخرجين #1',
   },
   {
     name: 'Seedance 2.0',
@@ -156,12 +214,11 @@ const models = [
     type: 'فيديو',
     releaseDate: '2026',
     slug: 'seedance-2-0',
-    rating: 'الأفضل للـ Shorts',
   },
 ];
 ---
 
-<BaseLayout title="النماذج العالمية" description="دليل شامل لأهم وأحدث 10 نماذج ذكاء اصطناعي رائدة عالمياً مع مواصفاتها ونقاط قوتها">
+<BaseLayout title="النماذج العالمية" description="دليل شامل لأهم وأحدث نماذج الذكاء الاصطناعي الرائدة عالمياً مع مواصفاتها ونقاط قوتها">
   <div class="max-w-7xl mx-auto px-4 py-12">
     <!-- Header -->
     <div class="mb-12">
@@ -169,7 +226,7 @@ const models = [
         أقوى نماذج <span class="gradient-text">الذكاء الاصطناعي (أبريل 2026)</span>
       </h1>
       <p class="text-gray-400 text-lg max-w-2xl">
-        استعرض قائمة أقوى 10 نماذج صينية وعالمية تتصدر المؤشرات حالياً، اضغط على النموذج لقراءة التحليل التقييمي المفصل لها.
+        استعرض قائمة أقوى النماذج الصينية والعالمية التي تتصدر المؤشرات حالياً، اضغط على النموذج لقراءة التحليل التقييمي المفصل له.
       </p>
     </div>
 
@@ -197,7 +254,6 @@ const models = [
               <th class="p-4 text-white font-semibold whitespace-nowrap">النموذج</th>
               <th class="p-4 text-white font-semibold">الشركة</th>
               <th class="p-4 text-white font-semibold">النوع</th>
-              <th class="p-4 text-white font-semibold whitespace-nowrap">نظام القياس (Elo Rating)</th>
               <th class="p-4 text-white font-semibold">المميزات الرئيسية</th>
             </tr>
           </thead>
@@ -212,11 +268,6 @@ const models = [
                 <td class="p-4 text-gray-300">{model.company}</td>
                 <td class="p-4">
                   <span class="px-2 py-1 bg-dark-600 rounded text-xs text-gray-300 font-medium">{model.type}</span>
-                </td>
-                <td class="p-4">
-                  <span class="text-yellow-500 font-bold bg-yellow-500/10 px-2.5 py-1 rounded-full text-xs items-center gap-1 inline-flex">
-                    🏆 {model.rating}
-                  </span>
                 </td>
                 <td class="p-4 text-gray-400 text-xs">{model.strengths.slice(0, 3).join('، ')}</td>
               </tr>

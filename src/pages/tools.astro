@@ -3,102 +3,104 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolCard from '../components/ToolCard.astro';
 
 const tools = [
+  // --- وكلاء البرمجة (AI Coding Agents) ---
   {
-    name: 'ChatGPT',
-    description: 'أشهر chatbot في العالم. محادثات ذكية، كتابة، ترجمة، وبرمجة.',
-    category: 'محادثة',
-    url: 'https://chat.openai.com',
-    free: true,
+    name: 'OpenClaw',
+    description: 'الوكيل الذكي الذي ينفذ المهام فعلياً — يتصفح الويب، يدير الملفات، وينفذ الأوامر بشكل مستقل.',
+    category: 'وكيل',
+    icon: '🦞',
+    slug: 'openclaw',
+    tokens: '6.39T',
   },
   {
-    name: 'Claude',
-    description: 'مساعد AI قوي من Anthropic. ممتاز في التحليل والبرمجة.',
-    category: 'محادثة',
-    url: 'https://claude.ai',
-    free: true,
-  },
-  {
-    name: 'Midjourney',
-    description: 'أفضل أداة لإنشاء صور فنية واقعية بالذكاء الاصطناعي.',
-    category: 'تصميم',
-    url: 'https://midjourney.com',
-    free: false,
-  },
-  {
-    name: 'GitHub Copilot',
-    description: 'مساعد برمجة ذكي يكتب الكود معك مباشرة في المحرر.',
+    name: 'Kilo Code',
+    description: 'وكيل برمجة ذكي لـ VS Code — يكتب الكود، يراجع الأخطاء، ويقترح تحسينات تلقائياً.',
     category: 'برمجة',
-    url: 'https://github.com/features/copilot',
-    free: false,
+    icon: '⚡',
+    slug: 'kilo-code',
+    tokens: '2.18T',
   },
   {
-    name: 'Perplexity AI',
-    description: 'محرك بحث ذكي يعطيك إجابات مباشرة مع المصادر.',
-    category: 'بحث',
-    url: 'https://perplexity.ai',
-    free: true,
+    name: 'Claude Code',
+    description: 'مساعد Anthropic لحل المشكلات المعقدة — يحلل الكود، يصمم الحلول، ويشرح المفاهيم بوضوح.',
+    category: 'برمجة',
+    icon: '🎯',
+    slug: 'claude-code',
+    tokens: '920B',
   },
   {
-    name: 'ElevenLabs',
-    description: 'تحويل النص إلى صوت بشري طبيعي بأكثر من 30 لغة.',
-    category: 'صوت',
-    url: 'https://elevenlabs.io',
-    free: true,
+    name: 'Cline',
+    description: 'وكيل برمجة مستقل يعمل مباشرة في بيئة التطوير — يكتب، يختبر، ويصحح الكود ذاتياً.',
+    category: 'برمجة',
+    icon: '🤖',
+    slug: 'cline',
+    tokens: '682B',
   },
   {
-    name: 'Runway ML',
-    description: 'إنشاء وتعديل الفيديوهات بالذكاء الاصطناعي.',
+    name: 'Roo Code',
+    description: 'فريق تطوير كامل من وكلاء AI — يدير المشاريع الكبيرة بتقسيم المهام بين وكلاء متخصصين.',
+    category: 'برمجة',
+    icon: '🦘',
+    slug: 'roo-code',
+    tokens: '125B',
+  },
+
+  // --- أدوات الإبداع والمحتوى ---
+  {
+    name: 'Descript',
+    description: 'محرر فيديو وبودكاست بالذكاء الاصطناعي — عدّل الفيديو بتعديل النص، استنسخ الأصوات، وأزل الكلمات.',
     category: 'فيديو',
-    url: 'https://runwayml.com',
-    free: true,
+    icon: '🎬',
+    slug: 'descript',
+    tokens: '289B',
+  },
+
+  // --- وكلاء المهام العامة ---
+  {
+    name: 'Hermes Agent',
+    description: 'وكيل ذكي لتبسيط المهام المعقدة — يربط بين التطبيقات وينفذ سير عمل تلقائي.',
+    category: 'وكيل',
+    icon: '📨',
+    slug: 'hermes-agent',
+    tokens: '280B',
+    isNew: true,
   },
   {
-    name: 'Notion AI',
-    description: 'ميزات AI مدمجة في أداة إدارة الملاحظات.',
-    category: 'إنتاجية',
-    url: 'https://notion.so',
-    free: false,
+    name: 'Janitor AI',
+    description: 'منصة شخصيات افتراضية مذهلة — محادثات تفاعلية مع شخصيات AI مخصصة للترفيه والإبداع.',
+    category: 'محادثة',
+    icon: '🧹',
+    slug: 'janitor-ai',
+    tokens: '207B',
   },
   {
-    name: 'Gamma',
-    description: 'إنشاء عروض تقديمية احترافية في ثوانٍ بـ AI.',
-    category: 'عروض',
-    url: 'https://gamma.app',
-    free: true,
+    name: 'ISEKAI ZERO',
+    description: 'مغامرات AI تفاعلية — سافر إلى عوالم خيالية وتفاعل مع شخصيات وقصص مولدة بالذكاء الاصطناعي.',
+    category: 'ألعاب',
+    icon: '⚔️',
+    slug: 'isekai-zero',
+    tokens: '206B',
   },
   {
-    name: 'Suno AI',
-    description: 'إنشاء موسيقى كاملة من وصف نصي بالذكاء الاصطناعي.',
-    category: 'موسيقى',
-    url: 'https://suno.ai',
-    free: true,
-  },
-  {
-    name: 'Hugging Face',
-    description: 'منصة مفتوحة المصدر لاستكشاف وتجربة آلاف نماذج AI.',
-    category: 'تطوير',
-    url: 'https://huggingface.co',
-    free: true,
-  },
-  {
-    name: 'Canva AI',
-    description: 'أدوات تصميم ذكية مدمجة في منصة Canva الشهيرة.',
-    category: 'تصميم',
-    url: 'https://canva.com',
-    free: true,
+    name: 'Lemonade',
+    description: 'أداة AI لألعاب Roblox — أنشئ عوالم وشخصيات وألعاب كاملة باستخدام الذكاء الاصطناعي.',
+    category: 'ألعاب',
+    icon: '🍋',
+    slug: 'lemonade',
+    tokens: '68.8B',
   },
 ];
 ---
 
-<BaseLayout title="الأدوات" description="دليل شامل لأفضل أدوات الذكاء الاصطناعي المجانية والمدفوعة">
+<BaseLayout title="أدوات AI" description="دليل شامل لأفضل أدوات ووكلاء الذكاء الاصطناعي في 2026">
   <div class="max-w-7xl mx-auto px-4 py-12">
     <!-- Header -->
     <div class="mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-        أدوات <span class="gradient-text">الذكاء الاصطناعي</span>
+        أدوات ووكلاء <span class="gradient-text">الذكاء الاصطناعي</span>
       </h1>
       <p class="text-gray-400 text-lg max-w-2xl">
-        اكتشف أفضل أدوات AI التي ستحسن إنتاجيتك وعملك اليومي
+        اكتشف أفضل أدوات AI ووكلاء البرمجة التي ستحسن إنتاجيتك — من وكلاء الكود إلى أدوات الإبداع والمحتوى
       </p>
     </div>
 
