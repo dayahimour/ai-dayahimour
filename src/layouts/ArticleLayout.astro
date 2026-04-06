@@ -118,6 +118,22 @@ const articleSchema = {
       </div>
     </div>
 
+    <!-- View Counter -->
+    <div class="mt-8 pt-6 border-t border-dark-500/30 flex items-center justify-between">
+      <div class="flex items-center gap-3 bg-dark-600/50 hover:bg-dark-600 border border-dark-500/50 rounded-2xl px-5 py-3 transition-colors group" id="article-views-counter">
+        <div class="w-10 h-10 rounded-full bg-neon-blue/10 flex items-center justify-center group-hover:bg-neon-blue/20 transition-colors">
+          <svg class="w-5 h-5 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs text-gray-500 font-medium mb-0.5">عدد القراءات</p>
+          <p class="text-white font-bold leading-none"><span class="views-number text-neon-blue text-lg">...</span> <span class="text-sm font-normal text-gray-400">قارئ</span></p>
+        </div>
+      </div>
+    </div>
+
     <!-- Share Buttons -->
     <div class="mt-8 flex items-center gap-4">
       <span class="text-gray-400 text-sm">شارك المقال:</span>
@@ -155,3 +171,48 @@ const articleSchema = {
     </div>
   </article>
 </BaseLayout>
+
+<script>
+  function initializeViews() {
+    const counterElements = document.querySelectorAll('#article-views-counter .views-number');
+    if (!counterElements.length) return;
+
+    // Deterministic pseudo-random generation based on URL path
+    const path = window.location.pathname;
+    let hash = 0;
+    for (let i = 0; i < path.length; i++) {
+      hash = ((hash << 5) - hash) + path.charCodeAt(i);
+      hash |= 0;
+    }
+    hash = Math.abs(hash);
+
+    // Initial base views: ensures a solid starting number between 800 and 3500
+    const baseViews = 800 + (hash % 2700);
+    
+    // Growth timeline: Starting baseline is April 1, 2026
+    const launchDate = new Date('2026-04-01').getTime();
+    const now = new Date().getTime();
+    
+    // Adding minor time variability based on hours instead of just days for more dynamic "fresh" feeling
+    const hoursSinceLaunch = Math.max(0, Math.floor((now - launchDate) / (1000 * 60 * 60)));
+    
+    // Daily/Hourly growth factor: different articles grow at different speeds
+    const hourlyGrowth = (5 + (hash % 20)) / 24; 
+    
+    const totalViews = Math.floor(baseViews + (hoursSinceLaunch * hourlyGrowth));
+    
+    // Format elegantly (e.g. 1.2k, 12.5k, etc)
+    let formattedViews = totalViews.toLocaleString('en-US');
+    if (totalViews >= 10000) {
+      formattedViews = (totalViews / 1000).toFixed(1) + 'k';
+    }
+
+    counterElements.forEach(el => {
+      el.textContent = formattedViews;
+    });
+  }
+
+  // Execute on initial page load and on Astro view transitions
+  document.addEventListener('astro:page-load', initializeViews);
+  initializeViews();
+</script>

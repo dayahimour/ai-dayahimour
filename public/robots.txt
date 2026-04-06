@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dayahimour.org/sitemap-index.xml
+Sitemap: https://dayahimour.org/sitemap.xml

@@ -4,7 +4,7 @@ description: "Cursor هو محرر كود AI-native مبني على VS Code، ي
 date: "2026-04-04"
 category: "أدوات"
 tags: ["Cursor AI", "محرر كود AI", "أدوات البرمجة بالذكاء الاصطناعي", "Cursor 3.0", "وكلاء الذكاء الاصطناعي"]
-image: "/images/og-default.svg"
+image: "/images/cursor.webp"
 ---
 
 # Cursor: محرر الكود الذكي بالذكاء الاصطناعي الذي يحول البرمجة إلى عملية وكيلية مستقلة في 2026

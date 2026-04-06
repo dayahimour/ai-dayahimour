@@ -4,7 +4,7 @@ description: "أطلقت أنثروبيك في 17 فبراير 2026 Claude Sonne
 date: "2026-04-04"
 category: "نماذج"
 tags: ["Claude Sonnet 4.6", "أنثروبيك", "Claude 4.6", "computer use", "نماذج الذكاء الاصطناعي"]
-image: "/images/og-default.svg"
+image: "/images/sonnet4-6.webp"
 ---
 
 # Claude Sonnet 4.6: أقوى نموذج Sonnet من أنثروبيك وأفضل خيار لمعظم المستخدمين
