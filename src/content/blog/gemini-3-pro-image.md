@@ -4,7 +4,7 @@ description: "جوجل تطلق Nano Banana Pro، نموذج الجيل الثا
 date: "2026-04-02"
 category: "نماذج"
 tags: ["Gemini 3 Pro Image", "Nano Banana Pro", "توليد صور AI", "جوجل", "ذكاء اصطناعي", "صور AI"]
-image: "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro/"
+image: "/images/og-default.svg"
 ---
 
 ## المقدمة

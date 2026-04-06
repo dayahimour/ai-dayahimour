@@ -4,7 +4,7 @@ description: "أكبر وأشمل مقارنة بين نماذج الذكاء ا
 date: "2026-04-02"
 category: "نماذج"
 tags: ["GPT-5.4", "Claude Opus 4.6", "Gemini 3.1 Pro", "Grok 4", "DeepSeek V4", "مقارنة نماذج", "2026"]
-image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
+image: "/images/og-default.svg"
 featured: true
 author: "فريق AI DayaHimour"
 draft: false

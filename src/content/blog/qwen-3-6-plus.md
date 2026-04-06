@@ -12,7 +12,7 @@ tags:
   - برمجة وكيلة
   - Alibaba Cloud
   - multimodal
-image: "https://images.openai.com/static-rsc-4/BxbHR5CfXxFj2moXCbMj7AtTxGd4DGgRFh8G4xI-6jppMBviJCNiXeeNMa1LDN68rIYh9cZF98INOqBoR8dQ9_E8XTrDFNg6lycnmTjeEtcGbRqjwIa_KzLVpz1Cm9e4hvSceukxbrTE5b-94x5r9_WZo07RMaKODw-rd33YdIyLkE0_GQ2Lt-qxtiKhiK1_?purpose=fullsize"
+image: "/images/og-default.svg"
 ---
 
 # Qwen3.6 Plus: نموذج الجيل الجديد من Qwen يُطلق تجريبياً مجاناً على OpenRouter مع سياق مليون رمز

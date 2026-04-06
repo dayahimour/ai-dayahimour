@@ -4,7 +4,7 @@ description: "أعمق دليل عربي لفهم الوكلاء الذكيين 
 date: "2026-04-02"
 category: "تحليل"
 tags: ["وكلاء AI", "Agentic AI", "AI Agents", "LangGraph", "OpenAI Agents SDK", "Claude Cowork", "أتمتة", "2026"]
-image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80"
+image: "/images/og-default.svg"
 featured: true
 author: "فريق AI DayaHimour"
 draft: false

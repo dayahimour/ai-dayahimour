@@ -4,7 +4,7 @@ description: "تسريبات وتحليلات حول نموذج DeepSeek V4 ال
 date: "2026-03-30"
 category: "نماذج"
 tags: ["DeepSeek V4", "تسريبات", "مفتوح المصدر", "الصين", "AI", "تحليل"]
-image: "https://images.unsplash.com/photo-1677442135568-b65b2e5ef8a2?w=1200&q=80"
+image: "/images/og-default.svg"
 featured: true
 author: "فريق AI DayaHimour"
 draft: false

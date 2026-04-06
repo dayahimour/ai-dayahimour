@@ -4,7 +4,7 @@ description: "Claude Opus 4.6 هو النموذج الرائد الذي أطلق
 date: "2026-04-04"
 category: "نماذج"
 tags: ["Claude Opus 4.6", "أنثروبيك", "نماذج الذكاء الاصطناعي", "البرمجة بالذكاء الاصطناعي", "وكلاء الذكاء الاصطناعي"]
-image: "https://logowik.com/claude-ai-logo-vector-70314.html"
+image: "/images/og-default.svg"
 ---
 
 # Claude Opus 4.6: أقوى نموذج من أنثروبيك يدفع حدود البرمجة والوكلاء الذكيين

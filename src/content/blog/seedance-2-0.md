@@ -4,7 +4,7 @@ description: "أطلقت ByteDance في فبراير 2026 نموذج Seedance 2.
 date: "2026-04-04"
 category: "نماذج"
 tags: ["Seedance 2.0", "ByteDance", "توليد فيديو AI", "نماذج الذكاء الاصطناعي", "إنتاج فيديو متعدد الوسائط"]
-image: ""
+image: "/images/og-default.svg"
 ---
 
 # Seedance 2.0: نموذج ByteDance الثوري لتوليد الفيديو متعدد الوسائط بدقة سينمائية

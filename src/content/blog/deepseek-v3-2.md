@@ -4,7 +4,7 @@ description: "أطلقت DeepSeek في 1 ديسمبر 2025 نموذج DeepSeek-V
 date: "2026-04-04"
 category: "نماذج"
 tags: ["DeepSeek V3.2", "DeepSeek", "نماذج الذكاء الاصطناعي المفتوحة", "الاستدلال بالذكاء الاصطناعي", "وكلاء الذكاء الاصطناعي"]
-image: "https://www.fastcompany.com/91268357/deepseek-logo"
+image: "/images/og-default.svg"
 ---
 
 # DeepSeek V3.2: نموذج DeepSeek المفتوح المصدر الذي ينافس GPT-5 في الاستدلال والوكلاء الذكيين بتكلفة أقل

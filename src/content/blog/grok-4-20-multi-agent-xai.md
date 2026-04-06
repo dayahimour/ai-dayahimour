@@ -13,7 +13,7 @@ tags:
   - agentic AI
   - Realtime Multi-Agent Research
   - x-ai
-image: "https://images.openai.com/static-rsc-4/IJBDZ1yCHRRiwZXqaa4Mt5j23RbbfjOUm1mNcZW-iueSFuyaM7eWajFvFlj7LBFsRRtZ18lH9vi8kEMtxYv_R-xyuf9-u44AZaxZC5E2DYvxj89NQ9aErxVlbd_fOgfpMwJG3vWw2sQV2sI6KhLnSfXxcviRD7hnyI-Y04OTU_2yJhze9ACaHF1CwS9s1R-Q?purpose=fullsize"
+image: "/images/og-default.svg"
 ---
 
 # Grok 4.20 Multi-Agent: نموذج الوكلاء المتعددين من xAI يُطلق على OpenRouter للبحث التعاوني والمهام الوكيلة
