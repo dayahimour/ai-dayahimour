@@ -4,7 +4,7 @@ description: "أنثروبيك تطلق وضع Fast Mode لنموذج Claude Opu
 date: "2026-04-07"
 category: "أخبار"
 tags: ["Claude Opus 4.6", "Anthropic", "Fast Mode", "الذكاء الاصطناعي", "برمجة", "تحليل"]
-image: "/images/og-default.svg"
+image: "/images/claude-opus-4-6-fast.webp"
 featured: true
 author: "فريق AI DayaHimour"
 draft: false
