@@ -4,7 +4,7 @@ description: "من قانون AI الأوروبي إلى التزييف العم
 date: "2026-03-28"
 category: "تحليل"
 tags: ["أخلاقيات AI", "EU AI Act", "تزييف عميق", "تحيز", "خصوصية", "تنظيم AI", "2026"]
-image: "/images/og-default.svg"
+image: "/images/ai-ethics.webp"
 featured: false
 author: "فريق AI DayaHimour"
 draft: false

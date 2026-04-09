@@ -13,7 +13,7 @@ tags:
   - agentic AI
   - Realtime Multi-Agent Research
   - x-ai
-image: "/images/og-default.svg"
+image: "/images/Grok 4.20 Multi-Agent.webp"
 ---
 
 # Grok 4.20 Multi-Agent: نموذج الوكلاء المتعددين من xAI يُطلق على OpenRouter للبحث التعاوني والمهام الوكيلة

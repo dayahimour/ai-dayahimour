@@ -4,7 +4,7 @@ description: "Seedream 5.0 Lite يقدم توليد صور متعدد الوسا
 date: "2026-04-05"
 category: "نماذج"
 tags: ["Seedream", "ByteDance", "توليد صور AI", "نماذج 2026"]
-image: "/images/og-default.svg"
+image: "/images/seedream5-0.webp"
 ---
 
 في 13 فبراير 2026 أطلقت فرقة Seed التابعة لـ ByteDance نموذج Seedream 5.0 Lite. النموذج يدمج الاستدلال البصري متعدد الخطوات مع بحث إنترنت فوري، ويقدم توليد صور احترافي بسرعة وتكلفة تنافسية.

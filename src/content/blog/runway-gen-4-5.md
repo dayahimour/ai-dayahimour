@@ -4,7 +4,7 @@ description: "أطلقت Runway في 1 ديسمبر 2025 نموذج Gen-4.5، ا
 date: "2026-04-04"
 category: "نماذج"
 tags: ["Runway Gen-4.5", "Runway AI", "توليد فيديو بالذكاء الاصطناعي", "نماذج الذكاء الاصطناعي", "Gen-4.5"]
-image: "/images/og-default.svg"
+image: "/images/Runway Gen 4.5.webp"
 ---
 
 # Runway Gen-4.5: أقوى نموذج توليد فيديو في العالم يرفع مستوى الإنتاج السينمائي بالذكاء الاصطناعي

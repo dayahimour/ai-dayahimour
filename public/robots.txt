@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Directories
+Disallow: /_astro/
+Disallow: /api/
+
+# Sitemap
 Sitemap: https://dayahimour.org/sitemap.xml

@@ -4,7 +4,7 @@ description: "شاومي تطلق MiMo-V2-Pro، نموذج ذكاء اصطناع
 date: "2026-04-02"
 category: "نماذج"
 tags: ["MiMo-V2-Pro", "شاومي", "ذكاء اصطناعي", "وكلاء AI", "نماذج LLMs", "OpenRouter"]
-image: "/images/og-default.svg"
+image: "/images/mimo-v2-pro.webp"
 ---
 
 ## المقدمة
