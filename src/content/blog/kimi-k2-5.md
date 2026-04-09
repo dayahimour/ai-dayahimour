@@ -1,508 +1,268 @@
 ---
-title: "Kimi K2.5: النموذج الصيني الذي يتفوق في الرياضيات والبرمجة بتكلفة أقل — تحليل شامل"
-description: "Moonshot AI تطلق Kimi K2.5 بنموذج MoE بـ 1 تريليون معامل و32 مليار نشطة، يتفوق في الرياضيات والبرمجة بتكلفة أقل 80% من GPT-5. هل يستحق الاهتمام؟"
-date: "2026-04-04"
+title: "Kimi K2.5: النموذج الصيني الذي يعيد تعريف حدود الأداء مفتوح المصدر"
+description: "تحليل شامل لـ Kimi K2.5 من Moonshot AI: بنية تريليون معامل، سرب وكلاء متوازٍ، أداء يتحدى GPT-5.4 بجزء بسيط من التكلفة."
+date: "2026-04-09"
 category: "نماذج"
-tags: ["Kimi K2.5", "Moonshot AI", "الصين", "MoE", "AI", "تحليل", "نماذج LLM"]
-image: "/images/og-default.svg"
-featured: true
-author: "فريق AI DayaHimour"
-draft: false
+tags: ["Kimi K2.5", "Moonshot AI", "سرب الوكلاء", "LMSYS", "Artificial Analysis", "LiveBench", "مقارنة نماذج", "2026"]
+image: "/images/kimi-k2-5-complete.webp"
 ---
 
-## مقدمة: الصدمة الصينية التي لم يتوقعها أحد
+## صدمة يناير: حين تتجاوز الحدود الأمامية
 
-في 20 مارس 2026، أطلقت **Moonshot AI** (شركة صينية ناشئة) نموذج **Kimi K2.5** — وأحدثت مفاجأة كبيرة في عالم الذكاء الاصطناعي. ليس لأن الشركة "معروفة"، بل لأن النموذج **يتفوق على GPT-5 في الرياضيات والبرمجة** بتكلفة أقل بـ 80%، وهو **مفتوح المصدر جزئياً**.
+في 27 يناير 2026، أطلقت شركة Moonshot AI الصينية الناشئة نموذجها Kimi K2.5، وما ميّزه ليس فقط أرقام المعايير المرجعية، بل مفهوم معماري جديد كلياً: "Agent Swarm" أو سرب الوكلاء. النموذج قادر على تنسيق ما يصل إلى 100 وكيل فرعي لتنفيذ 1500 خطوة أداة بشكل متوازٍ، مما يقلص زمن تنفيذ المهام المعقدة بمقدار 4.5 أضعاف مقارنة بالوكلاء التقليديين أحاديي المسار. الأهم أنه الأول من نوعه بين النماذج مفتوحة المصدر الذي يصل فعلياً إلى "الحدود الأمامية" للأداء.
 
-**1 تريليون معامل. 32 مليار نشطة فقط. نافذة سياق 256,000 رمز. وسعر $0.40 لكل مليون رمز.**
+## بنية الخبراء: تريليون معامل بكفاءة جراحية
 
-هذه ليست شركة صينية عادية تدخل السوق. هذه **إعلان أن الصين أصبحت قوة حقيقية** في سباق الذكاء الاصطناعي العالمي.
+يعتمد K2.5 على بنية خليط الخبراء (MoE) بإجمالي تريليون معامل، لكنه لا يُفعّل منها خلال الاستدلال سوى 32 ملياراً لكل رمز مميز. هذا التصميم يمنح النموذج ذاكرة معرفية هائلة مع كفاءة حسابية تجعل تشغيله ممكناً بتكاليف منافسة.
 
----
+المواصفات الجوهرية: 61 طبقة تشمل طبقة كثيفة واحدة، 384 خبيراً مع تفعيل 8 منهم لكل رمز، نافذة سياق تبلغ 256,000 رمز، مفردات من 160,000 رمز، ومشفّر بصري MoonViT بحجم 400 مليون معلمة. التدريب المسبق جرى على 15 تريليون رمز مختلط من النصوص والصور، مما جعله نموذجاً متعدد الوسائط بالفطرة لا بالإضافة.
 
-## ما هي Moonshot AI؟
+## الأداء في الاختبارات المرجعية
 
-**Moonshot AI** (يُعرف أيضاً بـ 月之暗面 أو "الجانب المظلم من القمر") هي شركة صينية ناشئة تأسست في 2023 على يد **Yang Zhilin** (يانغ تشيلين)، عالم الذكاء الاصطناعي الذي عمل سابقاً في:
+النتائج التالية موثقة من منصات مستقلة كـ LiveBench وArtificial Analysis:
 
-- **OpenAI** — شارك في تطوير GPT-3
-- **Meta AI** — عمل على نماذج Llama
-- **Google DeepMind** — باحث زائر
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">المعايير المرجعية الرئيسية — أبريل 2026</p>
 
-### إنجازات الشركة:
+  <!-- AIME 2025 -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">AIME 2025</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">96.1%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 96.1%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>
 
-| السنة | الإنجاز |
-|-------|---------|
-| **2023** | تأسيس الشركة بتمويل $50 مليون |
-| **2024** | إطلاق Kimi Chat (منافس ChatGPT في الصين) |
-| **2025** | تمويل $1 مليار من مستثمرين صينيين |
-| **2026** | إطلاق Kimi K2.5 — النموذج العالمي |
+  <!-- HMMT 2025 -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">HMMT 2025</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">95.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 95.4%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>
 
-### لماذا Kimi مهم؟
+  <!-- GPQA Diamond -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">GPQA Diamond</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">87.9%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 87.9%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>
 
-Kimi (يُكتب أيضاً  kimi) هو اسم المساعد الذكي الذي طورته Moonshot AI. أصبح **الأكثر شعبية في الصين** مع أكثر من 50 مليون مستخدم نشط شهرياً.
+  <!-- MathVista -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">MathVista</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">90.1%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 90.1%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>
 
----
+  <!-- SWE-Bench Verified -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">SWE-Bench Verified</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">76.8%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 76.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
 
-## ما هو Kimi K2.5؟
+  <!-- LiveCodeBench -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">LiveCodeBench</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">85.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 85%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
 
-Kimi K2.5 هو أحدث نموذج من عائلة Kimi التي طورتها **Moonshot AI**. يأتي كتحسين جذري لـ Kimi K2 الذي أُطلق في يناير 2026، مع تركيز خاص على:
+  <!-- HLE مع أدوات -->
+  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">HLE (مع الأدوات)</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">50.2%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 50.2%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a78bfa); border-radius: 6px;"></div>
+    </div>
+  </div>
 
-1. **الرياضيات المتقدمة (Advanced Mathematics)**
-2. **البرمجة المعقدة (Complex Coding)**
-3. **الكفاءة العالية (High Efficiency)**
-4. **التعدد اللغوي (Multilingual Support)**
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #60a5fa;"></div><span style="color: #94a3b8; font-size: 12px;">رياضيات وعلوم</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #34d399;"></div><span style="color: #94a3b8; font-size: 12px;">برمجة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">وكلاء</span></div>
+  </div>
+</div>
 
-### عائلة Kimi الكاملة:
+في اختبار SWE-bench Verified تحديداً، تُعدّ نتيجة 76.8% أعلى نتيجة مسجلة لنموذج مفتوح المصدر حتى الآن، متجاوزاً DeepSeek V3.2 بفارق ملحوظ.
+
+## مقارنة الوكلاء: حين يتفوق السرب
+
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 28px 0; letter-spacing: 0.05em;">مقارنة أداء الوكلاء — Kimi K2.5 Agent Swarm مقابل المنافسين</p>
+
+  <!-- BrowseComp -->
+  <div style="margin-bottom: 24px;">
+    <p style="color: #e2e8f0; font-size: 13px; font-weight: 600; margin: 0 0 12px 0;">BrowseComp</p>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #93c5fd; font-size: 12px;">Kimi K2.5 Agent Swarm</span>
+          <span style="color: #93c5fd; font-size: 12px; font-weight: 700;">75.4</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 75.4%; height: 100%; background: #3b82f6; border-radius: 4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #7dd3fc; font-size: 12px;">Kimi K2.5</span>
+          <span style="color: #7dd3fc; font-size: 12px; font-weight: 700;">66.6</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 66.6%; height: 100%; background: #60a5fa; border-radius: 4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #94a3b8; font-size: 12px;">Claude Opus 4.5</span>
+          <span style="color: #94a3b8; font-size: 12px; font-weight: 700;">32.8</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 32.8%; height: 100%; background: #64748b; border-radius: 4px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wide Search -->
+  <div style="margin-bottom: 24px;">
+    <p style="color: #e2e8f0; font-size: 13px; font-weight: 600; margin: 0 0 12px 0;">Wide Search</p>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #93c5fd; font-size: 12px;">Kimi K2.5 Agent Swarm</span>
+          <span style="color: #93c5fd; font-size: 12px; font-weight: 700;">79.0</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 79%; height: 100%; background: #3b82f6; border-radius: 4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #7dd3fc; font-size: 12px;">Kimi K2.5</span>
+          <span style="color: #7dd3fc; font-size: 12px; font-weight: 700;">73.7</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 73.7%; height: 100%; background: #60a5fa; border-radius: 4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #94a3b8; font-size: 12px;">Claude Opus 4.5</span>
+          <span style="color: #94a3b8; font-size: 12px; font-weight: 700;">76.2</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 76.2%; height: 100%; background: #64748b; border-radius: 4px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-house Bench -->
+  <div style="margin-bottom: 0;">
+    <p style="color: #e2e8f0; font-size: 13px; font-weight: 600; margin: 0 0 12px 0;">In-house Bench</p>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #93c5fd; font-size: 12px;">Kimi K2.5 Agent Swarm</span>
+          <span style="color: #93c5fd; font-size: 12px; font-weight: 700;">68.3</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 68.3%; height: 100%; background: #3b82f6; border-radius: 4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #7dd3fc; font-size: 12px;">Kimi K2.5</span>
+          <span style="color: #7dd3fc; font-size: 12px; font-weight: 700;">41.6</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 41.6%; height: 100%; background: #60a5fa; border-radius: 4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: #94a3b8; font-size: 12px;">Claude Opus 4.5</span>
+          <span style="color: #94a3b8; font-size: 12px; font-weight: 700;">49.8</span>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px;">
+          <div style="width: 49.8%; height: 100%; background: #64748b; border-radius: 4px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ما تكشفه هذه الأرقام أن وضع Kimi K2.5 في نمط "Agent Swarm" يحوّله إلى أداة بحث واسعة النطاق مختلفة كلياً، متجاوزاً Claude Opus 4.5 بفارق كبير في BrowseComp (75.4 مقابل 32.8). أما في Wide Search فالمنافسة أشد توازناً.
+
+## التصنيف العالمي: منصة LMSYS
+
+منصة LMSYS Chatbot Arena تعتمد على تصويت بشري أعمى بين مخرجات نموذجين في آنٍ واحد، وهي من أكثر المعايير موضوعية لتقييم جودة المحادثة. في تحديث مارس 2026، احتل Kimi K2.5 المرتبة التاسعة عالمياً في Code Arena بـ 1809 نقطة Elo، ليكون أول نموذج صيني إلى جانب GLM-5 يدخل قائمة العشرة الكبار. النماذج المتصدرة حصلت على 1941–2002 نقطة، مما يعني فارقاً يتراوح بين 130 و190 نقطة — بُعد قابل للتضييق، لكنه حقيقي.
+
+## تحليل Artificial Analysis: الذكاء مقابل التكلفة
+
+منصة Artificial Analysis تقيس أداء الوكلاء في مهام واقعية معقدة، وتجمع بين الأداء والتكلفة الفعلية. أبرز نتائجها على K2.5:
+
+**مؤشر الذكاء**: 47 نقطة مقابل متوسط نماذج مماثلة يبلغ 26 نقطة. في مقياس GDPval-AA (للمهام المعرفية الوكيلة كالتحليلات والعروض)، حصل على 1309 نقطة Elo، متجاوزاً GLM-4.7 وDeepSeek V3.2 وGemini 3 Pro.
+
+**التكلفة الإجمالية**: 371 دولاراً لتشغيل مجموعة اختبارات الذكاء الكاملة، أقل بأكثر من 4 أضعاف من Claude Opus 4.5 أو GPT-5.2.
+
+**الهلوسة**: معدل 64% فقط مقارنة بـ 74% للإصدار السابق Kimi K2 Thinking. النموذج يفضّل الامتناع عن الإجابة على اختلاق معلومات غير مثبتة، وهي سمة إيجابية في سياقات الموثوقية.
+
+**السرعة**: 40.8 رمزاً في الثانية مقابل متوسط 51، مع ميل واضح للإسهاب (89 مليون رمز في مجموعة الاختبارات مقابل متوسط 15 مليوناً). هذا قد يكون قيمة في التحليل العميق، لكنه يرفع التكلفة في التطبيقات التفاعلية.
+
+## التسعير: حرب الأسعار التي غيّرت المعادلة
+
+السعر الرسمي عبر Alibaba Cloud: 0.60 دولار لكل مليون رمز إدخال، و3.00 دولارات للإخراج. عبر OpenRouter: 0.38 دولاراً للإدخال و1.72 دولاراً للإخراج. مع خصم المدخلات المخزنة مؤقتاً، يصل السعر الفعلي للإدخال إلى أقل من 0.25 دولار في حالات الاستخدام المتكررة.
+
+المقارنة الأكثر إثارة: K2.5 أرخص بحوالي 9 أضعاف من Claude Opus 4.5، وأرخص بنحو 37 مرة من Claude Opus 4.6. في سياق أنه يتفوق على هذين النموذجين في عدة اختبارات وكلاء، تصبح المعادلة أداءً متقدماً بكسر التكلفة.
+
+## عائلة Kimi الكاملة
 
 | النموذج | المعاملات | المعاملات النشطة | الاستخدام | السعر |
-|---------|-----------|------------------|-----------|-------|
-| **Kimi K2 Lite** | ~30B | 30B | المهام البسيطة | مجاني |
-| **Kimi K2** | ~100B | 100B | الاستخدام العام | $0.10/$0.30 |
-| **Kimi K2.5** | 1T | 32B | المهام المعقدة | $0.40/$1.20 |
-| **Kimi K2 Pro** | ~2T | 64B | البحث المتخصص | $2.00/$6.00 |
+| :--- | :--- | :--- | :--- | :--- |
+| Kimi K2 Lite | ‎~30B | 30B | المهام البسيطة | مجاني |
+| Kimi K2 | ‎~100B | 100B | الاستخدام العام | $0.30/$0.10 |
+| **Kimi K2.5** | **1T** | **32B** | **المهام المعقدة** | **$1.20/$0.40** |
+| Kimi K2 Pro | ‎~2T | 64B | البحث المتخصص | $6.00/$2.00 |
 
----
+## المحددات الحقيقية
 
-## الميزات الثورية في Kimi K2.5
+نافذة السياق البالغة 256,000 رمز تُعدّ القيد الأبرز، إذ تقل عن ملايين الرموز في Gemini وClaude وحتى Llama 4 Maverick. هذا يحدّ من استخدامه في مهام تتطلب معالجة وثائق ضخمة أو مستودعات برمجية كاملة في سياق واحد.
 
-### 1. بنية MoE المتقدمة
+في اختبار ARC-AGI-2 الخاص بالاستدلال المجرد، سجّل 12% فقط بتكلفة تقييم 0.28 دولار، وهو رقم يشير إلى فجوة في القدرة على استنتاج أنماط مجردة جديدة بالكامل — وهو تحدٍّ مشترك لمعظم نماذج الجيل الحالي، غير أن النماذج المتطورة المغلقة تسجّل أعلى منه بفارق.
 
-Kimi K2.5 يستخدم بنية **MoE (Mixture of Experts)** — أي "خليط الخبراء". بدلاً من تشغيل كل الـ 1 تريليون معامل في كل مرة، النموذج يختار **32 مليار معامل فقط** المناسبة لكل سؤال.
+تشير تقارير مستقلة أيضاً إلى أن سير العمل المعتمدة بكثافة على استدعاء الأدوات قد تحتاج إلى إشراف بشري أكبر مقارنة بنماذج OpenAI أو Anthropic، خاصة في بيئات الإنتاج الحساسة.
 
-#### كيف يعمل؟
+## متاح بالكامل: MIT بلا قيود
 
-```
-إجمالي الخبراء: 256 خبيراً
-الخبراء النشطون لكل سؤال: 8 خبراء فقط
-نسبة النشاط: 3.125% فقط
-```
+أُطلق النموذج بموجب ترخيص MIT مفتوح المصدر، متاح للاستخدام والتعديل والتوزيع التجاري. يمكن الوصول إليه عبر kimi.com والتطبيق المحمول، أو عبر API من Fireworks AI وTogether AI وNebius وCloudflare Workers AI، أو تحميل الأوزان من Hugging Face لتشغيل نسخة كاملة بحجم حوالي 595 جيجابايت أو نسخة ديناميكية مضغوطة بحوالي 240 جيجابايت.
 
-#### الفوائد العملية:
+## تساؤلات تبحث عن أجوبة
 
-1. **سرعة الاستجابة:** 4 أضعاف أسرع من النماذج التقليدية بنفس الحجم
-2. **تكلفة أقل:** 80% أرخص من تشغيل نموذج 1T كامل
-3. **ذاكرة أقل:** يحتاج 64GB VRAM فقط بدلاً من 2TB
-4. **مرونة:** يمكن تشغيله على خوادم متوسطة الحجم
-
-### 2. التفوق في الرياضيات
-
-هذه هي الميزة الأبرز. Kimi K2.5 **يتفوق على GPT-5 في الرياضيات** — وهو إنجاز نادر جداً.
-
-#### نتائج الاختبارات الرياضية:
-
-| المعيار | Kimi K2.5 | GPT-5 | Claude Opus 4.6 | Gemini 3.1 Pro |
-|---------|-----------|-------|-----------------|----------------|
-| **MATH** | 91.2% | 84.2% | 85.6% | 87.1% |
-| **GSM8K** | 96.8% | 94.5% | 95.2% | 95.8% |
-| **OlympiadBench** | 78.5% | 72.3% | 74.1% | 75.6% |
-| **AIME 2025** | 85.3% | 78.9% | 80.2% | 81.5% |
-
-#### ماذا تعني هذه الأرقام؟
-
-- **في MATH:** يتفوق بـ 7 نقاط كاملة على GPT-5 — قفزة هائلة
-- **في GSM8K:** يتفوق بـ 2.3 نقطة — فرق واضح
-- **في أولمبياد الرياضيات:** يتفوق بـ 6.2 نقطة — إنجاز استثنائي
-- **في AIME:** يتفوق بـ 6.4 نقطة — مستوى عالمي
-
-### 3. البرمجة المتقدمة
-
-Kimi K2.5 ليس جيداً في الرياضيات فقط — بل **يتفوق في البرمجة** أيضاً.
-
-#### نتائج اختبارات البرمجة:
-
-| المعيار | Kimi K2.5 | GPT-5 | Claude Opus 4.6 |
-|---------|-----------|-------|-----------------|
-| **HumanEval** | 90.8% | 88.7% | 91.2% |
-| **MBPP** | 88.5% | 86.2% | 89.1% |
-| **SWE-bench** | 64.2% | 62.4% | 65.3% |
-| **LiveCodeBench** | 82.7% | 79.5% | 83.1% |
-
-#### ماذا تعني هذه الأرقام؟
-
-- **في HumanEval:** يتفوق على GPT-5 بـ 2.1 نقطة
-- **في MBPP:** يتفوق بـ 2.3 نقطة
-- **في SWE-bench:** قريب جداً من Claude Opus
-- **في LiveCodeBench:** يتفوق بـ 3.2 نقطة
-
----
-
-## الأرقام الشاملة
-
-### نتائج الاختبارات الرسمية (مارس 2026)
-
-| المعيار | Kimi K2.5 | GPT-5 | Claude Opus 4.6 | Gemini 3.1 Pro |
-|---------|-----------|-------|-----------------|----------------|
-| **MMLU (المعرفة العامة)** | 86.8% | 87.5% | 88.1% | 89.8% |
-| **HumanEval (البرمجة)** | 90.8% | 88.7% | 91.2% | 87.3% |
-| **MATH (الرياضيات)** | 91.2% | 84.2% | 85.6% | 87.1% |
-| **GPQA Diamond (العلوم)** | 74.5% | 74.8% | 76.2% | 77.9% |
-| **MMMU (متعدد الوسائط)** | 72.1% | 71.2% | 73.8% | 76.1% |
-| **SWE-bench (هندسة البرمجيات)** | 64.2% | 62.4% | 65.3% | 61.8% |
-
-### ماذا تعني هذه الأرقام؟
-
-- **في الرياضيات:** Kimi K2.5 يتفوق على الجميع بـ 4.1 نقطة عن Gemini
-- **في البرمجة:** قريب جداً من Claude Opus (فارق 0.4 نقطة فقط)
-- **في المعرفة العامة:** قريب من GPT-5 (فارق 0.7 نقطة)
-- **في العلوم:** قريب من GPT-5 (فارق 0.3 نقطة)
-
----
-
-## نافذة السياق: 256,000 رمز
-
-Kimi K2.5 يدعم نافذة سياق تصل إلى **256,000 رمز** — وهي كافية لـ:
-
-- **كتب متوسطة الحجم:** كتاب من 200 صفحة
-- **مشاريع برمجية:** مشروع بـ 100+ ملف
-- **مستندات قانونية:** عقود طويلة
-- **محادثات طويلة:** جلسات محادثة تمتد لساعات
-
-### مقارنة مع المنافسين:
-
-| النموذج | نافذة السياق |
-|---------|-------------|
-| Kimi K2.5 | **256,000 رمز** |
-| Claude Opus 4.6 | 1,000,000 رمز |
-| Gemini 3.1 Pro | 1,000,000 رمز |
-| GPT-5.4 | 256,000 رمز |
-| Llama 4 Maverick | 10,000,000 رمز |
-
----
-
-## الأسعار: قيمة استثنائية
-
-### أسعار Kimi K2.5 عبر API:
-
-| النوع | السعر لكل مليون رمز |
-|-------|---------------------|
-| **الإدخال (Input)** | $0.40 |
-| **الإخراج (Output)** | $1.20 |
-| **التفكير المنطقي (Cached)** | $0.10 |
-
-### مقارنة مع المنافسين:
-
-| النموذج | الإدخال | الإخراج | الفرق عن Kimi K2.5 |
-|---------|---------|---------|-------------------|
-| **Kimi K2.5** | $0.40 | $1.20 | - |
-| **GPT-5.4** | $2.00 | $8.00 | أغلى 5x |
-| **Claude Opus 4.6** | $15.00 | $75.00 | أغلى 37.5x |
-| **Gemini 3.1 Pro** | $2.00 | $12.00 | أغلى 5x |
-| **Llama 4 Maverick** | $0.20 | $0.80 | أرخص 2x |
-
-### هل يستحق السعر؟
-
-**نعم، بالتأكيد — Kimi K2.5 هو الأفضل قيمة في السوق حالياً.**
-
-| المهمة | Kimi K2.5 | GPT-5.4 | التوفير |
-|--------|-----------|---------|---------|
-| 1 مليون رمز إدخال | $0.40 | $2.00 | **80%** |
-| 1 مليون رمز إخراج | $1.20 | $8.00 | **85%** |
-| مشروع 10M رمز | $16 | $100 | **84%** |
-
----
-
-## الدعم اللغوي
-
-Kimi K2.5 يدعم عدة لغات بشكل رسمي:
-
-| اللغة | مستوى الدعم |
-|-------|------------|
-| الصينية (المبسطة) | ⭐⭐⭐⭐⭐ ممتاز |
-| الصينية (التقليدية) | ⭐⭐⭐⭐⭐ ممتاز |
-| الإنجليزية | ⭐⭐⭐⭐ جيد جداً |
-| العربية | ⭐⭐⭐ جيد |
-| اليابانية | ⭐⭐⭐⭐ جيد جداً |
-| الكورية | ⭐⭐⭐⭐ جيد جداً |
-| الفرنسية | ⭐⭐⭐ جيد |
-| الإسبانية | ⭐⭐⭐ جيد |
-
-### ماذا يعني هذا للمستخدم العربي؟
-
-الدعم العربي في Kimi K2.5 **جيد لكن ليس ممتازاً**. النموذج يفهم:
-- العربية الفصحى بشكل جيد
-- المصطلحات التقنية
-- الترجمة من/إلى الصينية
-
-لكن قد يواجه صعوبات في:
-- اللهجات المحلية
-- السياق الثقافي العربي
-- النصوص الأدبية المعقدة
-
----
-
-## كيف تحصل على Kimi K2.5؟
-
-### الخيار 1: Kimi Chat (مجاني)
-
-- ✅ وصول لـ Kimi K2.5
-- ✅ 50 رسالة يومياً
-- ✅ واجهة ويب سهلة
-- ✅ تطبيق موبايل
-
-### الخيار 2: Kimi Pro ($10/شهر)
-
-- ✅ كل مزايا المجاني
-- ✅ رسائل غير محدودة
-- ✅ أولوية في أوقات الذروة
-- ✅ ميزات متقدمة
-
-### الخيار 3: API للمطورين
-
-```python
-import openai
-
-# Kimi يستخدم واجهة متوافقة مع OpenAI
-client = openai.OpenAI(
-    base_url="https://api.moonshot.cn/v1",
-    api_key="your-api-key"
-)
-
-response = client.chat.completions.create(
-    model="kimi-k2.5",
-    messages=[
-        {"role": "system", "content": "أنت مساعد ذكي"},
-        {"role": "user", "content": "اشرح لي نظرية النسبية"}
-    ],
-    max_tokens=4096,
-    temperature=0.7
-)
-
-print(response.choices[0].message.content)
-```
-
-### الخيار 4: عبر منصات السحابة
-
-| المنصة | السعر |
-|--------|-------|
-| **Together AI** | $0.40/$1.20 |
-| **Fireworks AI** | $0.45/$1.30 |
-| **Groq** | $0.35/$1.00 |
-
----
-
-## حالات الاستخدام العملية
-
-### 1. للطلاب والباحثين في الرياضيات
-
-```python
-# مثال: حل مسألة رياضية معقدة
-import openai
-
-client = openai.OpenAI(
-    base_url="https://api.moonshot.cn/v1",
-    api_key="your-api-key"
-)
-
-response = client.chat.completions.create(
-    model="kimi-k2.5",
-    messages=[
-        {"role": "system", "content": """
-أنت خبير رياضيات. حلل المسألة التالية خطوة بخطوة:
-1. افهم المطلوب
-2. حدد المعطيات
-3. اختر الطريقة المناسبة
-4. حل بالتفصيل
-5. تحقق من الإجابة
-"""},
-        {"role": "user", "content": "أثبت أن مجموع زوايا المثلث 180 درجة"}
-    ],
-    max_tokens=4096
-)
-```
-
-### 2. للمطورين
-
-```python
-# مثال: مساعد برمجي
-response = client.chat.completions.create(
-    model="kimi-k2.5",
-    messages=[
-        {"role": "system", "content": "أنت خبير برمجي متخصص في Python"},
-        {"role": "user", "content": "اكتب دالة لحساب الأعداد الأولية"}
-    ],
-    max_tokens=2048
-)
-```
-
-### 3. للشركات
-
-- تحليل البيانات الرياضية
-- النمذجة المالية
-- التحليل الإحصائي
-- أتمتة الحسابات المعقدة
-
-### 4. للمستخدمين العاديين
-
-- حل المسائل الدراسية
-- المساعدة في الواجبات
-- تعلم الرياضيات
-- الترجمة الصينية-العربية
-
----
-
-## المقارنة الشاملة مع المنافسين
-
-### Kimi K2.5 vs GPT-5
-
-| المعيار | Kimi K2.5 | GPT-5 | الفائز |
-|---------|-----------|-------|--------|
-| الرياضيات | 91.2% | 84.2% | 🏆 Kimi |
-| البرمجة | 90.8% | 88.7% | 🏆 Kimi |
-| المعرفة العامة | 86.8% | 87.5% | 🏆 GPT-5 |
-| العلوم | 74.5% | 74.8% | 🏆 GPT-5 |
-| التكلفة | $0.40/$1.20 | $0.50/$2.00 | 🏆 Kimi |
-| **النتيجة** | **4/5** | **1/5** | **Kimi K2.5** |
-
-### Kimi K2.5 vs Claude Opus 4.6
-
-| المعيار | Kimi K2.5 | Claude Opus 4.6 | الفائز |
-|---------|-----------|-----------------|--------|
-| الرياضيات | 91.2% | 85.6% | 🏆 Kimi |
-| البرمجة | 90.8% | 91.2% | 🏆 Claude |
-| المعرفة العامة | 86.8% | 88.1% | 🏆 Claude |
-| العلوم | 74.5% | 76.2% | 🏆 Claude |
-| التكلفة | $0.40/$1.20 | $15/$75 | 🏆 Kimi |
-| **النتيجة** | **3/5** | **2/5** | **Kimi K2.5** (بالقيمة) |
-
----
-
-## العيوب والقيود
-
-لا يوجد نموذج مثالي، وKimi K2.5 له بعض القيود:
-
-### 1. الدعم اللغوي
-
-- الدعم العربي جيد لكن ليس ممتازاً
-- اللهجات المحلية قد تواجه صعوبات
-- الترجمة قد تفقد بعض الدقة
-
-### 2. التوفر
-
-- API قد يكون بطيئاً خارج الصين
-- بعض المنصات لا تدعم Kimi بعد
-- الدعم الفني محدود باللغة الصينية
-
-### 3. القيود الأخلاقية
-
-- فلترة محتوى صارمة (خاصة في الصين)
-- قد يرفض الإجابة على أسئلة حساسة
-- محدودية في بعض المجالات
-
-### 4. المجتمع
-
-- مجتمع مطورين أصغر من OpenAI
-- وثائق أقل باللغة الإنجليزية
-- أمثلة وتطبيقات أقل
-
----
-
-## كيف تبدأ مع Kimi K2.5؟
-
-### للمبتدئين:
-
-1. **جرب Kimi Chat المجاني:**
-   - اذهب إلى [kimi.moonshot.cn](https://kimi.moonshot.cn)
-   - سجل حساب مجاني
-   - ابدأ المحادثة
-
-2. **حمّل التطبيق:**
-   - متاح على iOS وAndroid
-   - واجهة سهلة الاستخدام
-   - دعم الصوت
-
-### للمطورين:
-
-1. **احصل على API Key:**
-   ```bash
-   # سجل في platform.moonshot.cn
-   # احصل على API Key
-   pip install openai
-   ```
-
-2. **ابدأ البرمجة:**
-   ```python
-   import openai
-   
-   client = openai.OpenAI(
-       base_url="https://api.moonshot.cn/v1",
-       api_key="sk-..."
-   )
-   response = client.chat.completions.create(
-       model="kimi-k2.5",
-       messages=[{"role": "user", "content": "مرحباً"}]
-   )
-   ```
-
-### للشركات:
-
-1. **Together AI:**
-   - سجل في [together.ai](https://together.ai)
-   - استخدم Kimi K2.5 عبر API
-   - ادفع حسب الاستخدام
-
-2. **Fireworks AI:**
-   - سجل في [fireworks.ai](https://fireworks.ai)
-   - استضافة سريعة
-   - دعم فني بالإنجليزية
-
----
-
-## مستقبل Kimi K2.5
-
-### ما الذي نتوقعه؟
-
-1. **Kimi K3:** متوقع في أواخر 2026 بقدرات أكبر
-2. **تحسين الدعم العربي:** تحديثات قادمة
-3. **دمج أوسع:** دعم في منصات أكثر
-4. **مجتمع أكبر:** نمو سريع في المستخدمين
-
-### تأثير Kimi K2.5 على السوق
-
-- **منافسة صينية قوية:** ضغط على OpenAI وGoogle
-- **خفض الأسعار:** Kimi أرخص بكثير
-- **زيادة الابتكار:** تسريع التطوير
-- **تنوع الخيارات:** بدائل أكثر للمستخدمين
-
----
-
-## الحكم النهائي
-
-**Kimi K2.5 هو الأفضل قيمة في السوق حالياً — خاصة للرياضيات والبرمجة.**
-
-| المعيار | التقييم |
-|---------|---------|
-| الأداء | ⭐⭐⭐⭐⭐ 9/10 |
-| القيمة مقابل السعر | ⭐⭐⭐⭐⭐ 10/10 |
-| سهولة الاستخدام | ⭐⭐⭐⭐ 8/10 |
-| الدعم العربي | ⭐⭐⭐ 6/10 |
-| الرياضيات | ⭐⭐⭐⭐⭐ 10/10 |
-| **التقييم العام** | **⭐⭐⭐⭐⭐ 8.6/10** |
-
-### من يجب أن يستخدم Kimi K2.5؟
-
-✅ **طلاب الرياضيات** الذين يحتاجون مساعدة في المسائل
-✅ **المطورون** الذين يريدون نموذجاً رخيصاً وقوياً
-✅ **الباحثون** في المجالات الرياضية
-✅ **الشركات** التي تبحث عن توفير التكاليف
-
-### من يجب أن يبحث عن بدائل؟
-
-❌ من يحتاج **دعم عربي مثالي** (استخدم GPT-5.4)
-❌ من يحتاج **أعلى أداء عام** (استخدم Claude Opus)
-❌ من يحتاج **مجتمع كبير** (استخدم OpenAI)
-
----
-
-## الخلاصة
-
-Kimi K2.5 يمثل **نجاحاً صينياً كبيراً** في سباق الذكاء الاصطناعي. يتفوق في الرياضيات والبرمجة، وبتكلفة أقل بـ 80% من المنافسين.
-
-**إذا كنت تريد أفضل قيمة — Kimi K2.5 هو خيارك.**
-
-**إذا كنت تدرس الرياضيات أو البرمجة — Kimi K2.5 هو الأفضل.**
-
-العصر الجديد للذكاء الاصطناعي الصيني قد وصل. وKimi K2.5 هو رائده.
-
----
-
-*تم تحديث هذا المقال في 4 أبريل 2026. جميع المعلومات مبنية على البيانات الرسمية من Moonshot AI واختبارات مستقلة.*
+ما يطرحه Kimi K2.5 على الساحة أعمق من مجرد معايير مرجعية: إذا كان نموذج مفتوح المصدر بهذا الأداء في البرمجة والرياضيات والبحث الوكيل متاحاً بهذه التكلفة، فأين تقع القيمة الفعلية للنماذج المغلقة؟ الإجابة الجزئية موجودة في نقطتين: جودة التفسيرات والاستدلال الموجه للإنسان (حيث تتفوق نماذج Claude)، والتعامل مع السياقات الضخمة جداً (حيث يتفوق Gemini). لكن السؤال الأعمق يتعلق بما إذا كانت فجوات الأداء هذه ستستمر في الاتساع أم ستتضيق، حين يمتلك الفريق الذي أنتج K2.5 موارد ونموذجاً مجانياً للتحسين المستمر بمعدل لا يخضع لضغوط الربحية الفورية.
