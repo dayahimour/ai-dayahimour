@@ -12,6 +12,17 @@ const featuredPosts = allPosts.filter(p => p.data.featured).slice(0, 2);
 const latestPosts = allPosts.slice(0, 8);
 const analysisPosts = allPosts.filter(p => p.data.category === 'تحليل').slice(0, 3);
 const futurePosts = allPosts.filter(p => p.data.category === 'مستقبل').slice(0, 3);
+
+// Prepare posts data for client-side randomization
+const postsData = allPosts.map(post => ({
+  title: post.data.title,
+  description: post.data.description,
+  date: post.data.date,
+  category: post.data.category,
+  slug: post.slug,
+  image: post.data.image || '',
+  featured: post.data.featured,
+}));
 ---
 
 <BaseLayout title="الرئيسية">
@@ -19,33 +30,31 @@ const futurePosts = allPosts.filter(p => p.data.category === 'مستقبل').sli
   <Hero />
 
   <!-- Featured Articles -->
-  {featuredPosts.length > 0 && (
-    <section class="max-w-7xl mx-auto px-4 py-16">
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="section-title flex items-center gap-3">
-          <span class="w-8 h-8 rounded-lg bg-neon-blue/10 flex items-center justify-center">
-            <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
-          </span>
-          <span class="gradient-text">مقالات مميزة</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {featuredPosts.map(post => (
-          <ArticleCard
-            title={post.data.title}
-            description={post.data.description}
-            date={post.data.date}
-            category={post.data.category}
-            slug={post.slug}
-            image={post.data.image}
-            featured={true}
-          />
-        ))}
-      </div>
-    </section>
-  )}
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="section-title flex items-center gap-3">
+        <span class="w-8 h-8 rounded-lg bg-neon-blue/10 flex items-center justify-center">
+          <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+        </span>
+        <span class="gradient-text">مقالات مميزة</span>
+      </h2>
+    </div>
+    <div id="featured-posts-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {featuredPosts.map(post => (
+        <ArticleCard
+          title={post.data.title}
+          description={post.data.description}
+          date={post.data.date}
+          category={post.data.category}
+          slug={post.slug}
+          image={post.data.image}
+          featured={true}
+        />
+      ))}
+    </div>
+  </section>
 
   <!-- Latest News -->
   <section class="max-w-7xl mx-auto px-4 py-16">
@@ -161,4 +170,85 @@ const futurePosts = allPosts.filter(p => p.data.category === 'مستقبل').sli
       </div>
     </div>
   </section>
+
+  <script>
+    // Randomize featured posts for each user
+    (function() {
+      try {
+        const featuredPosts = JSON.parse(document.getElementById('posts-data')?.textContent || '[]');
+        const featuredPostsFiltered = featuredPosts.filter(post => post.featured);
+        
+        if (featuredPostsFiltered.length <= 2) return;
+        
+        // Shuffle array using Fisher-Yates algorithm
+        function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
+        }
+        
+        const shuffledPosts = shuffleArray([...featuredPostsFiltered]).slice(0, 2);
+        const container = document.getElementById('featured-posts-container');
+        
+        if (container) {
+          container.innerHTML = shuffledPosts.map(post => `
+            <a href="/blog/${post.slug}" class="group block md:col-span-2">
+              <article class="glass-card overflow-hidden h-full flex flex-col">
+                <div class="relative overflow-hidden h-56 md:h-72">
+                  ${post.image ? `
+                    <img
+                      src="${post.image}"
+                      alt="${post.title}"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  ` : `
+                    <div class="w-full h-full bg-gradient-to-br from-dark-600 to-dark-700 flex items-center justify-center">
+                      <svg class="w-16 h-16 text-dark-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                      </svg>
+                    </div>
+                  `}
+                  <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+                  <span class="absolute top-3 right-3 inline-block px-3 py-1 text-xs font-medium rounded-full border bg-neon-blue/10 text-neon-blue border-neon-blue/20">
+                    ${post.category}
+                  </span>
+                </div>
+
+                <div class="p-5 flex flex-col flex-1">
+                  <h3 class="font-bold text-white mb-2 group-hover:text-neon-blue transition-colors leading-tight text-xl md:text-2xl">
+                    ${post.title}
+                  </h3>
+                  <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1 line-clamp-2">
+                    ${post.description}
+                  </p>
+                  <div class="flex items-center justify-between text-xs text-gray-500">
+                    <span>${new Date(post.date).toLocaleDateString('ar-EG', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}</span>
+                    <span class="flex items-center gap-1 text-neon-blue group-hover:gap-2 transition-all">
+                      اقرأ المزيد
+                      <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </a>
+          `).join('');
+        }
+      } catch (error) {
+        console.error('Error randomizing featured posts:', error);
+      }
+    })();
+  </script>
+  
+  <script id="posts-data" type="application/json">
+    ${JSON.stringify(postsData)}
+  </script>
 </BaseLayout>
