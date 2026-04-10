@@ -52,7 +52,48 @@ GPT Image 1.5 هو النموذج الرائد الجديد في عائلة GPT 
 
 **تطبيقات عملية حقيقية لـGPT Image 1.5**
 
-1. **تعديل صور منتجات**: أدخل صورة منتج واحدة واطلب "غيّر الخلفية إلى شاطئ غروب شمس مع إضافة شعار الشركة باللون الأزرق hex #007BFF دون تغيير المنتج نفسه". يحافظ النموذج على الإضاءة والتركيب والتفاصيل الدقيقة.
+1. **تعديل صور منتجات**: أدخل صورة منتج واحدة واطلب "غيّر الخلفية إلى شاطئ غروب شمس مع إضافة شعار الشركة باللون الأزرق hex #007BFF دون تغيير المنت
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(245,158,11,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">تقييمات الأداء — Artificial Analysis أبريل 2026</p>
+
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">ELO Score (Artificial Analysis)</span>
+      <span style="color: #fbbf24; font-weight: 700; font-size: 14px;">1264</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 85.6%; height: 100%; background: linear-gradient(90deg, #d97706, #fbbf24); border-radius: 6px;"></div>
+    </div>
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الالتزام بالوصف النصي</span>
+      <span style="color: #f97316; font-weight: 700; font-size: 14px;">Excellent (5/5)</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">جودة النصوص داخل الصورة</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">92%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 92%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الواقعية الفوتوغرافية</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">Good (4/5)</span>
+    </div>
+    
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #fbbf24;"></div><span style="color: #94a3b8; font-size: 12px;">ELO (تفضيل بشري)</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #f97316;"></div><span style="color: #94a3b8; font-size: 12px;">الالتزام بالوصف</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">Excellent (5/5)</span></div>
+  </div>
+</div>
+
+ج نفسه". يحافظ النموذج على الإضاءة والتركيب والتفاصيل الدقيقة.
 
 2. **تصميم واجهات تطبيقات**: "أنشئ واجهة تطبيق جوال لتسوق بالعربية مع أزرار واضحة ونصوص كثيفة". يدعم النص المعقد والتخطيطات بدقة فائقة.
 

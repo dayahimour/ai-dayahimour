@@ -18,7 +18,7 @@ const { Content, headings } = await post.render();
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter(p => p.data.category === post.data.category && p.slug !== post.slug && !p.data.draft)
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .sort(() => Math.random() - 0.5)
   .slice(0, 3);
 ---
 

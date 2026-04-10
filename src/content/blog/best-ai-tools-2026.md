@@ -4,7 +4,7 @@ description: "مراجعة شاملة لأبرز أدوات AI في 2026 عبر 
 date: "2026-04-01"
 category: "أدوات"
 tags: ["أدوات AI", "ChatGPT", "Claude", "Cursor", "Midjourney", "Perplexity", "دليل 2026"]
-image: "/images/og-default.svg"
+image: "/images/best-ai-tools.webp"
 featured: false
 author: "فريق AI DayaHimour"
 draft: false

@@ -31,7 +31,44 @@ Veo 3.1 يتفوق بوضوح في الصوت المتزامن والنسيج ا
 
 ### نقاط التفوق الحقيقية: الواقعية الفيزيائية والسيطرة الإبداعية
 
-ما يميز Veo 3.1 فعلاً هو القدرة على إنتاج حركات تبدو طبيعية تماماً: يد بشرية تلامس كوباً بوزن حقيقي، قماش يتمايل مع الرياح، أو شعر يتحرك بشكل عضوي. النموذج مدرب على بيانات فيزيائية حقيقية، مما يقلل من الأخطاء الشائعة مثل التشوهات أو الاختفاء المفاجئ للأجسام. كما أن الصوت الأصلي ليس مجرد إضافة؛ هو متكامل مع الصورة، فالحوار يتزامن مع حركة الشفاه، والمؤثرات الصوتية تتناسب مع الحركة.
+ما يميز Veo 3.1 فعلاً هو القدرة على إنتاج حركات تبدو طبيعية تماماً: يد بشرية تلامس كوباً بوزن حقيقي، قماش يتمايل مع الرياح، أو شعر يتحرك بشكل عضوي. النموذج مدرب على بيانات فيزيائية حقيقية، مما يقلل من الأخطاء الشائعة مثل التشوهات أو ال
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(236,72,153,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">تقييمات الأداء — Video Arena أبريل 2026</p>
+
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الواقعية البصرية</span>
+      <span style="color: #f472b6; font-weight: 700; font-size: 14px;">High</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">جودة الصوت المتزامن</span>
+      <span style="color: #22d3ee; font-weight: 700; font-size: 14px;">Native Sync</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">التحكم السينمائي</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">High</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">استمرارية المشهد</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">93%</span>
+    </div>
+    
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #f472b6;"></div><span style="color: #94a3b8; font-size: 12px;">الواقعية</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #22d3ee;"></div><span style="color: #94a3b8; font-size: 12px;">Lead Realism</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">Native</span></div>
+  </div>
+</div>
+
+اختفاء المفاجئ للأجسام. كما أن الصوت الأصلي ليس مجرد إضافة؛ هو متكامل مع الصورة، فالحوار يتزامن مع حركة الشفاه، والمؤثرات الصوتية تتناسب مع الحركة.
 
 في Flow – أداة التحرير الخاصة بجوجل – يستطيع المستخدم إضافة إطارات مرجعية، تمديد المقاطع، أو توليد انتقال سلس بين المشاهد. هذا يجعل Veo 3.1 مناسباً لصناع الإعلانات الذين يحتاجون عشرات النسخ السريعة من فيديو واحد.
 

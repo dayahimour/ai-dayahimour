@@ -4,7 +4,7 @@ description: "مقارنة تفصيلية بين OpenClaw (الوكيل الشخ
 date: "2026-04-02"
 category: "أدوات"
 tags: ["OpenClaw", "KimiClaw", "وكلاء AI", "Moonshot AI", "self-hosted", "وكيل شخصي", "2026"]
-image: "/images/og-default.svg"
+image: "/images/openclaw-kimiclaw.webp"
 featured: false
 author: "فريق AI DayaHimour"
 draft: false

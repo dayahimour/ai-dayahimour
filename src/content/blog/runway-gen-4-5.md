@@ -34,6 +34,43 @@ image: "/images/Runway Gen 4.5.webp"
 
 ## الأداء والمقارنات الدقيقة
 
+
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(236,72,153,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">تقييمات الأداء — Video Arena أبريل 2026</p>
+
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الواقعية البصرية</span>
+      <span style="color: #f472b6; font-weight: 700; font-size: 14px;">Visual Fidelity</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">التحكم السينمائي</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">Editor Tools</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">جودة الصوت</span>
+      <span style="color: #22d3ee; font-weight: 700; font-size: 14px;">Not native</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">أدوات التحرير المتقدمة</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">93%</span>
+    </div>
+    
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #f472b6;"></div><span style="color: #94a3b8; font-size: 12px;">الواقعية</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #22d3ee;"></div><span style="color: #94a3b8; font-size: 12px;">Visual Fidelity</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">Not native</span></div>
+  </div>
+</div>
+
 يتصدر Gen-4.5 قوائم الترتيب العالمية. إليك مقارنة مختصرة بناءً على البيانات الرسمية والمستقلة:
 
 | المعيار                      | Runway Gen-4.5 | Gen-4 السابق | Kling 3.0     | Luma Dream Machine |

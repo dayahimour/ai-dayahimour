@@ -62,6 +62,48 @@ image: "/images/Qwen-3.6-Plus.webp"
 
 ## نتائج الاختبارات الرسمية (Benchmarks)
 
+
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">المعايير المرجعية الرئيسية — أبريل 2026</p>
+
+  
+  </div>  
+  </div>  <!-- SWE-Bench Verified -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">SWE-Bench Verified</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">73.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 73.4%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- LiveCodeBench -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">LiveCodeBench</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">78.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 78.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- HumanEval -->
+  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">HumanEval</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">89.5%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 78.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #60a5fa;"></div><span style="color: #94a3b8; font-size: 12px;">رياضيات ومعرفة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">علوم</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #34d399;"></div><span style="color: #94a3b8; font-size: 12px;">برمجة</span></div>
+  </div>
+</div>
+
 من المدونة الرسمية لـ Qwen:
 
 **البرمجة والوكلاء:**

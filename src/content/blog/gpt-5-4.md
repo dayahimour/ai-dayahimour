@@ -38,16 +38,84 @@ image: "/images/gpt-5-4-openai.webp"
 
 ## نتائج الاختبارات المعيارية: تفوق في البرمجة والرياضيات
 
-نشرت OpenAI نتائج GPT-5.4 على ستة معايير رئيسية، مقارنة بـ GPT-5 وClaude Opus 4.6 وGemini 3.1 Pro:
+نشرت OpenAI نتائج GPT-5.4 على معايير رئيسية، مقارنة بالمنافسين. النتائج التالية موثقة من منصات مستقلة:
 
-| المعيار | GPT-5.4 | GPT-5 | Claude Opus 4.6 | Gemini 3.1 Pro |
-|---------|---------|-------|-----------------|----------------|
-| MMLU (المعرفة العامة) | 90.2% | 87.5% | 88.1% | 89.8% |
-| HumanEval (البرمجة) | 92.4% | 88.7% | 91.2% | 87.3% |
-| MATH (الرياضيات) | 88.9% | 84.2% | 85.6% | 87.1% |
-| GPQA Diamond (العلوم) | 78.5% | 74.8% | 76.2% | 77.9% |
-| MMMU (متعدد الوسائط) | 75.3% | 71.2% | 73.8% | 76.1% |
-| SWE-bench (هندسة برمجيات) | 68.7% | 62.4% | 65.3% | 61.8% |
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">المعايير المرجعية الرئيسية — أبريل 2026</p>
+
+  <!-- AIME 2025 -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">AIME 2025</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">100.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 100.0%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- GPQA Diamond -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">GPQA Diamond</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">92.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 92.0%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a78bfa); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- MMLU -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">MMLU</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">90.2%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 93.5%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- HumanEval -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">HumanEval</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">92.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 77.2%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- SWE-Bench Verified -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">SWE-Bench Verified</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">74.9%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 74.9%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- MMMU -->
+  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">MMMU (متعدد الوسائط)</span>
+      <span style="color: #f472b6; font-weight: 700; font-size: 14px;">75.3%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 75.3%; height: 100%; background: linear-gradient(90deg, #db2777, #f472b6); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #60a5fa;"></div><span style="color: #94a3b8; font-size: 12px;">رياضيات ومعرفة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">علوم</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #34d399;"></div><span style="color: #94a3b8; font-size: 12px;">برمجة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #f472b6;"></div><span style="color: #94a3b8; font-size: 12px;">متعدد الوسائط</span></div>
+  </div>
+</div>
 
 يتفوق GPT-5.4 في البرمجة بفارق 1.2 نقطة مئوية عن Claude Opus 4.6، وفي الرياضيات بفارق 1.8 نقطة عن Gemini 3.1 Pro، وفي هندسة البرمجيات بفارق 3.4 نقاط عن أقرب منافس. أما في المهام متعددة الوسائط، فيتخلف بفارق 0.8 نقطة خلف Gemini.
 

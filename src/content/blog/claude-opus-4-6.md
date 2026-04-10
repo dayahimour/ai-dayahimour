@@ -33,19 +33,86 @@ image: "/images/opus4-6.webp"
 
 ## الأداء والمقارنات الدقيقة
 
-يعتمد تقييم Opus 4.6 على معايير مستقلة موثقة. إليك جدول مقارنة مختار من النتائج الرسمية (متوسط 5 تجارب):
+يعتمد تقييم Opus 4.6 على معايير مستقلة موثقة من System Card الرسمي:
 
-| المعيار                  | Claude Opus 4.6 | Claude Opus 4.5 | Claude Sonnet 4.5 | Gemini 3 Pro |
-|---------------------------|-----------------|-----------------|-------------------|--------------|
-| SWE-bench Verified       | 80.8%          | 80.9%          | 77.2%            | 76.2%       |
-| Terminal-Bench 2.0       | 65.4%          | 59.8%          | 51.0%            | 56.2%       |
-| τ²-bench (Retail)        | 91.9%          | 88.9%          | 86.2%            | 85.3%       |
-| τ²-bench (Telecom)       | 99.3%          | 98.2%          | 98.0%            | 98.0%       |
-| OSWorld-Verified         | 72.7%          | 66.3%          | 61.4%            | -           |
-| GPQA Diamond             | 91.3%          | 87.0%          | 83.4%            | 91.9%       |
-| MMMU-Pro (no tools)      | 73.9%          | 70.6%          | 63.4%            | 81%         |
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">المعايير المرجعية الرئيسية — أبريل 2026</p>
 
-المصدر: System Card الرسمي لـ Claude Opus 4.6. يتفوق النموذج بوضوح في المهام الوكيلية الطويلة مثل Terminal-Bench وOSWorld، كما يحافظ على أداء قوي في البرمجة (SWE-bench) رغم أن الفرق مع 4.5 ضئيل في بعض الحالات. كما أنه يحقق 76% في اختبار استرجاع السياق الطويل MRCR v2 عند 1M tokens، مقارنة بـ18.5% في الإصدارات السابقة.
+  <!-- AIME 2025 -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">AIME 2025</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">99.8%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 99.8%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- GPQA Diamond -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">GPQA Diamond</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">91.3%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 91.3%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a78bfa); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- SWE-bench Verified -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">SWE-Bench Verified</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">80.8%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 80.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- Terminal-Bench -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">Terminal-Bench 2.0</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">65.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 80.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- OSWorld -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">OSWorld-Verified (وكلاء)</span>
+      <span style="color: #f472b6; font-weight: 700; font-size: 14px;">72.7%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 72.7%; height: 100%; background: linear-gradient(90deg, #db2777, #f472b6); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <!-- τ²-bench -->
+  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">τ²-bench Retail (وكلاء)</span>
+      <span style="color: #f472b6; font-weight: 700; font-size: 14px;">91.9%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 91.9%; height: 100%; background: linear-gradient(90deg, #db2777, #f472b6); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #60a5fa;"></div><span style="color: #94a3b8; font-size: 12px;">رياضيات</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">علوم</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #34d399;"></div><span style="color: #94a3b8; font-size: 12px;">برمجة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #f472b6;"></div><span style="color: #94a3b8; font-size: 12px;">وكلاء</span></div>
+  </div>
+</div>
+
+يتفوق النموذج بوضوح في المهام الوكيلية الطويلة مثل Terminal-Bench وOSWorld، كما يحافظ على أداء قوي في البرمجة (SWE-bench). كما يحقق 76% في اختبار استرجاع السياق الطويل MRCR v2 عند 1M tokens.
 
 ## تطبيقات عملية حقيقية
 

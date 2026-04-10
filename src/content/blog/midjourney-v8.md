@@ -19,6 +19,37 @@ image: "/images/Midjourney v8.webp"
 
 ### مقارنة صادقة مع المنافسين الرئيسيين
 
+
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(245,158,11,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">تقييمات الأداء — Artificial Analysis أبريل 2026</p>
+
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">ELO Score (Artificial Analysis)</span>
+      <span style="color: #fbbf24; font-weight: 700; font-size: 14px;">Improved</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الالتزام بالوصف النصي</span>
+      <span style="color: #f97316; font-weight: 700; font-size: 14px;">Improved</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الواقعية الفوتوغرافية</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">High Aesthetic</span>
+    </div>
+    
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #fbbf24;"></div><span style="color: #94a3b8; font-size: 12px;">ELO (تفضيل بشري)</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #f97316;"></div><span style="color: #94a3b8; font-size: 12px;">الالتزام بالوصف</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">Improved</span></div>
+  </div>
+</div>
+
 يبرز v8 في الجودة الفنية والتماسك السينمائي، لكنه ليس الأفضل مطلقاً في كل المعايير. مقارنة بـFLUX.2 Pro، يتفوق Midjourney في الجماليات الفريدة والإضاءة الدرامية، بينما يتفوق FLUX في السرعة والتكلفة المنخفضة كخيار مفتوح المصدر. أما GPT Image 1.5 (الذي يتصدر لوحات Artificial Analysis بدرجة ELO تصل إلى 1266)، فيتفوق في السرعة والالتزام الدقيق بالوصف في بعض السياقات، لكنه يفتقر إلى "اللمسة الفنية" التي يقدمها Midjourney. أما Adobe Firefly، فيتميز بأمانه القانوني العالي (بفضل تدريبه على بيانات مرخصة) وتكامله مع Creative Cloud، لكنه أقل جرأة فنياً وأقل قدرة على إنتاج صور سينمائية درامية مقارنة بـv8.
 
 أما لوحات التصنيف مثل Artificial Analysis، فلم تنشر بعد تصنيفاً رسمياً لـv8 Alpha بسبب حداثة إطلاقه، لكن v7 Alpha كان يحتل مراكز متوسطة (ELO حوالي 1066-1070). يشير المستخدمون إلى أن v8 يحسن الجودة العامة، خاصة في السياقات التجارية والسينمائية، لكنه قد يفقد بعض "الروح الفنية" التي ميزت v7 في الأساليب اللوحية أو الخيالية.

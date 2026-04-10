@@ -4,7 +4,7 @@ description: "تحليل شامل لفهم الوكلاء الذكيين في 20
 date: "2026-04-02"
 category: "تحليل"
 tags: ["وكلاء AI", "Agentic AI", "AI Agents", "LangGraph", "OpenAI Agents SDK", "Claude Cowork", "أتمتة", "2026"]
-image: "/images/og-default.svg"
+image: "/images/agentic-ai-2026.webp"
 featured: true
 author: "فريق AI DayaHimour"
 draft: false

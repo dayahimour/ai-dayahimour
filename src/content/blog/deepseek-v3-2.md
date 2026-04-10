@@ -33,6 +33,64 @@ image: "/images/deepseek.webp"
 
 ## الأداء والمقارنات الدقيقة
 
+
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">المعايير المرجعية الرئيسية — أبريل 2026</p>
+
+  <!-- AIME 2025 -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">AIME 2025</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">89.3%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 89.3%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- GPQA Diamond -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">GPQA Diamond</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">79.9%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 79.9%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a78bfa); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- SWE-Bench Verified -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">SWE-Bench Verified</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">74.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 74.4%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- LiveCodeBench -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">LiveCodeBench</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">82.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 75.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- HumanEval -->
+  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">HumanEval</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">90.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 75.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #60a5fa;"></div><span style="color: #94a3b8; font-size: 12px;">رياضيات ومعرفة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">علوم</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #34d399;"></div><span style="color: #94a3b8; font-size: 12px;">برمجة</span></div>
+  </div>
+</div>
+
 يحقق DeepSeek-V3.2 أداءً تنافسياً عالمياً. إليك جدول مقارنة مختار بناءً على التقارير الرسمية والمستقلة (ديسمبر 2025):
 
 | المعيار                  | DeepSeek-V3.2 | GPT-5          | Gemini-3.0-Pro | Claude 4.5    |

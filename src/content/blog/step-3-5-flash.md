@@ -35,6 +35,47 @@ Stepfun ليست شركة ناشئة عادية. تأسست في 6 أبريل 20
 
 ### مقارنة بالنماذج الغربية السريعة: Gemini Flash وGPT-4o Mini وClaude Haiku
 
+
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">المعايير المرجعية الرئيسية — أبريل 2026</p>
+
+  <!-- AIME 2025 -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">AIME 2025</span>
+      <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">74.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 74.4%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+    </div>
+  </div>  
+  </div>  <!-- SWE-Bench Verified -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">SWE-Bench Verified</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">74.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 74.4%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- HumanEval -->
+  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">HumanEval</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">80.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 48.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #60a5fa;"></div><span style="color: #94a3b8; font-size: 12px;">رياضيات ومعرفة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">علوم</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #34d399;"></div><span style="color: #94a3b8; font-size: 12px;">برمجة</span></div>
+  </div>
+</div>
+
 يُصمم Step 3.5 Flash ليكون «Flash» بمعنى سريع وفعّال، تماماً مثل Gemini Flash أو GPT-4o Mini أو Claude Haiku. لكنه يختلف جذرياً في الحجم والكفاءة. النماذج الغربية الصغيرة (التي تتراوح عادة بين 8-100B فعالة) تركز على التوازن بين السرعة والتكلفة، بينما يعتمد Step 3.5 Flash على MoE ليحقق «ذكاء frontier» بتكلفة تشغيلية منخفضة.
 
 في السرعة يتفوق Step 3.5 Flash بوضوح: 100-350 توكن/ثانية مقابل 50-150 توكن/ثانية تقريباً للنماذج الغربية المماثلة في الفئة. أما في التكلفة عبر API فيصل سعره إلى 0.10 دولار لكل مليون توكن دخل و0.30 دولار لكل مليون توكن خروج (عبر StepFun أو OpenRouter)، وهو أرخص بكثير من GPT-4o Mini أو Claude Haiku في الاستخدام الكثيف. في الاستدلال الرياضي والبرمجي يتفوق على معظم النماذج «الصغيرة» الغربية، خاصة في SWE-bench وAIME، بينما تظل Gemini Flash أقوى في السياقات الطويلة جداً (1M+) والوسائط المتعددة.

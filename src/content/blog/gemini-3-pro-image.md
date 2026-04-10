@@ -49,7 +49,48 @@ image: "/images/gemini-3-pro-image-nano-banana-pro.webp"
 
 في سيناريوهات الإبداع التسلسلي، مثل إنشاء قصص مصورة أو حملات إعلانية، يُعد الحفاظ على اتساق الشخصية تحدياً كبيراً. يوفر Nano Banana Pro حلاً لهذه المعضلة من خلال السماح بتحميل ما يصل إلى 14 صورة مرجعية في طلب واحد، مقسمة إلى فئتين: ما يصل إلى 6 صور لأشياء للحفاظ على دقتها، وما يصل إلى 5 صور لأشخاص للحفاظ على اتساق ملامحهم. يسمح هذا للعلامات التجارية بتحميل دليل هوية بصرية كامل دفعة واحدة، بما في ذلك الشعارات ولوحات الألوان والصور المرجعية للمنتجات والشخصيات.
 
-يمتد هذا التحكم في الاتساق أيضاً إلى الجوانب الفنية للصورة. يمكن التحكم بدقة في إعدادات الكاميرا (زاوية العدسة، البعد البؤري، العمق الميداني)، والإضاءة (اتجاه الضوء، شدته، لونه)، وتصحيح الألوان (درجات الحرارة، التشبع، التدرجات اللونية)، مما يسمح بالحفاظ على جمالية بصرية موحدة عبر سلسلة كاملة من الصور. على سبيل المثال، يمكن توليد ملصق إعلاني ثم طلب تعديل نسبة العرض إلى الارتفاع دون تغيير الموضوع الرئيسي، أو تغيير زاوية الكاميرا للحصول على منظور مختلف مع الحفاظ على نفس الإعدادات والإضاءة.
+يمتد هذا التحكم في الاتساق أيضاً إلى الجوانب الفنية للصورة. يمكن التحكم بدقة في إعدادات الكاميرا (زاوية العدسة، البعد البؤري، العمق الميداني)، والإضاءة (اتجاه الضوء، شدته، لونه)، وتصحيح الألوان (درجات الحرارة، التشبع، التدرجات اللونية)، مما يسمح بالحفاظ على جمالية بصرية موحدة عبر سلسلة كاملة من الصور. على سبيل المثال، يمكن توليد ملصق إعلاني ثم طلب تعديل نسبة العرض إلى الارتفاع دون تغيير الموضوع الرئيسي، أو تغيير زاوية الكاميرا للحصول على 
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(245,158,11,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">تقييمات الأداء — Artificial Analysis أبريل 2026</p>
+
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">ELO Score (Artificial Analysis)</span>
+      <span style="color: #fbbf24; font-weight: 700; font-size: 14px;">1252</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 80.80000000000001%; height: 100%; background: linear-gradient(90deg, #d97706, #fbbf24); border-radius: 6px;"></div>
+    </div>
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الالتزام بالوصف النصي</span>
+      <span style="color: #f97316; font-weight: 700; font-size: 14px;">Community Leader</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">الواقعية الفوتوغرافية</span>
+      <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">4K Top</span>
+    </div>
+    
+  </div>  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">التكامل متعدد الوسائط</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">91%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 91%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #fbbf24;"></div><span style="color: #94a3b8; font-size: 12px;">ELO (تفضيل بشري)</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #f97316;"></div><span style="color: #94a3b8; font-size: 12px;">الالتزام بالوصف</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">Community Leader</span></div>
+  </div>
+</div>
+
+منظور مختلف مع الحفاظ على نفس الإعدادات والإضاءة.
 
 ## الربط بالبحث: جوجل سيرش يمد النموذج بالمعرفة الحية
 
