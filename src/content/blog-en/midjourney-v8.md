@@ -2,7 +2,7 @@
 title: "Midjourney v8 — The Release That Settled the Debate: 'Have Synthetic Images Reached Cinema Quality?'"
 description: "An in‑depth analysis of the Midjourney v8 Alpha release launched in March 2026, focusing on technical changes compared to v7, its performance versus competitors, and the legal and artistic controversy about its use in film production."
 date: "2026-04-05"
-category: "Models"
+category: "models"
 tags: ["Midjourney v8", "image generation", "AI", "design", "2026"]
 image: "/images/midjourney-v8.webp"
 ---
