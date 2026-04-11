@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const lang = 'en';
+
+const futurePosts = (await getCollection('blog-en'))
+  .filter(post => post.data.category === 'future' && !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<BaseLayout title="Future" description="Exclusive predictions and insights about the future of artificial intelligence" lang={lang}>
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="mb-16 text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 mb-6">
+        <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+        <span class="text-sm text-pink-400 font-medium">Future</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">What Does the <span class="gradient-text">Future</span> Hold?</h1>
+      <p class="text-gray-400 text-lg leading-relaxed">Data-driven predictions about the future of AI and its impact on our lives</p>
+    </div>
+
+    <div class="relative mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-6 text-center">
+          <div class="w-fit px-4 h-10 rounded-full bg-neon-blue/10 border border-neon-blue/30 inline-flex items-center justify-center mx-auto mb-4">
+            <span class="text-neon-blue font-bold text-sm">2026 - 2030</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Autonomous Agents</h3>
+          <p class="text-sm text-gray-400">AI agents completing multi-step tasks — automating 30-70% of office work</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <div class="w-fit px-4 h-10 rounded-full bg-neon-green/10 border border-neon-green/30 inline-flex items-center justify-center mx-auto mb-4">
+            <span class="text-neon-green font-bold text-sm">2030 - 2035</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Labor Market Transformation</h3>
+          <p class="text-sm text-gray-400">300 million jobs at risk of automation — human-AI collaboration era</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <div class="w-fit px-4 h-10 rounded-full bg-purple-500/10 border border-purple-500/30 inline-flex items-center justify-center mx-auto mb-4">
+            <span class="text-purple-400 font-bold text-sm">2035 - 2040</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Medical Revolution & AGI</h3>
+          <p class="text-sm text-gray-400">AI-designed drugs — the question of Artificial General Intelligence</p>
+        </div>
+      </div>
+    </div>
+
+    {futurePosts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {futurePosts.map(post => (
+          <ArticleCard title={post.data.title} description={post.data.description} date={post.data.date} category={post.data.category} slug={post.slug} image={post.data.image} lang={lang} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-20">
+        <p class="text-gray-400 text-lg">Future articles coming soon...</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

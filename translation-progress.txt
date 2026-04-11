@@ -1,0 +1,115 @@
+# ترجمة المقالات العربية إلى الإنجليزية
+
+## التقدم الحالي:
+- ✅ المقالة 1: agentic-ai-2026.md - مكتملة
+- ✅ المقالة 2: ai-ethics.md - مكتملة
+- ✅ المقالة 3: ai-future-2030.md - مكتملة
+- ✅ المقالة 4: ai-models-comparison.md - مكتملة
+- ✅ المقالة 5: best-ai-tools-2026.md - مكتملة
+- ✅ المقالة 6: claude-code.md - مكتملة
+- ✅ المقالة 7: claude-opus-4-6-fast.md - مكتملة
+- ✅ المقالة 8: claude-opus-4-6.md - مكتملة
+- ✅ المقالة 9: claude-sonnet-4-6.md - مكتملة
+- ✅ المقالة 10: cline.md - مكتملة
+- ✅ المقالة 11: cursor.md - مكتملة
+- ✅ المقالة 12: deepseek-v3-2.md - مكتملة
+- ✅ المقالة 13: descript.md - مكتملة
+- ✅ المقالة 14: elevenlabs.md - مكتملة
+- ✅ المقالة 15: flux-2-pro.md - مكتملة
+- ✅ المقالة 16: gemini-3-1-pro.md - مكتملة
+- ✅ المقالة 17: gemini-3-pro-image.md - مكتملة
+- ✅ المقالة 18: gemma-4.md - مكتملة
+- ✅ المقالة 19: glm-5-1-long-horizon.md - مكتملة
+- ✅ المقالة 20: glm-5.md - مكتملة
+- ✅ المقالة 21: google-antigravity-ide-2026.md - مكتملة
+- ✅ المقالة 22: gpt-5-4.md - مكتملة
+- ✅ المقالة 23: gpt-image-1-5.md - مكتملة
+- ✅ المقالة 24: grok-4-20-multi-agent-xai.md - مكتملة
+- ✅ المقالة 25: hermes-agent.md - مكتملة
+- ✅ المقالة 26: isekai-zero.md - مكتملة
+- ✅ المقالة 27: janitor-ai.md - مكتملة
+- ✅ المقالة 28: kilo-code.md - مكتملة
+- ✅ المقالة 29: kimi-k2-5.md - مكتملة
+- ✅ المقالة 30: kling-3-0.md - مكتملة
+- ✅ المقالة 31: lemonade.md - مكتملة
+- ✅ المقالة 32: llama-4-maverick.md - مكتملة
+- ✅ المقالة 33: lovable.md - مكتملة
+- ✅ المقالة 34: manus-ai.md - مكتملة
+- ✅ المقالة 35: midjourney-v8.md - مكتملة
+- ✅ المقالة 36: mimo-v2-pro-xiaomi.md - مكتملة
+- ✅ المقالة 37: minimax-m2-7.md - مكتملة
+- ✅ المقالة 38: notebooklm.md - مكتملة
+- ✅ المقالة 39: openclaw-kimiclaw-2026.md - مكتملة
+- ✅ المقالة 40: openclaw.md - مكتملة
+- ✅ المقالة 41: perplexity-ai.md - مكتملة
+- ✅ المقالة 42: qwen-3-6-plus.md - مكتملة
+- ✅ المقالة 43: roo-code.md - مكتملة
+- ✅ المقالة 44: runway-gen-4-5.md - مكتملة
+- ✅ المقالة 45: seedance-2-0.md - مكتملة
+- ✅ المقالة 46: seedream-5-0.md - مكتملة
+- ✅ المقالة 47: sora-2-pro.md - مكتملة
+- ✅ المقالة 48: step-3-5-flash.md - مكتملة
+- ✅ المقالة 49: veo-3-1.md - مكتملة
+- ✅ المقالة 50: zapier-ai.md - مكتملة
+- ✅ المقالات المتبقية: 0
+
+## تفاصيل الترجمة:
+### المقالات المكتملة:
+1. agentic-ai-2026.md - مترجمة إلى src/content/blog-en/agentic-ai-2026.md
+2. ai-ethics.md - مترجمة إلى src/content/blog-en/ai-ethics.md
+3. ai-future-2030.md - مترجمة إلى src/content/blog-en/ai-future-2030.md
+4. ai-models-comparison.md - مترجمة إلى src/content/blog-en/ai-models-comparison.md
+5. best-ai-tools-2026.md - مترجمة إلى src/content/blog-en/best-ai-tools-2026.md
+6. claude-code.md - مترجمة إلى src/content/blog-en/claude-code.md
+7. claude-opus-4-6-fast.md - مترجمة إلى src/content/blog-en/claude-opus-4-6-fast.md
+8. claude-opus-4-6.md - مترجمة إلى src/content/blog-en/claude-opus-4-6.md
+9. claude-sonnet-4-6.md - مترجمة إلى src/content/blog-en/claude-sonnet-4-6.md
+10. cline.md - مترجمة إلى src/content/blog-en/cline.md
+11. cursor.md - مترجمة إلى src/content/blog-en/cursor.md
+12. deepseek-v3-2.md - مترجمة إلى src/content/blog-en/deepseek-v3-2.md
+13. descript.md - مترجمة إلى src/content/blog-en/descript.md
+14. elevenlabs.md - مترجمة إلى src/content/blog-en/elevenlabs.md
+15. flux-2-pro.md - مترجمة إلى src/content/blog-en/flux-2-pro.md
+16. gemini-3-1-pro.md - مترجمة إلى src/content/blog-en/gemini-3-1-pro.md
+17. gemini-3-pro-image.md - مترجمة إلى src/content/blog-en/gemini-3-pro-image.md
+18. gemma-4.md - مترجمة إلى src/content/blog-en/gemma-4.md
+19. glm-5-1-long-horizon.md - مترجمة إلى src/content/blog-en/glm-5-1-long-horizon.md
+20. glm-5.md - مترجمة إلى src/content/blog-en/glm-5.md
+21. google-antigravity-ide-2026.md - مترجمة إلى src/content/blog-en/google-antigravity-ide-2026.md
+22. gpt-5-4.md - مترجمة إلى src/content/blog-en/gpt-5-4.md
+23. gpt-image-1-5.md - مترجمة إلى src/content/blog-en/gpt-image-1-5.md
+24. grok-4-20-multi-agent-xai.md - مترجمة إلى src/content/blog-en/grok-4-20-multi-agent-xai.md
+25. hermes-agent.md - مترجمة إلى src/content/blog-en/hermes-agent.md
+26. isekai-zero.md - مترجمة إلى src/content/blog-en/isekai-zero.md
+27. janitor-ai.md - مترجمة إلى src/content/blog-en/janitor-ai.md
+28. kilo-code.md - مترجمة إلى src/content/blog-en/kilo-code.md
+29. kimi-k2-5.md - مترجمة إلى src/content/blog-en/kimi-k2-5.md
+30. kling-3-0.md - مترجمة إلى src/content/blog-en/kling-3-0.md
+31. lemonade.md - مترجمة إلى src/content/blog-en/lemonade.md
+32. llama-4-maverick.md - مترجمة إلى src/content/blog-en/llama-4-maverick.md
+33. lovable.md - مترجمة إلى src/content/blog-en/lovable.md
+34. manus-ai.md - مترجمة إلى src/content/blog-en/manus-ai.md
+35. midjourney-v8.md - مترجمة إلى src/content/blog-en/midjourney-v8.md
+36. mimo-v2-pro-xiaomi.md - مترجمة إلى src/content/blog-en/mimo-v2-pro-xiaomi.md
+37. minimax-m2-7.md - مترجمة إلى src/content/blog-en/minimax-m2-7.md
+38. notebooklm.md - مترجمة إلى src/content/blog-en/notebooklm.md
+39. openclaw-kimiclaw-2026.md - مترجمة إلى src/content/blog-en/openclaw-kimiclaw-2026.md
+40. openclaw.md - مترجمة إلى src/content/blog-en/openclaw.md
+41. perplexity-ai.md - مترجمة إلى src/content/blog-en/perplexity-ai.md
+42. qwen-3-6-plus.md - مترجمة إلى src/content/blog-en/qwen-3-6-plus.md
+43. roo-code.md - مترجمة إلى src/content/blog-en/roo-code.md
+44. runway-gen-4-5.md - مترجمة إلى src/content/blog-en/runway-gen-4-5.md
+45. seedance-2-0.md - مترجمة إلى src/content/blog-en/seedance-2-0.md
+46. seedream-5-0.md - مترجمة إلى src/content/blog-en/seedream-5-0.md
+47. sora-2-pro.md - مترجمة إلى src/content/blog-en/sora-2-pro.md
+48. step-3-5-flash.md - مترجمة إلى src/content/blog-en/step-3-5-flash.md
+49. veo-3-1.md - مترجمة إلى src/content/blog-en/veo-3-1.md
+50. zapier-ai.md - مترجمة إلى src/content/blog-en/zapier-ai.md
+
+### المقالات المتبقية:
+(لا توجد مقالات متبقية)
+
+## آخر تحديث: 2026-04-10 23:12
+## العدد الإجمالي للمقالات: 50
+## المقالات المترجمة: 50 (100%)
+## المترجم: AI DayaHimour Team

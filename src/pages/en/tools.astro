@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+
+const lang = 'en';
+
+const tools = [
+  // --- AI Coding Agents ---
+  {
+    name: 'OpenClaw',
+    description: 'AI agent that actually executes tasks — browses the web, manages files, and runs commands autonomously.',
+    category: 'Agent',
+    icon: '🦞',
+    slug: 'openclaw',
+    logo: '/icons/openclaw-color.svg',
+    tokens: '6.39T',
+  },
+  {
+    name: 'Kilo Code',
+    description: 'Smart coding agent for VS Code — writes code, reviews bugs, and suggests improvements automatically.',
+    category: 'Coding',
+    icon: '⚡',
+    slug: 'kilo-code',
+    logo: '/icons/kilocode.svg',
+    tokens: '2.18T',
+  },
+  {
+    name: 'Claude Code',
+    description: 'Anthropic\'s assistant for complex problem-solving — analyzes code, designs solutions, explains concepts clearly.',
+    category: 'Coding',
+    icon: '🎯',
+    slug: 'claude-code',
+    logo: '/icons/claudecode-color.svg',
+    tokens: '920B',
+  },
+  {
+    name: 'Cline',
+    description: 'Autonomous coding agent working directly in your IDE — writes, tests, and fixes code independently.',
+    category: 'Coding',
+    icon: '🤖',
+    slug: 'cline',
+    logo: '/icons/cline.svg',
+    tokens: '682B',
+  },
+  {
+    name: 'Roo Code',
+    description: 'Full AI development team — manages large projects by dividing tasks among specialized agents.',
+    category: 'Coding',
+    icon: '🦘',
+    slug: 'roo-code',
+    logo: '/icons/roocode.svg',
+    tokens: '125B',
+  },
+
+  // --- Creative & Content Tools ---
+  {
+    name: 'Descript',
+    description: 'AI-powered video & podcast editor — edit video by editing text, clone voices, remove filler words.',
+    category: 'Video',
+    icon: '🎬',
+    slug: 'descript',
+    tokens: '289B',
+  },
+
+  // --- General Task Agents ---
+  {
+    name: 'Hermes Agent',
+    description: 'Smart agent for simplifying complex tasks — connects apps and executes automated workflows.',
+    category: 'Agent',
+    icon: '📨',
+    slug: 'hermes-agent',
+    tokens: '280B',
+    isNew: true,
+  },
+  {
+    name: 'Janitor AI',
+    description: 'Amazing virtual character platform — interactive conversations with custom AI personalities for entertainment.',
+    category: 'Chat',
+    icon: '🧹',
+    slug: 'janitor-ai',
+    tokens: '207B',
+  },
+  {
+    name: 'ISEKAI ZERO',
+    description: 'Interactive AI adventures — travel to fantasy worlds and interact with AI-generated characters and stories.',
+    category: 'Games',
+    icon: '⚔️',
+    slug: 'isekai-zero',
+    tokens: '206B',
+  },
+  {
+    name: 'Lemonade',
+    description: 'AI tool for Roblox games — create worlds, characters, and complete games using artificial intelligence.',
+    category: 'Games',
+    icon: '🍋',
+    slug: 'lemonade',
+    tokens: '68.8B',
+  },
+];
+---
+
+<BaseLayout title="Tools" description="Comprehensive guide to the best AI tools and coding agents" lang={lang}>
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">AI <span class="gradient-text">Tools & Agents</span></h1>
+      <p class="text-gray-400 text-lg max-w-2xl">Discover the best AI tools and coding agents that will boost your productivity</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {tools.map(tool => <ToolCard {...tool} lang={lang} />)}
+    </div>
+  </div>
+</BaseLayout>

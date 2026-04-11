@@ -6,7 +6,7 @@ const blog = defineCollection({
         title: z.string(),
         description: z.string(),
         date: z.string(),
-        category: z.enum(['أخبار', 'تحليل', 'نماذج', 'أدوات', 'مستقبل', 'صور', 'فيديو']),
+        category: z.enum(['أخبار', 'تحليل', 'نماذج', 'أدوات', 'شركات', 'مستقبل', 'صور', 'فيديو']),
         tags: z.array(z.string()),
         image: z.string().optional(),
         featured: z.boolean().default(false),
@@ -15,4 +15,19 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const blogEn = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        date: z.string(),
+        category: z.enum(['news', 'analysis', 'models', 'tools', 'companies', 'future', 'images', 'video']),
+        tags: z.array(z.string()),
+        image: z.string().optional(),
+        featured: z.boolean().default(false),
+        author: z.string().default('AI DayaHimour Team'),
+        draft: z.boolean().default(false),
+    }),
+});
+
+export const collections = { blog, 'blog-en': blogEn };

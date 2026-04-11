@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'en';
+---
+
+<BaseLayout title="Privacy Policy" description="AI DayaHimour Privacy Policy" lang={lang}>
+  <div class="max-w-4xl mx-auto px-4 py-16 sm:py-24">
+    <div class="mb-10 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-6">Privacy <span class="gradient-text">Policy</span></h1>
+      <p class="text-lg text-gray-400">Welcome to the privacy policy page of AI DayaHimour</p>
+    </div>
+    <div class="glass-card p-8 sm:p-12 prose prose-invert prose-lg max-w-none prose-a:text-neon-blue hover:prose-a:text-neon-green">
+      <p>At <strong>AI DayaHimour</strong> (accessible via dayahimour.org), we consider the privacy of our visitors a top priority.</p>
+      <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Log Files</h2>
+      <p>AI DayaHimour follows standard procedure in using log files. These files log visitors when they visit the website, including IP addresses, browser type, ISP, date/time stamps, and referring/exit pages.</p>
+      <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Cookies</h2>
+      <p>Like most websites, AI DayaHimour uses cookies to store visitor preferences and improve user experience by customizing page content.</p>
+      <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Google AdSense</h2>
+      <p>Google uses DART cookies to serve ads based on visits to our site and other sites. You can opt out via: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Ads Privacy Policy</a></p>
+      <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Privacy Rights (CCPA / GDPR)</h2>
+      <p>We respect users' rights to access, modify, or delete their data in accordance with applicable laws. Please contact us to exercise any of these rights.</p>
+      <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Your Consent</h2>
+      <p>By using our website, you consent to our privacy policy and agree to its terms.</p>
+    </div>
+  </div>
+</BaseLayout>

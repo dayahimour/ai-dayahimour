@@ -1,0 +1,65 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { t } from '../../../i18n/translations';
+import { getCollection } from 'astro:content';
+
+const lang = 'ar';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await post.render();
+
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter(p => p.data.category === post.data.category && p.slug !== post.slug && !p.data.draft)
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
+---
+
+<ArticleLayout
+  title={post.data.title}
+  description={post.data.description}
+  date={post.data.date}
+  category={post.data.category}
+  tags={post.data.tags}
+  image={post.data.image}
+  author={post.data.author}
+  headings={headings}
+  lang={lang}
+>
+  <Content />
+</ArticleLayout>
+
+{relatedPosts.length > 0 && (
+  <section class="max-w-5xl mx-auto px-4 pb-16">
+    <h2 class="section-title flex items-center gap-3 mb-8">
+      <span class="w-8 h-8 rounded-lg bg-neon-blue/10 flex items-center justify-center">
+        <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+      </span>
+      {t(lang, 'section.related')}
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {relatedPosts.map(rp => (
+        <ArticleCard
+          title={rp.data.title}
+          description={rp.data.description}
+          date={rp.data.date}
+          category={rp.data.category}
+          slug={rp.slug}
+          image={rp.data.image}
+          lang={lang}
+        />
+      ))}
+    </div>
+  </section>
+)}

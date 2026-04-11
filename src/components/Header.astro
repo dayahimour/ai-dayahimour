@@ -1,21 +1,37 @@
 ---
+import { t, getAlternateLang } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'ar' } = Astro.props;
+const altLang = getAlternateLang(lang);
+const prefix = `/${lang}`;
+
 const navLinks = [
-  { href: '/', label: 'الرئيسية' },
-  { href: '/blog', label: 'المقالات' },
-  { href: '/models', label: 'النماذج' },
-  { href: '/tools', label: 'الأدوات' },
-  { href: '/future', label: 'المستقبل' },
-  { href: '/about', label: 'من نحن' },
+  { href: `${prefix}/`, label: t(lang, 'nav.home') },
+  { href: `${prefix}/blog`, label: t(lang, 'nav.blog') },
+  { href: `${prefix}/models`, label: t(lang, 'nav.models') },
+  { href: `${prefix}/tools`, label: t(lang, 'nav.tools') },
+  { href: `${prefix}/companies`, label: t(lang, 'nav.companies') },
+  { href: `${prefix}/future`, label: t(lang, 'nav.future') },
+  { href: `${prefix}/about`, label: t(lang, 'nav.about') },
 ];
 
 const currentPath = Astro.url.pathname;
+
+// Build alternate URL for language switcher
+let switchPath = currentPath.replace(`/${lang}`, `/${altLang}`);
+if (switchPath === currentPath) switchPath = `/${altLang}/`;
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-xl border-b border-dark-500/20">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href={`${prefix}/`} class="flex items-center gap-2 group">
         <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-neon-blue to-neon-green flex items-center justify-center group-hover:shadow-lg group-hover:shadow-neon-blue/20 transition-shadow">
           <svg class="w-5 h-5 text-dark-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
@@ -31,7 +47,7 @@ const currentPath = Astro.url.pathname;
             href={link.href}
             class:list={[
               'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
-              currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+              currentPath === link.href || (link.href !== `${prefix}/` && currentPath.startsWith(link.href))
                 ? 'text-neon-blue bg-neon-blue/10'
                 : 'text-gray-400 hover:text-white hover:bg-dark-600/50'
             ]}
@@ -39,21 +55,42 @@ const currentPath = Astro.url.pathname;
             {link.label}
           </a>
         ))}
+
+        <!-- Language Switcher -->
+        <a
+          href={switchPath}
+          class="px-3 py-1.5 rounded-lg text-xs font-bold border border-dark-500/40 text-gray-300 hover:text-neon-blue hover:border-neon-blue/40 transition-all duration-200 flex items-center gap-1.5"
+          aria-label={`Switch to ${altLang === 'ar' ? 'Arabic' : 'English'}`}
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+          {altLang === 'ar' ? 'AR' : 'EN'}
+        </a>
       </nav>
 
-      <!-- Mobile Menu Button -->
-      <button
-        id="mobile-menu-btn"
-        class="md:hidden w-10 h-10 rounded-lg bg-dark-700 flex items-center justify-center text-gray-400 hover:text-white transition-colors"
-        aria-label="فتح القائمة"
-      >
-        <svg class="w-5 h-5" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg class="w-5 h-5 hidden" id="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <!-- Mobile: Lang Switch + Menu Button -->
+      <div class="flex md:hidden items-center gap-2">
+        <a
+          href={switchPath}
+          class="w-10 h-10 rounded-lg bg-dark-700 flex items-center justify-center text-gray-400 hover:text-neon-blue transition-colors text-xs font-bold"
+          aria-label={`Switch to ${altLang === 'ar' ? 'Arabic' : 'English'}`}
+        >
+          {altLang === 'ar' ? 'AR' : 'EN'}
+        </a>
+        <button
+          id="mobile-menu-btn"
+          class="w-10 h-10 rounded-lg bg-dark-700 flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+          aria-label={lang === 'ar' ? 'فتح القائمة' : 'Open menu'}
+        >
+          <svg class="w-5 h-5" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="w-5 h-5 hidden" id="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -65,7 +102,7 @@ const currentPath = Astro.url.pathname;
           href={link.href}
           class:list={[
             'px-4 py-3 rounded-lg text-sm font-medium transition-colors',
-            currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+            currentPath === link.href || (link.href !== `${prefix}/` && currentPath.startsWith(link.href))
               ? 'text-neon-blue bg-neon-blue/10'
               : 'text-gray-400 hover:text-white hover:bg-dark-600/50'
           ]}

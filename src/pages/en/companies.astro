@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lang = 'en';
+
+const companies = [
+  { name: 'OpenAI', description: 'The world\'s most famous AI research lab — creator of GPT, ChatGPT, DALL·E, and Sora.', logo: '/icons/openai.svg', founded: '2015', hq: 'San Francisco, USA', slug: 'openai', color: '#10a37f' },
+  { name: 'Anthropic', description: 'AI safety company — creator of Claude, focused on building safe and reliable models.', logo: '/icons/anthropic.svg', founded: '2021', hq: 'San Francisco, USA', slug: 'anthropic', color: '#d4a574' },
+  { name: 'Google DeepMind', description: 'Google\'s AI arm — creator of Gemini, AlphaGo, Veo, and Imagen.', logo: '/icons/google-color.svg', founded: '2010', hq: 'London, UK', slug: 'google-deepmind', color: '#4285f4' },
+  { name: 'Meta AI', description: 'Meta\'s AI division — creator of open-source Llama, SAM, and NLLB.', logo: '/icons/meta-color.svg', founded: '2013', hq: 'Menlo Park, USA', slug: 'meta-ai', color: '#0668E1' },
+  { name: 'DeepSeek', description: 'Chinese company that stunned the world — competing models at 95% lower cost.', logo: '/icons/deepseek-color.svg', founded: '2023', hq: 'Hangzhou, China', slug: 'deepseek', color: '#4D6BFE' },
+  { name: 'xAI', description: 'Elon Musk\'s AI company — creator of Grok with live access to X data.', logo: '/icons/xai.svg', founded: '2023', hq: 'Austin, USA', slug: 'xai', color: '#fff' },
+  { name: 'Alibaba Cloud (Qwen)', description: 'Alibaba\'s cloud computing arm — creator of the open-source Qwen models.', logo: '/icons/qwen-color.svg', founded: '2009', hq: 'Hangzhou, China', slug: 'alibaba-qwen', color: '#ff6a00' },
+  { name: 'ByteDance', description: 'Chinese tech giant (TikTok) — creator of Seedream, Seedance, and Doubao.', logo: '/icons/bytedance-color.svg', founded: '2012', hq: 'Beijing, China', slug: 'bytedance', color: '#325AB4' },
+  { name: 'Microsoft', description: 'OpenAI\'s strategic partner — integrating AI across all products via Copilot.', logo: '/icons/microsoft-color.svg', founded: '1975', hq: 'Redmond, USA', slug: 'microsoft', color: '#00a4ef' },
+  { name: 'NVIDIA', description: 'The GPU queen — maker of the chips powering every AI model in the world.', logo: '/icons/nvidia-color.svg', founded: '1993', hq: 'Santa Clara, USA', slug: 'nvidia', color: '#76b900' },
+  { name: 'Xiaomi (MiMo)', description: 'Chinese electronics giant entering the AI race with the agentic MiMo model.', logo: '/icons/xiaomimimo.svg', founded: '2010', hq: 'Beijing, China', slug: 'xiaomi-mimo', color: '#ff6900' },
+  { name: 'MiniMax', description: 'Chinese company competing with efficient MoE models at 20x lower cost than Claude.', logo: '/icons/minimax-color.svg', founded: '2021', hq: 'Shanghai, China', slug: 'minimax', color: '#5B6CFF' },
+  { name: 'Zhipu AI', description: 'Leading Chinese AI company — creator of GLM and ChatGLM for general and coding use.', logo: '/icons/zhipu-color.svg', founded: '2019', hq: 'Beijing, China', slug: 'zhipu-ai', color: '#4B5FD6' },
+  { name: 'Moonshot AI (Kimi)', description: 'Chinese AI startup — creator of Kimi excelling in math and coding.', logo: '/icons/kimi-color.svg', founded: '2023', hq: 'Beijing, China', slug: 'moonshot-ai', color: '#4F46E5' },
+  { name: 'StepFun', description: 'Chinese company offering free and fast models for simple tasks.', logo: '/icons/stepfun-color.svg', founded: '2023', hq: 'Shanghai, China', slug: 'stepfun', color: '#6366f1' },
+  { name: 'Stability AI', description: 'Open-source image generation pioneer — creator of Stable Diffusion.', logo: '/icons/stability-color.svg', founded: '2019', hq: 'London, UK', slug: 'stability-ai', color: '#A855F7' },
+  { name: 'Midjourney', description: 'Best artistic creative model for stunning cinematic-style image generation.', logo: '/icons/midjourney.svg', founded: '2021', hq: 'San Francisco, USA', slug: 'midjourney', color: '#fff' },
+  { name: 'Black Forest Labs (FLUX)', description: 'Former Stable Diffusion team — creator of FLUX with highest artistic quality.', logo: '/icons/bfl.svg', founded: '2024', hq: 'Freiburg, Germany', slug: 'black-forest-labs', color: '#fff' },
+  { name: 'RunwayML', description: 'Creative AI video pioneer — creator of Gen-1 through Gen-4.5.', logo: '/icons/runway.svg', founded: '2018', hq: 'New York, USA', slug: 'runwayml', color: '#fff' },
+  { name: 'Kuaishou (Kling)', description: 'Chinese short video giant — creator of Kling video generation model.', logo: '/icons/kling-color.svg', founded: '2011', hq: 'Beijing, China', slug: 'kuaishou', color: '#FF4906' },
+  { name: 'Mistral AI', description: 'Leading French company — globally competitive open-source models.', logo: '/icons/mistral-color.svg', founded: '2023', hq: 'Paris, France', slug: 'mistral-ai', color: '#FF7000' },
+  { name: 'Perplexity AI', description: 'Smart search engine challenging Google with direct source-backed answers.', logo: '/icons/perplexity-color.svg', founded: '2022', hq: 'San Francisco, USA', slug: 'perplexity-ai', color: '#20808D' },
+  { name: 'Cohere', description: 'Canadian company specializing in enterprise models and semantic search.', logo: '/icons/cohere-color.svg', founded: '2019', hq: 'Toronto, Canada', slug: 'cohere', color: '#39594D' },
+  { name: 'Hugging Face', description: 'Largest community platform for sharing open-source AI models.', logo: '/icons/huggingface-color.svg', founded: '2016', hq: 'New York, USA', slug: 'hugging-face', color: '#FFD21E' },
+];
+---
+
+<BaseLayout title="Companies" description="Comprehensive guide to the world's most important AI companies — from founding to success" lang={lang}>
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        AI <span class="gradient-text">Companies</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl">
+        Discover the companies leading the AI revolution worldwide — from Silicon Valley to China and Europe
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {companies.map(company => (
+        <a href={`/en/blog/${company.slug}`} class="glass-card p-6 hover:border-white/20 transition-all group block">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
+              <img src={company.logo} alt={company.name} class="w-10 h-10 object-contain" loading="lazy" />
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white group-hover:text-neon-blue transition-colors">{company.name}</h3>
+              <p class="text-xs text-gray-500">Founded {company.founded} · {company.hq}</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">{company.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -2,6 +2,8 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import { t, getAlternateLang } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
 
 interface Props {
   title: string;
@@ -9,44 +11,119 @@ interface Props {
   image?: string;
   type?: string;
   keywords?: string;
+  lang?: Lang;
+  alternateSlug?: string;
 }
 
 const {
   title,
-  description = 'موقعك الأول لأخبار وتحليلات الذكاء الاصطناعي بالعربية — نماذج، أدوات، تنبؤات المستقبل',
-  image = '/images/og-default.svg',
+  description,
+  image = '/images/og-default.png',
   type = 'website',
-  keywords = 'الذكاء الاصطناعي, أخبار الذكاء الاصطناعي, نماذج لغوية, شات جي بي تي, ChatGPT, تقنية, تكنولوجيا المستقبل'
+  keywords,
+  lang = 'ar',
+  alternateSlug,
 } = Astro.props;
 
+const finalDescription = description || t(lang, 'meta.description');
+const finalKeywords = keywords || t(lang, 'meta.keywords');
+const isRTL = lang === 'ar';
+const altLang = getAlternateLang(lang);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const fullTitle = title === 'الرئيسية' ? 'AI DayaHimour — أخبار الذكاء الاصطناعي' : `${title} | AI DayaHimour`;
+const ogLocale = lang === 'ar' ? 'ar_AR' : 'en_US';
+
+const isHome = title === 'الرئيسية' || title === 'Home';
+const fullTitle = isHome ? t(lang, 'meta.siteTitle') : `${title} | AI DayaHimour`;
+
+// Alternate URL for hreflang
+const currentPath = Astro.url.pathname;
+let alternatePath = '';
+if (alternateSlug) {
+  alternatePath = alternateSlug;
+} else if (currentPath.startsWith(`/${lang}/`)) {
+  alternatePath = currentPath.replace(`/${lang}/`, `/${altLang}/`);
+} else if (currentPath === `/${lang}` || currentPath === `/${lang}/`) {
+  alternatePath = `/${altLang}/`;
+}
+const alternateURL = alternatePath ? new URL(alternatePath, Astro.site).toString() : '';
+
+// Structured Data: WebSite + Organization + SearchAction
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${Astro.site}#website`,
+      "name": "AI DayaHimour",
+      "url": Astro.site,
+      "description": finalDescription,
+      "inLanguage": [lang, altLang],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": `${Astro.site}${lang}/blog/?q={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": `${Astro.site}#organization`,
+      "name": "AI DayaHimour",
+      "url": Astro.site,
+      "logo": {
+        "@type": "ImageObject",
+        "url": new URL('/favicon-192x192.png', Astro.site).toString(),
+        "width": 192,
+        "height": 192
+      },
+      "sameAs": [
+        "https://x.com/DayaHimour",
+        "https://github.com/dayahimour"
+      ]
+    }
+  ]
+};
 ---
 
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang={lang} dir={isRTL ? 'rtl' : 'ltr'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#050a12" />
+    <meta name="google-site-verification" content="YzfAla6cQj68nN75Y-UVglxGPzNZHkamE9KC2BQeAnA" />
+
+    <!-- Fonts: preconnect + non-blocking load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" />
 
     <!-- SEO -->
     <title>{fullTitle}</title>
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
+    <meta name="description" content={finalDescription} />
+    <meta name="keywords" content={finalKeywords} />
     <meta name="author" content="AI DayaHimour" />
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- hreflang -->
+    <link rel="alternate" hreflang={lang} href={canonicalURL} />
+    {alternateURL && <link rel="alternate" hreflang={altLang} href={alternateURL} />}
+    {alternateURL && <link rel="alternate" hreflang="x-default" href={new URL('/en/', Astro.site)} />}
+
     <!-- OpenGraph -->
     <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={finalDescription} />
     <meta property="og:image" content={new URL(image, Astro.site)} />
     <meta property="og:image:alt" content={title} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content={type} />
-    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocale === 'ar_AR' ? 'en_US' : 'ar_AR'} />
     <meta property="og:site_name" content="AI DayaHimour" />
 
     <!-- Twitter -->
@@ -54,19 +131,12 @@ const fullTitle = title === 'الرئيسية' ? 'AI DayaHimour — أخبار �
     <meta name="twitter:site" content="@AIDAYAHIMOUR" />
     <meta name="twitter:creator" content="@AIDAYAHIMOUR" />
     <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={finalDescription} />
     <meta name="twitter:image" content={new URL(image, Astro.site)} />
     <meta name="twitter:image:alt" content={title} />
 
     <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AI DayaHimour",
-      "url": Astro.site,
-      "description": description,
-      "inLanguage": "ar",
-    })} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
@@ -74,25 +144,29 @@ const fullTitle = title === 'الرئيسية' ? 'AI DayaHimour — أخبار �
     <link rel="shortcut icon" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="AI DayaHimour" />
+    <link rel="manifest" href="/manifest.json" />
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1914471886936705" crossorigin="anonymous"></script>
+    
+    <!-- Preconnect for AdSense -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
     
     <!-- SEO: Robots -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     
     <!-- RSS & Sitemap Discovery -->
     <link rel="alternate" type="application/rss+xml" title="AI DayaHimour — RSS" href="/rss.xml" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     
     <!-- Slot للـ Head إضافات من الصفحات -->
     <slot name="head" />
   </head>
   <body class="bg-dark-900 min-h-screen flex flex-col bg-grid">
-    <Header />
+    <Header lang={lang} />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>
