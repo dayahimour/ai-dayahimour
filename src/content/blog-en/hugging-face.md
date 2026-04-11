@@ -4,7 +4,7 @@ description: "Comprehensive analysis of Hugging Face: from founding to success, 
 date: "2026-04-10"
 category: "companies"
 tags: ["Hugging Face", "AI Companies", "artificial intelligence", "2026"]
-image: "/images/hugging-face-en.webp"
+image: "/images/hugging-face.webp"
 featured: false
 author: "AI DayaHimour Team"
 draft: false

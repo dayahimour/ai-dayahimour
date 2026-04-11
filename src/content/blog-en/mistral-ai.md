@@ -4,7 +4,7 @@ description: "Comprehensive analysis of Mistral AI: from founding to success, it
 date: "2026-04-10"
 category: "companies"
 tags: ["Mistral AI", "AI Companies", "artificial intelligence", "2026"]
-image: "/images/mistral-ai-2.webp"
+image: "/images/mistral-ai.webp"
 featured: false
 author: "AI DayaHimour Team"
 draft: false

@@ -4,7 +4,7 @@ description: "Comprehensive analysis of Stability AI: from founding to success, 
 date: "2026-04-10"
 category: "companies"
 tags: ["Stability AI", "AI Companies", "artificial intelligence", "2026"]
-image: "/images/stability-ai-ability-ai.webp"
+image: "/images/stability-ai.webp"
 featured: false
 author: "AI DayaHimour Team"
 draft: false
