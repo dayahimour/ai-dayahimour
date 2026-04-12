@@ -46,7 +46,7 @@ const categoryColors: Record<string, { bg: string; text: string; border: string 
 const colors = categoryColors[category] || categoryColors['news'];
 ---
 
-<a href={`${prefix}/blog/${slug}`} class:list={['group block', featured ? 'md:col-span-2' : '']}>
+<a href={`${prefix}/blog/${slug}/`} class:list={['group block', featured ? 'md:col-span-2' : '']}>
   <article class="glass-card overflow-hidden h-full flex flex-col">
     <!-- Image -->
     <div class:list={['relative overflow-hidden', featured ? 'h-56 md:h-72' : 'h-48']}>

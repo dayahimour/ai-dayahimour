@@ -29,7 +29,7 @@ const categoryColors: Record<string, string> = {
 };
 
 const gradientClass = categoryColors[category] || categoryColors['برمجة'] || 'from-neon-blue to-blue-600';
-const finalHref = slug ? `/${lang}/blog/${slug}` : '#';
+const finalHref = slug ? `/${lang}/blog/${slug}/` : '#';
 ---
 
 <a href={finalHref} class={`block glass-card p-6 group hover:border-neon-blue/40 transition-all duration-300 hover:shadow-lg hover:shadow-neon-blue/10 relative overflow-hidden ${!slug && 'cursor-default'}`}>

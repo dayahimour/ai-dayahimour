@@ -12,12 +12,12 @@ const prefix = `/${lang}`;
 
 const navLinks = [
   { href: `${prefix}/`, label: t(lang, 'nav.home') },
-  { href: `${prefix}/blog`, label: t(lang, 'nav.blog') },
-  { href: `${prefix}/models`, label: t(lang, 'nav.models') },
-  { href: `${prefix}/tools`, label: t(lang, 'nav.tools') },
-  { href: `${prefix}/companies`, label: t(lang, 'nav.companies') },
-  { href: `${prefix}/future`, label: t(lang, 'nav.future') },
-  { href: `${prefix}/about`, label: t(lang, 'nav.about') },
+  { href: `${prefix}/blog/`, label: t(lang, 'nav.blog') },
+  { href: `${prefix}/models/`, label: t(lang, 'nav.models') },
+  { href: `${prefix}/tools/`, label: t(lang, 'nav.tools') },
+  { href: `${prefix}/companies/`, label: t(lang, 'nav.companies') },
+  { href: `${prefix}/future/`, label: t(lang, 'nav.future') },
+  { href: `${prefix}/about/`, label: t(lang, 'nav.about') },
 ];
 
 const currentPath = Astro.url.pathname;

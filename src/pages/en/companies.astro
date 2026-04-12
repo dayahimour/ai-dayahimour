@@ -44,7 +44,7 @@ const companies = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {companies.map(company => (
-        <a href={`/en/blog/${company.slug}`} class="glass-card p-6 hover:border-white/20 transition-all group block">
+        <a href={`/en/blog/${company.slug}/`} class="glass-card p-6 hover:border-white/20 transition-all group block">
           <div class="flex items-center gap-4 mb-4">
             <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
               <img src={company.logo} alt={company.name} class="w-10 h-10 object-contain" loading="lazy" />

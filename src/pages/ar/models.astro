@@ -330,7 +330,7 @@ const allModels = [...languageModels, ...imageModels, ...videoModels];
             {languageModels.sort((a, b) => (b.benchmarks?.swe || 0) - (a.benchmarks?.swe || 0)).map((model, i) => (
               <tr class:list={['border-b border-dark-500/10 hover:bg-white/5 transition-colors', i % 2 === 0 ? 'bg-white/[0.02]' : '']}>
                 <td class="p-4">
-                  <a href={`/ar/blog/${model.slug}`} class="text-neon-blue font-medium hover:underline hover:text-neon-green transition-colors">{model.name}</a>
+                  <a href={`/ar/blog/${model.slug}/`} class="text-neon-blue font-medium hover:underline hover:text-neon-green transition-colors">{model.name}</a>
                 </td>
                 <td class="p-4 text-gray-400 text-xs">{model.company}</td>
                 <td class="p-4" style="min-width: 140px;">
@@ -407,7 +407,7 @@ const allModels = [...languageModels, ...imageModels, ...videoModels];
             {imageModels.sort((a, b) => (b.benchmarks?.elo || 0) - (a.benchmarks?.elo || 0)).map((model, i) => (
               <tr class:list={['border-b border-dark-500/10 hover:bg-white/5 transition-colors', i % 2 === 0 ? 'bg-white/[0.02]' : '']}>
                 <td class="p-4">
-                  <a href={`/ar/blog/${model.slug}`} class="text-amber-400 font-medium hover:underline hover:text-amber-300 transition-colors">{model.name}</a>
+                  <a href={`/ar/blog/${model.slug}/`} class="text-amber-400 font-medium hover:underline hover:text-amber-300 transition-colors">{model.name}</a>
                 </td>
                 <td class="p-4 text-gray-400 text-xs">{model.company}</td>
                 <td class="p-4" style="min-width: 140px;">
@@ -468,7 +468,7 @@ const allModels = [...languageModels, ...imageModels, ...videoModels];
             {videoModels.map((model, i) => (
               <tr class:list={['border-b border-dark-500/10 hover:bg-white/5 transition-colors', i % 2 === 0 ? 'bg-white/[0.02]' : '']}>
                 <td class="p-4">
-                  <a href={`/ar/blog/${model.slug}`} class="text-pink-400 font-medium hover:underline hover:text-pink-300 transition-colors">{model.name}</a>
+                  <a href={`/ar/blog/${model.slug}/`} class="text-pink-400 font-medium hover:underline hover:text-pink-300 transition-colors">{model.name}</a>
                 </td>
                 <td class="p-4 text-gray-400 text-xs">{model.company}</td>
                 <td class="p-4 text-center"><span style="color: #f472b6; font-size: 13px; font-weight: 600;">{model.benchmarks.r || "N/A"}</span></td>
