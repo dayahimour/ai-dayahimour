@@ -13,8 +13,8 @@ export const GET: APIRoute = async () => {
 
   // Static pages — both languages with hreflang
   for (const page of staticPages) {
-    const arUrl = `${siteUrl}/ar${page}/`;
-    const enUrl = `${siteUrl}/en${page}/`;
+    const arUrl = page === '' ? `${siteUrl}/ar/` : `${siteUrl}/ar${page}/`;
+    const enUrl = page === '' ? `${siteUrl}/en/` : `${siteUrl}/en${page}/`;
     urls += `  <url>
     <loc>${arUrl}</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
