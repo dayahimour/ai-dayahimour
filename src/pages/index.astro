@@ -3,12 +3,15 @@
 // This page is only hit if Worker is not active (dev mode).
 ---
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0;url=/ar/" />
-    <link rel="canonical" href="https://dayahimour.org/ar/" />
-    <title>Redirecting...</title>
+    <meta name="robots" content="noindex, follow" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>AI DayaHimour</title>
     <script>
       // Client-side fallback: check browser language
       const lang = navigator.language || navigator.userLanguage || 'ar';
@@ -16,7 +19,6 @@
       window.location.replace(isArabic ? '/ar/' : '/en/');
     </script>
   </head>
-  <body>
-    <p>Redirecting...</p>
+  <body style="background-color: #050a12;">
   </body>
 </html>

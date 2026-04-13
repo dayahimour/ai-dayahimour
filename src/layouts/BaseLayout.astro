@@ -47,6 +47,17 @@ if (alternateSlug) {
 }
 const alternateURL = alternatePath ? new URL(alternatePath, Astro.site).toString() : '';
 
+// x-default URL logic:
+// Root (/) redirects based on IP, so it is the x-default for the homepage.
+// Subpages do not redirect, so we set English as the x-default.
+let xDefaultPath = '';
+if (currentPath === '/' || currentPath === '/ar' || currentPath === '/ar/' || currentPath === '/en' || currentPath === '/en/') {
+  xDefaultPath = '/';
+} else {
+  xDefaultPath = lang === 'en' ? currentPath : alternatePath;
+}
+const xDefaultURL = xDefaultPath ? new URL(xDefaultPath, Astro.site).toString() : '';
+
 // Structured Data: WebSite + Organization + SearchAction
 const structuredData = {
   "@context": "https://schema.org",
@@ -108,10 +119,18 @@ const structuredData = {
     <meta name="author" content="AI DayaHimour" />
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- Webmaster Tools Verification (Search Engines) -->
+    <!-- انسخ الكود الخاص بـ Bing هنا بعد التسجيل: -->
+    <!-- <meta name="msvalidate.01" content="كود_بينج_هنا" /> -->
+    <!-- انسخ الكود الخاص بـ Yandex هنا بعد التسجيل: -->
+    <!-- <meta name="yandex-verification" content="كود_ياندكس_هنا" /> -->
+    <!-- انسخ الكود الخاص بـ Baidu هنا بعد التسجيل: -->
+    <!-- <meta name="baidu-site-verification" content="كود_بايدو_هنا" /> -->
+
     <!-- hreflang -->
     <link rel="alternate" hreflang={lang} href={canonicalURL} />
     {alternateURL && <link rel="alternate" hreflang={altLang} href={alternateURL} />}
-    {alternateURL && <link rel="alternate" hreflang="x-default" href={new URL('/en/', Astro.site)} />}
+    {xDefaultURL && <link rel="alternate" hreflang="x-default" href={xDefaultURL} />}
 
     <!-- OpenGraph -->
     <meta property="og:title" content={fullTitle} />
@@ -139,9 +158,8 @@ const structuredData = {
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="AI DayaHimour" />
     <link rel="manifest" href="/manifest.json" />
