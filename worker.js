@@ -1,7 +1,7 @@
 /**
  * Cloudflare Worker — Geo-based language redirect
  * Uses request.cf.country (Cloudflare native, reliable)
- * Falls back to browser language for unknown IPs
+ * Falls back to CF-IPCountry header, then browser-side JS
  */
 
 const ARABIC_COUNTRIES = new Set([
@@ -16,27 +16,44 @@ export default {
     const path = url.pathname;
 
     // Only apply geo-redirect on the root path "/"
-    if (path === '/' || path === '') {
+    if (path === '/') {
       // 1. Check for language cookie (user manual override)
       const cookies = request.headers.get('Cookie') || '';
       const langCookie = cookies.match(/lang=(ar|en)/);
       if (langCookie) {
         const preferred = langCookie[1];
-        return Response.redirect(new URL(`/${preferred}/`, url), 302);
+        return makeRedirect(`/${preferred}/`, url);
       }
 
       // 2. Use Cloudflare's native geo data (most accurate)
-      const country = (request.cf && request.cf.country) ? request.cf.country.toUpperCase() : '';
-      if (country) {
+      const country = (request.cf?.country ?? request.headers.get('CF-IPCountry') ?? '').toUpperCase();
+      if (country && country !== 'XX') {
         const targetLang = ARABIC_COUNTRIES.has(country) ? 'ar' : 'en';
-        return Response.redirect(new URL(`/${targetLang}/`, url), 302);
+        return makeRedirect(`/${targetLang}/`, url);
       }
 
       // 3. Fallback: serve the index.html (has JS browser-lang detection)
-      return env.ASSETS.fetch(request);
+      const fallback = await env.ASSETS.fetch(request);
+      return new Response(fallback.body, {
+        status: fallback.status,
+        headers: {
+          ...Object.fromEntries(fallback.headers),
+          'Cache-Control': 'no-store',
+        },
+      });
     }
 
     // All other paths: serve static assets normally
     return env.ASSETS.fetch(request);
   },
 };
+
+function makeRedirect(path, baseUrl) {
+  return new Response(null, {
+    status: 302,
+    headers: {
+      'Location': new URL(path, baseUrl).toString(),
+      'Cache-Control': 'no-store',
+    },
+  });
+}
