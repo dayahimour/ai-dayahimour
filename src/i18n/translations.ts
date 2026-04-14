@@ -62,6 +62,8 @@ export const ui: Record<Lang, Record<string, string>> = {
         'news.latest': 'آخر الأخبار',
         'news.filterByImportance': 'فلترة حسب الأهمية',
         'news.filterByCompany': 'فلترة حسب الشركة',
+        'news.pageTitle': 'أحدث أخبار الذكاء الاصطناعي اليوم | AI DayaHimour',
+        'news.pageKeywords': 'أخبار الذكاء الاصطناعي, تطورات الذكاء الصناعي, أخبار شات جي بي تي, روبوتات, أحدث أخبار التقنية, OpenAI, أخبار جوجل',
 
         // CTA
         'cta.title': 'ابق على اطلاع دائم',
@@ -185,6 +187,8 @@ export const ui: Record<Lang, Record<string, string>> = {
         'news.latest': 'Latest News',
         'news.filterByImportance': 'Filter by importance',
         'news.filterByCompany': 'Filter by company',
+        'news.pageTitle': 'Latest AI News & Updates | AI DayaHimour',
+        'news.pageKeywords': 'AI news, artificial intelligence updates, ChatGPT news, tech news, OpenAI updates, machine learning news',
 
         // CTA
         'cta.title': 'Stay Updated',
@@ -275,14 +279,14 @@ export const arabicCountries = [
 
 // Category mapping between AR and EN
 export const categoryMap: Record<string, Record<Lang, string>> = {
-    news:     { ar: 'أخبار',   en: 'news' },
-    analysis: { ar: 'تحليل',   en: 'analysis' },
-    models:   { ar: 'نماذج',   en: 'models' },
-    companies:{ ar: 'شركات',  en: 'companies' },
-    tools:    { ar: 'أدوات',   en: 'tools' },
-    future:   { ar: 'مستقبل',  en: 'future' },
-    images:   { ar: 'صور',     en: 'images' },
-    video:    { ar: 'فيديو',   en: 'video' },
+    news: { ar: 'أخبار', en: 'news' },
+    analysis: { ar: 'تحليل', en: 'analysis' },
+    models: { ar: 'نماذج', en: 'models' },
+    companies: { ar: 'شركات', en: 'companies' },
+    tools: { ar: 'أدوات', en: 'tools' },
+    future: { ar: 'مستقبل', en: 'future' },
+    images: { ar: 'صور', en: 'images' },
+    video: { ar: 'فيديو', en: 'video' },
 };
 
 export function getCategoryKey(localizedCategory: string): string {

@@ -16,9 +16,40 @@ const allNews = (await getCollection('news'))
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const companies = [...new Set(allNews.map(n => n.company).filter(Boolean))];
+
+// Generate JSON-LD schema for all news items on this page
+// This is exactly what tells Google that this page contains multiple distinct searchable "News" objects
+const newsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": allNews.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "NewsArticle",
+      "headline": item.headline,
+      "description": item.summary,
+      "datePublished": item.date,
+      "publisher": {
+        "@type": "Organization",
+        "name": item.source,
+      },
+      "url": item.articleSlug ? new URL(`/${lang}/blog/${item.articleSlug}/`, Astro.site).toString() : item.sourceUrl,
+    }
+  }))
+};
 ---
 
-<BaseLayout title={t(lang, 'nav.news')} description={t(lang, 'news.subtitle')} lang={lang}>
+<BaseLayout 
+  title={t(lang, 'news.pageTitle')} 
+  description={t(lang, 'news.subtitle')} 
+  keywords={t(lang, 'news.pageKeywords')} 
+  lang={lang}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(newsSchema)} />
+  </Fragment>
+
   <div class="max-w-7xl mx-auto px-4 py-12">
     <!-- Header -->
     <div class="mb-10">

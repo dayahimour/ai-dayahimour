@@ -1,7 +1,17 @@
 [
   {
-    "headline": "Major Claude Code Desktop Update: Multiple Sessions Side-by-Side",
-    "summary": "Anthropic officially announced a redesigned Claude Code desktop experience. Users can now run multiple Claude sessions side-by-side in a single window with a new sidebar to manage them.",
+    "headline": "OpenAI Unveils GPT-5.4-Cyber Specialized in Cyber Defense",
+    "summary": "OpenAI released GPT-5.4-Cyber, a variant fine-tuned specifically for defensive cybersecurity tasks under the expanded Trusted Access program for authenticated defenders. The new model enables advanced defensive workflows while maintaining principles of democratic access and continuous protection. The official announcement came today, exactly one week after rival Anthropic’s Mythos launch.",
+    "date": "2026-04-14",
+    "source": "OpenAI",
+    "sourceUrl": "https://x.com/OpenAI/status/2044161906936791179",
+    "company": "OpenAI",
+    "tags": ["GPT-5.4-Cyber", "OpenAI", "cybersecurity", "specialized models"],
+    "draft": false
+  },
+  {
+    "headline": "Major Update for Claude Code on Desktop",
+    "summary": "Anthropic officially announced a complete redesign of Claude Code for desktop via its @claudeai account. Multiple Claude sessions can now run side-by-side in a single window, supported by a new sidebar for easy management. The update rolled out in the past few hours and marks a significant step toward a far more efficient coding experience.",
     "date": "2026-04-14",
     "source": "Anthropic (@claudeai)",
     "sourceUrl": "https://x.com/claudeai",
@@ -10,8 +20,8 @@
     "draft": false
   },
   {
-    "headline": "Anthropic Preparing Claude Opus 4.7 and New AI Design Tool",
-    "summary": "According to an exclusive report from The Information, Anthropic is preparing Opus 4.7 alongside a new AI design tool (vibe coding/design tool). Official announcement expected within the next few days.",
+    "headline": "Anthropic Prepares Claude Opus 4.7 and New AI Design Tool",
+    "summary": "According to an exclusive report published today by The Information, Anthropic is preparing the Opus 4.7 model along with a new AI design tool (vibe coding/design tool). The official announcement is expected within the next few days, only weeks after the limited Mythos Preview release.",
     "date": "2026-04-14",
     "source": "The Information",
     "sourceUrl": "https://theinformation.com",
@@ -20,18 +30,18 @@
     "draft": false
   },
   {
-    "headline": "SAP Launches Agentic AI Directly in Human Capital Management",
-    "summary": "SAP announced the integration of autonomous agentic AI directly into its human resources management solutions, enabling complex automated tasks within enterprise systems.",
+    "headline": "SAP Launches Intelligent AI Agents in Human Capital Management",
+    "summary": "SAP announced today the direct integration of intelligent agents (agentic AI) into its human capital management solutions. The move enables complex automated tasks to run natively within enterprise systems.",
     "date": "2026-04-14",
     "source": "SAP News",
     "sourceUrl": "https://news.sap.com",
     "company": "SAP",
-    "tags": ["SAP", "agentic AI", "HR", "enterprise"],
+    "tags": ["SAP", "AI agents", "human resources"],
     "draft": false
   },
   {
-    "headline": "Amazon Launches AI Research Tool to Accelerate Early Drug Discovery",
-    "summary": "Amazon announced a new AI-powered research tool to accelerate early-stage drug discovery, available to researchers and pharmaceutical institutions.",
+    "headline": "Amazon Releases AI Research Tool to Accelerate Early-Stage Drug Discovery",
+    "summary": "Amazon announced a new AI-powered research tool designed to speed up the early discovery phase of new medicines. The tool is now available to researchers and pharmaceutical organizations.",
     "date": "2026-04-14",
     "source": "Amazon Science",
     "sourceUrl": "https://www.amazon.science",
@@ -40,8 +50,8 @@
     "draft": false
   },
   {
-    "headline": "Google Adds \"AI Skills\" to Chrome and Launches Gemini Personal Intelligence in India",
-    "summary": "Google announced the addition of AI Skills to Chrome for saving and reusing AI-assisted workflows. Gemini Personal Intelligence also officially launched in India.",
+    "headline": "Google Adds AI Skills to Chrome and Rolls Out Gemini Personal Intelligence in India",
+    "summary": "Google announced the addition of the AI Skills feature to Chrome, enabling users to save and reuse favorite workflows with AI assistance. The company also officially launched Gemini Personal Intelligence in India.",
     "date": "2026-04-14",
     "source": "Google Blog",
     "sourceUrl": "https://blog.google",
@@ -50,8 +60,8 @@
     "draft": false
   },
   {
-    "headline": "Bank of England Governor Raises Security Concerns Over Anthropic's Mythos Model",
-    "summary": "Bank of England Governor Andrew Bailey expressed major security concerns about Anthropic's new Mythos model, warning of cybersecurity risks to banks and financial institutions.",
+    "headline": "Bank of England Raises Cybersecurity Concerns Over Anthropic’s New Mythos Model",
+    "summary": "Bank of England Governor Andrew Bailey expressed serious cybersecurity concerns today regarding Anthropic’s new Mythos model. He warned of potential risks to banks and financial institutions.",
     "date": "2026-04-14",
     "source": "Financial Times",
     "sourceUrl": "https://ft.com",
@@ -60,18 +70,18 @@
     "draft": false
   },
   {
-    "headline": "Anthropic Adds Novartis CEO to Its Board of Directors",
-    "summary": "Anthropic added the CEO of Novartis to its board of directors, signaling a stronger push toward medical and enterprise AI applications.",
+    "headline": "Anthropic Appoints Novartis CEO to Its Board of Directors",
+    "summary": "Anthropic has added the CEO of pharmaceutical giant Novartis to its board of directors. The appointment signals a stronger focus on medical and enterprise AI applications.",
     "date": "2026-04-14",
     "source": "Anthropic",
     "sourceUrl": "https://anthropic.com/news",
     "company": "Anthropic",
-    "tags": ["Anthropic", "Novartis", "board", "health AI"],
+    "tags": ["Anthropic", "Novartis", "board of directors"],
     "draft": false
   },
   {
-    "headline": "Alibaba's HappyHorse 1.0 Tops Global Video Generation Rankings",
-    "summary": "Alibaba's new video generation model HappyHorse 1.0 has topped global rankings in the space, according to WSJ reports.",
+    "headline": "Alibaba’s HappyHorse 1.0 Tops Global AI Video Generation Rankings",
+    "summary": "Alibaba’s new HappyHorse 1.0 video-generation model has claimed the top spot in global rankings. The achievement was highlighted in today’s Wall Street Journal reports.",
     "date": "2026-04-14",
     "source": "Wall Street Journal",
     "sourceUrl": "https://wsj.com",
