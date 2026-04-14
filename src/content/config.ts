@@ -30,4 +30,26 @@ const blogEn = defineCollection({
     }),
 });
 
-export const collections = { blog, 'blog-en': blogEn };
+const newsItemSchema = z.object({
+    headline: z.string(),
+    summary: z.string(),
+    date: z.string(),
+    source: z.string(),
+    sourceUrl: z.string().url(),
+    articleSlug: z.string().optional(),
+    company: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+    draft: z.boolean().default(false),
+});
+
+const news = defineCollection({
+    type: 'data',
+    schema: z.array(newsItemSchema),
+});
+
+const newsEn = defineCollection({
+    type: 'data',
+    schema: z.array(newsItemSchema),
+});
+
+export const collections = { blog, 'blog-en': blogEn, news, 'news-en': newsEn };

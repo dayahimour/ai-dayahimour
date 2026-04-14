@@ -47,6 +47,22 @@ export const ui: Record<Lang, Record<string, string>> = {
         'article.share': 'شارك المقال:',
         'article.toc': 'فهرس المحتوى',
 
+        // News
+        'nav.news': 'الأخبار',
+        'news.title': 'آخر',
+        'news.titleHighlight': 'الأخبار',
+        'news.subtitle': 'تابع آخر التطورات والأخبار العاجلة في عالم الذكاء الاصطناعي لحظة بلحظة',
+        'news.all': 'الكل',
+        'news.breaking': 'عاجل',
+        'news.important': 'مهم',
+        'news.normal': 'عادي',
+        'news.noResults': 'لا توجد أخبار',
+        'news.source': 'المصدر',
+        'news.viewAll': 'جميع الأخبار',
+        'news.latest': 'آخر الأخبار',
+        'news.filterByImportance': 'فلترة حسب الأهمية',
+        'news.filterByCompany': 'فلترة حسب الشركة',
+
         // CTA
         'cta.title': 'ابق على اطلاع دائم',
         'cta.subtitle': 'تابع أحدث التطورات في عالم الذكاء الاصطناعي. محتوى جديد كل يوم!',
@@ -153,6 +169,22 @@ export const ui: Record<Lang, Record<string, string>> = {
         'article.reader': 'readers',
         'article.share': 'Share this article:',
         'article.toc': 'Table of Contents',
+
+        // News
+        'nav.news': 'News',
+        'news.title': 'Latest',
+        'news.titleHighlight': 'News',
+        'news.subtitle': 'Follow the latest breaking news and developments in the world of artificial intelligence in real-time',
+        'news.all': 'All',
+        'news.breaking': 'Breaking',
+        'news.important': 'Important',
+        'news.normal': 'Normal',
+        'news.noResults': 'No news found',
+        'news.source': 'Source',
+        'news.viewAll': 'All News',
+        'news.latest': 'Latest News',
+        'news.filterByImportance': 'Filter by importance',
+        'news.filterByCompany': 'Filter by company',
 
         // CTA
         'cta.title': 'Stay Updated',

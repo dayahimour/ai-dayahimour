@@ -1,0 +1,82 @@
+[
+  {
+    "headline": "تحديث كبير لـ Claude Code على سطح المكتب",
+    "summary": "أعلنت Anthropic رسمياً (من حساب @claudeai) إعادة تصميم Claude Code على الديسكتوب: يمكن الآن تشغيل جلسات Claude متعددة جنباً إلى جنب في نافذة واحدة مع شريط جانبي جديد لإدارتها. التحديث صدر خلال الساعات الماضية ويُعتبر خطوة مهمة نحو تجربة تطوير أكثر كفاءة.",
+    "date": "2026-04-14",
+    "source": "Anthropic (@claudeai)",
+    "sourceUrl": "https://x.com/claudeai",
+    "company": "Anthropic",
+    "tags": ["Claude Code", "Anthropic", "تطوير", "ديسكتوب"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic تستعد لإطلاق Claude Opus 4.7 وأداة تصميم AI جديدة",
+    "summary": "بحسب تقرير حصري من The Information (نُشر اليوم)، الشركة تجهز نموذج Opus 4.7 بالإضافة إلى أداة تصميم AI جديدة (vibe coding/design tool). من المتوقع الإعلان الرسمي خلال الأيام القليلة القادمة، بعد أسابيع قليلة فقط من إعلان Mythos Preview المقيد.",
+    "date": "2026-04-14",
+    "source": "The Information",
+    "sourceUrl": "https://theinformation.com",
+    "company": "Anthropic",
+    "tags": ["Claude Opus 4.7", "Anthropic", "نماذج جديدة"],
+    "draft": false
+  },
+  {
+    "headline": "SAP تطلق وكلاء AI ذكيين في حلول إدارة رأس المال البشري",
+    "summary": "أعلنت SAP اليوم دمج الوكلاء الذكيين (agentic AI) مباشرة في حلول إدارة الموارد البشرية، مما يسمح بتنفيذ مهام تلقائية معقدة داخل أنظمة الشركات.",
+    "date": "2026-04-14",
+    "source": "SAP News",
+    "sourceUrl": "https://news.sap.com",
+    "company": "SAP",
+    "tags": ["SAP", "وكلاء AI", "موارد بشرية"],
+    "draft": false
+  },
+  {
+    "headline": "Amazon تطلق أداة بحث AI لتسريع اكتشاف الأدوية في مراحلها المبكرة",
+    "summary": "أعلنت أمازون اليوم أداة بحثية جديدة تعتمد على الذكاء الاصطناعي لتسريع مرحلة الاكتشاف المبكر للأدوية، وهي متاحة للباحثين والمؤسسات الصيدلانية.",
+    "date": "2026-04-14",
+    "source": "Amazon Science",
+    "sourceUrl": "https://www.amazon.science",
+    "company": "Amazon",
+    "tags": ["Amazon", "اكتشاف أدوية", "AI صحة"],
+    "draft": false
+  },
+  {
+    "headline": "Google تضيف ميزة \"AI Skills\" إلى Chrome وتطلق Gemini Personal Intelligence في الهند",
+    "summary": "أعلنت جوجل اليوم إضافة ميزة AI Skills في متصفح Chrome لحفظ وإعادة استخدام تدفقات العمل المفضلة بمساعدة الذكاء الاصطناعي. كما أطلقت ميزة Gemini Personal Intelligence رسمياً في الهند.",
+    "date": "2026-04-14",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google",
+    "company": "Google",
+    "tags": ["Google", "Chrome", "Gemini", "AI Skills"],
+    "draft": false
+  },
+  {
+    "headline": "مخاوف أمنية من بنك إنجلترا بشأن نموذج Anthropic الجديد Mythos",
+    "summary": "أعرب محافظ بنك إنجلترا Andrew Bailey اليوم عن مخاوف أمنية كبيرة من النموذج الجديد لـ Anthropic (Mythos)، محذراً من مخاطر الأمن السيبراني على البنوك والمؤسسات المالية.",
+    "date": "2026-04-14",
+    "source": "Financial Times",
+    "sourceUrl": "https://ft.com",
+    "company": "Anthropic",
+    "tags": ["Anthropic", "Mythos", "بنك إنجلترا", "أمن سيبراني"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic تضيف الرئيس التنفيذي لـ Novartis إلى مجلس إدارتها",
+    "summary": "أضافت Anthropic اليوم الرئيس التنفيذي لشركة Novartis (عملاق الأدوية) إلى مجلس إدارتها، في خطوة تشير إلى تعزيز التوجه نحو التطبيقات الطبية والمؤسسية.",
+    "date": "2026-04-14",
+    "source": "Anthropic",
+    "sourceUrl": "https://anthropic.com/news",
+    "company": "Anthropic",
+    "tags": ["Anthropic", "Novartis", "مجلس إدارة"],
+    "draft": false
+  },
+  {
+    "headline": "Alibaba's HappyHorse 1.0 يتصدر تصنيفات توليد الفيديو عالمياً",
+    "summary": "أعلن نموذج Alibaba الجديد لتوليد الفيديو (HappyHorse 1.0) صدارة التصنيفات العالمية في هذا المجال، وفقاً لتقارير WSJ اليوم.",
+    "date": "2026-04-14",
+    "source": "Wall Street Journal",
+    "sourceUrl": "https://wsj.com",
+    "company": "Alibaba",
+    "tags": ["Alibaba", "HappyHorse", "توليد فيديو"],
+    "draft": false
+  }
+]

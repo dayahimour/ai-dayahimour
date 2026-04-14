@@ -15,6 +15,20 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
+    console.log(`[Worker] path="${path}" cf.country="${request.cf?.country}" CF-IPCountry="${request.headers.get('CF-IPCountry')}"`);
+
+    // Debug endpoint to verify Worker is running
+    if (path === '/debug-geo') {
+      return new Response(JSON.stringify({
+        worker: true,
+        country: request.cf?.country ?? null,
+        cfIpCountry: request.headers.get('CF-IPCountry'),
+        path,
+      }), {
+        headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
+      });
+    }
+
     // Only apply geo-redirect on the root path "/"
     if (path === '/') {
       // 1. Check for language cookie (user manual override)

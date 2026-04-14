@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import NewsCard from '../../components/NewsCard.astro';
 import { t } from '../../i18n/translations';
 import { getCollection } from 'astro:content';
 
@@ -22,10 +23,55 @@ const featuredPosts = allPosts.filter(p => {
 const latestPosts = allPosts.slice(0, 8);
 const analysisPosts = allPosts.filter(p => p.data.category === 'analysis').slice(0, 3);
 const futurePosts = allPosts.filter(p => p.data.category === 'future').slice(0, 3);
+
+let latestNews: any[] = [];
+try {
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 5);
+  latestNews = (await getCollection('news-en'))
+    .flatMap((e: any) => e.data)
+    .filter((n: any) => !n.draft && new Date(n.date) >= cutoff)
+    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 6);
+} catch { latestNews = []; }
 ---
 
 <BaseLayout title="Home" lang={lang}>
   <Hero lang={lang} />
+
+  <!-- Latest News -->
+  {latestNews.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl md:text-2xl font-bold text-white flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+          </span>
+          <span>{t(lang, 'news.latest')}</span>
+        </h2>
+        <a href="/en/news/" class="text-sm text-neon-blue hover:text-neon-green transition-colors flex items-center gap-1">
+          {t(lang, 'news.viewAll')}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {latestNews.map(item => (
+          <NewsCard
+            headline={item.headline}
+            summary={item.summary}
+            date={item.date}
+            source={item.source}
+            sourceUrl={item.sourceUrl}
+            articleSlug={item.articleSlug}
+            company={item.company}
+            lang={lang}
+          />
+        ))}
+      </div>
+    </section>
+  )}
 
   {featuredPosts.length > 0 && (
     <section class="max-w-7xl mx-auto px-4 py-16">

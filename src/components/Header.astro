@@ -1,6 +1,7 @@
 ---
 import { t, getAlternateLang } from '../i18n/translations';
 import type { Lang } from '../i18n/translations';
+import NewsTicker from './NewsTicker.astro';
 
 interface Props {
   lang?: Lang;
@@ -12,6 +13,7 @@ const prefix = `/${lang}`;
 
 const navLinks = [
   { href: `${prefix}/`, label: t(lang, 'nav.home') },
+  { href: `${prefix}/news/`, label: t(lang, 'nav.news'), isNew: true },
   { href: `${prefix}/blog/`, label: t(lang, 'nav.blog') },
   { href: `${prefix}/models/`, label: t(lang, 'nav.models') },
   { href: `${prefix}/tools/`, label: t(lang, 'nav.tools') },
@@ -53,6 +55,9 @@ if (switchPath === currentPath) switchPath = `/${altLang}/`;
             ]}
           >
             {link.label}
+            {link.isNew && (
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse inline-block"></span>
+            )}
           </a>
         ))}
 
@@ -113,6 +118,8 @@ if (switchPath === currentPath) switchPath = `/${altLang}/`;
     </nav>
   </div>
 </header>
+
+<NewsTicker lang={lang} />
 
 <!-- Spacer for fixed header -->
 <div class="h-16"></div>
