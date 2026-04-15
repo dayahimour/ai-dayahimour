@@ -1,0 +1,82 @@
+[
+  {
+    "headline": "DeepMind تطلق Gemini 3.1 Flash TTS الأكثر تحكماً في الصوت",
+    "summary": "أطلقت Google DeepMind نموذج Gemini 3.1 Flash TTS الجديد لتحويل النص إلى كلام، وهو الأكثر تحكماً حتى الآن. يدعم أوامر صوتية متقدمة لتحديد الأسلوب والإيقاع وأكثر من 70 لغة بما فيها العربية مع علامة مائية SynthID. النموذج متاح فوراً عبر Gemini API وGoogle Vids.",
+    "date": "2026-04-15",
+    "source": "Google DeepMind",
+    "sourceUrl": "https://deepmind.google.com",
+    "company": "Google",
+    "tags": ["Gemini", "TTS", "DeepMind", "نص إلى كلام", "صوتي"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic تكشف عن التعلم اللاواعي في نماذج الذكاء الاصطناعي",
+    "summary": "نشرت Anthropic ورقة بحثية في مجلة Nature تثبت نقل صفات مثل التفضيلات وسوء المحاذاة عبر إشارات خفية في البيانات غير المباشرة. النتائج تفتح أبعاداً جديدة في فهم سلوك النماذج الكبيرة ومخاطر المحاذاة.",
+    "date": "2026-04-15",
+    "source": "Anthropic + Nature",
+    "sourceUrl": "https://anthropic.com/news",
+    "company": "Anthropic",
+    "tags": ["Anthropic", "بحث", "تعلم", "Nature", "محاذاة"],
+    "draft": false
+  },
+  {
+    "headline": "Adobe تطلق Firefly AI Assistant داخل أدوات التصميم",
+    "summary": "أطلقت Adobe مساعد Firefly AI الجديد الذي يعمل مباشرة داخل Photoshop وIllustrator وPremiere. يتكامل مع Claude من Anthropic لتنفيذ مهام إبداعية معقدة تلقائياً. النسخة التجريبية ستكون متاحة خلال أسابيع.",
+    "date": "2026-04-15",
+    "source": "Reuters",
+    "sourceUrl": "https://www.reuters.com/legal/litigation/adobe-releases-ai-assistant-creative-tools-says-it-will-work-with-anthropics-2026-04-15/",
+    "company": "Adobe",
+    "tags": ["Adobe", "Firefly", "AI Assistant", "تصميم", "Claude"],
+    "draft": false
+  },
+  {
+    "headline": "Forrester يصدر أبرز 10 تقنيات ناشئة لعام 2026",
+    "summary": "أكد تقرير Forrester انتقال الذكاء الاصطناعي من البرمجيات إلى العالم الفيزيائي مع التركيز على الروبوتات والوكلاء الذكيين. يبرز Agentic AI وPhysical AI كأولويتين رئيسيتين للعام المقبل.",
+    "date": "2026-04-15",
+    "source": "Business Wire",
+    "sourceUrl": "https://www.businesswire.com",
+    "company": "",
+    "tags": ["Forrester", "تقنيات ناشئة", "Physical AI", "Agentic AI"],
+    "draft": false
+  },
+  {
+    "headline": "أمازون تشتري Globalstar بـ11.6 مليار دولار",
+    "summary": "أبرمت أمازون صفقة شراء Globalstar بقيمة 11.6 مليار دولار لتعزيز شبكة الأقمار الصناعية. الصفقة تدعم مشاريع الذكاء الاصطناعي ومراكز البيانات في مواجهة Starlink.",
+    "date": "2026-04-15",
+    "source": "Fortune",
+    "sourceUrl": "https://fortune.com",
+    "company": "Amazon",
+    "tags": ["Amazon", "Globalstar", "أقمار صناعية", "AI infrastructure"],
+    "draft": false
+  },
+  {
+    "headline": "Allbirds تحول نشاطها كلياً إلى NewBird AI",
+    "summary": "باعت Allbirds أصول أعمال الأحذية لتتحول بالكامل إلى مزود GPU-as-a-Service وخدمات سحابية AI-native. جمعت الشركة 50 مليون دولار في عملية التحول.",
+    "date": "2026-04-15",
+    "source": "Reuters",
+    "sourceUrl": "https://www.reuters.com",
+    "company": "Allbirds",
+    "tags": ["Allbirds", "NewBird AI", "GPU", "سحابة AI"],
+    "draft": false
+  },
+  {
+    "headline": "Accenture تستثمر في General Robotics للذكاء الفيزيائي",
+    "summary": "أجرت Accenture استثماراً استراتيجياً في General Robotics لتطوير روبوتات ذكية عامة. الاستثمار يركز على نشر Physical AI في التصنيع واللوجستيات.",
+    "date": "2026-04-15",
+    "source": "Business Wire",
+    "sourceUrl": "https://www.businesswire.com",
+    "company": "Accenture",
+    "tags": ["Accenture", "Physical AI", "روبوتات", "General Robotics"],
+    "draft": false
+  },
+  {
+    "headline": "Hightouch تصل إلى 100 مليون دولار ARR بفضل وكلاء AI",
+    "summary": "حققت Hightouch نمواً هائلاً بوصولها إلى 100 مليون دولار إيرادات سنوية متكررة. السبب الرئيسي هو وكلاء الذكاء الاصطناعي التسويقي الذين يصممون حملات إعلانية مخصصة تلقائياً.",
+    "date": "2026-04-15",
+    "source": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com",
+    "company": "Hightouch",
+    "tags": ["Hightouch", "AI Marketing", "ARR", "وكلاء AI"],
+    "draft": false
+  }
+]
