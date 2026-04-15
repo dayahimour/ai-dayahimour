@@ -15,24 +15,7 @@ interface Props {
 const { headline, summary, date, source, sourceUrl, articleSlug, company, lang = 'ar' } = Astro.props;
 
 const dateLocale = lang === 'ar' ? 'ar-EG' : 'en-US';
-const now = new Date();
 const newsDate = new Date(date);
-const diffMs = now.getTime() - newsDate.getTime();
-const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-let timeAgo: string;
-if (diffHours < 1) {
-  timeAgo = lang === 'ar' ? 'الآن' : 'Just now';
-} else if (diffHours < 24) {
-  timeAgo = lang === 'ar' ? `منذ ${diffHours} ساعة` : `${diffHours}h ago`;
-} else if (diffDays < 7) {
-  timeAgo = lang === 'ar' ? `منذ ${diffDays} يوم` : `${diffDays}d ago`;
-} else {
-  timeAgo = newsDate.toLocaleDateString(dateLocale, { month: 'short', day: 'numeric' });
-}
-
-const isNew = diffHours < 24;
 const isInternal = !!articleSlug;
 const href = isInternal ? `/${lang}/blog/${articleSlug}/` : sourceUrl;
 ---
@@ -41,7 +24,9 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : sourceUrl;
   href={href}
   target={isInternal ? '_self' : '_blank'}
   rel={isInternal ? undefined : 'noopener noreferrer'}
-  class="group block"
+  class="group block news-card"
+  data-date={date}
+  data-lang={lang}
 >
   <article class:list={[
     'relative overflow-hidden rounded-xl border transition-all duration-300',
@@ -53,7 +38,7 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : sourceUrl;
       <!-- Top row: dot + company + time -->
       <div class="flex items-center justify-between mb-3">
         <div class="flex items-center gap-2">
-          <span class:list={['w-2 h-2 rounded-full shrink-0', isNew ? 'bg-neon-green animate-pulse' : 'bg-dark-400']}></span>
+          <span class="news-dot w-2 h-2 rounded-full shrink-0 bg-dark-400"></span>
           {isInternal && (
             <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-semibold rounded-full bg-neon-blue/10 text-neon-blue border border-neon-blue/20">
               <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,16 +53,16 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : sourceUrl;
             </span>
           )}
         </div>
-        <span class="text-[11px] text-gray-500 shrink-0">{timeAgo}</span>
+        <span class="news-time text-[11px] text-gray-500 shrink-0">{newsDate.toLocaleDateString(dateLocale, { month: 'short', day: 'numeric' })}</span>
       </div>
 
       <!-- Headline -->
-      <h3 class="text-sm font-bold text-white mb-2 leading-tight group-hover:text-neon-blue transition-colors">
+      <h3 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-neon-blue transition-colors">
         {headline}
       </h3>
 
       <!-- Summary -->
-      <p class="text-xs text-gray-400 leading-relaxed mb-3 line-clamp-2">
+      <p class="text-sm text-gray-400 leading-relaxed mb-3">
         {summary}
       </p>
 
@@ -102,6 +87,51 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : sourceUrl;
     </div>
   </article>
 </a>
+
+<script>
+  function updateNewsTime() {
+    const cards = document.querySelectorAll('.news-card');
+    const now = new Date();
+
+    cards.forEach(card => {
+      const dateStr = card.getAttribute('data-date');
+      const lang = card.getAttribute('data-lang') || 'ar';
+      if (!dateStr) return;
+
+      const newsDate = new Date(dateStr);
+      const diffMs = now.getTime() - newsDate.getTime();
+      const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+      const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      let timeAgo;
+      if (diffHours < 1) {
+        timeAgo = lang === 'ar' ? 'الآن' : 'Just now';
+      } else if (diffHours < 24) {
+        timeAgo = lang === 'ar' ? `منذ ${diffHours} ساعة` : `${diffHours}h ago`;
+      } else if (diffDays < 7) {
+        timeAgo = lang === 'ar' ? `منذ ${diffDays} يوم` : `${diffDays}d ago`;
+      } else {
+        timeAgo = newsDate.toLocaleDateString(lang === 'ar' ? 'ar-EG' : 'en-US', { month: 'short', day: 'numeric' });
+      }
+
+      const timeEl = card.querySelector('.news-time');
+      if (timeEl) timeEl.textContent = timeAgo;
+
+      // Update "new" indicator
+      const isNew = diffHours < 24;
+      const dotEl = card.querySelector('.news-dot');
+      if (dotEl) {
+        dotEl.classList.toggle('bg-neon-green', isNew);
+        dotEl.classList.toggle('animate-pulse', isNew);
+        dotEl.classList.toggle('bg-dark-400', !isNew);
+      }
+    });
+  }
+
+  updateNewsTime();
+  // Update every minute
+  setInterval(updateNewsTime, 60000);
+</script>
 
 <style>
   .line-clamp-2 {
