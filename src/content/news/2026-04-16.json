@@ -1,0 +1,67 @@
+[
+    {
+        "headline": "Claude Opus 4.7 من Anthropic رسمياً: قفزة في البرمجة الوكيلة ورؤية 3.75MP",
+        "summary": "أعلنت Anthropic في 16 أبريل 2026 عن إطلاق Claude Opus 4.7 رسمياً. النموذج الجديد يحقق 64.3% على SWE-Bench Pro متجاوزاً GPT-5.4، ويدعم رؤية عالية الدقة 3.75 ميغابكسل ومستوى xhigh الجديد. متوفر الآن عبر Claude.ai وAPI وClaude Code بسعر 5$ لكل مليون رمز إدخال.",
+        "date": "2026-04-16",
+        "source": "AI DayaHimour",
+        "sourceUrl": "https://ai-dayahimour.web.app/ar/blog/claude-opus-4-7/",
+        "articleSlug": "claude-opus-4-7",
+        "company": "Anthropic",
+        "tags": [
+            "Claude Opus 4.7",
+            "Anthropic",
+            "البرمجة الوكيلة",
+            "SWE-Bench",
+            "Claude Code",
+            "نماذج AI 2026",
+            "أخبار الذكاء الاصطناعي"
+        ],
+        "draft": false
+    },
+    {
+        "headline": "OpenAI تحدث Codex لمنافسة Claude Code على سطح المكتب",
+        "summary": "أطلقت OpenAI تحديثاً كبيراً لأداة Codex يمنحها القدرة على التحكم المستقل في تطبيقات macOS. يتيح التحديث للأداة التعلم من التجارب السابقة وتنفيذ مهام معقدة دون تدخل. التحديث يستهدف المنافسة المباشرة مع أدوات Anthropic.",
+        "date": "2026-04-16",
+        "source": "The Verge",
+        "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
+        "company": "OpenAI",
+        "tags": [
+            "Codex",
+            "OpenAI",
+            "Claude Code",
+            "أدوات",
+            "برمجة"
+        ],
+        "draft": false
+    },
+    {
+        "headline": "Anthropic تخطط لتوسعة مكتب لندن لاستيعاب 800 موظف",
+        "summary": "كشفت Anthropic عن خطط لتوسيع مكتبها في لندن ليشمل 800 موظف جديد. تأتي الخطوة بعد أيام قليلة من إعلان OpenAI عن مكتبها الدائم في العاصمة البريطانية. التوسعة تعكس نمو الشركة السريع في أوروبا.",
+        "date": "2026-04-16",
+        "source": "CNBC",
+        "sourceUrl": "https://www.cnbc.com/2026/04/16/anthropic-london-office-800-staff-openai-expansion.html",
+        "company": "Anthropic",
+        "tags": [
+            "Anthropic",
+            "توسعة",
+            "لندن",
+            "أوروبا"
+        ],
+        "draft": false
+    },
+    {
+        "headline": "Anthropic تؤكد أن Claude Opus 4.7 أقل قدرة من Mythos Preview",
+        "summary": "أوضحت Anthropic أن النموذج الجديد Opus 4.7 أقل قدرة عموماً من Mythos Preview المقيد. يركز Opus 4.7 على البرمجة المتقدمة مع حواجز أمان تلقائية تحول دون الاستخدامات عالية المخاطر. الإعلان يأتي ضمن استراتيجية الشركة في نشر النماذج بأمان.",
+        "date": "2026-04-16",
+        "source": "Seeking Alpha",
+        "sourceUrl": "https://seekingalpha.com/news/4575778-anthropic-unveils-ai-model-claude-opus-47-second-most-powerful-after-mythos",
+        "company": "Anthropic",
+        "tags": [
+            "Claude Opus 4.7",
+            "Mythos",
+            "Anthropic",
+            "أمان AI"
+        ],
+        "draft": false
+    }
+]

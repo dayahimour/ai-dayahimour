@@ -13,6 +13,7 @@ interface Props {
   keywords?: string;
   lang?: Lang;
   alternateSlug?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -23,20 +24,22 @@ const {
   keywords,
   lang = 'ar',
   alternateSlug,
+  noindex = false,
 } = Astro.props;
 
 const finalDescription = description || t(lang, 'meta.description');
 const finalKeywords = keywords || t(lang, 'meta.keywords');
 const isRTL = lang === 'ar';
 const altLang = getAlternateLang(lang);
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const secureUrlPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const canonicalURL = new URL(secureUrlPath, Astro.site);
 const ogLocale = lang === 'ar' ? 'ar_AR' : 'en_US';
 
 const isHome = title === 'الرئيسية' || title === 'Home';
 const fullTitle = isHome ? t(lang, 'meta.siteTitle') : `${title} | AI DayaHimour`;
 
 // Alternate URL for hreflang
-const currentPath = Astro.url.pathname;
+const currentPath = secureUrlPath;
 let alternatePath = '';
 if (alternateSlug) {
   alternatePath = alternateSlug;
@@ -44,6 +47,9 @@ if (alternateSlug) {
   alternatePath = currentPath.replace(`/${lang}/`, `/${altLang}/`);
 } else if (currentPath === `/${lang}` || currentPath === `/${lang}/`) {
   alternatePath = `/${altLang}/`;
+}
+if (alternatePath && !alternatePath.endsWith('/')) {
+  alternatePath += '/';
 }
 const alternateURL = alternatePath ? new URL(alternatePath, Astro.site).toString() : '';
 
@@ -171,7 +177,11 @@ const structuredData = {
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
     
     <!-- SEO: Robots -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    )}
     
     <!-- RSS & Sitemap Discovery -->
     <link rel="alternate" type="application/rss+xml" title="AI DayaHimour — RSS" href="/rss.xml" />
