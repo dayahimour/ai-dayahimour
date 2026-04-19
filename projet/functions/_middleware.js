@@ -29,7 +29,7 @@ export async function onRequest(context) {
     return Response.redirect(new URL(`/${preferredLang}/`, url), 302);
   }
 
-  // Redirect based on geo
+  // Redirect based on geo (use 302 to prevent browser caching issues)
   const targetLang = isArabic ? 'ar' : 'en';
   return Response.redirect(new URL(`/${targetLang}/`, url), 302);
 }

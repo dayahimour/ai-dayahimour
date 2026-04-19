@@ -40,21 +40,16 @@ export default {
       }
 
       // 2. Use Cloudflare's native geo data (most accurate)
+      // Default to 'ar' if country unknown - always redirect, never serve fallback HTML
       const country = (request.cf?.country ?? request.headers.get('CF-IPCountry') ?? '').toUpperCase();
-      if (country && country !== 'XX') {
-        const targetLang = ARABIC_COUNTRIES.has(country) ? 'ar' : 'en';
-        return makeRedirect(`/${targetLang}/`, url);
+      let targetLang = 'ar'; // Default language
+      if (country && country !== 'XX' && !ARABIC_COUNTRIES.has(country)) {
+        targetLang = 'en';
       }
-
-      // 3. Fallback: serve the index.html (has JS browser-lang detection)
-      const fallback = await env.ASSETS.fetch(request);
-      return new Response(fallback.body, {
-        status: fallback.status,
-        headers: {
-          ...Object.fromEntries(fallback.headers),
-          'Cache-Control': 'no-store',
-        },
-      });
+      
+      // Always redirect to avoid serving an empty index.html fallback to bots (like AdSense)
+      // Use 302 (not 301) to prevent browser caching of the redirect
+      return makeRedirect(`/${targetLang}/`, url);
     }
 
     // All other paths: serve static assets normally

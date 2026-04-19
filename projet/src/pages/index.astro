@@ -13,13 +13,15 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>AI DayaHimour</title>
-    <script>
-      // Client-side fallback: check browser language
-      const lang = navigator.language || navigator.userLanguage || 'ar';
-      const isArabic = lang.startsWith('ar');
-      window.location.replace(isArabic ? '/ar/' : '/en/');
+    <!-- Immediate client-side redirect - runs before page renders -->
+    <script is:inline>
+      // Immediate redirect - no delay, no visible content
+      const lang = navigator.language.toLowerCase();
+      window.location.replace('/' + (lang.startsWith('ar') ? 'ar' : 'en') + '/');
     </script>
+    <!-- Meta refresh as final fallback -->
+    <meta http-equiv="refresh" content="0; url=/ar/" />
   </head>
-  <body style="background-color: #050a12;">
+  <body style="background-color: #050a12; margin: 0; padding: 0;">
   </body>
 </html>

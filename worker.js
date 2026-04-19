@@ -47,7 +47,8 @@ export default {
       }
       
       // Always redirect to avoid serving an empty index.html fallback to bots (like AdSense)
-      return makeRedirect(`/${targetLang}/`, url);
+      // Use 302 (not 301) to prevent browser caching of the redirect
+      return makeRedirect(`/${targetLang}/`, url, 302);
     }
 
     // All other paths: serve static assets normally
@@ -55,9 +56,9 @@ export default {
   },
 };
 
-function makeRedirect(path, baseUrl) {
+function makeRedirect(path, baseUrl, status = 301) {
   return new Response(null, {
-    status: 301,
+    status: status,
     headers: {
       'Location': new URL(path, baseUrl).toString(),
       'Cache-Control': 'no-store',

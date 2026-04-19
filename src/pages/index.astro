@@ -15,7 +15,14 @@ return Astro.redirect(`/${defaultLang}/`, 301);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>AI DayaHimour</title>
+    <!-- Immediate client-side redirect as fallback -->
+    <script is:inline>
+      // Immediate redirect - no delay, no visible content
+      const lang = navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en';
+      window.location.replace('/' + lang + '/');
+    </script>
+    <meta http-equiv="refresh" content="0; url=/ar/" />
   </head>
-  <body style="background-color: #050a12;">
+  <body style="background-color: #050a12; margin: 0; padding: 0;">
   </body>
 </html>
