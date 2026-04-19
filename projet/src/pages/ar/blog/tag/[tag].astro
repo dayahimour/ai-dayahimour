@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const lang = 'ar';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).filter(p => !p.data.draft);
+  const allTags = [...new Set(posts.flatMap(p => p.data.tags))];
+  return allTags.map(tag => ({
+    params: { tag },
+    props: {
+      posts: posts
+        .filter(p => p.data.tags.includes(tag))
+        .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()),
+      tag,
+    },
+  }));
+}
+
+const { posts, tag } = Astro.props;
+---
+
+<BaseLayout title={`#${tag}`} description={`جميع المقالات بوسم ${tag}`} lang={lang}>
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="mb-12">
+      <nav class="text-sm text-gray-400 mb-4">
+        <a href="/ar/" class="hover:text-white">الرئيسية</a>
+        <span class="mx-2">/</span>
+        <a href="/ar/blog/" class="hover:text-white">المقالات</a>
+        <span class="mx-2">/</span>
+        <span class="text-neon-blue">#{tag}</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        وسم <span class="gradient-text">#{tag}</span>
+      </h1>
+      <p class="text-gray-400 text-lg">{posts.length} مقال بهذا الوسم</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {posts.map(post => (
+        <ArticleCard
+          title={post.data.title}
+          description={post.data.description}
+          date={post.data.date}
+          category={post.data.category}
+          slug={post.slug}
+          image={post.data.image}
+          lang={lang}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,106 @@
+---
+import { t } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  category: string;
+  slug: string;
+  image?: string;
+  featured?: boolean;
+  lang?: Lang;
+}
+
+const { title, description, date, category, slug, image, featured, lang = 'ar' } = Astro.props;
+
+const dateLocale = lang === 'ar' ? 'ar-EG' : 'en-US';
+const formattedDate = new Date(date).toLocaleDateString(dateLocale, {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+
+const prefix = `/${lang}`;
+const arrowClass = lang === 'ar' ? 'rotate-180' : '';
+
+// Category color mapping (supports both AR and EN)
+const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
+  'أخبار': { bg: 'bg-neon-blue/10', text: 'text-neon-blue', border: 'border-neon-blue/20' },
+  'news': { bg: 'bg-neon-blue/10', text: 'text-neon-blue', border: 'border-neon-blue/20' },
+  'تحليل': { bg: 'bg-purple-500/10', text: 'text-purple-400', border: 'border-purple-500/20' },
+  'analysis': { bg: 'bg-purple-500/10', text: 'text-purple-400', border: 'border-purple-500/20' },
+  'نماذج': { bg: 'bg-neon-green/10', text: 'text-neon-green', border: 'border-neon-green/20' },
+  'models': { bg: 'bg-neon-green/10', text: 'text-neon-green', border: 'border-neon-green/20' },
+  'أدوات': { bg: 'bg-orange-500/10', text: 'text-orange-400', border: 'border-orange-500/20' },
+  'tools': { bg: 'bg-orange-500/10', text: 'text-orange-400', border: 'border-orange-500/20' },
+  'مستقبل': { bg: 'bg-pink-500/10', text: 'text-pink-400', border: 'border-pink-500/20' },
+  'future': { bg: 'bg-pink-500/10', text: 'text-pink-400', border: 'border-pink-500/20' },
+  'صور': { bg: 'bg-yellow-500/10', text: 'text-yellow-400', border: 'border-yellow-500/20' },
+  'images': { bg: 'bg-yellow-500/10', text: 'text-yellow-400', border: 'border-yellow-500/20' },
+  'فيديو': { bg: 'bg-red-500/10', text: 'text-red-400', border: 'border-red-500/20' },
+  'video': { bg: 'bg-red-500/10', text: 'text-red-400', border: 'border-red-500/20' },
+};
+
+const colors = categoryColors[category] || categoryColors['news'];
+---
+
+<a href={`${prefix}/blog/${slug}/`} class:list={['group block', featured ? 'md:col-span-2' : '']}>
+  <article class="glass-card overflow-hidden h-full flex flex-col">
+    <!-- Image -->
+    <div class:list={['relative overflow-hidden', featured ? 'h-56 md:h-72' : 'h-48']}>
+      {image ? (
+        <img
+          src={image}
+          alt={title}
+          width="400"
+          height="225"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      ) : (
+        <div class="w-full h-full bg-gradient-to-br from-dark-600 to-dark-700 flex items-center justify-center">
+          <svg class="w-16 h-16 text-dark-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+          </svg>
+        </div>
+      )}
+      <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+      <span class={`absolute top-3 ${lang === 'ar' ? 'right-3' : 'left-3'} inline-block px-3 py-1 text-xs font-medium rounded-full border ${colors.bg} ${colors.text} ${colors.border}`}>
+        {category}
+      </span>
+    </div>
+
+    <!-- Content -->
+    <div class="p-5 flex flex-col flex-1">
+      <h3 class:list={[
+        'font-bold text-white mb-2 group-hover:text-neon-blue transition-colors leading-tight',
+        featured ? 'text-xl md:text-2xl' : 'text-lg'
+      ]}>
+        {title}
+      </h3>
+      <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1 line-clamp-2">
+        {description}
+      </p>
+      <div class="flex items-center justify-between text-xs text-gray-500">
+        <span>{formattedDate}</span>
+        <span class="flex items-center gap-1 text-neon-blue group-hover:gap-2 transition-all">
+          {t(lang, 'section.readMore')}
+          <svg class={`w-4 h-4 ${arrowClass}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </article>
+</a>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

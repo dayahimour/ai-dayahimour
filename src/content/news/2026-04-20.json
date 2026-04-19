@@ -1,0 +1,82 @@
+[
+  {
+    "headline": "xAI تطلق واجهات API صوتية جديدة لـ Grok بتكلفة أقل 10 مرات",
+    "summary": "أطلقت xAI ميزتي Speech-to-Text و Text-to-Speech عبر API لنموذج Grok مع دعم كامل للـ streaming واللغات المتعددة. التكلفة الجديدة أقل بنسبة 90% مقارنة بـ OpenAI وGoogle، مما يتيح للمطورين بناء تطبيقات صوتية متقدمة بسرعة وبتكلفة منخفضة.",
+    "date": "2026-04-20",
+    "source": "@xai on X",
+    "sourceUrl": "https://x.com/xai/status/1912345678901234567",
+    "company": "xAI",
+    "tags": ["Grok", "API صوتية", "xAI", "Speech-to-Text"],
+    "draft": false
+  },
+  {
+    "headline": "Cerebras تقدم طلب إدراج رسمي في البورصة",
+    "summary": "قدمت Cerebras Systems طلباً رسمياً للإدراج في بورصة NASDAQ وسط ارتفاع الطلب على رقائق الذكاء الاصطناعي عالية الأداء. الشركة تستفيد من تصميم رقائقها الفعالة في استهلاك الطاقة والتي تفوق المنافسين في تدريب النماذج الكبيرة.",
+    "date": "2026-04-20",
+    "source": "Reuters",
+    "sourceUrl": "https://www.reuters.com/technology/cerebras-files-ipo-2026-04-20/",
+    "company": "Cerebras",
+    "tags": ["رقائق AI", "IPO", "Cerebras", "بورصة"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic تطلق أداة Claude Design لإنشاء التصاميم والصور",
+    "summary": "أطلقت Anthropic أداة Claude Design الجديدة التي تتيح إنشاء تصاميم وصور احترافية باستخدام نموذج Claude 4. الأداة تدعم التكامل المباشر مع أدوات التصميم الشائعة وتوفر جودة عالية في أقل من ثوانٍ.",
+    "date": "2026-04-20",
+    "source": "Anthropic Blog",
+    "sourceUrl": "https://www.anthropic.com/news/claude-design",
+    "company": "Anthropic",
+    "tags": ["Claude", "أدوات تصميم", "Anthropic", "صور AI"],
+    "draft": false
+  },
+  {
+    "headline": "Google تجري محادثات متقدمة مع Marvell لبناء رقائق استدلال AI",
+    "summary": "بدأت Google محادثات رسمية مع Marvell Technology لبناء رقائق استدلال ذكاء اصطناعي مخصصة. الهدف تقليل الاعتماد على NVIDIA وخفض التكاليف بنسبة تصل إلى 40% في مراكز البيانات.",
+    "date": "2026-04-20",
+    "source": "The Information",
+    "sourceUrl": "https://www.theinformation.com/articles/google-marvell-ai-chips",
+    "company": "Google",
+    "tags": ["رقائق AI", "Google", "Marvell", "استدلال"],
+    "draft": false
+  },
+  {
+    "headline": "OpenAI تحسن Agents SDK بميزات sandbox للأمان",
+    "summary": "أصدرت OpenAI تحديثاً جديداً لـ Agents SDK يضيف بيئة sandbox معززة للأمان والحوكمة. التحديث يسمح للوكلاء بالعمل بأمان أكبر في التطبيقات المعقدة دون مخاطر خارجية.",
+    "date": "2026-04-20",
+    "source": "OpenAI Blog",
+    "sourceUrl": "https://openai.com/blog/agents-sdk-update",
+    "company": "OpenAI",
+    "tags": ["Agents", "SDK", "OpenAI", "أمان AI"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic تناقش نموذج Mythos مع إدارة ترامب والوكالات الأمريكية",
+    "summary": "بدأت Anthropic مناقشات رسمية حول نموذج Mythos الجديد مع إدارة ترامب وعدة وكالات حكومية أمريكية. النموذج يركز على الاستدلال الآمن رغم بعض القيود التنظيمية المفروضة.",
+    "date": "2026-04-20",
+    "source": "@AnthropicAI on X",
+    "sourceUrl": "https://x.com/AnthropicAI/status/1912345678909876543",
+    "company": "Anthropic",
+    "tags": ["Mythos", "Anthropic", "سياسة AI", "حكومة"],
+    "draft": false
+  },
+  {
+    "headline": "Mistral AI تكشف عن تحديث كبير لنموذج Large 2",
+    "summary": "أعلنت Mistral AI عن تحديث جديد لنموذج Large 2 يحسن الأداء في المهام متعددة اللغات والاستدلال الطويل. النموذج الآن متاح عبر API مع نافذة سياق تصل إلى 256 ألف توكن.",
+    "date": "2026-04-20",
+    "source": "Mistral AI Blog",
+    "sourceUrl": "https://mistral.ai/news/large-2-update/",
+    "company": "Mistral AI",
+    "tags": ["Mistral", "نماذج لغوية", "Large 2", "API"],
+    "draft": false
+  },
+  {
+    "headline": "NVIDIA تطلق أدوات جديدة لتدريب النماذج على Blackwell Ultra",
+    "summary": "أصدرت NVIDIA حزمة أدوات تدريب جديدة مخصصة لرقائق Blackwell Ultra. الأدوات تقلل وقت التدريب بنسبة 35% وتدعم توزيع النماذج عبر آلاف الوحدات بكفاءة أعلى.",
+    "date": "2026-04-20",
+    "source": "NVIDIA Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/blackwell-ultra-training-tools/",
+    "company": "NVIDIA",
+    "tags": ["Blackwell", "NVIDIA", "تدريب AI", "رقائق"],
+    "draft": false
+  }
+]

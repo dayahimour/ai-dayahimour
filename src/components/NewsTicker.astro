@@ -11,7 +11,7 @@ const collectionName = lang === 'ar' ? 'news' : 'news-en';
 
 const NEWS_EXPIRY_DAYS = 5;
 
-let newsItems: { headline: string; date: string; source: string; sourceUrl: string; company?: string }[] = [];
+let newsItems: { headline: string; date: string; source: string; sourceUrl: string; articleSlug?: string; company?: string }[] = [];
 
 try {
   const cutoff = new Date();
@@ -47,18 +47,28 @@ const prefix = `/${lang}`;
       <!-- Scrolling ticker -->
       <div class="ticker-track flex items-center gap-8 whitespace-nowrap">
         {[...newsItems, ...newsItems].map((item) => (
-          <a
-            href={item.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-[12px] text-gray-400 hover:text-white transition-colors shrink-0"
-          >
-            <span class="w-1 h-1 rounded-full shrink-0 bg-neon-green/60"></span>
-            <span class="font-medium text-gray-300">{item.headline}</span>
-            {item.company && (
-              <span class="text-gray-600">— {item.company}</span>
-            )}
-          </a>
+          item.articleSlug ? (
+            <!-- Internal article link -->
+            <a
+              href={`${prefix}/blog/${item.articleSlug}/`}
+              class="inline-flex items-center gap-2 text-[12px] text-neon-blue hover:text-neon-blue/80 transition-colors shrink-0"
+            >
+              <span class="w-1 h-1 rounded-full shrink-0 bg-neon-blue animate-pulse"></span>
+              <span class="font-medium text-neon-blue">{item.headline}</span>
+              {item.company && (
+                <span class="text-neon-blue/60">— {item.company}</span>
+              )}
+            </a>
+          ) : (
+            <!-- Static text (no link) -->
+            <span class="inline-flex items-center gap-2 text-[12px] text-gray-400 shrink-0">
+              <span class="w-1 h-1 rounded-full shrink-0 bg-neon-green/60"></span>
+              <span class="font-medium text-gray-300">{item.headline}</span>
+              {item.company && (
+                <span class="text-gray-600">— {item.company}</span>
+              )}
+            </span>
+          )
         ))}
       </div>
     </div>

@@ -1,0 +1,148 @@
+---
+title: "Qwen3.6 Plus: نموذج الجيل الجديد من Qwen يُطلق تجريبياً مجاناً على OpenRouter مع سياق مليون رمز"
+description: "إطلاق Qwen3.6 Plus Preview كإصدار تجريبي مجاني على OpenRouter (ينتهي 3 أبريل 2026) مع تحليل دقيق لعمارته الهجينة، قدراته في البرمجة الوكيلة (agentic coding)، الرؤية متعددة الوسائط، نتائج الاختبارات الرسمية، والتطبيقات العملية للمطورين."
+date: "2026-04-02"
+category: "نماذج"
+tags:
+  - Qwen3.6-Plus
+  - OpenRouter
+  - نماذج Qwen
+  - ذكاء اصطناعي
+  - agentic AI
+  - برمجة وكيلة
+  - Alibaba Cloud
+  - multimodal
+image: "/images/Qwen-3.6-Plus.webp"
+---
+
+# Qwen3.6 Plus: نموذج الجيل الجديد من Qwen يُطلق تجريبياً مجاناً على OpenRouter مع سياق مليون رمز
+
+في 30 مارس 2026، أضافت منصة OpenRouter نموذج **Qwen3.6 Plus Preview (free)** إلى قائمتها كإصدار تجريبي مجاني تماماً (0 دولار لكل مليون رمز إدخال أو إخراج). النموذج يحمل سياقاً يصل إلى مليون رمز، وهو متاح عبر معرف `qwen/qwen3.6-plus-preview:free`. وفقاً لصفحة النموذج الرسمية على OpenRouter، سيُزال هذا الإصدار التجريبي في 3 أبريل 2026 – أي اليوم.
+
+في اليوم التالي مباشرة (2 أبريل 2026)، أُضيف **Qwen3.6 Plus (free)** النسخة الرسمية المجانية أيضاً على OpenRouter، مع نفس السياق الطويل. أما الإطلاق الرسمي الكامل لـ Qwen3.6-Plus فقد أعلنته فرقة Qwen في Alibaba Cloud في 1 أبريل 2026 عبر مدونتهم الرسمية، وهو متاح الآن عبر Alibaba Cloud Model Studio API.
+
+هذا الإطلاق ليس مجرد تحديث روتيني؛ إنه نقلة نوعية في قدرات النماذج الوكيلة (agentic) والمتعددة الوسائط. في هذه المقالة، نقدم تحليلاً فنياً دقيقاً 100% مبنياً على المصادر الرسمية (OpenRouter ومدونة Qwen.ai) لمساعدة المطورين العرب على استغلال هذه الفرصة قبل انتهاء الإصدار التجريبي المجاني.
+
+## خلفية سلسلة Qwen وأهمية الإصدار 3.6
+
+سلسلة Qwen من Alibaba Cloud تُعد من أبرز النماذج الصينية المفتوحة والمغلقة على حد سواء. بدأت بـ Qwen2 ثم Qwen2.5، ووصلت إلى Qwen3.5 في فبراير 2026. الآن يأتي Qwen3.6-Plus كتطور مباشر لسلسلة Plus، مع تركيز واضح على "الوكلاء الحقيقيين في العالم الواقعي" (Towards Real World Agents).
+
+العمارة الجديدة **هجينة** (hybrid architecture): تجمع بين **linear attention** الفعّالة وبين **sparse mixture-of-experts (MoE)**. هذا التصميم يحقق:
+- كفاءة استدلال أعلى.
+- قابلية توسع أكبر دون زيادة هائلة في التكلفة.
+- أداء أفضل في المهام الطويلة والمعقدة.
+
+مقارنةً بـ Qwen3.5 Plus، يُقدم Qwen3.6-Plus تحسناً ملحوظاً في الاستقرار والسلوك الوكيلي (agentic behavior)، مع معالجة ملاحظات المجتمع حول الإصدار السابق.
+
+## الإصدارات المتاحة حالياً والفرق بينها
+
+| النموذج                      | تاريخ الإصدار     | السياق          | السعر على OpenRouter          | ملاحظات هامة                          | الرابط المباشر |
+|-------------------------------|---------------------|------------------|--------------------------------|---------------------------------------|-----------------|
+| Qwen3.6 Plus Preview (free)  | 30 مارس 2026      | 1,000,000 رمز   | مجاني تماماً ($0)            | يُجمع البيانات لتحسين النموذج، يُزال 3 أبريل 2026 | [openrouter.ai/qwen/qwen3.6-plus-preview:free](https://openrouter.ai/qwen/qwen3.6-plus-preview:free) |
+| Qwen3.6 Plus (free)          | 2 أبريل 2026       | 1,000,000 رمز   | مجاني تماماً ($0)            | النسخة الرسمية المجانية، أداء أعلى في SWE-bench | [openrouter.ai/qwen/qwen3.6-plus:free](https://openrouter.ai/qwen/qwen3.6-plus:free) |
+| Qwen3.6-Plus (رسمي)          | 1 أبريل 2026       | 1,000,000 رمز   | مدفوع عبر Model Studio        | متاح عبر API Alibaba Cloud، يدعم preserve_thinking | [modelstudio.alibabacloud.com](https://modelstudio.alibabacloud.com/) |
+
+**ملاحظة فنية**: الإصدار Preview يُصمم كـ "flagship preview" ويُجمع كل المدخلات والمخرجات لتدريب النموذج مستقبلاً. هذا يعني أنه غير مناسب للبيانات الحساسة.
+
+## القدرات التقنية الرئيسية
+
+### 1. البرمجة الوكيلة (Agentic Coding)
+- يتفوق النموذج في المهام المعقدة: تطوير الواجهات الأمامية (front-end)، حل المشكلات على مستوى المستودع كاملاً (repository-level)، و"vibe coding" (تجربة برمجة طبيعية ومباشرة).
+- يدعم tool use و function calling بشكل أصلي.
+- يتكامل مباشرة مع أدوات مثل OpenClaw، Claude Code، وQwen Code.
+
+### 2. القدرات متعددة الوسائط (Multimodal)
+- يدعم الإدخال النصي + الصور + الفيديو.
+- تحسّن كبير في الرؤية: فهم الوثائق المعقدة، تحليل البيئة المادية، استدلال الفيديو، والبرمجة البصرية (visual coding).
+- يستطيع توليد صفحات ويب كاملة من لقطات شاشة أو تصاميم UI.
+
+### 3. السياق الطويل والاستدلال
+- سياق افتراضي: 1,000,000 رمز.
+- يدعم وضع التفكير (thinking mode) مع خيار `preserve_thinking` الذي يحفظ سلسلة التفكير عبر الجلسات لتحسين الاستمرارية في المهام الوكيلة.
+
+## نتائج الاختبارات الرسمية (Benchmarks)
+
+
+<div dir="rtl" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 28px 24px; margin: 32px 0; border: 1px solid rgba(99,179,237,0.15);">
+  <p style="color: #94a3b8; font-size: 13px; text-align: center; margin: 0 0 24px 0; letter-spacing: 0.05em;">المعايير المرجعية الرئيسية — أبريل 2026</p>
+
+  
+  </div>  
+  </div>  <!-- SWE-Bench Verified -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">SWE-Bench Verified</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">73.4%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 73.4%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- LiveCodeBench -->
+  <div style="margin-bottom: 16px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">LiveCodeBench</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">78.0%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 78.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>  <!-- HumanEval -->
+  <div style="margin-bottom: 0;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="color: #cbd5e1; font-size: 14px;">HumanEval</span>
+      <span style="color: #34d399; font-weight: 700; font-size: 14px;">89.5%</span>
+    </div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
+      <div style="width: 78.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #60a5fa;"></div><span style="color: #94a3b8; font-size: 12px;">رياضيات ومعرفة</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #a78bfa;"></div><span style="color: #94a3b8; font-size: 12px;">علوم</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 12px; height: 12px; border-radius: 3px; background: #34d399;"></div><span style="color: #94a3b8; font-size: 12px;">برمجة</span></div>
+  </div>
+</div>
+
+من المدونة الرسمية لـ Qwen:
+
+**البرمجة والوكلاء:**
+- SWE-bench Verified: **78.8**
+- SWE-bench Multilingual: 73.8
+- Terminal-Bench 2.0: 61.6
+- TAU3-Bench: 70.7
+
+**المعرفة والاستدلال:**
+- MMLU-Pro: 88.5
+- GPQA: 90.4
+- LiveCodeBench v6: 87.1
+
+**الرؤية:**
+- MMMU: 86.0
+- VideoMME (with subtitles): 87.8
+- OmniDocBench1.5: 91.2
+
+هذه الأرقام تؤكد أن Qwen3.6-Plus ينافس أو يتفوق على النماذج الرائدة عالمياً في فئته.
+
+## تطبيقات عملية للمطورين العرب
+
+1. **بناء تطبيقات وكيلة كاملة**: استخدم النموذج مع OpenClaw لإنشاء agents تقوم بكتابة كود، اختباره، ونشره تلقائياً داخل مستودع GitHub.
+2. **تطوير واجهات أمامية سريع**: أرسل لقطة شاشة لتصميم Figma فيُولّد النموذج كود React/Vue كاملاً.
+3. **معالجة وثائق طويلة**: مع سياق مليون رمز، يمكن تحليل كتب كاملة أو مستندات قانونية/مالية عربية-إنجليزية دفعة واحدة.
+4. **تكامل مع تطبيقاتك**: استخدم API OpenRouter (OpenAI-compatible) أو Model Studio مباشرة في تطبيقات Flutter أو Next.js الخاصة بك.
+
+**مثال API بسيط (Python):**
+```python
+import openrouter
+client = openrouter.OpenRouter(api_key="YOUR_KEY")
+response = client.chat.completions.create(
+    model="qwen/qwen3.6-plus-preview:free",
+    messages=[{"role": "user", "content": "اكتب agent يقوم بـ..."}]
+)
+```
+
+## الخاتمة: فرصة لا تُفوّت قبل 3 أبريل
+
+Qwen3.6 Plus يمثل نقلة حقيقية نحو الوكلاء الذكاء الاصطناعي القادرين على العمل في بيئات حقيقية. الإصدار التجريبي المجاني على OpenRouter يمنح المطورين فرصة تجريب فورية بتكلفة صفرية – لكنها تنتهي اليوم. بعد ذلك، يبقى Qwen3.6 Plus (free) والنسخة المدفوعة عبر Model Studio خيارات قوية ومستقرة.
+
+للمطورين العرب الذين يبنون تطبيقات عالمية أو محلية، هذا النموذج يوفر توازناً ممتازاً بين الأداء، السياق الطويل، والتكلفة. جربوه الآن عبر [OpenRouter](https://openrouter.ai/qwen/qwen3.6-plus-preview:free) قبل الإزالة، ثم انتقل إلى النسخة الرسمية عبر [Alibaba Cloud Model Studio](https://modelstudio.alibabacloud.com/).

@@ -1,0 +1,82 @@
+---
+interface Item {
+  name: string;
+  score: number;
+  maxScore?: number;
+  color: string;
+  textColor: string;
+}
+
+interface Category {
+  name: string;
+  colorHex: string;
+}
+
+interface Props {
+  title?: string;
+  items: Item[];
+  categories?: Category[];
+}
+
+const { title, items, categories } = Astro.props;
+---
+
+<div dir="rtl" class="w-full bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-2xl p-6 md:p-8 my-8 border border-slate-700/50 shadow-xl relative backdrop-blur-sm overflow-hidden">
+  
+  <!-- Subtle accent glow -->
+  <div class="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/10 blur-[80px] pointer-events-none"></div>
+
+  {title && (
+    <h3 class="text-slate-400 text-xs md:text-[13px] font-semibold text-center mb-8 tracking-widest uppercase">
+      {title}
+    </h3>
+  )}
+
+  <div class="space-y-5 relative z-10">
+    {items.map(item => {
+      const max = item.maxScore || 100;
+      const width = Math.min((item.score / max) * 100, 100);
+      
+      return (
+        <div class="group/hitem">
+          <div class="flex justify-between items-end mb-2.5 transition-colors duration-300">
+            <span class="text-slate-300 text-[13px] md:text-sm font-medium tracking-wide group-hover/hitem:text-white transition-colors">{item.name}</span>
+            <span class={`${item.textColor} font-bold text-[13px] md:text-sm drop-shadow-md`}>
+              {item.score.toFixed(1)}{max === 100 ? '%' : ''}
+            </span>
+          </div>
+          <!-- Track -->
+          <div class="w-full bg-[#0B0F19] rounded-full h-2.5 overflow-hidden ring-1 ring-white/5 shadow-inner">
+            <!-- Fill -->
+            <div 
+              class={`h-full rounded-full transition-all duration-[1500ms] ease-out ${item.color} relative overflow-hidden group-hover/hitem:brightness-110`}
+              style={`width: ${width}%`}
+            >
+              <!-- Shimmer effect on hover -->
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover/hitem:animate-[shimmer_1.5s_infinite]"></div>
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+  
+  {categories && categories.length > 0 && (
+    <div class="flex flex-wrap justify-center gap-6 mt-10 pt-5 border-t border-slate-700/60">
+      {categories.map(cat => (
+        <div class="flex items-center gap-2 transition-transform duration-300 hover:scale-105">
+          <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-[3px] shadow-sm" style={`background-color: ${cat.colorHex}`}></div>
+          <span class="text-slate-400 text-[11px] md:text-xs font-semibold tracking-wider">{cat.name}</span>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+</style>

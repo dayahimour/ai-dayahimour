@@ -14,10 +14,10 @@ const companies = [
   { name: 'ByteDance', description: 'عملاق التكنولوجيا الصيني (TikTok) — صانعة Seedream و Seedance و Doubao.', logo: '/icons/bytedance-color.svg', founded: '2012', hq: 'بكين، الصين', slug: 'bytedance', color: '#325AB4' },
   { name: 'Microsoft', description: 'شريك OpenAI الاستراتيجي — مُدمجة AI في كل منتجاتها عبر Copilot.', logo: '/icons/microsoft-color.svg', founded: '1975', hq: 'ريدموند، أمريكا', slug: 'microsoft', color: '#00a4ef' },
   { name: 'NVIDIA', description: 'ملكة الرقائق — صانعة وحدات GPU التي تشغّل كل نماذج الذكاء الاصطناعي.', logo: '/icons/nvidia-color.svg', founded: '1993', hq: 'سانتا كلارا، أمريكا', slug: 'nvidia', color: '#76b900' },
-  { name: 'Xiaomi (MiMo)', description: 'عملاق الإلكترونيات الصيني يدخل سباق AI بنموذج MiMo الوكيلي.', logo: '/icons/xiaomimimo.svg', founded: '2010', hq: 'بكين، الصين', slug: 'xiaomi-mimo', color: '#ff6900' },
+  { name: 'Xiaomi', description: 'عملاق الإلكترونيات الصيني يدخل سباق AI بنموذج MiMo الوكيلي.', logo: '/icons/xiaomi-brand.svg', founded: '2010', hq: 'بكين، الصين', slug: 'xiaomi-mimo', color: '#ff6900' },
   { name: 'MiniMax', description: 'شركة صينية تنافس بنماذج MoE فعالة بتكلفة أقل 20 مرة من Claude.', logo: '/icons/minimax-color.svg', founded: '2021', hq: 'شانغهاي، الصين', slug: 'minimax', color: '#5B6CFF' },
   { name: 'Zhipu AI', description: 'شركة صينية رائدة — صانعة GLM و ChatGLM للاستخدام العام والبرمجة.', logo: '/icons/zhipu-color.svg', founded: '2019', hq: 'بكين، الصين', slug: 'zhipu-ai', color: '#4B5FD6' },
-  { name: 'Moonshot AI (Kimi)', description: 'شركة صينية ناشئة — صانعة Kimi المتفوق في الرياضيات والبرمجة.', logo: '/icons/kimi-color.svg', founded: '2023', hq: 'بكين، الصين', slug: 'moonshot-ai', color: '#4F46E5' },
+  { name: 'Moonshot AI (Kimi)', description: 'شركة صينية ناشئة — صانعة Kimi المتفوق في الرياضيات والبرمجة.', logo: '/icons/kimi-color.svg', logoBg: 'dark', founded: '2023', hq: 'بكين، الصين', slug: 'moonshot-ai', color: '#4F46E5' },
   { name: 'StepFun', description: 'شركة صينية تقدم نماذج مجانية وسريعة للمهام البسيطة.', logo: '/icons/stepfun-color.svg', founded: '2023', hq: 'شانغهاي، الصين', slug: 'stepfun', color: '#6366f1' },
   { name: 'Stability AI', description: 'رائدة الصور المفتوحة المصدر — صانعة Stable Diffusion.', logo: '/icons/stability-color.svg', founded: '2019', hq: 'لندن، بريطانيا', slug: 'stability-ai', color: '#A855F7' },
   { name: 'Midjourney', description: 'أفضل نموذج فني إبداعي لتوليد الصور بأسلوب سينمائي مذهل.', logo: '/icons/midjourney.svg', founded: '2021', hq: 'سان فرانسيسكو، أمريكا', slug: 'midjourney', color: '#fff' },
@@ -46,7 +46,7 @@ const companies = [
       {companies.map(company => (
         <a href={`/ar/blog/${company.slug}/`} class="glass-card p-6 hover:border-white/20 transition-all group block">
           <div class="flex items-center gap-4 mb-4">
-            <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
+            <div class:list={['w-14 h-14 rounded-xl flex items-center justify-center p-2 shadow-sm ring-1 ring-white/10 group-hover:scale-105 transition-transform', (company as any).logoBg === 'dark' ? 'bg-gradient-to-br from-dark-600 to-dark-800' : 'bg-white']}>
               <img src={company.logo} alt={company.name} class="w-10 h-10 object-contain" loading="lazy" />
             </div>
             <div>

@@ -8,10 +8,15 @@ interface Props {
   tokens?: string;
   isNew?: boolean;
   logo?: string;
+  logoBg?: 'light' | 'dark';
   lang?: string;
 }
 
-const { name, description, category, icon, slug, tokens, isNew, logo, lang = 'ar' } = Astro.props;
+const { name, description, category, icon, slug, tokens, isNew, logo, logoBg = 'light', lang = 'ar' } = Astro.props;
+
+const logoBgClass = logoBg === 'dark'
+  ? 'bg-gradient-to-br from-dark-600 to-dark-800 ring-1 ring-white/10'
+  : 'bg-white ring-1 ring-white/10';
 
 const categoryColors: Record<string, string> = {
   'برمجة': 'from-neon-blue to-blue-600',
@@ -39,17 +44,21 @@ const finalHref = slug ? `/${lang}/blog/${slug}/` : '#';
   <!-- Header -->
   <div class="flex items-start justify-between mb-4 relative z-10">
     <div class="flex items-center gap-3">
-      <div class="w-12 h-12 rounded-xl bg-gradient-to-br {gradientClass}/20 border border-dark-500/50 flex items-center justify-center group-hover:scale-110 transition-transform">
-        {logo ? (
+      {logo ? (
+        <div class={`w-12 h-12 rounded-xl flex items-center justify-center p-2 flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform ${logoBgClass}`}>
           <img src={logo} alt={name} class="w-8 h-8 object-contain" loading="lazy" />
-        ) : icon ? (
-          <span class="text-2xl">{icon}</span>
-        ) : (
-          <svg class="w-6 h-6 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div class={`w-12 h-12 rounded-xl bg-gradient-to-br ${gradientClass}/20 border border-dark-500/50 flex items-center justify-center group-hover:scale-110 transition-transform`}>
+          {icon ? (
+            <span class="text-2xl">{icon}</span>
+          ) : (
+            <svg class="w-6 h-6 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          )}
+        </div>
+      )}
       <div>
         <h3 class="text-lg font-bold text-white group-hover:text-neon-blue transition-colors flex items-center gap-2">
           {name}
@@ -69,10 +78,8 @@ const finalHref = slug ? `/${lang}/blog/${slug}/` : '#';
   {tokens && (
     <div class="flex items-center justify-between relative z-10">
       <span class="text-xs text-gray-500">📊 {tokens} tokens</span>
-      {slug ? (
+      {slug && (
         <span class="text-neon-blue text-xs font-medium group-hover:text-neon-green transition-colors">اقرأ المزيد ←</span>
-      ) : (
-        <span class="text-yellow-500/80 text-xs">قريباً...</span>
       )}
     </div>
   )}

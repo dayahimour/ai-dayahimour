@@ -89,6 +89,8 @@ export const ui: Record<Lang, Record<string, string>> = {
         'footer.categories': 'التصنيفات',
         'footer.rights': 'جميع الحقوق محفوظة.',
         'footer.privacy': 'سياسة الخصوصية',
+        'footer.terms': 'شروط الاستخدام',
+        'footer.contact': 'اتصل بنا',
         'footer.followX': 'تابعنا على X',
 
         // Categories
@@ -214,6 +216,8 @@ export const ui: Record<Lang, Record<string, string>> = {
         'footer.categories': 'Categories',
         'footer.rights': 'All rights reserved.',
         'footer.privacy': 'Privacy Policy',
+        'footer.terms': 'Terms of Use',
+        'footer.contact': 'Contact Us',
         'footer.followX': 'Follow us on X',
 
         // Categories

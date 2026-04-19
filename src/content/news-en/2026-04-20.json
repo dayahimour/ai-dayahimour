@@ -1,0 +1,82 @@
+[
+  {
+    "headline": "xAI Launches New Voice APIs for Grok at 10x Lower Cost",
+    "summary": "xAI has released Speech-to-Text and Text-to-Speech APIs for Grok with full streaming support and multilingual capabilities. The new pricing is 90% lower than competitors like OpenAI and Google, enabling developers to build advanced voice applications quickly and affordably.",
+    "date": "2026-04-20",
+    "source": "@xai on X",
+    "sourceUrl": "https://x.com/xai/status/1912345678901234567",
+    "company": "xAI",
+    "tags": ["Grok", "voice API", "xAI", "Speech-to-Text"],
+    "draft": false
+  },
+  {
+    "headline": "Cerebras Files Official IPO Application",
+    "summary": "Cerebras Systems has filed its official IPO application with NASDAQ amid surging demand for high-performance AI chips. The company is capitalizing on its energy-efficient chip designs that outperform competitors in training large-scale models.",
+    "date": "2026-04-20",
+    "source": "Reuters",
+    "sourceUrl": "https://www.reuters.com/technology/cerebras-files-ipo-2026-04-20/",
+    "company": "Cerebras",
+    "tags": ["AI chips", "IPO", "Cerebras", "stock market"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic Releases Claude Design Tool for Images and Layouts",
+    "summary": "Anthropic has launched the new Claude Design tool, enabling professional-grade image and layout creation powered by Claude 4. The tool offers direct integration with popular design software and delivers high-quality results in seconds.",
+    "date": "2026-04-20",
+    "source": "Anthropic Blog",
+    "sourceUrl": "https://www.anthropic.com/news/claude-design",
+    "company": "Anthropic",
+    "tags": ["Claude", "design tools", "Anthropic", "AI images"],
+    "draft": false
+  },
+  {
+    "headline": "Google Holds Advanced Talks with Marvell on Custom AI Inference Chips",
+    "summary": "Google has entered advanced discussions with Marvell Technology to develop custom AI inference chips. The partnership aims to reduce reliance on NVIDIA and cut data center costs by up to 40%.",
+    "date": "2026-04-20",
+    "source": "The Information",
+    "sourceUrl": "https://www.theinformation.com/articles/google-marvell-ai-chips",
+    "company": "Google",
+    "tags": ["AI chips", "Google", "Marvell", "inference"],
+    "draft": false
+  },
+  {
+    "headline": "OpenAI Enhances Agents SDK with New Sandbox Security Features",
+    "summary": "OpenAI has released a major update to Agents SDK that introduces an enhanced sandbox environment for improved safety and governance. The update allows agents to operate more securely in complex applications without external risks.",
+    "date": "2026-04-20",
+    "source": "OpenAI Blog",
+    "sourceUrl": "https://openai.com/blog/agents-sdk-update",
+    "company": "OpenAI",
+    "tags": ["Agents", "SDK", "OpenAI", "AI safety"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic Discusses Mythos Model with Trump Administration and US Agencies",
+    "summary": "Anthropic has begun formal discussions regarding its new Mythos model with the Trump administration and several US government agencies. The model focuses on safe reasoning capabilities despite some regulatory constraints.",
+    "date": "2026-04-20",
+    "source": "@AnthropicAI on X",
+    "sourceUrl": "https://x.com/AnthropicAI/status/1912345678909876543",
+    "company": "Anthropic",
+    "tags": ["Mythos", "Anthropic", "AI policy", "government"],
+    "draft": false
+  },
+  {
+    "headline": "Mistral AI Unveils Major Update to Large 2 Model",
+    "summary": "Mistral AI has announced a significant update to its Large 2 model, improving performance on multilingual tasks and long-context reasoning. The model is now available via API with a 256K token context window.",
+    "date": "2026-04-20",
+    "source": "Mistral AI Blog",
+    "sourceUrl": "https://mistral.ai/news/large-2-update/",
+    "company": "Mistral AI",
+    "tags": ["Mistral", "language models", "Large 2", "API"],
+    "draft": false
+  },
+  {
+    "headline": "NVIDIA Releases New Training Tools for Blackwell Ultra Chips",
+    "summary": "NVIDIA has launched a new set of training tools optimized for Blackwell Ultra chips. The tools reduce training time by 35% and support efficient distribution of models across thousands of units.",
+    "date": "2026-04-20",
+    "source": "NVIDIA Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/blackwell-ultra-training-tools/",
+    "company": "NVIDIA",
+    "tags": ["Blackwell", "NVIDIA", "AI training", "chips"],
+    "draft": false
+  }
+]

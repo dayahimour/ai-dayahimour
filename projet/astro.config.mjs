@@ -1,0 +1,23 @@
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+    site: 'https://dayahimour.org',
+    output: 'static',
+    trailingSlash: 'always',
+    build: {
+        format: 'directory',
+    },
+    integrations: [
+        tailwind(),
+        mdx(),
+        // sitemap(), // Disabled: using custom sitemap generation
+    ],
+    markdown: {
+        shikiConfig: {
+            theme: 'github-dark',
+        },
+    },
+});

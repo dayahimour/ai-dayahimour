@@ -9,10 +9,15 @@ interface Props {
   slug?: string;
   rating?: string;
   logo?: string;
+  logoBg?: 'light' | 'dark';
   lang?: string;
 }
 
-const { name, company, description, strengths, type, releaseDate, slug, rating, logo, lang = 'ar' } = Astro.props;
+const { name, company, description, strengths, type, releaseDate, slug, rating, logo, logoBg = 'light', lang = 'ar' } = Astro.props;
+
+const logoBgClass = logoBg === 'dark'
+  ? 'bg-gradient-to-br from-dark-600 to-dark-800 ring-1 ring-white/10'
+  : 'bg-white ring-1 ring-white/10';
 
 const typeColors: Record<string, string> = {
   'لغوي': 'from-neon-blue to-blue-600',
@@ -39,7 +44,7 @@ const finalHref = slug ? `/${lang}/blog/${slug}` : '#';
   <div class="flex items-start justify-between mb-4 relative z-10">
     <div class="flex items-center gap-3">
       {logo && (
-        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center p-1.5 flex-shrink-0">
+        <div class={`w-10 h-10 rounded-lg flex items-center justify-center p-1.5 flex-shrink-0 shadow-sm ${logoBgClass}`}>
           <img src={logo} alt={company} class="w-7 h-7 object-contain" loading="lazy" />
         </div>
       )}

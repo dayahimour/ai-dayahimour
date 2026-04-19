@@ -1,24 +1,20 @@
 ---
-// Root index: fallback redirect. Cloudflare Worker handles geo-redirect for production.
-// This page is only hit if Worker is not active (dev mode).
+import { defaultLang } from '../i18n/translations';
+
+// Server-side redirect for bots (like AdSense)
+return Astro.redirect(`/${defaultLang}/`, 301);
 ---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="robots" content="noindex, follow" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://dayahimour.org/ar/" />
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>AI DayaHimour</title>
-    <script>
-      // Client-side fallback: check browser language
-      const lang = navigator.language || navigator.userLanguage || 'ar';
-      const isArabic = lang.startsWith('ar');
-      window.location.replace(isArabic ? '/ar/' : '/en/');
-    </script>
   </head>
   <body style="background-color: #050a12;">
   </body>

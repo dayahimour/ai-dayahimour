@@ -1,0 +1,91 @@
+---
+import { t } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'ar' } = Astro.props;
+const prefix = `/${lang}`;
+
+// Get real statistics from content collections
+const collectionName = lang === 'ar' ? 'blog' : 'blog-en';
+const allPosts = await getCollection(collectionName);
+const publishedPosts = allPosts.filter(post => !post.data.draft);
+
+// Categories based on language
+const modelsCategory = lang === 'ar' ? 'نماذج' : 'models';
+const toolsCategory = lang === 'ar' ? 'أدوات' : 'tools';
+
+// Count statistics
+const totalArticles = publishedPosts.length;
+const modelsCount = publishedPosts.filter(p => p.data.category === modelsCategory).length;
+const toolsCount = publishedPosts.filter(p => p.data.category === toolsCategory).length;
+---
+
+<section class="relative overflow-hidden py-20 md:py-32">
+  <!-- Background Effects -->
+  <div class="absolute inset-0 z-0">
+    <div class="orb orb-blue w-96 h-96 top-0 -right-48 opacity-30"></div>
+    <div class="orb orb-green w-72 h-72 bottom-0 -left-36 opacity-20"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="text-center max-w-4xl mx-auto">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neon-blue/20 bg-neon-blue/5 mb-8 animate-fade-in">
+        <span class="w-2 h-2 rounded-full bg-neon-green animate-pulse"></span>
+        <span class="text-sm text-gray-300">{t(lang, 'hero.badge')}</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight animate-slide-up">
+        {t(lang, 'hero.title1')}
+        <span class="gradient-text block">{t(lang, 'hero.title2')}</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in" style="animation-delay: 0.2s">
+        {t(lang, 'hero.subtitle')}
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-16 animate-fade-in" style="animation-delay: 0.4s">
+        <a href={`${prefix}/blog`} class="btn-primary">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+          </svg>
+          {t(lang, 'hero.cta.blog')}
+        </a>
+        <a href={`${prefix}/models`} class="btn-secondary">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          {t(lang, 'hero.cta.models')}
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in" style="animation-delay: 0.6s">
+        <div class="glass-card p-4 text-center">
+          <p class="text-2xl md:text-3xl font-bold gradient-text">+{totalArticles}</p>
+          <p class="text-xs text-gray-400 mt-1">{t(lang, 'hero.stat.articles')}</p>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <p class="text-2xl md:text-3xl font-bold gradient-text">+{modelsCount}</p>
+          <p class="text-xs text-gray-400 mt-1">{t(lang, 'hero.stat.models')}</p>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <p class="text-2xl md:text-3xl font-bold gradient-text">+{toolsCount}</p>
+          <p class="text-xs text-gray-400 mt-1">{t(lang, 'hero.stat.tools')}</p>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <p class="text-2xl md:text-3xl font-bold text-neon-green">{t(lang, 'hero.stat.dailyLabel')}</p>
+          <p class="text-xs text-gray-400 mt-1">{t(lang, 'hero.stat.daily')}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

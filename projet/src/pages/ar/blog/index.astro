@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { t } from '../../../i18n/translations';
+import { getCollection } from 'astro:content';
+
+const lang = 'ar';
+
+const allPosts = (await getCollection('blog'))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const categories = ['الكل', 'أخبار', 'تحليل', 'نماذج', 'أدوات', 'مستقبل'];
+---
+
+<BaseLayout title={t(lang, 'nav.blog')} description={t(lang, 'blog.subtitle')} lang={lang}>
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        {t(lang, 'blog.title')} <span class="gradient-text">{t(lang, 'blog.titleHighlight')}</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl">{t(lang, 'blog.subtitle')}</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-10" id="category-filter">
+      {categories.map(cat => (
+        <button
+          class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-all border border-dark-500/30 text-gray-400 hover:text-white hover:bg-dark-600/50"
+          data-category={cat}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+
+    <div class="mb-10">
+      <div class="relative max-w-md">
+        <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+          type="text"
+          id="search-input"
+          placeholder={t(lang, 'blog.search')}
+          class="w-full bg-dark-700/50 border border-dark-500/30 rounded-xl pr-10 pl-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-neon-blue/50 transition-colors"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+      {allPosts.map(post => (
+        <div class="article-item" data-category={post.data.category} data-title={post.data.title}>
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.date}
+            category={post.data.category}
+            slug={post.slug}
+            image={post.data.image}
+            lang={lang}
+          />
+        </div>
+      ))}
+    </div>
+
+    <div id="empty-state" class="hidden text-center py-20">
+      <svg class="w-16 h-16 text-dark-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <p class="text-gray-400 text-lg">{t(lang, 'blog.noResults')}</p>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const articles = document.querySelectorAll('.article-item');
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const emptyState = document.getElementById('empty-state');
+
+  let activeCategory = 'الكل';
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.getAttribute('data-category') || 'الكل';
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-neon-blue/20', 'text-neon-blue', 'border-neon-blue/30');
+        b.classList.add('text-gray-400');
+      });
+      btn.classList.add('bg-neon-blue/20', 'text-neon-blue', 'border-neon-blue/30');
+      btn.classList.remove('text-gray-400');
+      filterArticles();
+    });
+  });
+
+  filterBtns[0]?.classList.add('bg-neon-blue/20', 'text-neon-blue', 'border-neon-blue/30');
+  filterBtns[0]?.classList.remove('text-gray-400');
+
+  searchInput?.addEventListener('input', () => filterArticles());
+
+  function filterArticles() {
+    const searchTerm = searchInput?.value.toLowerCase() || '';
+    let matchCount = 0;
+    articles.forEach(article => {
+      const category = article.getAttribute('data-category') || '';
+      const title = (article.getAttribute('data-title') || '').toLowerCase();
+      const matchesCategory = activeCategory === 'الكل' || category === activeCategory;
+      const matchesSearch = !searchTerm || title.includes(searchTerm);
+      const show = matchesCategory && matchesSearch;
+      (article as HTMLElement).style.display = show ? '' : 'none';
+      if (show) matchCount++;
+    });
+    if (emptyState) emptyState.classList.toggle('hidden', matchCount > 0);
+  }
+
+  filterArticles();
+</script>
