@@ -7,14 +7,33 @@ const ARABIC_COUNTRIES = [
   'DJ', 'KM'
 ];
 
+// Bot detection for AdSense/Googlebot - they need to see actual content
+const BOT_USER_AGENTS = [
+  'googlebot', 'adsbot-google', 'mediapartners-google',
+  'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot',
+  'facebookexternalhit', 'twitterbot', 'linkedinbot', 'whatsapp', 'slackbot',
+];
+
+function isBot(userAgent) {
+  if (!userAgent) return false;
+  const lower = userAgent.toLowerCase();
+  return BOT_USER_AGENTS.some(bot => lower.includes(bot));
+}
+
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
   const path = url.pathname;
+  const userAgent = request.headers.get('User-Agent') || '';
 
   // Only redirect on root path "/"
   if (path !== '/') {
     return context.next();
+  }
+
+  // IMPORTANT: Serve content to bots (AdSense/Googlebot need to crawl)
+  if (isBot(userAgent)) {
+    return context.next(); // Serve the actual index.html with meta tags
   }
 
   // Get country from Cloudflare header
@@ -26,10 +45,10 @@ export async function onRequest(context) {
   const langCookie = cookies.match(/lang=(ar|en)/);
   if (langCookie) {
     const preferredLang = langCookie[1];
-    return Response.redirect(new URL(`/${preferredLang}/`, url), 302);
+    return Response.redirect(new URL(`/${preferredLang}/`, url), 301);
   }
 
-  // Redirect based on geo (use 302 to prevent browser caching issues)
+  // Redirect based on geo (use 301 for SEO)
   const targetLang = isArabic ? 'ar' : 'en';
-  return Response.redirect(new URL(`/${targetLang}/`, url), 302);
+  return Response.redirect(new URL(`/${targetLang}/`, url), 301);
 }
