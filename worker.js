@@ -56,14 +56,6 @@ export default {
 
     // Only apply geo-redirect on the root path "/"
     if (path === '/') {
-      // IMPORTANT: Serve actual content to bots (AdSense/Googlebot need to crawl)
-      // Redirect only real human users
-      if (isBot(userAgent)) {
-        // Serve the static index.html which has proper meta tags for SEO/AdSense
-        // It includes a client-side redirect for humans but bots see the canonical/meta
-        return env.ASSETS.fetch(request);
-      }
-
       // 1. Check for language preference cookie (user manual override)
       const cookies = request.headers.get('Cookie') || '';
       const langCookie = cookies.match(/lang=(ar|en)/);
@@ -78,7 +70,7 @@ export default {
       if (country && country !== 'XX' && !ARABIC_COUNTRIES.has(country)) {
         targetLang = 'en';
       }
-      
+
       // Redirect human users with 301 (permanent redirect - good for SEO)
       return makeRedirect(`/${targetLang}/`, url, 301);
     }
