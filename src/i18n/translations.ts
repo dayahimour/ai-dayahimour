@@ -90,6 +90,7 @@ export const ui: Record<Lang, Record<string, string>> = {
         'footer.rights': 'جميع الحقوق محفوظة.',
         'footer.privacy': 'سياسة الخصوصية',
         'footer.terms': 'شروط الاستخدام',
+        'footer.cookies': 'ملفات التعريف',
         'footer.contact': 'اتصل بنا',
         'footer.followX': 'تابعنا على X',
 
@@ -217,6 +218,7 @@ export const ui: Record<Lang, Record<string, string>> = {
         'footer.rights': 'All rights reserved.',
         'footer.privacy': 'Privacy Policy',
         'footer.terms': 'Terms of Use',
+        'footer.cookies': 'Cookie Policy',
         'footer.contact': 'Contact Us',
         'footer.followX': 'Follow us on X',
 
