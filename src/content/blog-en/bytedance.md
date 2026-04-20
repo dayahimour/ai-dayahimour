@@ -61,3 +61,8 @@ The deeper strategic impact: ByteDance heavily invested in diversifying its busi
 Doubao faces the revenue‑validation question: the user base is massive but the path to monetization remains unclear. The advertising model that succeeded for TikTok doesn't easily transfer to a conversational AI assistant.
 
 The most obscure focal point is whether ByteDance will continue its open‑source AI path — which builds trust in the tech community — or will close its models to protect its investments. To date, this question hasn't been decisively settled.
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

@@ -1,6 +1,6 @@
 ---
 title: "Gemma 4: أقوى نموذج مفتوح المصدر من Google — تحليل شامل لعائلة النماذج الجديدة 2026"
-description: "Google تطلق Gemma 4 بأربعة أحجام من 2B إلى 31B، مبني على تقنية Gemini 3، بترخيص Apache 2.0 مفتوح تجارياً. يدعم 140 لغة ونافذة سياق 256K ويعمل على الأجهزة المحمولة بكفاءة غير مسبوقة."
+description: "دليل شامل: Google تطلق Gemma 4 بأربعة أحجام من 2B إلى 31B، مبني على تقنية Gemini 3، بترخيص Apache 2.0 مفتوح تجارياً. يدعم 140 لغة ونافذة سياق 256K ويعمل على الأجهزة المحمولة بكفاءة غير مسبوقة. - اكتشف أهم التفاصيل والمقارنات التي تحتاجها."
 date: "2026-04-04"
 category: "نماذج"
 tags: ["Gemma 4", "Google", "مفتوح المصدر", "AI", "نماذج LLM", "on-device AI", "Apache 2.0"]
@@ -188,3 +188,9 @@ ollama run gemma4:4b
 - [Gemma 4 على Google Cloud](https://cloud.google.com/blog/products/ai-machine-learning/gemma-4-available-on-google-cloud)
 - [Gemma 4 في Google AI Studio](https://aistudio.google.com)
 - [تنزيل النماذج من Hugging Face](https://huggingface.co/google/gemma-4)
+
+
+---
+
+### 🚀 استكشف المزيد
+هل تريد معرفة المزيد عن أحدث النماذج المذكورة هنا؟ تفضل بزيارة [قائمة أقوى نماذج الذكاء الاصطناعي](/ar/models/) للحصول على مقارنة شاملة، أو تصفح [أحدث أدوات الذكاء الاصطناعي](/ar/tools/) لتحسين إنتاجيتك.

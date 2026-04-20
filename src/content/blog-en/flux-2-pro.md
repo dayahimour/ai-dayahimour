@@ -101,3 +101,8 @@ FLUX.2 [pro] ranks among the highest‑performing models in image quality, instr
 - API Docs: https://docs.bfl.ai/flux_2/
 - Playground: https://bfl.ai/play
 - Hugging Face ([dev]): https://huggingface.co/black-forest-labs/FLUX.2-dev
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

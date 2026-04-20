@@ -1,6 +1,6 @@
 ---
 title: "Hermes Agent: The Agent That Grows With Its Users — A Deep Dive into Nous Research's Project"
-description: "An open‑source agent from Nous Research that learns from its experiences, builds its own skills, and runs continuously on your server. Over 18k GitHub stars, persistent memory, and integration with more than 400 models. A detailed analysis of capabilities, limitations, and comparison with OpenClaw."
+description: "Comprehensive Guide: An open‑source agent from Nous Research that learns from its experiences, builds its own skills, and runs continuously on your server. Over 18k GitHub stars, persistent memory, and integration with more than 400 models. A detailed analysis of capabilities, limitations, and comparison with OpenClaw. - Discover the essential details and comparisons you need."
 date: "2026-04-05"
 category: "tools"
 tags: ["Hermes Agent", "Nous Research", "Automation agent", "AI", "2026"]
@@ -58,3 +58,8 @@ The community still agrees that Hermes does not replace OpenClaw. Most users con
 Hermes Agent is not just another agent. It solves a problem most other frameworks ignore: what happens after the first session. While OpenClaw focuses on breadth and a huge skill marketplace, Hermes focuses on depth: a system that, the more it is used, becomes more capable.
 
 Not even two months have passed since its launch. On April 2, 2026, the team released v0.7.0, turning memory into a plug‑gable extension system that allows users to replace the backend with any database or storage structure they choose. The pace at which Hermes Agent evolves reflects more than just technical efficiency — it reflects a growing community of users who choose agents that remember, adapt, and grow with them.
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

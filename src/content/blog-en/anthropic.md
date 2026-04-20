@@ -55,3 +55,8 @@ Investment in infrastructure is planned at $19 billion in 2026, distributed betw
 Anthropic expanded into digital health with HIPAA‑compliant Claude healthcare applications and acquired Coefficient Bio to strengthen its presence in drug discovery. The Claude Cowork product for office task automation is redrawing the boundaries of what AI can replace humans in executing.
 
 The gap between a startup and established institutional power hasn't yet been fully crossed. The real question is not about the technical capabilities of the models, but about the nature of the corporate identity Anthropic will carry when it becomes a public company balancing shareholder demands with its research legacy in safety.
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

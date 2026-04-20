@@ -61,3 +61,8 @@ Geopolitical tensions complicate global expansion: government institutions and W
 After the technical leader's departure, the pressing question is whether Alibaba will maintain the development momentum that achieved this leadership, or whether restructuring will threaten continuity. Qwen 3.5, released weeks before Lin's departure, proved that the technical infrastructure is deeper than to stop with one person's exit.
 
 In the long term, the question remains: can an open-source model ecosystem be continuously funded by competitive cloud infrastructure, or does this model require clearer commercial gains than what broad free dissemination achieves?
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

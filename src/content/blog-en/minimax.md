@@ -66,3 +66,8 @@ A legal dispute with Wuhu Diezhi over content ownership went to court in July 20
 The IPO changes MiniMax's equations: it's now obliged to periodic disclosure and subject to investor scrutiny, narrowing the maneuvering margin available to private startups. The raised funds provide financial ammunition to expand training capabilities and expand into foreign markets.
 
 The open question is whether MiniMax can transition from consumer products like Talkie — which consume service resources without a clear profit model — to the enterprise sector that generates stable returns. 2025 figures indicate an ongoing transition, but the distance to becoming a heavyweight player in the global enterprise ecosystem remains substantial.
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

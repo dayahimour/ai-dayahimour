@@ -7,7 +7,7 @@ export const GET: APIRoute = async () => {
   const arPosts = (await getCollection('blog')).filter(p => !p.data.draft);
   const enPosts = (await getCollection('blog-en')).filter(p => !p.data.draft);
 
-  const staticPages = ['', '/blog', '/models', '/tools', '/future', '/about', '/privacy'];
+  const staticPages = ['', '/blog', '/models', '/tools', '/future', '/about', '/privacy', '/contact', '/companies', '/terms', '/cookies', '/news'];
 
   let urls = '';
 

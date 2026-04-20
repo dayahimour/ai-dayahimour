@@ -91,3 +91,9 @@ US chip export restrictions hinder Moonshot's access to Nvidia H100/H200 process
 From few indicators in 2023 — long context and a polished Chinese assistant — Moonshot built one of the most exciting growth stories in global AI in 2026. The valuation from $2.5 billion to $18 billion in less than two years reflects investor confidence, but also raises expectations to levels difficult to sustain continuously.
 
 The business model is clear and logical: subscriptions for individual users, and API fees for developers and enterprises. The challenge is sustainability in a market where DeepSeek, Ali Qwen, and others offer free or low-cost models. If K2.5 succeeds in maintaining its global growth, it may prove that Chinese open-source AI is capable of competing globally without needing government contracts or massive enterprise subscriptions.
+
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

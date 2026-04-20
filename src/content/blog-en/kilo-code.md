@@ -1,6 +1,6 @@
 ---
 title: "Kilo Code: The World's Second Most Used Coding Agent with 2.18 Trillion Tokens Processed — Complete Analysis"
-description: "In 2026, Kilo Code has become the world's second most used coding agent, processing over 2.18 trillion tokens and reaching more than 1.5 million users. The legitimate heir to Roo Code and Cline with an open‑source philosophy and transparent pricing model."
+description: "Comprehensive Guide: In 2026, Kilo Code has become the world's second most used coding agent, processing over 2.18 trillion tokens and reaching more than 1.5 million users. The legitimate heir to Roo Code and Cline with an open‑source philosophy and transparent pricing model. - Discover the essential details and comparisons you need."
 date: "2026-04-05"
 category: "tools"
 tags: ["Kilo Code", "VS Code", "coding agent", "AI", "2026"]
@@ -70,3 +70,8 @@ The tool has recently expanded from VS Code to **JetBrains IDEs** and CLI, letti
 In a market crowded with names like Cursor (which redefines the IDE itself) and Cline (the simple original), Kilo Code occupies a unique niche: the open‑source alternative that combines the power of Cline with the flexibility of Roo Code, backed by professional management and a pricing policy that does not drain budgets.
 
 With expectations of reaching 2 million developers before the end of 2026 and continued improvements to the local‑model experience, “Kilo Coders” do not appear to be just a passing trend but a growing community of professionals who have chosen full control over their tools instead of submitting to closed subscription models.
+
+---
+
+### 🚀 Explore More
+Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.
