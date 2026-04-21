@@ -77,5 +77,5 @@ In conclusion, v8 represents an advanced step toward making generated images a g
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

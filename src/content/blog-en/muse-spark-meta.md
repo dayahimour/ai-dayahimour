@@ -38,11 +38,11 @@ What truly distinguishes Muse Spark is not these features per se — most have b
   <p style="color: #475569; font-size: 11px; text-align: center; margin: 0 0 24px 0;">Source: Official Meta AI Blog</p>
 
   <!-- ===== MULTIMODAL ===== -->
-  <p style="color: #60a5fa; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;">📷 Multimodal</p>
+  <p style="color: #60a5fa; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;"> Multimodal</p>
 
   <div style="margin-bottom: 14px;">
     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-      <span style="color: #cbd5e1; font-size: 13px;">CharXiv Reasoning (Chart Understanding) 🏆</span>
+      <span style="color: #cbd5e1; font-size: 13px;">CharXiv Reasoning (Chart Understanding) </span>
       <span style="color: #34d399; font-weight: 700; font-size: 13px;">86.4</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 9px; overflow: hidden;">
@@ -75,7 +75,7 @@ What truly distinguishes Muse Spark is not these features per se — most have b
 
   <div style="margin-bottom: 20px;">
     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-      <span style="color: #cbd5e1; font-size: 13px;">ZeroBench (Multi-step Visual Reasoning) 🏆</span>
+      <span style="color: #cbd5e1; font-size: 13px;">ZeroBench (Multi-step Visual Reasoning) </span>
       <span style="color: #34d399; font-weight: 700; font-size: 13px;">33.0</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 9px; overflow: hidden;">
@@ -86,7 +86,7 @@ What truly distinguishes Muse Spark is not these features per se — most have b
 
   <!-- ===== TEXT/REASONING ===== -->
   <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 18px; margin-bottom: 14px;">
-    <p style="color: #a78bfa; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;">🧠 Text / Reasoning</p>
+    <p style="color: #a78bfa; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;"> Text / Reasoning</p>
   </div>
 
   <div style="margin-bottom: 14px;">
@@ -135,7 +135,7 @@ What truly distinguishes Muse Spark is not these features per se — most have b
 
   <div style="margin-bottom: 20px;">
     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-      <span style="color: #cbd5e1; font-size: 13px;">ARC-AGI-2 (Abstract Reasoning) ⚠️</span>
+      <span style="color: #cbd5e1; font-size: 13px;">ARC-AGI-2 (Abstract Reasoning) </span>
       <span style="color: #f87171; font-weight: 700; font-size: 13px;">42.5%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 9px; overflow: hidden;">
@@ -146,12 +146,12 @@ What truly distinguishes Muse Spark is not these features per se — most have b
 
   <!-- ===== HEALTH ===== -->
   <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 18px; margin-bottom: 14px;">
-    <p style="color: #34d399; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;">🏥 Health</p>
+    <p style="color: #34d399; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;"> Health</p>
   </div>
 
   <div style="margin-bottom: 14px;">
     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-      <span style="color: #cbd5e1; font-size: 13px;">HealthBench Hard 🏆🏆</span>
+      <span style="color: #cbd5e1; font-size: 13px;">HealthBench Hard </span>
       <span style="color: #34d399; font-weight: 700; font-size: 13px;">42.8%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 9px; overflow: hidden;">
@@ -173,12 +173,12 @@ What truly distinguishes Muse Spark is not these features per se — most have b
 
   <!-- ===== AGENTIC ===== -->
   <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 18px; margin-bottom: 14px;">
-    <p style="color: #f59e0b; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;">🤖 Agentic</p>
+    <p style="color: #f59e0b; font-size: 12px; font-weight: 700; margin: 0 0 14px 0; letter-spacing: 0.08em; text-transform: uppercase;"> Agentic</p>
   </div>
 
   <div style="margin-bottom: 14px;">
     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-      <span style="color: #cbd5e1; font-size: 13px;">DeepSearchQA (Agentic Search) 🏆</span>
+      <span style="color: #cbd5e1; font-size: 13px;">DeepSearchQA (Agentic Search) </span>
       <span style="color: #f59e0b; font-weight: 700; font-size: 13px;">74.8%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 9px; overflow: hidden;">
@@ -200,7 +200,7 @@ What truly distinguishes Muse Spark is not these features per se — most have b
 
   <div style="margin-bottom: 14px;">
     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-      <span style="color: #cbd5e1; font-size: 13px;">Terminal-Bench 2.0 ⚠️</span>
+      <span style="color: #cbd5e1; font-size: 13px;">Terminal-Bench 2.0 </span>
       <span style="color: #f87171; font-weight: 700; font-size: 13px;">59.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 9px; overflow: hidden;">
@@ -222,7 +222,7 @@ What truly distinguishes Muse Spark is not these features per se — most have b
 
   <div style="margin-bottom: 0;">
     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-      <span style="color: #cbd5e1; font-size: 13px;">GDPval-AA Elo (Office Tasks) ⚠️</span>
+      <span style="color: #cbd5e1; font-size: 13px;">GDPval-AA Elo (Office Tasks) </span>
       <span style="color: #f87171; font-weight: 700; font-size: 13px;">1444</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 9px; overflow: hidden;">
@@ -292,5 +292,5 @@ On X, one AI developer wrote: "Llama 4 was a scandal. Muse Spark is closed. When
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

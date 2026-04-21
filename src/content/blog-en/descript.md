@@ -77,5 +77,5 @@ Ultimately, Descript hasn't just changed editing tools; it changed **the deep un
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

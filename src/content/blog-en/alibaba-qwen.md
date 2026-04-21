@@ -64,5 +64,5 @@ In the long term, the question remains: can an open-source model ecosystem be co
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

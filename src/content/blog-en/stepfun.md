@@ -101,5 +101,5 @@ The company prefers calm over hype: "We are not capable enough in some areas and
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

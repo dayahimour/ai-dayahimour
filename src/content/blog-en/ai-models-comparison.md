@@ -46,7 +46,7 @@ During a short period in early 2026, four companies — OpenAI, Anthropic, Googl
 
 ## Detailed Analysis of Each Model
 
-### 🔵 GPT-5.4 "Thinking" — The Comprehensive Model
+###  GPT-5.4 "Thinking" — The Comprehensive Model
 
 Released on **March 5, 2026**. The main feature is the internal guidance mechanism — the system automatically chooses between response speed for simple questions and depth of analysis for complex problems.
 
@@ -76,7 +76,7 @@ Released on **March 8, 2026**. The **1 million token** context window allows acc
 
 ---
 
-### 🔴 Gemini 3.1 Pro — Benchmark Performance
+###  Gemini 3.1 Pro — Benchmark Performance
 
 Released on **February 19, 2026** and achieved **94.3% on GPQA Diamond**. Leads in 13 out of 16 benchmarks according to independent evaluations.
 
@@ -106,7 +106,7 @@ xAI's model distinguished by direct access to X platform data.
 
 ---
 
-### ⚫ DeepSeek V4 — The Anticipated Open Model
+###  DeepSeek V4 — The Anticipated Open Model
 
 According to leaks, the upcoming model will contain **trillion parameters** open source — only 32 billion active in each call through Mixture-of-Experts architecture.
 
@@ -143,5 +143,5 @@ Actual usage indicates a multi-model trend — directing tasks to the most suita
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

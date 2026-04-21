@@ -116,9 +116,9 @@ vLLM, llama.cpp, MLX, LM Studio, Unsloth, SGLang, Keras, NVIDIA NIM, Docker, Max
 
 | Feature | Gemma 4 (31B) | Llama 4 Maverick | GPT‑4o |
 |---------|---------------|------------------|--------|
-| License | Apache 2.0 ✅ | Partially restricted | Closed ❌ |
-| On‑device | ✅ (E2B/E4B) | ❌ | ❌ |
-| Audio support | ✅ | ❌ | Limited |
+| License | Apache 2.0  | Partially restricted | Closed  |
+| On‑device |  (E2B/E4B) |  |  |
+| Audio support |  |  | Limited |
 | Languages | 140+ | 12 | Multiple |
 | Context window | 256K | 10M | 128K |
 | Source | Google DeepMind | Meta AI | OpenAI |
@@ -191,5 +191,5 @@ For Arab developers especially, this means professional tools **with no API cost
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

@@ -14,7 +14,7 @@ A company with fewer than 400 employees, its revenue didn't exceed $79 million i
 
 ## Founding and Seeds
 
-MiniMax was founded in December 2021 in Shanghai by several former researchers from SenseTime, a computer‑vision technology company. Principal founder Yan Junjie and participants Yang Bin and Zhou Yucong established a company called "Xiyu Technology" (稀宇科技), with the brand name MiniMax.
+MiniMax was founded in December 2021 in Shanghai by several former researchers from SenseTime, a computer‑vision technology company. Principal founder Yan Junjie and participants Yang Bin and Zhou Yucong established a company called "Xiyu Technology" (), with the brand name MiniMax.
 
 In its early days, it received funding from MiHoYo — the famous Chinese game studio behind Genshin Impact — giving it a unique connection to the digital‑creation industry from day one.
 
@@ -69,5 +69,5 @@ The open question is whether MiniMax can transition from consumer products like 
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

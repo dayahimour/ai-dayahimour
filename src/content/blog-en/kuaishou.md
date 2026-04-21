@@ -16,7 +16,7 @@ No one expected in early 2024 that a Chinese short video platform competing with
 
 ## Founding Story: From Chinese TikTok to Global AI Platform
 
-Kuaishou is a Chinese company listed on the Hong Kong Stock Exchange, founded in 2011. It was a traditional competitor to ByteDance (TikTok's parent company), operating a short video platform called "快手" (Kuaishou) with 400 million daily active users in China.
+Kuaishou is a Chinese company listed on the Hong Kong Stock Exchange, founded in 2011. It was a traditional competitor to ByteDance (TikTok's parent company), operating a short video platform called "" (Kuaishou) with 400 million daily active users in China.
 
 But when OpenAI launched Sora in February 2024 and shook the video generation world, Kuaishou's leaders decided to respond directly instead of waiting. The company invested in a specialized AI team that leveraged its vast experience in processing billions of video clips daily — an experience most AI companies born from purely research environments don't possess.
 
@@ -95,5 +95,5 @@ The main risk ahead is not technical but geo-political: amid escalating US-China
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

@@ -137,5 +137,5 @@ GPT Image 1.5 is not just a new tool; it is the beginning of a new era for visua
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

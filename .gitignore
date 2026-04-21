@@ -26,3 +26,49 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# AI tool sidecars
+.kilo/
+.kilocode/
+.qoder/
+.cursor/
+.windsurf/
+
+# Archives & old snapshots
+*.tar.gz
+/projet/
+/lobe-icons/
+/images/
+
+# Local working notes & drafts (keep only in the working tree)
+AI_SITE_FIX_REPORT.md
+ARTICLE_QUALITY_ANALYSIS.md
+SEO_FIX_REPORT.md
+future-expansion-strategy.md
+plan-translation.md
+translation-progress.txt
+promt.md
+prompt-news.md
+prompt-translate.md
+prompt_gemini_images.md
+image_prompts_for_articles.md
+article_descriptions_for_images.md
+
+# Throwaway / one-off scripts
+add_local_images.py
+check_articles.py
+generate_company_images.py
+update_company_images.py
+
+# Accidental files from mistyped git commands
+h\ origin\ main
+tatus
+
+# Arabic-named personal folders
+سياسات/
+مقالات/

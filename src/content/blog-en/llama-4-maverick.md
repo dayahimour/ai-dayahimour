@@ -152,18 +152,18 @@ Maverick officially supports 12 languages:
 
 | Language | Support Level |
 |----------|--------------|
-| English | ⭐⭐⭐⭐⭐ Excellent |
-| Arabic | ⭐⭐⭐⭐ Very Good |
-| Chinese (Simplified) | ⭐⭐⭐⭐⭐ Excellent |
-| Chinese (Traditional) | ⭐⭐⭐⭐ Very Good |
-| Spanish | ⭐⭐⭐⭐ Very Good |
-| French | ⭐⭐⭐⭐ Very Good |
-| German | ⭐⭐⭐⭐ Very Good |
-| Portuguese | ⭐⭐⭐⭐ Very Good |
-| Hindi | ⭐⭐⭐⭐ Very Good |
-| Japanese | ⭐⭐⭐⭐ Very Good |
-| Korean | ⭐⭐⭐⭐ Very Good |
-| Russian | ⭐⭐⭐⭐ Very Good |
+| English |  Excellent |
+| Arabic |  Very Good |
+| Chinese (Simplified) |  Excellent |
+| Chinese (Traditional) |  Very Good |
+| Spanish |  Very Good |
+| French |  Very Good |
+| German |  Very Good |
+| Portuguese |  Very Good |
+| Hindi |  Very Good |
+| Japanese |  Very Good |
+| Korean |  Very Good |
+| Russian |  Very Good |
 
 ### What Does This Mean for Arabic Users?
 
@@ -179,16 +179,16 @@ Arabic support in Maverick is **much better** than in previous generations. The 
 
 ### What Can You Do with Llama 4 Maverick?
 
-✅ **Free commercial use** — no licensing fees
-✅ **Modify the source code** — customise the model for your needs
-✅ **Redistribute** — share the modified model
-✅ **Further training** — fine‑tune on your own data
-✅ **Integrate into your products** — APIs, applications, services
+ **Free commercial use** — no licensing fees
+ **Modify the source code** — customise the model for your needs
+ **Redistribute** — share the modified model
+ **Further training** — fine‑tune on your own data
+ **Integrate into your products** — APIs, applications, services
 
 ### What Can’t You Do?
 
-❌ Use the model’s outputs to train a competing model
-❌ Use the model in military or mass‑surveillance applications
+ Use the model’s outputs to train a competing model
+ Use the model in military or mass‑surveillance applications
 
 This license is **more open** than Llama 3’s, making it an ideal choice for startups and independent developers.
 
@@ -277,25 +277,25 @@ and convert it to a DataFrame
 
 | Criterion | Maverick | GPT‑4o | Winner |
 |-----------|----------|--------|--------|
-| Programming | 89.2% | 87.1% | 🏆 Maverick |
-| Mathematics | 83.7% | 78.4% | 🏆 Maverick |
-| General Knowledge | 87.3% | 88.7% | 🏆 GPT‑4o |
-| Science | 72.1% | 74.3% | 🏆 GPT‑4o |
-| Context Window | 10 M | 128 K | 🏆 Maverick |
-| Cost | $0.20/M | $2.50/M | 🏆 Maverick |
-| License | Open | Closed | 🏆 Maverick |
+| Programming | 89.2% | 87.1% |  Maverick |
+| Mathematics | 83.7% | 78.4% |  Maverick |
+| General Knowledge | 87.3% | 88.7% |  GPT‑4o |
+| Science | 72.1% | 74.3% |  GPT‑4o |
+| Context Window | 10 M | 128 K |  Maverick |
+| Cost | $0.20/M | $2.50/M |  Maverick |
+| License | Open | Closed |  Maverick |
 | **Result** | **5/8** | **3/8** | **Maverick** |
 
 ### Llama 4 Maverick vs Claude Sonnet 4
 
 | Criterion | Maverick | Claude Sonnet 4 | Winner |
 |-----------|----------|-----------------|--------|
-| Programming | 89.2% | 88.4% | 🏆 Maverick |
-| Mathematics | 83.7% | 81.2% | 🏆 Maverick |
-| General Knowledge | 87.3% | 86.5% | 🏆 Maverick |
-| Science | 72.1% | 73.8% | 🏆 Claude |
-| Context Window | 10 M | 200 K | 🏆 Maverick |
-| Cost | $0.20/M | $3.00/M | 🏆 Maverick |
+| Programming | 89.2% | 88.4% |  Maverick |
+| Mathematics | 83.7% | 81.2% |  Maverick |
+| General Knowledge | 87.3% | 86.5% |  Maverick |
+| Science | 72.1% | 73.8% |  Claude |
+| Context Window | 10 M | 200 K |  Maverick |
+| Cost | $0.20/M | $3.00/M |  Maverick |
 | **Result** | **6/6** | **0/6** | **Maverick** |
 
 ---
@@ -389,25 +389,25 @@ No model is perfect, and Maverick has some limitations:
 
 | Criterion | Rating |
 |-----------|--------|
-| Performance | ⭐⭐⭐⭐⭐ 9.5/10 |
-| Value for Money | ⭐⭐⭐⭐⭐ 10/10 |
-| Ease of Use | ⭐⭐⭐⭐ 8/10 |
-| Arabic Support | ⭐⭐⭐⭐ 8/10 |
-| License | ⭐⭐⭐⭐⭐ 10/10 |
-| **Overall Rating** | **⭐⭐⭐⭐⭐ 9.1/10** |
+| Performance |  9.5/10 |
+| Value for Money |  10/10 |
+| Ease of Use |  8/10 |
+| Arabic Support |  8/10 |
+| License |  10/10 |
+| **Overall Rating** | ** 9.1/10** |
 
 ### Who Should Use Llama 4 Maverick?
 
-✅ **Developers** who want a powerful, free model
-✅ **Startups** looking to cut costs
-✅ **Researchers** who need a customisable model
-✅ **Everyday users** who want to experience AI without restrictions
+ **Developers** who want a powerful, free model
+ **Startups** looking to cut costs
+ **Researchers** who need a customisable model
+ **Everyday users** who want to experience AI without restrictions
 
 ### Who Should Look for Alternatives?
 
-❌ Those who need **the highest level of safety** (use Claude or GPT)
-❌ Those who need **perfect Arabic support** (wait for future updates)
-❌ Those without **technical infrastructure** (use cloud APIs)
+ Those who need **the highest level of safety** (use Claude or GPT)
+ Those who need **perfect Arabic support** (wait for future updates)
+ Those without **technical infrastructure** (use cloud APIs)
 
 ---
 
@@ -427,5 +427,5 @@ The new era of open‑source AI has begun. And Llama 4 Maverick is its pione
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

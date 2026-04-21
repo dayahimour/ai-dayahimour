@@ -114,5 +114,5 @@ Next step: Try MiMo‑V2‑Pro today through Xiaomi’s platform – it could be
 
 ---
 
-### 🚀 Explore More
+###  Explore More
 Want to learn more about the latest models mentioned here? Visit our [Top AI Models List](/en/models/) for a comprehensive comparison, or browse the [Latest AI Tools](/en/tools/) to boost your productivity.

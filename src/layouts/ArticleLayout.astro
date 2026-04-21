@@ -147,8 +147,8 @@ const articleSchema = {
 
     <!-- Cover Image -->
     {image && (
-      <figure class="mb-10 rounded-2xl overflow-hidden border border-dark-500/30">
-        <img src={image} alt={title} title={title} class="w-full h-64 md:h-96 object-cover" width="1200" height="630" loading="eager" fetchpriority="high" />
+      <figure class="mb-10 rounded-2xl overflow-hidden border border-dark-500/30 bg-dark-800 max-w-3xl mx-auto">
+        <img src={image} alt={title} title={title} class="w-full aspect-[16/9] object-contain" width="1200" height="675" loading="eager" fetchpriority="high" />
       </figure>
     )}
 
@@ -216,4 +216,7 @@ const articleSchema = {
       </button>
     </div>
   </article>
+
+  <!-- Related posts slot (rendered inside <main>, before the footer) -->
+  <slot name="related" />
 </BaseLayout>
