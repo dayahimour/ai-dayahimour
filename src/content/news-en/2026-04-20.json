@@ -78,5 +78,24 @@
     "company": "NVIDIA",
     "tags": ["Blackwell", "NVIDIA", "AI training", "chips"],
     "draft": false
+  },
+  {
+    "headline": "Moonshot AI Launches Kimi K2.6: Open-Source Model Outperforms GPT-5.4 and Claude Opus 4.6 on Long-Horizon Coding and Agents",
+    "summary": "Moonshot AI has released Kimi K2.6 (1T MoE, 32B active) supporting a 262K-token context window and parallel agent swarms of up to 300 sub-agents. It scored 54.0% on Humanity's Last Exam (with tools), 83.2% on BrowseComp, 58.6% on SWE-Bench Pro, and 86.3% on BrowseComp with Agent Swarm. The model is now available on kimi.com, OpenRouter, Hugging Face, and Ollama.",
+    "date": "2026-04-20",
+    "source": "AI DayaHimour",
+    "sourceUrl": "https://ai-dayahimour.web.app/en/blog/kimi-k2-6/",
+    "articleSlug": "kimi-k2-6",
+    "company": "Moonshot AI",
+    "tags": [
+      "Kimi K2.6",
+      "Moonshot AI",
+      "Open-Source Models",
+      "AI Agents",
+      "Long-Horizon Coding",
+      "SWE-Bench",
+      "Agent Swarm"
+    ],
+    "draft": false
   }
 ]

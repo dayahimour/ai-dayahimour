@@ -1,20 +1,18 @@
 [
   {
-    "headline": "Moonshot AI تطلق Kimi K2.6: نموذج مفتوح المصدر يتفوق على GPT-5.4 وClaude Opus 4.6 في البرمجة الطويلة والوكلاء",
-    "summary": "أطلقت Moonshot AI نموذج Kimi K2.6 الجديد (1T MoE، 32B نشطة) الذي يدعم نافذة سياق 262 ألف رمز ووكلاء متوازية تصل إلى 300 وكيل فرعي. حقق 54.0% على Humanity's Last Exam (مع أدوات)، 83.2% على BrowseComp، 58.6% على SWE-Bench Pro، و86.3% على BrowseComp مع Agent Swarm. النموذج متاح الآن على kimi.com وOpenRouter وHugging Face وOllama.",
+    "headline": "OpenAI تطلق ChatGPT Images 2.0 بنمط تفكير متقدم",
+    "summary": "أعلنت OpenAI عن نموذج توليد الصور الجديد ChatGPT Images 2.0 (gpt-image-2) الذي يجمع بين الدقة البصرية العالية وقدرات التفكير الذكي مثل البحث في الويب وإنشاء خيارات متعددة ومراجعة النتائج ذاتياً. النموذج متاح الآن لجميع مستخدمي ChatGPT وCodex وعبر API، ويدعم دقة تصل إلى 2K مع تحكم أفضل في النصوص والتصاميم المعقدة. وضع \"Thinking\" متاح لمستخدمي Plus وPro وEnterprise.",
     "date": "2026-04-21",
-    "source": "AI DayaHimour",
-    "sourceUrl": "https://ai-dayahimour.web.app/ar/blog/kimi-k2-6/",
-    "articleSlug": "kimi-k2-6",
-    "company": "Moonshot AI",
+    "source": "OpenAI Blog",
+    "sourceUrl": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+    "articleSlug": "gpt-image-2-0",
+    "company": "OpenAI",
     "tags": [
-      "Kimi K2.6",
-      "Moonshot AI",
-      "نماذج مفتوحة",
-      "وكلاء AI",
-      "برمجة طويلة",
-      "SWE-Bench",
-      "Agent Swarm"
+      "ChatGPT Images 2.0",
+      "gpt-image-2",
+      "OpenAI",
+      "توليد صور",
+      "نماذج AI"
     ],
     "draft": false
   }

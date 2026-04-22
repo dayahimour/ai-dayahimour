@@ -78,5 +78,24 @@
     "company": "NVIDIA",
     "tags": ["Blackwell", "NVIDIA", "تدريب AI", "رقائق"],
     "draft": false
+  },
+  {
+    "headline": "Moonshot AI تطلق Kimi K2.6: نموذج مفتوح المصدر يتفوق على GPT-5.4 وClaude Opus 4.6 في البرمجة الطويلة والوكلاء",
+    "summary": "أطلقت Moonshot AI نموذج Kimi K2.6 الجديد (1T MoE، 32B نشطة) الذي يدعم نافذة سياق 262 ألف رمز ووكلاء متوازية تصل إلى 300 وكيل فرعي. حقق 54.0% على Humanity's Last Exam (مع أدوات)، 83.2% على BrowseComp، 58.6% على SWE-Bench Pro، و86.3% على BrowseComp مع Agent Swarm. النموذج متاح الآن على kimi.com وOpenRouter وHugging Face وOllama.",
+    "date": "2026-04-20",
+    "source": "AI DayaHimour",
+    "sourceUrl": "https://ai-dayahimour.web.app/ar/blog/kimi-k2-6/",
+    "articleSlug": "kimi-k2-6",
+    "company": "Moonshot AI",
+    "tags": [
+      "Kimi K2.6",
+      "Moonshot AI",
+      "نماذج مفتوحة",
+      "وكلاء AI",
+      "برمجة طويلة",
+      "SWE-Bench",
+      "Agent Swarm"
+    ],
+    "draft": false
   }
 ]

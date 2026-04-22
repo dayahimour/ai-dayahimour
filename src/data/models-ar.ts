@@ -292,6 +292,17 @@ export const imageModels: AIModel[] = [
     logo: '/icons/bytedance-color.svg',
     benchmarks: { elo: 1225, p: 'CoT Reasoning', r: 'Product Leader' },
   },
+  {
+    name: 'GPT Image 2.0',
+    company: 'OpenAI',
+    description: 'نموذج توليد الصور الجديد من OpenAI مع تفكير متقدم وبحث ويب وتوليد 8 خيارات متسقة ومراجعة ذاتية. يدعم دقة 2K.',
+    strengths: ['تحسين النصوص 316 نقطة', '8 صور متسقة', 'تفكير بالبحث', 'مراجعة ذاتية'],
+    type: 'صور',
+    releaseDate: 'أبريل 2026',
+    slug: 'gpt-image-2-0',
+    logo: '/icons/openai.svg',
+    benchmarks: { elo: 1512, p: 'Excellent (5/5)', r: 'Excellent (5/5)' },
+  },
 ];
 
 export const videoModels: AIModel[] = [

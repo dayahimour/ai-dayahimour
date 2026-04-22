@@ -1,20 +1,18 @@
 [
   {
-    "headline": "Moonshot AI Launches Kimi K2.6: Open-Source Model Outperforms GPT-5.4 and Claude Opus 4.6 on Long-Horizon Coding and Agents",
-    "summary": "Moonshot AI has released Kimi K2.6 (1T MoE, 32B active) supporting a 262K-token context window and parallel agent swarms of up to 300 sub-agents. It scored 54.0% on Humanity's Last Exam (with tools), 83.2% on BrowseComp, 58.6% on SWE-Bench Pro, and 86.3% on BrowseComp with Agent Swarm. The model is now available on kimi.com, OpenRouter, Hugging Face, and Ollama.",
+    "headline": "OpenAI Launches ChatGPT Images 2.0 with Advanced Reasoning Mode",
+    "summary": "OpenAI announced the new image generation model ChatGPT Images 2.0 (gpt-image-2), which combines high visual fidelity with intelligent reasoning capabilities such as web search, generating multiple options, and self-reviewing results. The model is now available to all ChatGPT and Codex users and via API, supporting up to 2K resolution with better control over text and complex designs. 'Thinking' mode is available for Plus, Pro, and Enterprise users.",
     "date": "2026-04-21",
-    "source": "AI DayaHimour",
-    "sourceUrl": "https://ai-dayahimour.web.app/en/blog/kimi-k2-6/",
-    "articleSlug": "kimi-k2-6",
-    "company": "Moonshot AI",
+    "source": "OpenAI Blog",
+    "sourceUrl": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+    "articleSlug": "gpt-image-2-0",
+    "company": "OpenAI",
     "tags": [
-      "Kimi K2.6",
-      "Moonshot AI",
-      "Open-Source Models",
-      "AI Agents",
-      "Long-Horizon Coding",
-      "SWE-Bench",
-      "Agent Swarm"
+      "ChatGPT Images 2.0",
+      "gpt-image-2",
+      "OpenAI",
+      "Image Generation",
+      "AI Models"
     ],
     "draft": false
   }

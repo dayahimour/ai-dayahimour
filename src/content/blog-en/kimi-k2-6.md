@@ -1,7 +1,7 @@
 ---
 title: "Kimi K2.6: The Open‑Source Model Challenging the Giants in Agentic Coding"
 description: "Moonshot AI has released Kimi K2.6, a fully open‑source trillion‑parameter model that outperforms GPT‑5.4 and Claude Opus 4.6 on coding and deep agentic search benchmarks."
-date: "2026-04-21"
+date: "2026-04-20"
 category: "models"
 tags: ["Kimi K2.6", "Moonshot AI", "Open‑Source Models", "Agentic Coding", "2026"]
 image: "/images/kimi-k2-6.webp"
