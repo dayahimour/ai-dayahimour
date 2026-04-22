@@ -56,6 +56,7 @@ promt.md
 prompt-news.md
 prompt-translate.md
 prompt_gemini_images.md
+prompt-images.md
 image_prompts_for_articles.md
 article_descriptions_for_images.md
 
@@ -68,6 +69,9 @@ update_company_images.py
 # Accidental files from mistyped git commands
 h\ origin\ main
 tatus
+
+# Backup files from image normalization script
+*.bak
 
 # Arabic-named personal folders
 سياسات/
