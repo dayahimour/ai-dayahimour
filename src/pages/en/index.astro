@@ -26,11 +26,22 @@ const futurePosts = allPosts.filter(p => p.data.category === 'future').slice(0, 
 
 let latestNews: any[] = [];
 try {
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 5);
+  const now = new Date();
+  const cutoffUnlinked = new Date();
+  cutoffUnlinked.setDate(now.getDate() - 14);
+  const cutoffLinked = new Date();
+  cutoffLinked.setDate(now.getDate() - 60);
+
   latestNews = (await getCollection('news-en'))
     .flatMap((e: any) => e.data)
-    .filter((n: any) => !n.draft && new Date(n.date) >= cutoff)
+    .filter((n: any) => {
+      if (n.draft) return false;
+      const itemDate = new Date(n.date);
+      if (n.articleSlug) {
+        return itemDate >= cutoffLinked;
+      }
+      return itemDate >= cutoffUnlinked;
+    })
     .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 6);
 } catch { latestNews = []; }

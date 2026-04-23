@@ -9,17 +9,29 @@ interface Props {
 const { lang = 'ar' } = Astro.props;
 const collectionName = lang === 'ar' ? 'news' : 'news-en';
 
-const NEWS_EXPIRY_DAYS = 5;
+const NEWS_EXPIRY_DAYS_UNLINKED = 14; // أسبوعين للأخبار غير المربوطة
+const NEWS_EXPIRY_DAYS_LINKED = 60;   // شهرين للأخبار المربوطة بمقالة
 
 let newsItems: { headline: string; date: string; source: string; sourceUrl: string; articleSlug?: string; company?: string }[] = [];
 
 try {
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - NEWS_EXPIRY_DAYS);
+  const now = new Date();
+  const cutoffUnlinked = new Date();
+  cutoffUnlinked.setDate(now.getDate() - NEWS_EXPIRY_DAYS_UNLINKED);
+  const cutoffLinked = new Date();
+  cutoffLinked.setDate(now.getDate() - NEWS_EXPIRY_DAYS_LINKED);
+
   const entries = await getCollection(collectionName as any);
   newsItems = entries
     .flatMap((e: any) => e.data)
-    .filter((n: any) => !n.draft && new Date(n.date) >= cutoff)
+    .filter((n: any) => {
+      if (n.draft) return false;
+      const itemDate = new Date(n.date);
+      if (n.articleSlug) {
+        return itemDate >= cutoffLinked;
+      }
+      return itemDate >= cutoffUnlinked;
+    })
     .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 15);
 } catch {

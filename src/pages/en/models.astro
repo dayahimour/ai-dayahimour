@@ -4,6 +4,20 @@ import ModelCard from '../../components/ModelCard.astro';
 import { languageModels, imageModels, videoModels } from '../../data/models-en';
 
 const lang = 'en';
+
+const tierRank = { flagship: 0, standard: 1, budget: 2 } as const;
+
+function sortModels(models: typeof languageModels) {
+  return [...models].sort((a, b) => {
+    const tierDiff = tierRank[a.tier] - tierRank[b.tier];
+    if (tierDiff !== 0) return tierDiff;
+    return b.releaseDateISO.localeCompare(a.releaseDateISO);
+  });
+}
+
+const sortedLanguageModels = sortModels(languageModels);
+const sortedImageModels = sortModels(imageModels);
+const sortedVideoModels = sortModels(videoModels);
 ---
 
 <BaseLayout title="AI Models" description="Comprehensive guide to the most powerful AI models worldwide with specs, strengths, and benchmarks" lang={lang}>
@@ -27,7 +41,7 @@ const lang = 'en';
       </h2>
       <p class="text-gray-500 text-sm mb-8">Chat, reasoning, and coding models — benchmarked on AIME, GPQA Diamond, SWE-bench</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-        {languageModels.map(model => <ModelCard {...model} lang={lang} />)}
+        {sortedLanguageModels.map(model => <ModelCard {...model} lang={lang} />)}
       </div>
 
       <div class="glass-card overflow-hidden overflow-x-auto" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid rgba(99,179,237,0.12); border-radius: 16px;">
@@ -78,7 +92,7 @@ const lang = 'en';
       </h2>
       <p class="text-gray-500 text-sm mb-8">AI image generation — compared on ELO Score, Prompt Adherence, Realism</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-        {imageModels.map(model => <ModelCard {...model} lang={lang} />)}
+        {sortedImageModels.map(model => <ModelCard {...model} lang={lang} />)}
       </div>
 
       <div class="glass-card overflow-hidden overflow-x-auto" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid rgba(245,158,11,0.12); border-radius: 16px;">
@@ -120,7 +134,7 @@ const lang = 'en';
       </h2>
       <p class="text-gray-500 text-sm mb-8">Cinematic AI video generation — compared on Realism, Audio, Cinematic Control</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-        {videoModels.map(model => <ModelCard {...model} lang={lang} />)}
+        {sortedVideoModels.map(model => <ModelCard {...model} lang={lang} />)}
       </div>
 
       <div class="glass-card overflow-hidden overflow-x-auto" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid rgba(236,72,153,0.12); border-radius: 16px;">

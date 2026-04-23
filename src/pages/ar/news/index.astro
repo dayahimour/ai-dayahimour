@@ -6,13 +6,25 @@ import { getCollection } from 'astro:content';
 
 const lang = 'ar';
 
-const NEWS_EXPIRY_DAYS = 5;
-const cutoff = new Date();
-cutoff.setDate(cutoff.getDate() - NEWS_EXPIRY_DAYS);
+const NEWS_EXPIRY_DAYS_UNLINKED = 14;
+const NEWS_EXPIRY_DAYS_LINKED = 60;
+
+const now = new Date();
+const cutoffUnlinked = new Date();
+cutoffUnlinked.setDate(now.getDate() - NEWS_EXPIRY_DAYS_UNLINKED);
+const cutoffLinked = new Date();
+cutoffLinked.setDate(now.getDate() - NEWS_EXPIRY_DAYS_LINKED);
 
 const allNews = (await getCollection('news'))
   .flatMap(entry => entry.data)
-  .filter(item => !item.draft && new Date(item.date) >= cutoff)
+  .filter(item => {
+    if (item.draft) return false;
+    const itemDate = new Date(item.date);
+    if (item.articleSlug) {
+      return itemDate >= cutoffLinked;
+    }
+    return itemDate >= cutoffUnlinked;
+  })
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const companies = [...new Set(allNews.map(n => n.company).filter(Boolean))];

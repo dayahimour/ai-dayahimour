@@ -1,0 +1,13 @@
+[
+  {
+    "headline": "MiMo-V2.5-Pro Launches: Xiaomi's Most Capable Agent Model Uses 40–60% Fewer Tokens Than Opus 4.6",
+    "summary": "Xiaomi released MiMo-V2.5-Pro into public beta today, its most advanced model yet for long-horizon agentic tasks. The model sustains over 1,000 consecutive tool calls without context drift, completed a full SysY compiler in Rust in 4.3 hours with a perfect 233/233 test score, and built an 8,192-line desktop video editor across 11.5 hours of autonomous work. Benchmarks include 57.2% on SWE-bench Pro and 68.4% on Terminal-Bench 2.0. On ClawEval, it reaches 63.8% pass^3 using roughly 70K tokens per trajectory — 40–60% fewer than Claude Opus 4.6, Gemini 3.1 Pro, and GPT-5.4. Pricing remains unchanged at $1 per million input tokens and $3 per million output tokens. Open-source release is planned soon.",
+    "date": "2026-04-22",
+    "source": "Xiaomi MiMo",
+    "sourceUrl": "https://miMo.ai",
+    "articleSlug": "mimo-v2-5-pro",
+    "company": "Xiaomi",
+    "tags": ["MiMo V2.5 Pro", "Xiaomi", "AI models", "autonomous agents", "2026"],
+    "draft": false
+  }
+]

@@ -5,7 +5,21 @@ import { languageModels, imageModels, videoModels } from '../../data/models-ar';
 
 const lang = 'ar';
 
-const allModels = [...languageModels, ...imageModels, ...videoModels];
+const tierRank = { flagship: 0, standard: 1, budget: 2 } as const;
+
+function sortModels(models: typeof languageModels) {
+  return [...models].sort((a, b) => {
+    const tierDiff = tierRank[a.tier] - tierRank[b.tier];
+    if (tierDiff !== 0) return tierDiff;
+    return b.releaseDateISO.localeCompare(a.releaseDateISO);
+  });
+}
+
+const sortedLanguageModels = sortModels(languageModels);
+const sortedImageModels = sortModels(imageModels);
+const sortedVideoModels = sortModels(videoModels);
+
+const allModels = [...sortedLanguageModels, ...sortedImageModels, ...sortedVideoModels];
 ---
 
 <BaseLayout title="النماذج العالمية" description="دليل شامل لأهم وأحدث نماذج الذكاء الاصطناعي الرائدة عالمياً مع مواصفاتها ونقاط قوتها وتقييماتها المرجعية" lang={lang}>
@@ -31,7 +45,7 @@ const allModels = [...languageModels, ...imageModels, ...videoModels];
       <p class="text-gray-500 text-sm mb-8 mr-13">نماذج المحادثة والاستدلال والبرمجة — مقارنة على معايير AIME, GPQA Diamond, SWE-bench</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-        {languageModels.map((model) => (
+        {sortedLanguageModels.map((model) => (
           <ModelCard {...model} lang={lang} />
         ))}
       </div>
@@ -108,7 +122,7 @@ const allModels = [...languageModels, ...imageModels, ...videoModels];
       <p class="text-gray-500 text-sm mb-8 mr-13">نماذج توليد الصور بالذكاء الاصطناعي — مقارنة على ELO Score, الالتزام بالوصف, الواقعية</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-        {imageModels.map((model) => (
+        {sortedImageModels.map((model) => (
           <ModelCard {...model} lang={lang} />
         ))}
       </div>
@@ -169,7 +183,7 @@ const allModels = [...languageModels, ...imageModels, ...videoModels];
       <p class="text-gray-500 text-sm mb-8 mr-13">نماذج توليد الفيديو السينمائي — مقارنة على الواقعية, جودة الصوت, التحكم السينمائي</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-        {videoModels.map((model) => (
+        {sortedVideoModels.map((model) => (
           <ModelCard {...model} lang={lang} />
         ))}
       </div>
