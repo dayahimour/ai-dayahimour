@@ -1,0 +1,14 @@
+[
+  {
+    "headline": "DeepSeek Launches Open-Source V4 Pro and Flash with Million-Token Context",
+    "summary": "DeepSeek released two models: V4-Pro with 1.6T parameters (49B activated) and V4-Flash with 284B parameters (13B activated), both featuring a hybrid attention architecture that reduces compute per token to 27% of the previous generation. In maximum thinking mode, Pro-Max surpassed GPT-5.4 with a Codeforces Elo of 3206 and topped LiveCodeBench at 93.5%. Both models are available as open-source previews on Hugging Face.",
+    "date": "2026-04-24",
+    "source": "DeepSeek",
+    "sourceUrl": "",
+    "articleSlug": "deepseek-v4-pro-flash",
+    "company": "DeepSeek",
+    "importance": "prominent",
+    "tags": ["DeepSeek", "V4", "language models", "open source", "2026"],
+    "draft": false
+  }
+]

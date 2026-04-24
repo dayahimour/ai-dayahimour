@@ -1,0 +1,14 @@
+[
+  {
+    "headline": "DeepSeek تُطلق نموذجَي V4 Pro وFlash مفتوحي المصدر بسياق مليون رمز",
+    "summary": "أطلقت DeepSeek نموذجين جديدين: V4-Pro بـ 1.6 تريليون معامل (49 ملياراً مفعّلة) وV4-Flash بـ 284 مليار معامل (13 ملياراً مفعّلة)، وكلاهما بنافذة سياق مليون رمز وآلية انتباه هجينة تُقلّص استهلاك الحوسبة إلى 27% مقارنة بالإصدار السابق. وفي وضع التفكير الأقصى، تفوّق Pro-Max على GPT-5.4 في تقييم Codeforces محققاً 3206 نقطة ELO، كما تصدّر LiveCodeBench بنسبة 93.5%. النموذجان متاحان بمعمارية مفتوحة المصدر على Hugging Face.",
+    "date": "2026-04-24",
+    "source": "DeepSeek",
+    "sourceUrl": "",
+    "articleSlug": "deepseek-v4-pro-flash",
+    "company": "DeepSeek",
+    "importance": "prominent",
+    "tags": ["DeepSeek", "V4", "نماذج لغوية", "مفتوحة المصدر", "2026"],
+    "draft": false
+  }
+]
