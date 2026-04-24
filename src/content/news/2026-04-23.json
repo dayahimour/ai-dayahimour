@@ -1,0 +1,62 @@
+[
+  {
+    "headline": "OpenAI تُطلق GPT-5.5 بقدرات برمجة وأبحاث عميلة",
+    "summary": "أصدرت OpenAI نموذج GPT-5.5 بعد أقل من شهرين من GPT-5.4، مع تركيز على تحسين أداء البرمجة واستخدام الحاسوب والأبحاث المستقلة. النموذج متاح للمشتركين المدفوعين عبر ChatGPT وCodex، ويُصنف ضمن فئة المخاطر المرتفعة بعد اختبارات أمنية مكثفة.",
+    "date": "2026-04-23",
+    "source": "OpenAI",
+    "sourceUrl": "",
+    "articleSlug": "gpt-5-5",
+    "company": "OpenAI",
+    "importance": "prominent",
+    "tags": ["GPT-5.5", "OpenAI", "برمجة", "عوامل ذكاء اصطناعي", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Google تكشف منصة Gemini Enterprise وشرائح TPU v8",
+    "summary": "كشفت Google خلال مؤتمر Cloud Next '26 عن منصة Gemini Enterprise Agent Platform لبناء ونشر وكلاء الذكاء الاصطناعي المستقلين. أطلقت الشركة شريحتي TPU v8t للتدريب بأداء أسرع 2.8 مرة، وTPU v8i للاستنتاج بكفاءة تكلفة محسّنة 80%. كشف سوندار بيتشاي أن 75% من أكواد Google الجديدة تُنتج بالذكاء الاصطناعي.",
+    "date": "2026-04-23",
+    "source": "Google",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "Google",
+    "importance": "normal",
+    "tags": ["Gemini Enterprise", "Google", "TPU", "وكلاء", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Elon Musk يعلن مشروع Terafab للرقائق وصفقة Cursor",
+    "summary": "أعلن Elon Musk بناء مصنعي رقائق Terafab في أوستن بتقنية Intel 14A، أحدهما لسيارات Tesla والآخر لمراكز بيانات الفضاء. حصلت SpaceX على خيار الاستحواذ على Cursor مقابل 60 مليار دولار أو شراكة بـ10 مليارات. تهدف الصفقة لتعزيز قدرات xAI في البرمجة ودمجها مع حاسوب Colossus.",
+    "date": "2026-04-23",
+    "source": "SpaceX",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "SpaceX",
+    "importance": "normal",
+    "tags": ["Terafab", "Elon Musk", "رقائق", "Cursor", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic تحقق في تسريب Mythos وتصدر Claude Opus 4.7",
+    "summary": "فتحت Anthropic تحقيقاً في وصول غير مصرح به للنسخة التجريبية من نموذج Mythos Preview، المعروف بقدراته السيبرانية المتقدمة. أصدرت الشركة نموذج Claude Opus 4.7 مع قيود أمنية تمنعه من المساعدة في الهجمات السيبرانية. أدوات اختبار أقوى ستُتاح فقط للمتخصصين الموثوقين.",
+    "date": "2026-04-23",
+    "source": "Anthropic",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "Anthropic",
+    "importance": "normal",
+    "tags": ["Mythos", "Claude Opus 4.7", "Anthropic", "أمن", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Microsoft تستثمر 180 مليار دولار بأستراليا للذكاء الاصطناعي",
+    "summary": "تعهدت Microsoft باستثمار 180 مليار دولار في أستراليا لتعزيز البنية التحتية للذكاء الاصطناعي. يأتي ذلك ضمن إنفاق متوقع من عمالقة التكنولوجيا 650 مليار دولار عام 2026 على البنية التحتية للعوامل الذكية. تهدف Microsoft لبناء 'العمود الفقري للإنترنت العميل'.",
+    "date": "2026-04-23",
+    "source": "Microsoft",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "Microsoft",
+    "importance": "normal",
+    "tags": ["Microsoft", "استثمار", "أستراليا", "بنية تحتية", "2026"],
+    "draft": false
+  }
+]

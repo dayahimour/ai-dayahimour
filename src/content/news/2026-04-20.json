@@ -6,8 +6,14 @@
     "source": "@xai on X",
     "sourceUrl": "https://x.com/xai/status/1912345678901234567",
     "company": "xAI",
-    "tags": ["Grok", "API صوتية", "xAI", "Speech-to-Text"],
-    "draft": false
+    "tags": [
+      "Grok",
+      "API صوتية",
+      "xAI",
+      "Speech-to-Text"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Cerebras تقدم طلب إدراج رسمي في البورصة",
@@ -16,8 +22,14 @@
     "source": "Reuters",
     "sourceUrl": "https://www.reuters.com/technology/cerebras-files-ipo-2026-04-20/",
     "company": "Cerebras",
-    "tags": ["رقائق AI", "IPO", "Cerebras", "بورصة"],
-    "draft": false
+    "tags": [
+      "رقائق AI",
+      "IPO",
+      "Cerebras",
+      "بورصة"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic تطلق أداة Claude Design لإنشاء التصاميم والصور",
@@ -26,8 +38,14 @@
     "source": "Anthropic Blog",
     "sourceUrl": "https://www.anthropic.com/news/claude-design",
     "company": "Anthropic",
-    "tags": ["Claude", "أدوات تصميم", "Anthropic", "صور AI"],
-    "draft": false
+    "tags": [
+      "Claude",
+      "أدوات تصميم",
+      "Anthropic",
+      "صور AI"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Google تجري محادثات متقدمة مع Marvell لبناء رقائق استدلال AI",
@@ -36,8 +54,14 @@
     "source": "The Information",
     "sourceUrl": "https://www.theinformation.com/articles/google-marvell-ai-chips",
     "company": "Google",
-    "tags": ["رقائق AI", "Google", "Marvell", "استدلال"],
-    "draft": false
+    "tags": [
+      "رقائق AI",
+      "Google",
+      "Marvell",
+      "استدلال"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "OpenAI تحسن Agents SDK بميزات sandbox للأمان",
@@ -46,8 +70,14 @@
     "source": "OpenAI Blog",
     "sourceUrl": "https://openai.com/blog/agents-sdk-update",
     "company": "OpenAI",
-    "tags": ["Agents", "SDK", "OpenAI", "أمان AI"],
-    "draft": false
+    "tags": [
+      "Agents",
+      "SDK",
+      "OpenAI",
+      "أمان AI"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic تناقش نموذج Mythos مع إدارة ترامب والوكالات الأمريكية",
@@ -56,8 +86,14 @@
     "source": "@AnthropicAI on X",
     "sourceUrl": "https://x.com/AnthropicAI/status/1912345678909876543",
     "company": "Anthropic",
-    "tags": ["Mythos", "Anthropic", "سياسة AI", "حكومة"],
-    "draft": false
+    "tags": [
+      "Mythos",
+      "Anthropic",
+      "سياسة AI",
+      "حكومة"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Mistral AI تكشف عن تحديث كبير لنموذج Large 2",
@@ -66,8 +102,14 @@
     "source": "Mistral AI Blog",
     "sourceUrl": "https://mistral.ai/news/large-2-update/",
     "company": "Mistral AI",
-    "tags": ["Mistral", "نماذج لغوية", "Large 2", "API"],
-    "draft": false
+    "tags": [
+      "Mistral",
+      "نماذج لغوية",
+      "Large 2",
+      "API"
+    ],
+    "draft": false,
+    "importance": "prominent"
   },
   {
     "headline": "NVIDIA تطلق أدوات جديدة لتدريب النماذج على Blackwell Ultra",
@@ -76,8 +118,14 @@
     "source": "NVIDIA Blog",
     "sourceUrl": "https://blogs.nvidia.com/blog/blackwell-ultra-training-tools/",
     "company": "NVIDIA",
-    "tags": ["Blackwell", "NVIDIA", "تدريب AI", "رقائق"],
-    "draft": false
+    "tags": [
+      "Blackwell",
+      "NVIDIA",
+      "تدريب AI",
+      "رقائق"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Moonshot AI تطلق Kimi K2.6: نموذج مفتوح المصدر يتفوق على GPT-5.4 وClaude Opus 4.6 في البرمجة الطويلة والوكلاء",
@@ -96,6 +144,7 @@
       "SWE-Bench",
       "Agent Swarm"
     ],
-    "draft": false
+    "draft": false,
+    "importance": "prominent"
   }
 ]

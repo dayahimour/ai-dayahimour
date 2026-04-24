@@ -1,0 +1,62 @@
+[
+  {
+    "headline": "OpenAI Launches GPT-5.5 with Advanced Coding and Agentic Research",
+    "summary": "OpenAI released GPT-5.5 just two months after GPT-5.4, focusing on improved coding, computer use, and autonomous research capabilities. The model is available to paid subscribers via ChatGPT and Codex, classified as high-risk after extensive safety testing.",
+    "date": "2026-04-23",
+    "source": "OpenAI",
+    "sourceUrl": "",
+    "articleSlug": "gpt-5-5",
+    "company": "OpenAI",
+    "importance": "prominent",
+    "tags": ["GPT-5.5", "OpenAI", "coding", "agentic AI", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Google Unveils Gemini Enterprise Agent Platform and TPU v8 Chips",
+    "summary": "At Google Cloud Next '26, Google introduced the Gemini Enterprise Agent Platform for building and deploying autonomous AI agents. The company launched TPU v8t for training with 2.8x faster performance, and TPU v8i for inference with 80% better cost efficiency. Sundar Pichai revealed 75% of Google's new code is now AI-generated.",
+    "date": "2026-04-23",
+    "source": "Google",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "Google",
+    "importance": "normal",
+    "tags": ["Gemini Enterprise", "Google", "TPU", "agents", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Elon Musk Announces Terafab Chip Factories and Cursor Deal",
+    "summary": "Elon Musk announced building two Terafab chip fabrication plants in Austin using Intel 14A technology, one for Tesla cars and robots, another for space data centers. SpaceX secured an option to acquire Cursor for $60 billion or a $10 billion partnership. The deal aims to boost xAI's coding tools and integrate them with the Colossus supercomputer.",
+    "date": "2026-04-23",
+    "source": "SpaceX",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "SpaceX",
+    "importance": "normal",
+    "tags": ["Terafab", "Elon Musk", "chips", "Cursor", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Anthropic Probes Mythos Model Leak and Releases Claude Opus 4.7",
+    "summary": "Anthropic opened an investigation into unauthorized access to the preview version of its advanced Mythos model, known for its cyber capabilities. The company released Claude Opus 4.7 with deliberate safety restrictions preventing it from assisting in cyberattacks. Stronger testing tools will only be available to trusted specialists.",
+    "date": "2026-04-23",
+    "source": "Anthropic",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "Anthropic",
+    "importance": "normal",
+    "tags": ["Mythos", "Claude Opus 4.7", "Anthropic", "security", "2026"],
+    "draft": false
+  },
+  {
+    "headline": "Microsoft Invests $180 Billion in Australia for AI Infrastructure",
+    "summary": "Microsoft committed $180 billion in investments to build AI infrastructure in Australia. This comes as tech giants are expected to spend $650 billion on AI infrastructure in 2026 alone. Microsoft aims to build the 'backbone of the agentic internet.'",
+    "date": "2026-04-23",
+    "source": "Microsoft",
+    "sourceUrl": "",
+    "articleSlug": "",
+    "company": "Microsoft",
+    "importance": "normal",
+    "tags": ["Microsoft", "investment", "Australia", "infrastructure", "2026"],
+    "draft": false
+  }
+]

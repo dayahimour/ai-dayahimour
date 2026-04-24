@@ -1,66 +1,70 @@
 [
-    {
-        "headline": "Anthropic Launches Claude Opus 4.7: Agentic Coding Leap with 3.75MP Vision",
-        "summary": "Anthropic officially launched Claude Opus 4.7 on April 16, 2026. The new model hits 64.3% on SWE-Bench Pro beating GPT-5.4, features 3.75MP high-resolution vision, and introduces the new xhigh effort level. Available now via Claude.ai, API, and Claude Code at $5 per million input tokens.",
-        "date": "2026-04-16",
-        "source": "AI DayaHimour",
-        "sourceUrl": "https://ai-dayahimour.web.app/en/blog/claude-opus-4-7/",
-        "articleSlug": "claude-opus-4-7",
-        "company": "Anthropic",
-        "tags": [
-            "Claude Opus 4.7",
-            "Anthropic",
-            "Agentic Coding",
-            "SWE-Bench",
-            "Claude Code",
-            "AI Models 2026",
-            "AI News"
-        ],
-        "draft": false
-    },
-    {
-        "headline": "OpenAI Updates Codex to Compete with Claude Code on Desktop",
-        "summary": "OpenAI has launched a major update to Codex, giving it autonomous control capabilities within macOS applications. The update allows the tool to learn from past experiences and execute complex tasks without human intervention, directly targeting Anthropic's developer tools.",
-        "date": "2026-04-16",
-        "source": "The Verge",
-        "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-        "company": "OpenAI",
-        "tags": [
-            "Codex",
-            "OpenAI",
-            "Claude Code",
-            "Developer Tools"
-        ],
-        "draft": false
-    },
-    {
-        "headline": "Anthropic Plans London Office Expansion for 800 Employees",
-        "summary": "Anthropic revealed plans to expand its London office to accommodate 800 new employees. The move comes just days after OpenAI announced its permanent hub in the UK capital. The expansion reflects the company's rapid growth across Europe.",
-        "date": "2026-04-16",
-        "source": "CNBC",
-        "sourceUrl": "https://www.cnbc.com/2026/04/16/anthropic-london-office-800-staff-openai-expansion.html",
-        "company": "Anthropic",
-        "tags": [
-            "Anthropic",
-            "Expansion",
-            "London",
-            "Hiring"
-        ],
-        "draft": false
-    },
-    {
-        "headline": "Anthropic Confirms Claude Opus 4.7 is Less Capable than Mythos Preview",
-        "summary": "Anthropic clarified that the newly released Opus 4.7 is generally less capable than the restricted Mythos Preview. Opus 4.7 focuses on advanced coding with automatic security guardrails to prevent high-risk applications, reflecting the company's strategy of deploying models securely.",
-        "date": "2026-04-16",
-        "source": "Seeking Alpha",
-        "sourceUrl": "https://seekingalpha.com/news/4575778-anthropic-unveils-ai-model-claude-opus-47-second-most-powerful-after-mythos",
-        "company": "Anthropic",
-        "tags": [
-            "Claude Opus 4.7",
-            "Mythos",
-            "Anthropic",
-            "AI Safety"
-        ],
-        "draft": false
-    }
+  {
+    "headline": "Anthropic Launches Claude Opus 4.7: Agentic Coding Leap with 3.75MP Vision",
+    "summary": "Anthropic officially launched Claude Opus 4.7 on April 16, 2026. The new model hits 64.3% on SWE-Bench Pro beating GPT-5.4, features 3.75MP high-resolution vision, and introduces the new xhigh effort level. Available now via Claude.ai, API, and Claude Code at $5 per million input tokens.",
+    "date": "2026-04-16",
+    "source": "AI DayaHimour",
+    "sourceUrl": "https://ai-dayahimour.web.app/en/blog/claude-opus-4-7/",
+    "articleSlug": "claude-opus-4-7",
+    "company": "Anthropic",
+    "tags": [
+      "Claude Opus 4.7",
+      "Anthropic",
+      "Agentic Coding",
+      "SWE-Bench",
+      "Claude Code",
+      "AI Models 2026",
+      "AI News"
+    ],
+    "draft": false,
+    "importance": "prominent"
+  },
+  {
+    "headline": "OpenAI Updates Codex to Compete with Claude Code on Desktop",
+    "summary": "OpenAI has launched a major update to Codex, giving it autonomous control capabilities within macOS applications. The update allows the tool to learn from past experiences and execute complex tasks without human intervention, directly targeting Anthropic's developer tools.",
+    "date": "2026-04-16",
+    "source": "The Verge",
+    "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
+    "company": "OpenAI",
+    "tags": [
+      "Codex",
+      "OpenAI",
+      "Claude Code",
+      "Developer Tools"
+    ],
+    "draft": false,
+    "importance": "normal"
+  },
+  {
+    "headline": "Anthropic Plans London Office Expansion for 800 Employees",
+    "summary": "Anthropic revealed plans to expand its London office to accommodate 800 new employees. The move comes just days after OpenAI announced its permanent hub in the UK capital. The expansion reflects the company's rapid growth across Europe.",
+    "date": "2026-04-16",
+    "source": "CNBC",
+    "sourceUrl": "https://www.cnbc.com/2026/04/16/anthropic-london-office-800-staff-openai-expansion.html",
+    "company": "Anthropic",
+    "tags": [
+      "Anthropic",
+      "Expansion",
+      "London",
+      "Hiring"
+    ],
+    "draft": false,
+    "importance": "normal"
+  },
+  {
+    "headline": "Anthropic Confirms Claude Opus 4.7 is Less Capable than Mythos Preview",
+    "summary": "Anthropic clarified that the newly released Opus 4.7 is generally less capable than the restricted Mythos Preview. Opus 4.7 focuses on advanced coding with automatic security guardrails to prevent high-risk applications, reflecting the company's strategy of deploying models securely.",
+    "date": "2026-04-16",
+    "source": "Seeking Alpha",
+    "sourceUrl": "https://seekingalpha.com/news/4575778-anthropic-unveils-ai-model-claude-opus-47-second-most-powerful-after-mythos",
+    "company": "Anthropic",
+    "tags": [
+      "Claude Opus 4.7",
+      "Mythos",
+      "Anthropic",
+      "AI Safety"
+    ],
+    "draft": false,
+    "importance": "normal"
+  }
 ]

@@ -7,7 +7,14 @@
     "sourceUrl": "https://miMo.ai",
     "articleSlug": "mimo-v2-5-pro",
     "company": "Xiaomi",
-    "tags": ["MiMo V2.5 Pro", "شاومي", "نماذج الذكاء الاصطناعي", "وكلاء ذاتيون", "2026"],
-    "draft": false
+    "tags": [
+      "MiMo V2.5 Pro",
+      "شاومي",
+      "نماذج الذكاء الاصطناعي",
+      "وكلاء ذاتيون",
+      "2026"
+    ],
+    "draft": false,
+    "importance": "prominent"
   }
 ]

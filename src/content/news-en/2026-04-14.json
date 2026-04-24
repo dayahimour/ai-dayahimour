@@ -6,8 +6,14 @@
     "source": "OpenAI",
     "sourceUrl": "https://x.com/OpenAI/status/2044161906936791179",
     "company": "OpenAI",
-    "tags": ["GPT-5.4-Cyber", "OpenAI", "cybersecurity", "specialized models"],
-    "draft": false
+    "tags": [
+      "GPT-5.4-Cyber",
+      "OpenAI",
+      "cybersecurity",
+      "specialized models"
+    ],
+    "draft": false,
+    "importance": "prominent"
   },
   {
     "headline": "Major Update for Claude Code on Desktop",
@@ -16,8 +22,14 @@
     "source": "Anthropic (@claudeai)",
     "sourceUrl": "https://x.com/claudeai",
     "company": "Anthropic",
-    "tags": ["Claude Code", "Anthropic", "development", "desktop"],
-    "draft": false
+    "tags": [
+      "Claude Code",
+      "Anthropic",
+      "development",
+      "desktop"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic Prepares Claude Opus 4.7 and New AI Design Tool",
@@ -26,8 +38,13 @@
     "source": "The Information",
     "sourceUrl": "https://theinformation.com",
     "company": "Anthropic",
-    "tags": ["Claude Opus 4.7", "Anthropic", "new models"],
-    "draft": false
+    "tags": [
+      "Claude Opus 4.7",
+      "Anthropic",
+      "new models"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "SAP Launches Intelligent AI Agents in Human Capital Management",
@@ -36,8 +53,13 @@
     "source": "SAP News",
     "sourceUrl": "https://news.sap.com",
     "company": "SAP",
-    "tags": ["SAP", "AI agents", "human resources"],
-    "draft": false
+    "tags": [
+      "SAP",
+      "AI agents",
+      "human resources"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Amazon Releases AI Research Tool to Accelerate Early-Stage Drug Discovery",
@@ -46,8 +68,13 @@
     "source": "Amazon Science",
     "sourceUrl": "https://www.amazon.science",
     "company": "Amazon",
-    "tags": ["Amazon", "drug discovery", "AI health"],
-    "draft": false
+    "tags": [
+      "Amazon",
+      "drug discovery",
+      "AI health"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Google Adds AI Skills to Chrome and Rolls Out Gemini Personal Intelligence in India",
@@ -56,8 +83,14 @@
     "source": "Google Blog",
     "sourceUrl": "https://blog.google",
     "company": "Google",
-    "tags": ["Google", "Chrome", "Gemini", "AI Skills"],
-    "draft": false
+    "tags": [
+      "Google",
+      "Chrome",
+      "Gemini",
+      "AI Skills"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Bank of England Raises Cybersecurity Concerns Over Anthropic’s New Mythos Model",
@@ -66,8 +99,14 @@
     "source": "Financial Times",
     "sourceUrl": "https://ft.com",
     "company": "Anthropic",
-    "tags": ["Anthropic", "Mythos", "Bank of England", "cybersecurity"],
-    "draft": false
+    "tags": [
+      "Anthropic",
+      "Mythos",
+      "Bank of England",
+      "cybersecurity"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic Appoints Novartis CEO to Its Board of Directors",
@@ -76,8 +115,13 @@
     "source": "Anthropic",
     "sourceUrl": "https://anthropic.com/news",
     "company": "Anthropic",
-    "tags": ["Anthropic", "Novartis", "board of directors"],
-    "draft": false
+    "tags": [
+      "Anthropic",
+      "Novartis",
+      "board of directors"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Alibaba’s HappyHorse 1.0 Tops Global AI Video Generation Rankings",
@@ -86,7 +130,12 @@
     "source": "Wall Street Journal",
     "sourceUrl": "https://wsj.com",
     "company": "Alibaba",
-    "tags": ["Alibaba", "HappyHorse", "video generation"],
-    "draft": false
+    "tags": [
+      "Alibaba",
+      "HappyHorse",
+      "video generation"
+    ],
+    "draft": false,
+    "importance": "prominent"
   }
 ]

@@ -63,7 +63,7 @@ image: "/images/sonnet4-6.webp"
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">51.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 55.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 51.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>  <!-- HumanEval -->
   <div style="margin-bottom: 0;">
@@ -72,7 +72,7 @@ image: "/images/sonnet4-6.webp"
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">88.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 55.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 88.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>
 

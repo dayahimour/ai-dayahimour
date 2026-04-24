@@ -6,8 +6,14 @@
     "source": "OpenAI",
     "sourceUrl": "https://x.com/OpenAI/status/2044161906936791179",
     "company": "OpenAI",
-    "tags": ["GPT-5.4-Cyber", "OpenAI", "أمن سيبراني", "نماذج متخصصة"],
-    "draft": false
+    "tags": [
+      "GPT-5.4-Cyber",
+      "OpenAI",
+      "أمن سيبراني",
+      "نماذج متخصصة"
+    ],
+    "draft": false,
+    "importance": "prominent"
   },
   {
     "headline": "تحديث كبير لـ Claude Code على سطح المكتب",
@@ -16,8 +22,14 @@
     "source": "Anthropic (@claudeai)",
     "sourceUrl": "https://x.com/claudeai",
     "company": "Anthropic",
-    "tags": ["Claude Code", "Anthropic", "تطوير", "ديسكتوب"],
-    "draft": false
+    "tags": [
+      "Claude Code",
+      "Anthropic",
+      "تطوير",
+      "ديسكتوب"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic تستعد لإطلاق Claude Opus 4.7 وأداة تصميم AI جديدة",
@@ -26,8 +38,13 @@
     "source": "The Information",
     "sourceUrl": "https://theinformation.com",
     "company": "Anthropic",
-    "tags": ["Claude Opus 4.7", "Anthropic", "نماذج جديدة"],
-    "draft": false
+    "tags": [
+      "Claude Opus 4.7",
+      "Anthropic",
+      "نماذج جديدة"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "SAP تطلق وكلاء AI ذكيين في حلول إدارة رأس المال البشري",
@@ -36,8 +53,13 @@
     "source": "SAP News",
     "sourceUrl": "https://news.sap.com",
     "company": "SAP",
-    "tags": ["SAP", "وكلاء AI", "موارد بشرية"],
-    "draft": false
+    "tags": [
+      "SAP",
+      "وكلاء AI",
+      "موارد بشرية"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Amazon تطلق أداة بحث AI لتسريع اكتشاف الأدوية في مراحلها المبكرة",
@@ -46,8 +68,13 @@
     "source": "Amazon Science",
     "sourceUrl": "https://www.amazon.science",
     "company": "Amazon",
-    "tags": ["Amazon", "اكتشاف أدوية", "AI صحة"],
-    "draft": false
+    "tags": [
+      "Amazon",
+      "اكتشاف أدوية",
+      "AI صحة"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Google تضيف ميزة \"AI Skills\" إلى Chrome وتطلق Gemini Personal Intelligence في الهند",
@@ -56,8 +83,14 @@
     "source": "Google Blog",
     "sourceUrl": "https://blog.google",
     "company": "Google",
-    "tags": ["Google", "Chrome", "Gemini", "AI Skills"],
-    "draft": false
+    "tags": [
+      "Google",
+      "Chrome",
+      "Gemini",
+      "AI Skills"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "مخاوف أمنية من بنك إنجلترا بشأن نموذج Anthropic الجديد Mythos",
@@ -66,8 +99,14 @@
     "source": "Financial Times",
     "sourceUrl": "https://ft.com",
     "company": "Anthropic",
-    "tags": ["Anthropic", "Mythos", "بنك إنجلترا", "أمن سيبراني"],
-    "draft": false
+    "tags": [
+      "Anthropic",
+      "Mythos",
+      "بنك إنجلترا",
+      "أمن سيبراني"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic تضيف الرئيس التنفيذي لـ Novartis إلى مجلس إدارتها",
@@ -76,8 +115,13 @@
     "source": "Anthropic",
     "sourceUrl": "https://anthropic.com/news",
     "company": "Anthropic",
-    "tags": ["Anthropic", "Novartis", "مجلس إدارة"],
-    "draft": false
+    "tags": [
+      "Anthropic",
+      "Novartis",
+      "مجلس إدارة"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Alibaba's HappyHorse 1.0 يتصدر تصنيفات توليد الفيديو عالمياً",
@@ -86,7 +130,12 @@
     "source": "Wall Street Journal",
     "sourceUrl": "https://wsj.com",
     "company": "Alibaba",
-    "tags": ["Alibaba", "HappyHorse", "توليد فيديو"],
-    "draft": false
+    "tags": [
+      "Alibaba",
+      "HappyHorse",
+      "توليد فيديو"
+    ],
+    "draft": false,
+    "importance": "prominent"
   }
 ]

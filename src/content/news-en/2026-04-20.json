@@ -6,8 +6,14 @@
     "source": "@xai on X",
     "sourceUrl": "https://x.com/xai/status/1912345678901234567",
     "company": "xAI",
-    "tags": ["Grok", "voice API", "xAI", "Speech-to-Text"],
-    "draft": false
+    "tags": [
+      "Grok",
+      "voice API",
+      "xAI",
+      "Speech-to-Text"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Cerebras Files Official IPO Application",
@@ -16,8 +22,14 @@
     "source": "Reuters",
     "sourceUrl": "https://www.reuters.com/technology/cerebras-files-ipo-2026-04-20/",
     "company": "Cerebras",
-    "tags": ["AI chips", "IPO", "Cerebras", "stock market"],
-    "draft": false
+    "tags": [
+      "AI chips",
+      "IPO",
+      "Cerebras",
+      "stock market"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic Releases Claude Design Tool for Images and Layouts",
@@ -26,8 +38,14 @@
     "source": "Anthropic Blog",
     "sourceUrl": "https://www.anthropic.com/news/claude-design",
     "company": "Anthropic",
-    "tags": ["Claude", "design tools", "Anthropic", "AI images"],
-    "draft": false
+    "tags": [
+      "Claude",
+      "design tools",
+      "Anthropic",
+      "AI images"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Google Holds Advanced Talks with Marvell on Custom AI Inference Chips",
@@ -36,8 +54,14 @@
     "source": "The Information",
     "sourceUrl": "https://www.theinformation.com/articles/google-marvell-ai-chips",
     "company": "Google",
-    "tags": ["AI chips", "Google", "Marvell", "inference"],
-    "draft": false
+    "tags": [
+      "AI chips",
+      "Google",
+      "Marvell",
+      "inference"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "OpenAI Enhances Agents SDK with New Sandbox Security Features",
@@ -46,8 +70,14 @@
     "source": "OpenAI Blog",
     "sourceUrl": "https://openai.com/blog/agents-sdk-update",
     "company": "OpenAI",
-    "tags": ["Agents", "SDK", "OpenAI", "AI safety"],
-    "draft": false
+    "tags": [
+      "Agents",
+      "SDK",
+      "OpenAI",
+      "AI safety"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Anthropic Discusses Mythos Model with Trump Administration and US Agencies",
@@ -56,8 +86,14 @@
     "source": "@AnthropicAI on X",
     "sourceUrl": "https://x.com/AnthropicAI/status/1912345678909876543",
     "company": "Anthropic",
-    "tags": ["Mythos", "Anthropic", "AI policy", "government"],
-    "draft": false
+    "tags": [
+      "Mythos",
+      "Anthropic",
+      "AI policy",
+      "government"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Mistral AI Unveils Major Update to Large 2 Model",
@@ -66,8 +102,14 @@
     "source": "Mistral AI Blog",
     "sourceUrl": "https://mistral.ai/news/large-2-update/",
     "company": "Mistral AI",
-    "tags": ["Mistral", "language models", "Large 2", "API"],
-    "draft": false
+    "tags": [
+      "Mistral",
+      "language models",
+      "Large 2",
+      "API"
+    ],
+    "draft": false,
+    "importance": "prominent"
   },
   {
     "headline": "NVIDIA Releases New Training Tools for Blackwell Ultra Chips",
@@ -76,8 +118,14 @@
     "source": "NVIDIA Blog",
     "sourceUrl": "https://blogs.nvidia.com/blog/blackwell-ultra-training-tools/",
     "company": "NVIDIA",
-    "tags": ["Blackwell", "NVIDIA", "AI training", "chips"],
-    "draft": false
+    "tags": [
+      "Blackwell",
+      "NVIDIA",
+      "AI training",
+      "chips"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Moonshot AI Launches Kimi K2.6: Open-Source Model Outperforms GPT-5.4 and Claude Opus 4.6 on Long-Horizon Coding and Agents",
@@ -96,6 +144,7 @@
       "SWE-Bench",
       "Agent Swarm"
     ],
-    "draft": false
+    "draft": false,
+    "importance": "prominent"
   }
 ]

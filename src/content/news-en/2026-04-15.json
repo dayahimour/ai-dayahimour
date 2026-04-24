@@ -6,8 +6,15 @@
     "source": "Google DeepMind",
     "sourceUrl": "https://deepmind.google.com",
     "company": "Google",
-    "tags": ["Gemini", "TTS", "DeepMind", "text-to-speech", "voice"],
-    "draft": false
+    "tags": [
+      "Gemini",
+      "TTS",
+      "DeepMind",
+      "text-to-speech",
+      "voice"
+    ],
+    "draft": false,
+    "importance": "prominent"
   },
   {
     "headline": "Anthropic Reveals Subliminal Learning in Large AI Models",
@@ -16,28 +23,48 @@
     "source": "Anthropic + Nature",
     "sourceUrl": "https://anthropic.com/news",
     "company": "Anthropic",
-    "tags": ["Anthropic", "research", "learning", "Nature", "alignment"],
-    "draft": false
+    "tags": [
+      "Anthropic",
+      "research",
+      "learning",
+      "Nature",
+      "alignment"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Adobe Launches Firefly AI Assistant Inside Creative Tools",
-    "summary": "Adobe has released the new Firefly AI Assistant that works directly inside Photoshop, Illustrator, and Premiere. It integrates with Anthropic’s Claude to execute complex multi-step creative tasks autonomously. The public beta will be available in the coming weeks.",
+    "summary": "Adobe has released the new Firefly AI Assistant that works directly inside Photoshop, Illustrator, and Premiere. It integrates with Anthropic's Claude to execute complex multi-step creative tasks autonomously. The public beta will be available in the coming weeks.",
     "date": "2026-04-15",
     "source": "Reuters",
     "sourceUrl": "https://www.reuters.com/legal/litigation/adobe-releases-ai-assistant-creative-tools-says-it-will-work-with-anthropics-2026-04-15/",
     "company": "Adobe",
-    "tags": ["Adobe", "Firefly", "AI Assistant", "creative tools", "Claude"],
-    "draft": false
+    "tags": [
+      "Adobe",
+      "Firefly",
+      "AI Assistant",
+      "creative tools",
+      "Claude"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Forrester Releases Top 10 Emerging Technologies for 2026",
-    "summary": "Forrester’s new report confirms AI’s shift from software to the physical world, highlighting robotics, intelligent agents, and ambient experiences. Agentic AI and Physical AI emerge as the top priorities for the coming year.",
+    "summary": "Forrester's new report confirms AI's shift from software to the physical world, highlighting robotics, intelligent agents, and ambient experiences. Agentic AI and Physical AI emerge as the top priorities for the coming year.",
     "date": "2026-04-15",
     "source": "Business Wire",
     "sourceUrl": "https://www.businesswire.com",
     "company": "",
-    "tags": ["Forrester", "emerging tech", "Physical AI", "Agentic AI"],
-    "draft": false
+    "tags": [
+      "Forrester",
+      "emerging tech",
+      "Physical AI",
+      "Agentic AI"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Amazon Acquires Globalstar for $11.6 Billion",
@@ -46,8 +73,14 @@
     "source": "Fortune",
     "sourceUrl": "https://fortune.com",
     "company": "Amazon",
-    "tags": ["Amazon", "Globalstar", "satellite", "AI infrastructure"],
-    "draft": false
+    "tags": [
+      "Amazon",
+      "Globalstar",
+      "satellite",
+      "AI infrastructure"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Allbirds Fully Transitions to NewBird AI",
@@ -56,8 +89,14 @@
     "source": "Reuters",
     "sourceUrl": "https://www.reuters.com",
     "company": "Allbirds",
-    "tags": ["Allbirds", "NewBird AI", "GPU", "AI cloud"],
-    "draft": false
+    "tags": [
+      "Allbirds",
+      "NewBird AI",
+      "GPU",
+      "AI cloud"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Accenture Invests in General Robotics for Physical AI",
@@ -66,8 +105,14 @@
     "source": "Business Wire",
     "sourceUrl": "https://www.businesswire.com",
     "company": "Accenture",
-    "tags": ["Accenture", "Physical AI", "robotics", "General Robotics"],
-    "draft": false
+    "tags": [
+      "Accenture",
+      "Physical AI",
+      "robotics",
+      "General Robotics"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Hightouch Hits $100M ARR Powered by AI Marketing Agents",
@@ -76,7 +121,13 @@
     "source": "TechCrunch",
     "sourceUrl": "https://techcrunch.com",
     "company": "Hightouch",
-    "tags": ["Hightouch", "AI Marketing", "ARR", "AI agents"],
-    "draft": false
+    "tags": [
+      "Hightouch",
+      "AI Marketing",
+      "ARR",
+      "AI agents"
+    ],
+    "draft": false,
+    "importance": "normal"
   }
 ]

@@ -71,7 +71,7 @@ image: "/images/deepseek.webp"
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">82.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 75.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 82.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>  <!-- HumanEval -->
   <div style="margin-bottom: 0;">
@@ -80,7 +80,7 @@ image: "/images/deepseek.webp"
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">90.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 75.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 90.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>
 

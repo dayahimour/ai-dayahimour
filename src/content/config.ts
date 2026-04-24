@@ -35,9 +35,10 @@ const newsItemSchema = z.object({
     summary: z.string(),
     date: z.string(),
     source: z.string(),
-    sourceUrl: z.string().url(),
+    sourceUrl: z.string().url().or(z.literal('')).default(''),
     articleSlug: z.string().optional(),
     company: z.string().optional(),
+    importance: z.enum(['prominent', 'normal']).default('normal'),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
 });

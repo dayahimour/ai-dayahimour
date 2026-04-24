@@ -99,7 +99,7 @@ $4.00 / $18.00 إذا تجاوز 200K
       <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">89.8%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 92.0%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+      <div style="width: 89.8%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
     </div>
   </div>  <!-- SWE-Bench Verified -->
   <div style="margin-bottom: 16px;">

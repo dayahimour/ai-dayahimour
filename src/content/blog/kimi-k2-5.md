@@ -42,7 +42,7 @@ image: "/images/kimi-k2-5-complete.webp"
       <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">95.4%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 96.1%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+      <div style="width: 95.4%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
     </div>
   </div>
 
@@ -64,7 +64,7 @@ image: "/images/kimi-k2-5-complete.webp"
       <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">90.1%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 96.1%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+      <div style="width: 90.1%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
     </div>
   </div>
 
@@ -86,7 +86,7 @@ image: "/images/kimi-k2-5-complete.webp"
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">85.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 76.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 85.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>
 
@@ -97,7 +97,7 @@ image: "/images/kimi-k2-5-complete.webp"
       <span style="color: #a78bfa; font-weight: 700; font-size: 14px;">50.2%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 87.9%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a78bfa); border-radius: 6px;"></div>
+      <div style="width: 50.2%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a78bfa); border-radius: 6px;"></div>
     </div>
   </div>
 

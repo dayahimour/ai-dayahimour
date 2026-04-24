@@ -88,7 +88,7 @@ GLM‑5 stands out in Vending Bench 2 (a year‑long simulated agentic business�
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">75.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 77.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 75.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>
 

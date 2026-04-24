@@ -64,7 +64,7 @@ Its average performance across eight key benchmarks reaches 81.0, surpassing or 
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">80.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 48.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 80.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>
 

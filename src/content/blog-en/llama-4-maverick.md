@@ -61,7 +61,7 @@ Maverick uses a **MoE (Mixture of Experts)** architecture. Instead of running al
       <span style="color: #60a5fa; font-weight: 700; font-size: 14px;">88.5%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 82.0%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
+      <div style="width: 88.5%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 6px;"></div>
     </div>
   </div>
 
@@ -72,7 +72,7 @@ Maverick uses a **MoE (Mixture of Experts)** architecture. Instead of running al
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">85.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 55.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 85.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>
 

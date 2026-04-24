@@ -83,7 +83,7 @@ Compared with Qwen3.5 Plus, Qwen3.6‑Plus shows noticeable improvement in stabi
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">78.0%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 78.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 78.0%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>  <!-- HumanEval -->
   <div style="margin-bottom: 0;">
@@ -92,7 +92,7 @@ Compared with Qwen3.5 Plus, Qwen3.6‑Plus shows noticeable improvement in stabi
       <span style="color: #34d399; font-weight: 700; font-size: 14px;">89.5%</span>
     </div>
     <div style="background: rgba(255,255,255,0.07); border-radius: 6px; height: 10px; overflow: hidden;">
-      <div style="width: 78.8%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
+      <div style="width: 89.5%; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 6px;"></div>
     </div>
   </div>
 

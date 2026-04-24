@@ -276,6 +276,19 @@ export const languageModels: AIModel[] = [
     logo: '/icons/deepseek-color.svg',
     benchmarks: { aime: 89.3, gpqa: 79.9, swe: 74.4 },
   },
+  {
+    name: 'MiMo V2.5 Pro',
+    company: 'Xiaomi',
+    description: 'أقوى نماذج شاومي حتى الآن، يُنجز مهام هندسية تستغرق أسابيع في ساعات عبر أكثر من ألف استدعاء أداة في مهمة واحدة متواصلة.',
+    strengths: ['وكيل متعدد الأدوات', 'كفاءة رموز عالية', 'برمجة عميقة'],
+    type: 'متعدد',
+    releaseDate: 'أبريل 2026',
+    releaseDateISO: '2026-04-22',
+    tier: 'flagship',
+    slug: 'mimo-v2-5-pro',
+    logo: '/icons/xiaomi-brand.svg',
+    benchmarks: { swe: 57.2, terminal: 68.4, claweval: 63.8, t3: 72.9, gdpval: 1581, hle: 48.0 },
+  },
 ];
 
 export const imageModels: AIModel[] = [

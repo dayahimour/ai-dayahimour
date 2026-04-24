@@ -6,8 +6,15 @@
     "source": "Google DeepMind",
     "sourceUrl": "https://deepmind.google.com",
     "company": "Google",
-    "tags": ["Gemini", "TTS", "DeepMind", "نص إلى كلام", "صوتي"],
-    "draft": false
+    "tags": [
+      "Gemini",
+      "TTS",
+      "DeepMind",
+      "نص إلى كلام",
+      "صوتي"
+    ],
+    "draft": false,
+    "importance": "prominent"
   },
   {
     "headline": "Anthropic تكشف عن التعلم اللاواعي في نماذج الذكاء الاصطناعي",
@@ -16,8 +23,15 @@
     "source": "Anthropic + Nature",
     "sourceUrl": "https://anthropic.com/news",
     "company": "Anthropic",
-    "tags": ["Anthropic", "بحث", "تعلم", "Nature", "محاذاة"],
-    "draft": false
+    "tags": [
+      "Anthropic",
+      "بحث",
+      "تعلم",
+      "Nature",
+      "محاذاة"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Adobe تطلق Firefly AI Assistant داخل أدوات التصميم",
@@ -26,8 +40,15 @@
     "source": "Reuters",
     "sourceUrl": "https://www.reuters.com/legal/litigation/adobe-releases-ai-assistant-creative-tools-says-it-will-work-with-anthropics-2026-04-15/",
     "company": "Adobe",
-    "tags": ["Adobe", "Firefly", "AI Assistant", "تصميم", "Claude"],
-    "draft": false
+    "tags": [
+      "Adobe",
+      "Firefly",
+      "AI Assistant",
+      "تصميم",
+      "Claude"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Forrester يصدر أبرز 10 تقنيات ناشئة لعام 2026",
@@ -36,8 +57,14 @@
     "source": "Business Wire",
     "sourceUrl": "https://www.businesswire.com",
     "company": "",
-    "tags": ["Forrester", "تقنيات ناشئة", "Physical AI", "Agentic AI"],
-    "draft": false
+    "tags": [
+      "Forrester",
+      "تقنيات ناشئة",
+      "Physical AI",
+      "Agentic AI"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "أمازون تشتري Globalstar بـ11.6 مليار دولار",
@@ -46,8 +73,14 @@
     "source": "Fortune",
     "sourceUrl": "https://fortune.com",
     "company": "Amazon",
-    "tags": ["Amazon", "Globalstar", "أقمار صناعية", "AI infrastructure"],
-    "draft": false
+    "tags": [
+      "Amazon",
+      "Globalstar",
+      "أقمار صناعية",
+      "AI infrastructure"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Allbirds تحول نشاطها كلياً إلى NewBird AI",
@@ -56,8 +89,14 @@
     "source": "Reuters",
     "sourceUrl": "https://www.reuters.com",
     "company": "Allbirds",
-    "tags": ["Allbirds", "NewBird AI", "GPU", "سحابة AI"],
-    "draft": false
+    "tags": [
+      "Allbirds",
+      "NewBird AI",
+      "GPU",
+      "سحابة AI"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Accenture تستثمر في General Robotics للذكاء الفيزيائي",
@@ -66,8 +105,14 @@
     "source": "Business Wire",
     "sourceUrl": "https://www.businesswire.com",
     "company": "Accenture",
-    "tags": ["Accenture", "Physical AI", "روبوتات", "General Robotics"],
-    "draft": false
+    "tags": [
+      "Accenture",
+      "Physical AI",
+      "روبوتات",
+      "General Robotics"
+    ],
+    "draft": false,
+    "importance": "normal"
   },
   {
     "headline": "Hightouch تصل إلى 100 مليون دولار ARR بفضل وكلاء AI",
@@ -76,7 +121,13 @@
     "source": "TechCrunch",
     "sourceUrl": "https://techcrunch.com",
     "company": "Hightouch",
-    "tags": ["Hightouch", "AI Marketing", "ARR", "وكلاء AI"],
-    "draft": false
+    "tags": [
+      "Hightouch",
+      "AI Marketing",
+      "ARR",
+      "وكلاء AI"
+    ],
+    "draft": false,
+    "importance": "normal"
   }
 ]

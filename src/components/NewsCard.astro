@@ -9,10 +9,11 @@ interface Props {
   sourceUrl?: string;
   articleSlug?: string;
   company?: string;
+  importance?: 'prominent' | 'normal';
   lang?: Lang;
 }
 
-const { headline, summary, date, source, sourceUrl, articleSlug, company, lang = 'ar' } = Astro.props;
+const { headline, summary, date, source, sourceUrl, articleSlug, company, importance = 'normal', lang = 'ar' } = Astro.props;
 
 const dateLocale = lang === 'ar' ? 'ar-EG' : 'en-US';
 const newsDate = new Date(date);
@@ -55,7 +56,7 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : undefined;
         </h3>
 
         <!-- Summary -->
-        <p class="text-sm text-gray-400 leading-relaxed mb-3">
+        <p class="text-sm text-gray-400 leading-relaxed mb-3 ">
           {summary}
         </p>
 
@@ -104,7 +105,7 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : undefined;
         </h3>
 
         <!-- Summary -->
-        <p class="text-sm text-gray-400 leading-relaxed mb-3">
+        <p class="text-sm text-gray-400 leading-relaxed mb-3 ">
           {summary}
         </p>
 
@@ -171,10 +172,5 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : undefined;
 </script>
 
 <style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+  /* news card styles */
 </style>
