@@ -3,7 +3,7 @@ title: "Grok Voice Think Fast 1.0: xAI Speech Agent Tops τ-voice Bench by 20 Po
 description: "On April 23, 2026, xAI launched grok-voice-think-fast-1.0, scoring 67.3% on τ-voice Bench, a 20+ point lead over Gemini 3.1 Flash Live (43.8%) and GPT Realtime 1.5 (35.3%) in real-world voice scenarios."
 date: "2026-04-23"
 slug: "grok-voice-think-fast-1"
-category: "Models"
+category: "models"
 tags: ["Grok Voice Think Fast 1.0", "xAI", "voice agent", "τ-voice Bench", "2026"]
 image: "/images/grok-voice-think-fast-1.webp"
 author: "فريق AI DayaHimour"
