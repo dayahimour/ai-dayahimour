@@ -1,7 +1,7 @@
 /**
- * Cloudflare Worker — Geo-based language redirect
- * Uses request.cf.country (Cloudflare native, reliable)
- * Falls back to CF-IPCountry header, then browser-side JS
+ * Cloudflare Worker — Intelligent language redirect (production-grade)
+ * Priority: Cookie > Accept-Language > Geo-IP
+ * Bots receive the static index.html (no geo-redirect) to avoid cloaking.
  */
 
 const ARABIC_COUNTRIES = new Set([
@@ -10,82 +10,98 @@ const ARABIC_COUNTRIES = new Set([
   'DJ', 'KM',
 ]);
 
-// Common bot user agents that should NOT be redirected (need to see content for AdSense/SEO)
 const BOT_USER_AGENTS = [
-  'googlebot',
-  'adsbot-google',
-  'mediapartners-google', // AdSense
-  'bingbot',
-  'slurp',
-  'duckduckbot',
-  'baiduspider',
-  'yandexbot',
-  'facebookexternalhit',
-  'twitterbot',
-  'linkedinbot',
-  'whatsapp',
-  'slackbot',
+  'googlebot', 'adsbot-google', 'mediapartners-google',
+  'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot',
+  'facebookexternalhit', 'twitterbot', 'linkedinbot', 'whatsapp', 'slackbot',
+  'google-inspectiontool', 'chrome-lighthouse', 'gtmetrix', 'pingdom',
 ];
 
-function isBot(userAgent) {
-  if (!userAgent) return false;
-  const lower = userAgent.toLowerCase();
+function isBot(ua) {
+  if (!ua) return false;
+  const lower = ua.toLowerCase();
   return BOT_USER_AGENTS.some(bot => lower.includes(bot));
+}
+
+function parseAcceptLanguage(header) {
+  if (!header) return null;
+  const primary = header.split(',')[0].split(';')[0].trim().toLowerCase();
+  if (primary.startsWith('ar')) return 'ar';
+  if (primary.startsWith('en')) return 'en';
+  return null;
+}
+
+function makeRedirect(path, baseUrl, status = 302, extraHeaders = {}) {
+  return new Response(null, {
+    status,
+    headers: {
+      'Location': new URL(path, baseUrl).toString(),
+      'Cache-Control': 'private, no-store',
+      ...extraHeaders,
+    },
+  });
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const path = url.pathname;
-    const userAgent = request.headers.get('User-Agent') || '';
+    const ua = request.headers.get('User-Agent') || '';
+    const isBotRequest = isBot(ua);
 
-    console.log(`[Worker] path="${path}" cf.country="${request.cf?.country}" bot="${isBot(userAgent)}"`);
-
-    // Debug endpoint to verify Worker is running
+    // Debug endpoint
     if (path === '/debug-geo') {
       return new Response(JSON.stringify({
         worker: true,
         country: request.cf?.country ?? null,
         cfIpCountry: request.headers.get('CF-IPCountry'),
+        acceptLanguage: request.headers.get('Accept-Language'),
         path,
-        isBot: isBot(userAgent),
+        isBot: isBotRequest,
       }), {
         headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
       });
     }
 
-    // Only apply geo-redirect on the root path "/"
+    // Only intercept root path "/"
     if (path === '/') {
-      // 1. Check for language preference cookie (user manual override)
+      // 1. Cookie (user explicit preference — highest priority)
       const cookies = request.headers.get('Cookie') || '';
       const langCookie = cookies.match(/lang=(ar|en)/);
       if (langCookie) {
-        const preferred = langCookie[1];
-        return makeRedirect(`/${preferred}/`, url, 301);
+        return makeRedirect(`/${langCookie[1]}/`, url, 302, {
+          'Vary': 'Cookie, Accept-Language',
+        });
       }
 
-      // 2. Use Cloudflare's native geo data (most accurate)
+      // 2. Accept-Language (browser preference)
+      const acceptLang = request.headers.get('Accept-Language');
+      const browserLang = parseAcceptLanguage(acceptLang);
+      if (browserLang) {
+        return makeRedirect(`/${browserLang}/`, url, 302, {
+          'Vary': 'Accept-Language, Cookie',
+        });
+      }
+
+      // 3. Geo-IP (fallback)
       const country = (request.cf?.country ?? request.headers.get('CF-IPCountry') ?? '').toUpperCase();
-      let targetLang = 'ar'; // Default language
+      let targetLang = 'ar'; // default
       if (country && country !== 'XX' && !ARABIC_COUNTRIES.has(country)) {
         targetLang = 'en';
       }
 
-      // Redirect human users with 301 (permanent redirect - good for SEO)
-      return makeRedirect(`/${targetLang}/`, url, 301);
+      // Bots: serve the static index.html so they can read hreflang & canonical
+      if (isBotRequest) {
+        return env.ASSETS.fetch(request);
+      }
+
+      // Humans: redirect
+      return makeRedirect(`/${targetLang}/`, url, 302, {
+        'Vary': 'Accept-Language, Cookie',
+      });
     }
 
-    // All other paths: serve static assets normally
+    // All other paths: passthrough
     return env.ASSETS.fetch(request);
   },
 };
-
-function makeRedirect(path, baseUrl, status = 301) {
-  return new Response(null, {
-    status: status,
-    headers: {
-      'Location': new URL(path, baseUrl).toString(),
-      'Cache-Control': 'no-store',
-    },
-  });
-}

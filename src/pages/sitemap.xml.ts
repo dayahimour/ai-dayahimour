@@ -11,14 +11,16 @@ export const GET: APIRoute = async () => {
 
   let urls = '';
 
-  // Static pages — both languages with hreflang
+  // Static pages — both languages with hreflang + x-default
   for (const page of staticPages) {
     const arUrl = page === '' ? `${siteUrl}/ar/` : `${siteUrl}/ar${page}/`;
     const enUrl = page === '' ? `${siteUrl}/en/` : `${siteUrl}/en${page}/`;
+    const xDefaultUrl = page === '' ? `${siteUrl}/` : enUrl;
     urls += `  <url>
     <loc>${arUrl}</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />
     <changefreq>${page === '' ? 'daily' : 'weekly'}</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>\n`;
@@ -26,6 +28,7 @@ export const GET: APIRoute = async () => {
     <loc>${enUrl}</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />
     <changefreq>${page === '' ? 'daily' : 'weekly'}</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>\n`;
@@ -36,11 +39,14 @@ export const GET: APIRoute = async () => {
     const arUrl = `${siteUrl}/ar/blog/${post.slug}/`;
     const enMatch = enPosts.find(ep => ep.slug === post.slug);
     const enUrl = enMatch ? `${siteUrl}/en/blog/${post.slug}/` : '';
+    const xDefaultUrl = enUrl || arUrl;
     urls += `  <url>
     <loc>${arUrl}</loc>
     <lastmod>${new Date(post.data.date).toISOString().split('T')[0]}</lastmod>${enUrl ? `
     <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
-    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />` : ''}
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />` : `
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />`}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>\n`;
@@ -51,11 +57,15 @@ export const GET: APIRoute = async () => {
     const enUrl = `${siteUrl}/en/blog/${post.slug}/`;
     const arMatch = arPosts.find(ap => ap.slug === post.slug);
     const arUrl = arMatch ? `${siteUrl}/ar/blog/${post.slug}/` : '';
+    const xDefaultUrl = enUrl;
     urls += `  <url>
     <loc>${enUrl}</loc>
     <lastmod>${new Date(post.data.date).toISOString().split('T')[0]}</lastmod>${arUrl ? `
     <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
-    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />` : ''}
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />` : `
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />`}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>\n`;

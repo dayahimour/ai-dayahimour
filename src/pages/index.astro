@@ -1,21 +1,98 @@
 ---
-// Root page: Redirects to the main language (/ar/)
-// Handled primarily by Cloudflare Worker, this serves as a fallback.
+// Root portal: used as static fallback when Worker/middleware are not active.
+// Bots see hreflang links + content (no redirect). Humans get JS redirect.
 ---
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="x-default">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0;url=/ar/" />
-    <meta name="robots" content="noindex, follow" />
-    <link rel="canonical" href="https://dayahimour.org/ar/" />
-    <title>Redirecting / جاري التوجيه...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://dayahimour.org/" />
+    <link rel="alternate" hreflang="ar" href="https://dayahimour.org/ar/" />
+    <link rel="alternate" hreflang="en" href="https://dayahimour.org/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://dayahimour.org/" />
+    <title>AI DayaHimour — AI News &amp; Analysis</title>
+    <meta name="description" content="Your go-to source for AI news, model analysis, tool reviews, and future predictions — covering ChatGPT, Claude, Gemini, and more." />
+
+    <!-- OpenGraph for root -->
+    <meta property="og:title" content="AI DayaHimour — AI News & Analysis" />
+    <meta property="og:description" content="Daily AI news, deep analysis, model comparisons, and exclusive insights." />
+    <meta property="og:image" content="https://dayahimour.org/images/og-default.png" />
+    <meta property="og:url" content="https://dayahimour.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_AR" />
+    <meta property="og:site_name" content="AI DayaHimour" />
+
     <script is:inline>
-      window.location.replace('/ar/');
+      (function() {
+        try {
+          // 1. Cookie (user preference)
+          var m = document.cookie.match(/lang=(ar|en)/);
+          if (m) { window.location.replace('/' + m[1] + '/'); return; }
+          // 2. Browser language
+          var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+          var target = nav.startsWith('ar') ? '/ar/' : '/en/';
+          window.location.replace(target);
+        } catch (e) {
+          // If JS fails, show the manual links below
+        }
+      })();
     </script>
+
+    <style>
+      body {
+        background-color: #050a12;
+        color: #e5e7eb;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+      }
+      h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #fff; }
+      p.sub { color: #9ca3af; margin-bottom: 2rem; }
+      .links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+      .btn {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.9rem 1.6rem; border-radius: 0.75rem; font-weight: 600;
+        text-decoration: none; transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn-ar {
+        background: linear-gradient(135deg, #3b82f6, #22c55e);
+        color: #050a12;
+      }
+      .btn-en {
+        background: #1f2937;
+        color: #fff;
+        border: 1px solid #374151;
+      }
+      .btn-en:hover { border-color: #60a5fa; }
+      .seo-text { margin-top: 2rem; max-width: 520px; color: #6b7280; font-size: 0.9rem; line-height: 1.6; }
+      .seo-text a { color: #60a5fa; }
+    </style>
   </head>
-  <body style="background-color: #050a12; color: #fff; font-family: system-ui, sans-serif; text-align: center; padding-top: 20vh;">
-    <p>إذا لم يتم توجيهك تلقائياً، <a href="/ar/" style="color: #3b82f6;">اضغط هنا</a>.</p>
-    <p>If you are not redirected automatically, <a href="/ar/" style="color: #3b82f6;">click here</a>.</p>
+  <body>
+    <h1>AI DayaHimour</h1>
+    <p class="sub">Explore the future of Artificial Intelligence</p>
+
+    <div class="links">
+      <a href="/ar/" class="btn btn-ar" lang="ar" dir="rtl">
+        <span>العربية</span>
+      </a>
+      <a href="/en/" class="btn btn-en" lang="en">
+        <span>English</span>
+      </a>
+    </div>
+
+    <div class="seo-text">
+      <p>AI DayaHimour is your go-to source for AI news, model analysis, tool reviews, and future predictions. We cover ChatGPT, Claude, Gemini, and more in both <a href="/ar/">Arabic</a> and <a href="/en/">English</a>.</p>
+    </div>
   </body>
 </html>
