@@ -37,6 +37,7 @@ src/content/news-en/YYYY-MM-DD.json     ← إنجليزي
 - **importance**: `"prominent"` | `"normal"` — يحدد قسم العرض. الافتراضي `"normal"`.
   - `"prominent"`: إعلان إطلاق نموذج AI جديد فقط (new model announcement)
   - `"normal"`: جميع باقي الأخبار (أدوات، تحديثات، شراكات، استثمارات، تقارير...)
+  - ⚠️ **خطأ شائع**: كتابة `"breaking"` — المخطط (schema) يقبل فقط `"prominent"` أو `"normal"`. لا توجد قيمة `"breaking"` أو `"high"` أو `"critical"`.
 - **draft**: دائماً `false`
 
 ---
@@ -109,3 +110,24 @@ src/content/news-en/YYYY-MM-DD.json     ← إنجليزي
 - headline يبدأ بالكلمة المفتاحية الأقوى
 - tags: اسم النموذج + الشركة + وصف + السنة
 - لا تكرار نفس البنية في كل عناوين الدفعة الواحدة
+
+---
+
+## قائمة التحقق قبل الحفظ (Validation Checklist)
+
+قبل إنهاء أي ملف أخبار — **اقرأ كل خبر مرة أخيرة** وتأكد من:
+
+| # | الحقل | القاعدة |
+|---|-------|---------|
+| 1 | `importance` | فقط `"prominent"` أو `"normal"` — لا `"breaking"` ولا `"high"` ولا `"critical"` |
+| 2 | `date` | صيغة `"YYYY-MM-DD"` — تطابق تاريخ اليوم |
+| 3 | `articleSlug` | إذا غير فارغ → يجب أن يطابق `slug` المقالة بالضبط |
+| 4 | `source` | اسم المصدر نصياً (لا رابط) |
+| 5 | `sourceUrl` | دائماً `""` |
+| 6 | `draft` | دائماً `false` |
+| 7 | `summary` | 1-2 جمل فقط (أقل من 40 كلمة) |
+| 8 | `headline` | جملة واحدة، أقل من 15 كلمة |
+| 9 | tags | 3-5 كلمات، تتضمن اسم الشركة/النموذج + السنة |
+| 10 | file name | `"YYYY-MM-DD.json"` بالضبط |
+
+> 🛑 **أهم خطأ شائع:** `importance: "breaking"` → **فشل البناء كامل**. الـ schema يقبل فقط `"prominent"` أو `"normal"`.

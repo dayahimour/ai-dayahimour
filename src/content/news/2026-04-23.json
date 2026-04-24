@@ -58,5 +58,17 @@
     "importance": "normal",
     "tags": ["Microsoft", "استثمار", "أستراليا", "بنية تحتية", "2026"],
     "draft": false
+  },
+  {
+    "headline": "xAI تطلق Grok Voice Think Fast 1.0 الأذكى صوتياً",
+    "summary": "سجل النموذج 67.3% في τ-voice Bench متجاوزاً Gemini 3.1 Flash Live وGPT Realtime 1.5 بأكثر من 20 نقطة. يعمل مع Starlink محققاً 20% تحويل مبيعات و70% حل ذاتي.",
+    "date": "2026-04-23",
+    "source": "xAI Blog",
+    "sourceUrl": "",
+    "articleSlug": "grok-voice-think-fast-1",
+    "company": "xAI",
+    "importance": "prominent",
+    "tags": ["Grok Voice Think Fast 1.0", "xAI", "وكيل صوتي", "τ-voice Bench", "2026"],
+    "draft": false
   }
 ]

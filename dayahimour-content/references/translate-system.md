@@ -14,18 +14,21 @@
 | `draft` | كما هو |
 | `tier` | احتفظ بالقيمة كما هي (`flagship` / `standard` / `budget`) — لا تُترجم |
 
-### خريطة التصنيفات
+### خريطة التصنيفات (case-sensitive — أحرف صغيرة فقط)
 ```
-أخبار    → news
-تحليل    → analysis
-نماذج    → models
-أدوات    → tools
-شركات    → companies
-مستقبل   → future
-صور      → images
-فيديو    → video
-مقارنات  → comparisons
+أخبار    → news       (لا News)
+تحليل    → analysis   (لا Analysis)
+نماذج    → models     (لا Models)
+أدوات    → tools      (لا Tools)
+شركات    → companies  (لا Companies)
+مستقبل   → future     (لا Future)
+صور      → images     (لا Images)
+فيديو    → video      (لا Video)
+مقارنات  → comparisons (لا Comparisons)
 ```
+
+> ⚠️ **خطأ شائع فادح**: المخطط (schema) يقبل **أحرف صغيرة فقط**. كتابة `"Models"` بدلاً من `"models"` تُسبب **فشل البناء كامل**.
+> ⚠️ لا توجد قيمة `"breaking"` — `importance` يترجم من `"عادي"` → `"normal"` و `"بارز"` → `"prominent"` فقط.
 
 ---
 
