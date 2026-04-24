@@ -108,9 +108,20 @@ const lang = 'en';
   const successMsg = document.getElementById('contact-success');
   const errorMsg = document.getElementById('contact-error');
 
+  let lastSubmitTime = 0;
+
   if (form && submitBtn) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Rate limiting: prevent spam (10 second cooldown)
+      const now = Date.now();
+      if (now - lastSubmitTime < 10000) {
+        errorMsg!.textContent = 'Please wait 10 seconds before sending another message.';
+        errorMsg?.classList.remove('hidden');
+        return;
+      }
+
       successMsg?.classList.add('hidden');
       errorMsg?.classList.add('hidden');
       const originalText = submitBtn.textContent;
@@ -126,6 +137,7 @@ const lang = 'en';
         });
         if (response.ok) {
           form.reset();
+          lastSubmitTime = Date.now();
           successMsg?.classList.remove('hidden');
         } else {
           errorMsg?.classList.remove('hidden');

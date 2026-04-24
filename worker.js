@@ -37,9 +37,22 @@ function makeRedirect(path, baseUrl, status = 302, extraHeaders = {}) {
     headers: {
       'Location': new URL(path, baseUrl).toString(),
       'Cache-Control': 'private, no-store',
+      'X-Frame-Options': 'DENY',
+      'X-Content-Type-Options': 'nosniff',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), payment=()',
       ...extraHeaders,
     },
   });
+}
+
+function addSecurityHeaders(response) {
+  const h = new Headers(response.headers);
+  h.set('X-Frame-Options', 'DENY');
+  h.set('X-Content-Type-Options', 'nosniff');
+  h.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  h.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=(), payment=()');
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers: h });
 }
 
 export default {
@@ -48,20 +61,6 @@ export default {
     const path = url.pathname;
     const ua = request.headers.get('User-Agent') || '';
     const isBotRequest = isBot(ua);
-
-    // Debug endpoint
-    if (path === '/debug-geo') {
-      return new Response(JSON.stringify({
-        worker: true,
-        country: request.cf?.country ?? null,
-        cfIpCountry: request.headers.get('CF-IPCountry'),
-        acceptLanguage: request.headers.get('Accept-Language'),
-        path,
-        isBot: isBotRequest,
-      }), {
-        headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
-      });
-    }
 
     // Only intercept root path "/"
     if (path === '/') {
@@ -101,7 +100,7 @@ export default {
       });
     }
 
-    // All other paths: passthrough
-    return env.ASSETS.fetch(request);
+    // All other paths: passthrough + security headers
+    return addSecurityHeaders(await env.ASSETS.fetch(request));
   },
 };

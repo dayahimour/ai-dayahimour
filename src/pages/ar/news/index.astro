@@ -61,7 +61,7 @@ const newsSchema = {
   lang={lang}
 >
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(newsSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(newsSchema).replace(/</g, '\\u003c')} />
   </Fragment>
 
   <div class="max-w-7xl mx-auto px-4 py-12">

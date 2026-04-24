@@ -64,7 +64,7 @@ if (switchPath === currentPath) switchPath = `/${altLang}/`;
         <!-- Language Switcher -->
         <a
           href={switchPath}
-          onclick={`document.cookie='lang=${altLang};path=/;max-age=31536000;SameSite=Lax';`}
+          onclick={`document.cookie='lang=${altLang};path=/;max-age=31536000;SameSite=Strict;Secure';`}
           class="px-3 py-1.5 rounded-lg text-xs font-bold border border-dark-500/40 text-gray-300 hover:text-neon-blue hover:border-neon-blue/40 transition-all duration-200 flex items-center gap-1.5"
           aria-label={`Switch to ${altLang === 'ar' ? 'Arabic' : 'English'}`}
         >
@@ -79,7 +79,7 @@ if (switchPath === currentPath) switchPath = `/${altLang}/`;
       <div class="flex md:hidden items-center gap-2">
         <a
           href={switchPath}
-          onclick={`document.cookie='lang=${altLang};path=/;max-age=31536000;SameSite=Lax';`}
+          onclick={`document.cookie='lang=${altLang};path=/;max-age=31536000;SameSite=Strict;Secure';`}
           class="w-10 h-10 rounded-lg bg-dark-700 flex items-center justify-center text-gray-400 hover:text-neon-blue transition-colors text-xs font-bold"
           aria-label={`Switch to ${altLang === 'ar' ? 'Arabic' : 'English'}`}
         >

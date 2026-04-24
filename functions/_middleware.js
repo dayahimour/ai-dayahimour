@@ -36,9 +36,20 @@ export async function onRequest(context) {
   const userAgent = request.headers.get('User-Agent') || '';
   const isBotRequest = isBot(userAgent);
 
+  // Security headers helper
+  function addSecurityHeaders(response) {
+    const h = new Headers(response.headers);
+    h.set('X-Frame-Options', 'DENY');
+    h.set('X-Content-Type-Options', 'nosniff');
+    h.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    h.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=(), payment=()');
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers: h });
+  }
+
   // Only redirect on root path "/"
   if (path !== '/') {
-    return context.next();
+    const response = await context.next();
+    return addSecurityHeaders(response);
   }
 
   function makeRedirect(path, status = 302, extraHeaders = {}) {
@@ -47,6 +58,10 @@ export async function onRequest(context) {
       headers: {
         'Location': new URL(path, url).toString(),
         'Cache-Control': 'private, no-store',
+        'X-Frame-Options': 'DENY',
+        'X-Content-Type-Options': 'nosniff',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), payment=()',
         ...extraHeaders,
       },
     });
@@ -77,7 +92,8 @@ export async function onRequest(context) {
 
   // Bots: serve the static index.html so they can read hreflang & canonical
   if (isBotRequest) {
-    return context.next();
+    const response = await context.next();
+    return addSecurityHeaders(response);
   }
 
   // Humans: redirect

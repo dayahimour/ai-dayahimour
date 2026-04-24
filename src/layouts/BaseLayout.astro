@@ -113,6 +113,9 @@ const structuredData = {
     <meta name="theme-color" content="#050a12" />
     <meta name="google-site-verification" content="YzfAla6cQj68nN75Y-UVglxGPzNZHkamE9KC2BQeAnA" />
 
+    <!-- Content Security Policy (CSP) — protects against XSS, clickjacking, data injection -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://formsubmit.co https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.google.com; frame-src https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com; base-uri 'self'; form-action 'self' https://formsubmit.co;" />
+
     <!-- Fonts: preconnect + non-blocking load -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -160,8 +163,8 @@ const structuredData = {
     <meta name="twitter:image" content={new URL(image, Astro.site)} />
     <meta name="twitter:image:alt" content={title} />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <!-- Structured Data (safe JSON-LD with < escaped to prevent XSS) -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />

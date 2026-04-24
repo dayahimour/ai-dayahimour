@@ -6,7 +6,11 @@
  */
 
 const SITE = 'https://dayahimour.org';
-const KEY = '334ebed7d28114c09ac658e477975c60';
+const KEY = process.env.INDEXNOW_KEY || '334ebed7d28114c09ac658e477975c60';
+
+if (!process.env.INDEXNOW_KEY) {
+  console.warn('⚠️  WARNING: INDEXNOW_KEY not set in environment. Using fallback key.\n   Set INDEXNOW_KEY in your environment to avoid exposing the key in source code.\n   Example: INDEXNOW_KEY=your-key-here node scripts/indexnow.js');
+}
 const KEY_LOCATION = `${SITE}/${KEY}.txt`;
 
 async function submitIndexNow(urls) {

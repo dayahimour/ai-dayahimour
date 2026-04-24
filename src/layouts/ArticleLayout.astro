@@ -96,7 +96,7 @@ const articleSchema = {
 
 <BaseLayout title={title} description={description} image={image} type="article" lang={lang}>
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema).replace(/</g, '\\u003c')} />
     <meta property="article:published_time" content={new Date(date).toISOString()} />
     <meta property="article:modified_time" content={new Date(date).toISOString()} />
     <meta property="article:section" content={category} />
