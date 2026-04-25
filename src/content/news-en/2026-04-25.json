@@ -1,0 +1,38 @@
+[
+    {
+        "headline": "Google Invests $40 Billion in Anthropic in Largest Startup Deal Ever",
+        "summary": "The deal begins with $10 billion upfront at a $380 billion valuation, with the rest contingent on performance milestones. Anthropic's annual revenue surpassed $30 billion, driven by Claude Code demand.",
+        "date": "2026-04-25",
+        "source": "CNBC",
+        "sourceUrl": "",
+        "articleSlug": "",
+        "company": "Google",
+        "importance": "normal",
+        "tags": [
+            "Google",
+            "Anthropic",
+            "investment",
+            "Claude Code",
+            "2026"
+        ],
+        "draft": false
+    },
+    {
+        "headline": "GPT-5.5 and GPT-5.5 Pro Now Available via OpenAI API",
+        "summary": "OpenAI released both models via API on April 24, 2026, for Plus, Pro, Business, and Enterprise subscribers in ChatGPT and Codex, with superior agentic coding and higher token efficiency.",
+        "date": "2026-04-25",
+        "source": "OpenAI",
+        "sourceUrl": "",
+        "articleSlug": "",
+        "company": "OpenAI",
+        "importance": "normal",
+        "tags": [
+            "GPT-5.5",
+            "OpenAI",
+            "API",
+            "agentic coding",
+            "2026"
+        ],
+        "draft": false
+    }
+]

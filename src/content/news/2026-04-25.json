@@ -1,0 +1,38 @@
+[
+    {
+        "headline": "Google تستثمر 40 مليار دولار في Anthropic بأكبر صفقة تمويل ناشئة في التاريخ",
+        "summary": "بدأت الصفقة بـ 10 مليارات فورية عند تقييم 380 مليار دولار، والباقي مشروط بأهداف أداء. إيرادات Anthropic السنوية تجاوزت 30 مليار دولار بدعم الطلب على Claude Code.",
+        "date": "2026-04-25",
+        "source": "CNBC",
+        "sourceUrl": "",
+        "articleSlug": "",
+        "company": "Google",
+        "importance": "normal",
+        "tags": [
+            "Google",
+            "Anthropic",
+            "استثمار",
+            "Claude Code",
+            "2026"
+        ],
+        "draft": false
+    },
+    {
+        "headline": "GPT-5.5 و GPT-5.5 Pro متاحان رسمياً عبر واجهة برمجة OpenAI",
+        "summary": "أتاحت OpenAI في 24 أبريل 2026 النموذجين عبر API لمشتركي Plus وPro وBusiness وEnterprise في ChatGPT وCodex، مع تفوق في البرمجة الوكيلية وكفاءة رمزية أعلى.",
+        "date": "2026-04-25",
+        "source": "OpenAI",
+        "sourceUrl": "",
+        "articleSlug": "",
+        "company": "OpenAI",
+        "importance": "normal",
+        "tags": [
+            "GPT-5.5",
+            "OpenAI",
+            "API",
+            "برمجة وكيلية",
+            "2026"
+        ],
+        "draft": false
+    }
+]
