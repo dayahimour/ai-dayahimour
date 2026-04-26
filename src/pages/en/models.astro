@@ -18,6 +18,17 @@ function sortModels(models: typeof languageModels) {
 const sortedLanguageModels = sortModels(languageModels);
 const sortedImageModels = sortModels(imageModels);
 const sortedVideoModels = sortModels(videoModels);
+
+function getModelBenchmarkScore(model: any) {
+  const b = model.benchmarks;
+  if (!b) return 0;
+  let total = 0, count = 0;
+  if (b.aime) { total += Number(b.aime); count++; }
+  if (b.gpqa) { total += Number(b.gpqa); count++; }
+  if (b.swe) { total += Number(b.swe); count++; }
+  if (b.swe_pro) { total += (Number(b.swe_pro) + 23.5); count++; }
+  return count > 0 ? total / count : 0;
+}
 ---
 
 <BaseLayout title="AI Models" description="Comprehensive guide to the most powerful AI models worldwide with specs, strengths, and benchmarks" lang={lang}>
@@ -59,7 +70,7 @@ const sortedVideoModels = sortModels(videoModels);
             </tr>
           </thead>
           <tbody>
-            {languageModels.sort((a, b) => (b.benchmarks?.swe || 0) - (a.benchmarks?.swe || 0)).map((model, i) => (
+            {languageModels.sort((a, b) => getModelBenchmarkScore(b) - getModelBenchmarkScore(a)).map((model, i) => (
               <tr class:list={['border-b border-dark-500/10 hover:bg-white/5 transition-colors', i % 2 === 0 ? 'bg-white/[0.02]' : '']}>
                 <td class="p-4"><a href={`/en/blog/${model.slug}/`} class="text-neon-blue font-medium hover:underline">{model.name}</a></td>
                 <td class="p-4 text-gray-400 text-xs">{model.company}</td>
@@ -72,8 +83,15 @@ const sortedVideoModels = sortModels(videoModels);
                   <div style="background:rgba(255,255,255,0.06);border-radius:4px;height:6px;overflow:hidden"><div style={`width:${model.benchmarks.gpqa}%;height:100%;background:linear-gradient(90deg,#7c3aed,#a78bfa);border-radius:4px`}></div></div>
                 </td>
                 <td class="p-4" style="min-width: 130px;">
-                  <div class="flex justify-between mb-1"><span style="font-size:11px;color:#94a3b8">Code</span><span style={`font-size:12px;font-weight:700;color:${model.benchmarks.swe >= 70 ? '#34d399' : '#94a3b8'}`}>{model.benchmarks.swe}%</span></div>
-                  <div style="background:rgba(255,255,255,0.06);border-radius:4px;height:6px;overflow:hidden"><div style={`width:${model.benchmarks.swe}%;height:100%;background:linear-gradient(90deg,#059669,#34d399);border-radius:4px`}></div></div>
+                  <div class="flex justify-between mb-1">
+                    <span style="font-size:11px;color:#94a3b8">{model.benchmarks.swe ? 'Verified' : (model.benchmarks.swe_pro ? 'Pro' : 'Code')}</span>
+                    <span style={`font-size:12px;font-weight:700;color:${model.benchmarks.swe >= 70 || model.benchmarks.swe_pro >= 55 ? '#34d399' : '#94a3b8'}`}>
+                      {model.benchmarks.swe || model.benchmarks.swe_pro || 'N/A'}{model.benchmarks.swe || model.benchmarks.swe_pro ? '%' : ''}
+                    </span>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.06);border-radius:4px;height:6px;overflow:hidden">
+                    <div style={`width:${model.benchmarks.swe || Math.min(100, (model.benchmarks.swe_pro || 0) * 1.4)}%;height:100%;background:linear-gradient(90deg,#059669,#34d399);border-radius:4px`}></div>
+                  </div>
                 </td>
               </tr>
             ))}

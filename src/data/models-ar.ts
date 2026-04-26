@@ -51,7 +51,7 @@ export const languageModels: AIModel[] = [
     tier: 'flagship',
     slug: 'gpt-5-5',
     logo: '/icons/openai.svg',
-    benchmarks: { gpqa: 93.6, swe: 58.6, terminal: 82.7 },
+    benchmarks: { gpqa: 93.6, swe_pro: 58.6, terminal: 82.7 },
   },
   {
     name: 'Claude Opus 4.6',
@@ -326,7 +326,7 @@ export const languageModels: AIModel[] = [
     tier: 'flagship',
     slug: 'mimo-v2-5-pro',
     logo: '/icons/xiaomi-brand.svg',
-    benchmarks: { gpqa: 86.6, swe: 57.2, terminal: 68.4, claweval: 63.8, t3: 72.9, gdpval: 1581, hle: 48.0 },
+    benchmarks: { gpqa: 86.6, swe_pro: 57.2, terminal: 68.4, claweval: 63.8, t3: 72.9, gdpval: 1581, hle: 48.0 },
   },
 ];
 
