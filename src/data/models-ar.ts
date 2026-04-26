@@ -274,7 +274,7 @@ export const languageModels: AIModel[] = [
     tier: 'budget',
     slug: 'gemma-4',
     logo: '/icons/gemma-color.svg',
-    benchmarks: { aime: 88.3 },
+    benchmarks: { aime: 88.3, gpqa: 84.3 },
   },
   {
     name: 'Llama 4 Maverick',
@@ -326,7 +326,7 @@ export const languageModels: AIModel[] = [
     tier: 'flagship',
     slug: 'mimo-v2-5-pro',
     logo: '/icons/xiaomi-brand.svg',
-    benchmarks: { swe: 57.2, terminal: 68.4, claweval: 63.8, t3: 72.9, gdpval: 1581, hle: 48.0 },
+    benchmarks: { gpqa: 86.6, swe: 57.2, terminal: 68.4, claweval: 63.8, t3: 72.9, gdpval: 1581, hle: 48.0 },
   },
 ];
 
