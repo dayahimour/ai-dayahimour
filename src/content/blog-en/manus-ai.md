@@ -76,6 +76,14 @@ With the acquisition chapter closed and a new era under Meta’s umbrella beginn
 
 More importantly, can agents like Manus one day overcome the **“reliability” hurdle** that still troubles generative AI models? However advanced an agent may be, it remains prone to errors and hallucinations, and the only difference is that its mistake is no longer limited to providing incorrect information—it could extend to taking actual actions in the digital or financial world on the user’s behalf. In this new landscape, the question is no longer “What can AI do?”, but **“How far do we trust it to do that on its own?”**
 
+## Plot Twist: China Blocks the Acquisition and Redraws the Map
+
+On 27 April 2026, China’s National Development and Reform Commission (NDRC) issued a **final decision blocking Meta’s acquisition of Manus** in its entirety, unraveling months of strategic integration. The ruling was grounded in “national-security protection and prevention of strategic-technology leakage,” an unprecedented move against a U.S. tech giant.
+
+Under the decision, Meta was forced to immediately restructure its investments and unwind the Manus team that had been operating under its umbrella. Meta’s stock dropped roughly 8% within hours of the announcement, while analysts debated the platform’s future: will Manus return to operating as an independent company in China, or will it seek a new strategic partner?
+
+This cancellation marks a pivotal turning point in Manus’s trajectory, making this article an evolving story that will require continued updates as events unfold.
+
 ---
 
 ###  Explore More
