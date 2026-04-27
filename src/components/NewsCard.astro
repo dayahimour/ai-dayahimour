@@ -5,6 +5,7 @@ interface Props {
   headline: string;
   summary: string;
   date: string;
+  publishedAt?: string;
   source: string;
   sourceUrl?: string;
   articleSlug?: string;
@@ -13,7 +14,8 @@ interface Props {
   lang?: Lang;
 }
 
-const { headline, summary, date, source, sourceUrl, articleSlug, company, importance = 'normal', lang = 'ar' } = Astro.props;
+const { headline, summary, date, publishedAt, source, sourceUrl, articleSlug, company, importance = 'normal', lang = 'ar' } = Astro.props;
+const effectivePublishedAt = publishedAt || date;
 
 const dateLocale = lang === 'ar' ? 'ar-EG' : 'en-US';
 const newsDate = new Date(date);
@@ -28,6 +30,7 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : (isExternal ? source
     href={href}
     class="group block news-card"
     data-date={date}
+    data-published-at={effectivePublishedAt}
     data-lang={lang}
   >
     <article class="relative overflow-hidden rounded-xl border transition-all duration-300 bg-dark-700/40 border-neon-blue/20 hover:border-neon-blue/50 hover:shadow-lg hover:shadow-neon-blue/10">
@@ -84,6 +87,7 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : (isExternal ? source
     rel="noopener noreferrer"
     class="group block news-card"
     data-date={date}
+    data-published-at={effectivePublishedAt}
     data-lang={lang}
   >
     <article class="relative overflow-hidden rounded-xl border transition-all duration-300 bg-dark-700/40 border-dark-500/30 hover:border-neon-green/40 hover:shadow-lg hover:shadow-neon-green/5">
@@ -134,7 +138,7 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : (isExternal ? source
   </a>
 ) : (
   <!-- Static news card (no link) -->
-  <div class="group block news-card" data-date={date} data-lang={lang}>
+  <div class="group block news-card" data-date={date} data-published-at={effectivePublishedAt} data-lang={lang}>
     <article class="relative overflow-hidden rounded-xl border transition-all duration-300 bg-dark-700/40 border-dark-500/30">
       <div class="p-4">
         <!-- Top row: dot + company + time -->
@@ -189,12 +193,12 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : (isExternal ? source
     const now = new Date();
 
     cards.forEach(card => {
-      const dateStr = card.getAttribute('data-date');
+      const publishedAtStr = card.getAttribute('data-published-at') || card.getAttribute('data-date');
       const lang = card.getAttribute('data-lang') || 'ar';
-      if (!dateStr) return;
+      if (!publishedAtStr) return;
 
-      const newsDate = new Date(dateStr);
-      const diffMs = now.getTime() - newsDate.getTime();
+      const publishedDate = new Date(publishedAtStr);
+      const diffMs = now.getTime() - publishedDate.getTime();
       const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
       const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
@@ -206,7 +210,7 @@ const href = isInternal ? `/${lang}/blog/${articleSlug}/` : (isExternal ? source
       } else if (diffDays < 7) {
         timeAgo = lang === 'ar' ? `منذ ${diffDays} يوم` : `${diffDays}d ago`;
       } else {
-        timeAgo = newsDate.toLocaleDateString(lang === 'ar' ? 'ar-EG' : 'en-US', { month: 'short', day: 'numeric' });
+        timeAgo = publishedDate.toLocaleDateString(lang === 'ar' ? 'ar-EG' : 'en-US', { month: 'short', day: 'numeric' });
       }
 
       const timeEl = card.querySelector('.news-time');

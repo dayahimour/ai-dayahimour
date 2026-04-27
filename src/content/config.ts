@@ -34,6 +34,7 @@ const newsItemSchema = z.object({
     headline: z.string(),
     summary: z.string(),
     date: z.string(),
+    publishedAt: z.string().optional(),
     source: z.string(),
     sourceUrl: z.string().url().or(z.literal('')).default(''),
     articleSlug: z.string().optional(),
