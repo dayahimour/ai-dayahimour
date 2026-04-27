@@ -26,9 +26,20 @@
     <meta property="og:site_name" content="AI DayaHimour" />
 
     <script is:inline>
-      function setLangCookie(lang) {
-        document.cookie = 'lang=' + lang + ';path=/;max-age=31536000;SameSite=Strict;Secure';
-      }
+      (function() {
+        try {
+          // 1. Cookie (user preference)
+          var m = document.cookie.match(/lang=(ar|en)/);
+          if (m) { window.location.replace('/' + m[1] + '/'); return; }
+          // 2. Browser language — detect and store cookie for next visit
+          var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+          var target = nav.startsWith('ar') ? '/ar/' : '/en/';
+          document.cookie = 'lang=' + (nav.startsWith('ar') ? 'ar' : 'en') + ';path=/;max-age=31536000;SameSite=Strict;Secure';
+          window.location.replace(target);
+        } catch (e) {
+          // If JS fails, show the manual links below
+        }
+      })();
     </script>
 
     <style>
@@ -73,10 +84,10 @@
     <p class="sub">Explore the future of Artificial Intelligence</p>
 
     <div class="links">
-      <a href="/ar/" class="btn btn-ar" lang="ar" dir="rtl" onclick="setLangCookie('ar')">
+      <a href="/ar/" class="btn btn-ar" lang="ar" dir="rtl">
         <span>العربية</span>
       </a>
-      <a href="/en/" class="btn btn-en" lang="en" onclick="setLangCookie('en')">
+      <a href="/en/" class="btn btn-en" lang="en">
         <span>English</span>
       </a>
     </div>
