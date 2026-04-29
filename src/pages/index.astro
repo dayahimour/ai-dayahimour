@@ -1,6 +1,16 @@
 ---
 // Root portal: used as static fallback when Worker/middleware are not active.
 // Bots see hreflang links + content (no redirect). Humans get JS redirect.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const lang = 'x-default';
+
+// Fetch some latest posts for bot indexing and SEO value (AdSense approval)
+const allPosts = (await getCollection('blog'))
+  .filter((post: any) => !post.data.draft)
+  .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 8);
 ---
 <!DOCTYPE html>
 <html lang="x-default">
@@ -27,6 +37,11 @@
 
     <script is:inline>
       (function() {
+        // Detect bots so we don't redirect them (vital for AdSense!)
+        var ua = navigator.userAgent.toLowerCase();
+        var isBot = /bot|googlebot|crawler|spider|robot|crawling|mediapartners|adsbot/i.test(ua);
+        if (isBot) return;
+
         try {
           // 1. Cookie (user preference)
           var m = document.cookie.match(/lang=(ar|en)/);
@@ -47,17 +62,20 @@
         background-color: #050a12;
         color: #e5e7eb;
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .hero-section {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 2rem;
+        padding: 4rem 2rem;
         text-align: center;
+        border-bottom: 1px solid #1e293b;
       }
-      h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #fff; }
-      p.sub { color: #9ca3af; margin-bottom: 2rem; }
+      h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+      p.sub { color: #9ca3af; margin-bottom: 2rem; font-size: 1.1rem;}
       .links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
       .btn {
         display: inline-flex; align-items: center; gap: 0.5rem;
@@ -75,25 +93,58 @@
         border: 1px solid #374151;
       }
       .btn-en:hover { border-color: #60a5fa; }
-      .seo-text { margin-top: 2rem; max-width: 520px; color: #6b7280; font-size: 0.9rem; line-height: 1.6; }
-      .seo-text a { color: #60a5fa; }
+      
+      .content-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+      .post-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .post-card {
+        background: #0f172a;
+        border: 1px solid #1e293b;
+        border-radius: 1rem;
+        padding: 1.5rem;
+      }
+      .post-card h3 { margin: 0 0 1rem 0; color: #fff; font-size: 1.25rem; }
+      .post-card p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0; }
     </style>
   </head>
   <body>
-    <h1>AI DayaHimour</h1>
-    <p class="sub">Explore the future of Artificial Intelligence</p>
+    <div class="hero-section">
+      <h1>AI DayaHimour</h1>
+      <p class="sub">Explore the future of Artificial Intelligence</p>
 
-    <div class="links">
-      <a href="/ar/" class="btn btn-ar" lang="ar" dir="rtl">
-        <span>العربية</span>
-      </a>
-      <a href="/en/" class="btn btn-en" lang="en">
-        <span>English</span>
-      </a>
+      <div class="links">
+        <a href="/ar/" class="btn btn-ar" lang="ar" dir="rtl">
+          <span>العربية</span>
+        </a>
+        <a href="/en/" class="btn btn-en" lang="en">
+          <span>English</span>
+        </a>
+      </div>
     </div>
 
-    <div class="seo-text">
-      <p>AI DayaHimour is your go-to source for AI news, model analysis, tool reviews, and future predictions. We cover ChatGPT, Claude, Gemini, and more in both <a href="/ar/">Arabic</a> and <a href="/en/">English</a>.</p>
+    <!-- SEO & AdSense Content for Bots -->
+    <div class="content-section">
+      <h2 style="color: #fff; border-bottom: 1px solid #1e293b; padding-bottom: 1rem;">Latest AI Insights & News</h2>
+      <p style="color: #6b7280; font-size: 0.95rem; margin-top: 1rem;">
+        AI DayaHimour is your go-to source for AI news, model analysis, tool reviews, and future predictions. We cover ChatGPT, Claude, Gemini, and more in both Arabic and English.
+      </p>
+      
+      <div class="post-grid">
+        {allPosts.map((post: any) => (
+          <article class="post-card">
+            <h3><a href={`/en/blog/${post.slug}/`} style="color: inherit; text-decoration: none;">{post.data.title}</a></h3>
+            <p>{post.data.description}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </body>
 </html>
