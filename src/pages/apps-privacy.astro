@@ -1,0 +1,178 @@
+---
+// src/pages/apps-privacy.astro
+// Hidden Privacy Policy page for Mobile Apps
+// Intentionally not using the main BaseLayout to keep it completely isolated and unlinked from the main site.
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CRITICAL: This prevents search engines from indexing the page -->
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <title>Privacy Policy - Mobile Applications</title>
+    
+    <style>
+      :root {
+        --bg-color: #050a12;
+        --card-bg: #0f172a;
+        --border-color: #1e293b;
+        --text-main: #e5e7eb;
+        --text-muted: #94a3b8;
+        --primary: #3b82f6;
+        --accent: #22c55e;
+      }
+      
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.7;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .last-updated {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+
+      .card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 1rem;
+        padding: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      h2::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 24px;
+        background: var(--primary);
+        border-radius: 4px;
+      }
+
+      h2:first-of-type {
+        margin-top: 0;
+      }
+
+      p, li {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      strong {
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .footer {
+        margin-top: 4rem;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        border-top: 1px solid var(--border-color);
+        padding-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: April 30, 2026</p>
+      </div>
+
+      <div class="card">
+        <p>This Privacy Policy applies to the mobile applications (including "Bac Calculator" and future releases) developed and published by <strong>Daya Himour</strong>.</p>
+
+        <h2>1. Information Collection and Use</h2>
+        <p>Our applications are built with privacy as a core principle. <strong>We do not collect, store, transmit, or share any personal data or personally identifiable information (PII)</strong> from our users.</p>
+        <ul>
+          <li><strong>Local Processing:</strong> All core operations, computations, and logic (such as calculating academic scores) are performed strictly locally on your device's processor.</li>
+          <li><strong>Local Storage:</strong> Any data you input (such as grades or preferences) is saved locally on your device using internal databases (e.g., Hive). We do not have access to this data, and it is never transmitted to our servers.</li>
+        </ul>
+
+        <h2>2. Third-Party Services</h2>
+        <p>Our applications may utilize standard third-party services necessary for core functionality (like rendering fonts, printing documents, or displaying advertisements if applicable). These services operate under their own privacy policies:</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">AdMob</a> (Only applicable if ads are actively displayed in the app)</li>
+        </ul>
+
+        <h2>3. Device Permissions</h2>
+        <p>Our apps may request specific device permissions to function correctly (for example, storage access to export PDF reports, or internet access to fetch fonts/ads). These permissions are strictly limited to the stated functionality and are <strong>never</strong> used to secretly harvest user data or monitor activity.</p>
+
+        <h2>4. Children's Privacy</h2>
+        <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. Since our apps do not collect data, children's data remains entirely secure on their local devices.</p>
+
+        <h2>5. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions, concerns, or suggestions regarding our Privacy Policy, please do not hesitate to contact us at:</p>
+        <p><strong>contact@dayahimour.org</strong></p>
+      </div>
+
+      <div class="footer">
+        <p>&copy; {new Date().getFullYear()} Daya Himour. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
